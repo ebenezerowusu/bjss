@@ -1,0 +1,194 @@
+<!doctype html>
+<html amp lang="en" >
+  
+<!-- Mirrored from www.bjss.com/engineering-insights/green-software-design?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:41:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Green Software Design</title>
+    <link rel="canonical" href="green-software-design.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Carl Austin and Ricky Barefield">
+
+    <meta name="description" content="Our CTO, Carl Austin, and Engineering Lead, Ricky Barefield, share their thoughts on green software design.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Green Software Design",
+        "datePublished": "2023-01-20T15:10:22.905Z",
+        "dateModified": "2023-01-20T15:10:22.911Z",
+        "mainEntityOfPage": "https://www.bjss.com/engineering-insights/green-software-design",
+        "author": {
+          "@type": "Person",
+          "name": "Carl Austin and Ricky Barefield"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1155,
+          
+          
+          "height": 854,
+          
+          "url": "https://9399653.fs1.hubspotusercontent-na1.net/hubfs/9399653/Feature_Green-sofware-design.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "/hs/hsstatic/content_shared_assets/static-1.4092/img/default-amp-logo.png",
+            "width": 60,
+            "height": 60
+            
+          },
+          "name": "Engineering Insights "
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../engineering-insights.html">
+        
+          <span class="logo-header-text">Engineering Insights | BJSS</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="green-software-design.html">Green Software Design</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/carl-austin-and-ricky-barefield.html">Carl Austin and Ricky Barefield</a> | Jan 20, 2023 3:10:22 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><h4>Green Architecture</h4>
+<p>Architectural decisions have some of the largest potential influences on software carbon intensity. They are also some of the most fundamental choices and hardest to back out of at a later point.</p>
+
+<p>These decisions significantly affect the amount of hardware you use, how efficiently you utilise that hardware, and the amount of data you store or send over networks when operating software.</p>
+<p>To ensure that you can make decisions with energy use and emissions in mind, architects must learn about sustainability concepts and take the time to understand how they can apply them to their designs.</p>
+<p>As discussed, the industry is early in the green software development journey. While <a href="https://principles.green/" rel="noopener" target="_blank"><strong>green principles</strong></a> are essential for any architect, there is limited implementation information about good patterns and practices.</p>
+<p>Given this, architects will need to put effort into assessing the potential emissions impact of different options. You may need to undertake spike work where differences are not evident on paper. You can use the eight green principles to help support this process, as well as the three categories of actions that can reduce emissions, as defined by the <a href="https://github.com/Green-Software-Foundation/software_carbon_intensity/blob/main/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md#software-sustainability-actions" rel="noopener" target="_blank"><strong>Green Software Foundation</strong></a>:</p>
+<ul>
+<li><strong>Energy Efficiency: </strong>Actions taken to make software use less electricity to perform the same function</li>
+<li><strong>Hardware Efficiency:</strong> Actions taken to build software using fewer physical resources to perform the same function</li>
+<li><strong>Carbon Awareness:</strong> Actions taken to time or region-shift software computation to take advantage of clean, renewable, or low carbon sources of electricity.</li>
+</ul>
+<p>Taking these into account will support greener decision making. But it’s an inexact science when the scale of emissions resulting from a decision is often difficult to quantify, especially when software is not live and measurable.</p>
+<p>To create a green architecture culture, you should include references to sustainability motivations, assumptions, and implications in your key design decision (KDD) or architecture decision record (ADR) templates – prompting architects to include these aspects as part of their decision making.</p></span>
+        </div>
+        <div class="full-link">
+          <a href="green-software-design.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptqa5f1.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Green+Software+Design&amp;pi=98716042627&amp;a=9399653&amp;nc=true&amp;cgi=48313963830&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.bjss.com/engineering-insights/green-software-design?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:41:47 GMT -->
+</html>

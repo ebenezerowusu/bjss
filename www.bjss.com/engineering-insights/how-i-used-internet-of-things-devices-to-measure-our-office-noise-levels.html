@@ -1,0 +1,547 @@
+<!doctype html><html lang="en">
+<!-- Mirrored from www.bjss.com/engineering-insights/how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 10:41:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>How I Used Internet of Things Devices with AWS to Measure Our Office Noise Levels</title>
+    <link rel="shortcut icon" href="../hubfs/BJSSfav-01.png">
+    <meta name="description" content="How Amazon Web Services was used in conjunction Internet of Things devices for a data analytics project measuring sound volumes in an office location. ">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <meta property="og:description" content="How Amazon Web Services was used in conjunction Internet of Things devices for a data analytics project measuring sound volumes in an office location. ">
+    <meta property="og:title" content="How I Used Internet of Things Devices with AWS to Measure Our Office Noise Levels">
+    <meta name="twitter:description" content="How Amazon Web Services was used in conjunction Internet of Things devices for a data analytics project measuring sound volumes in an office location. ">
+    <meta name="twitter:title" content="How I Used Internet of Things Devices with AWS to Measure Our Office Noise Levels">
+
+    
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365676184/1622442584700/BJSS_May2021/css/layout.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365604017/1671180309381/BJSS_May2021/css/main.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Lato:400,700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,200,300,400,500,600,700,800,900%7CDroid+Serif:400,700%7CMontserrat:100,200,300,400,500,600,700,800,900%7CLato:300,400,700,900%7CAnton%7CBarlow+Condensed:100,200,300,400,500,600,700%7CSource+Code+Pro:300,400,500,600,700">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365604651/1630588080644/BJSS_May2021/css/theme-overrides.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844591/module_52098159278_language_switcher.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/48374514008/1642518516330/module_48374514008_Engineering_Insights_Post_Banner.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/48372652123/1664435298183/module_48372652123_Engineering_Insights_Post_Content.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/47366505811/1642518516986/module_47366505811_Follow_Us.min.css">
+    
+
+    
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script id="Cookiebot" src="../../consent.cookiebot.com/uc.js" data-cbid="1e8015ed-e92b-4a8a-81af-cd363b75ae3f" data-blockingmode="auto" type="text/javascript"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKPDZ5X');</script>
+<!-- End Google Tag Manager -->
+<script>
+(function(g,e,o,t,a,r,ge,tl,y,s){
+g.getElementsByTagName(o)[0].insertAdjacentHTML('afterbegin','<style id="georedirect1630578272721style">body{opacity:0.0 !important;}</style>');
+s=function(){g.getElementById('georedirect1630578272721style').innerHTML='body{opacity:1.0 !important;}';};
+t=g.getElementsByTagName(o)[0];y=g.createElement(e);y.async=true;
+y.src='https://g792337340.co/gr?id=-Mia1T_TRP_QsDX3xGqm&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);
+t.parentNode.insertBefore(y,t);y.onerror=function(){s()};
+georedirect1630578272721loaded=function(redirect){var to=0;if(redirect){to=5000};
+setTimeout(function(){s();},to)};
+})(document,'script','head');
+</script>
+<meta name="google-site-verification" content="XE271XJfF68am7oHm2x4veUqLyGeIVskmS7V3t-JVh0">
+
+<link rel="amphtml" href="how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels3d9f.html?hs_amp=true">
+
+<meta property="og:image" content="https://www.bjss.com/hubfs/Feature-HOW%20I%20USED%20INTERNET%20OF%20THINGS%20DEVICES%20WITH%20AWS%20TO%20MEASURE%20OUR%20OFFICE%20NOISE%20LEVELS.jpg#keepProtocol">
+<meta property="og:image:width" content="1155">
+<meta property="og:image:height" content="854">
+
+<meta name="twitter:image" content="https://www.bjss.com/hubfs/Feature-HOW%20I%20USED%20INTERNET%20OF%20THINGS%20DEVICES%20WITH%20AWS%20TO%20MEASURE%20OUR%20OFFICE%20NOISE%20LEVELS.jpg#keepProtocol">
+
+
+<meta property="og:url" content="https://www.bjss.com/engineering-insights/how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels.html">
+
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/rss+xml" href="rss.xml">
+<meta name="twitter:domain" content="www.bjss.com">
+<script src="../../platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+</script>
+
+<meta http-equiv="content-language" content="en">
+
+
+
+
+
+
+    
+  <meta name="generator" content="HubSpot"></head>
+  <body>
+    <div class="body-wrapper   hs-content-id-87587159719 hs-blog-post hs-blog-id-48313963830">
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/header.html"><header class="header">
+  <div class="main-header">
+    <div class="header__container">
+      <div class="headerLogo">
+        
+        <div id="hs_cos_wrapper_header_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  <span id="hs_cos_wrapper_header_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../index.html" id="hs-link-header_logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="../hubfs/bjss_logo_25_Blue%26Navy%20(RGB).svg" class="hs-image-widget " style="width:100px;border-width:0px;border:0px;" width="100" alt="bjss_logo_25_Blue&amp;Navy (RGB)" title="bjss_logo_25_Blue&amp;Navy (RGB)"></a></span>
+</div>
+      </div>
+      <div class="headerNavigation">
+        <div class="custom-menu-primary">
+          <span id="hs_cos_wrapper_header_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_header_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47367390570" aria-label="Navigation Menu">
+ <ul role="menu" class="active-branch">
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../about/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">About BJSS</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../our-work.html" role="menuitem">Our Work</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../community/index.html" role="menuitem">BJSS in the Community</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../governance/index.html" role="menuitem">Governance</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../our-sustainability.html" role="menuitem">Our Sustainability</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../greenfield.html" role="menuitem">Green Field</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../services/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Our Services</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../strategy-and-transformation.html" role="menuitem">Strategy &amp; Transformation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../design/index.html" role="menuitem">Design &amp; Innovation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../technology-engineering/index.html" role="menuitem">Technology &amp; Engineering</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../managed-service/index.html" role="menuitem">Managed Service</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../low-code-and-automation.html" role="menuitem">Low Code &amp; Automation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../data/index.html" role="menuitem">Data &amp; AI</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../cloud/index.html" role="menuitem">Cloud &amp; Platform</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../cyber-security.html" role="menuitem">Cyber Security</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../sustainability.html" role="menuitem">Sustainability</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../industries/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Your Industry</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../energy-commodities-utilities.html" role="menuitem">Energy, Commodities &amp; Utilities</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../financial-services.html" role="menuitem">Financial Services</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../health/index.html" role="menuitem">Health &amp; Social Care</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../public/index.html" role="menuitem">Public Sector</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../retail/index.html" role="menuitem">Retail &amp; Consumer Markets</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../enterprise-agile.html" role="menuitem">Enterprise Agile®</a></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch" role="none"><a href="../insights/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Insights</a>
+   <ul role="menu" class="hs-menu-children-wrapper active-branch">
+    <li class="hs-menu-item hs-menu-depth-2 active active-branch" role="none"><a href="../engineering-insights.html" role="menuitem">Engineering Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../industry-insights.html" role="menuitem">Industry Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../news.html" role="menuitem">News Centre</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../events/index.html" role="menuitem">Events</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../future-of-retail/index.html" role="menuitem">Future of Retail</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../careers.html" role="menuitem">Careers</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../contact/index.html" role="menuitem">Contact</a></li>
+ </ul>
+</div></span>
+        </div>
+        <div class="custom-menu-primary">
+          <div id="hs_cos_wrapper_module_16279825775607" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16279825775607_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="language_switcher"></span></div>
+        </div>
+        <div class="search-icon">
+          <span class="search-icon-in"></span>
+        </div>
+        <div class="mobile-navigation">
+          <div class="mobile-navigation-inner">
+            <span class="mobile-trigger"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search-outer">
+    <div class="header__container">
+      <div class="hs-search-field">
+        <div class="hs-search-field__bar">
+          <form action="https://www.bjss.com/hs-search-results">
+            <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search …">
+          </form>
+          <span class="close-search"></span>
+        </div>
+        <ul class="hs-search-field__suggestions"></ul>
+      </div>
+      
+    </div>
+  </div>
+</header></div>
+      
+
+      
+<main class="body-container-wrapper blog blog_post engineering_post">
+  <div class="blog-wrapper">
+    <div id="hs_cos_wrapper_post_banner" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="blog-banner post-banner engineering__banner" style="background-image: url(../hubfs/HOW-I-USED-INTERNET-OF-THINGS-DEVICES-WITH-AWS-TO-TRY-TO-MEASURE-OUR-OFFICE-NOISE-LEVELS-BANNER.png)">
+  <div class="content-wrapper">
+    <div class="post-banner-col post-banner-col7">
+      <div class="post-banner-rich-text">
+        <h4><span id="hs_cos_wrapper_name" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="text">How I Used Internet of Things Devices with AWS to Measure Our Office Noise Levels</span></h4>
+        <p>By Alex Khrizman, Software Engineer at BJSS</p>
+      </div>
+    </div>
+    
+    <div class="post-banner-col post-banner-col5">
+      <div class="post-banner-image">
+        <span class="post-banner-img">
+          <img src="../hubfs/Alex%20Khrizman%20Headshot.png" alt="Alex Khrizman">
+        </span>
+      </div>
+    </div>
+    
+  </div>
+</div></div>
+  </div>
+  <div class="blog-single-wrapper">
+    <div class="content-wrapper ">
+      <div class="blog-post__body">
+        <span id="hs_cos_wrapper_post_body" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="rich_text"><p style="margin-top: 25px;">Growing up, I never found tinkering with gadgets interesting enough to explore. YouTube, and its plethora of everything about anything, wasn't a thing until I was finishing college, so technology felt very abstract. While I overheard talk of a robotics club in high school, I always considered things like that to be out of reach. Pursuing chemistry in college and grad school, I never even wrote a line of code (unless you count a Geocities website I made from HTML in the late 90s). In the last five years or so since I got into software development, my passion for all things technology sparked. I conquered my irrational fear of using Linux, set up various servers, hosted a website, networked my home, and so on. I've listened to talks about Internet of Things (IoT), learned how to do basic electrical work, and made my home a Smart Home.</p>
+<!--more-->
+<p>Coming in with experience as a Java Web Developer, when I joined BJSS I had no idea what was in store for me. In my first week, I was on calls trying to figure out what sort of incubator projects I could work on, and one involving <a href="https://aws.amazon.com/iot-core/" rel="noopener" target="_blank" style="font-weight: bold;">AWS IoT Core</a> was the front runner. The first couple weeks involved researching what services AWS had to offer someone building, using, and managing IoT devices. I had a RaspberryPi 3B+ lying around that was at one point set up to work a Retro Gaming System, but I had only used it once. So, with little to no prior AWS experience, I quickly installed the Raspberry Pi OS and the AWS IoT Python SDK and started learning hands-on about messaging, pub/sub, and AWS features.</p>
+<p>As our small team started running out of ideas for what to research, and Smart Office solutions became the obvious direction, I remembered one of the things I noticed on my first day in the New York office: it was loud. An all-hands was scheduled that day, so the office was packed. I even overheard someone apologizing for the noise on their Zoom meeting. If only there was a way to help the office maintain a reasonable volume level. Hence, the idea for a Volume Excess Notification System was born.</p></span>
+      </div>
+    </div>
+  </div>
+  <div id="hs_cos_wrapper_post_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="enginnering-post-content">
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-bg" style="background-image: url(../hubfs/BJSS-Staff-Working-Eng-Insights2.jpg);">
+
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(129, 190, 196, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4 style="color: #041e42;">The Aim: Create a Volume Excess Notification System Powered by AWS</h4>
+<p style="color: #041e42; margin-bottom: 25px;">According to <strong><a href="https://www.techopedia.com/definition/31463/smart-device" rel="noopener" target="_blank" style="color: #041e42;"><span style="color: #d90699;">Techopedia</span></a></strong>, a smart device is an electronic gadget able to connect, share and interact with its user and other smart devices. By that logic, one can say that a smart office is an office that does the same by using smart devices. Just as a person might speak up and ask the office employees to lower their voices when it gets too loud, I thought it would be great to let the office itself do the hushing (after all, who could ever get mad at an electronic device?). So we set out to create a Volume Excess Notification System powered by AWS: IoT Core, Kinesis, Lambda, an AWS IoT-friendly volume sensing device, and a smart-plug/bulb. The primary goal was to measure noise levels in our New York office and notify the people in the office when it was too loud. This could be accomplished by:</p>
+<ol>
+<li style="color: #041e42; padding-bottom: 10px;">Configuring a microcontroller or microprocessor with a microphone to measure noise levels</li>
+<li style="color: #041e42; padding-bottom: 10px;">Sending a message to AWS IoT Core when a set noise level threshold is met</li>
+<li style="color: #041e42; padding-bottom: 10px;">Streaming those messages to AWS Lambda</li>
+<li style="color: #041e42; padding-bottom: 10px;">Having AWS Lambda call an API to turn on a light bulb for a short period of time.</li>
+</ol>
+<img src="../hs-fs/hubfs/AWS-NYC-Infrastructure040d.png?width=1082&amp;name=AWS-NYC-Infrastructure.png" alt="AWS-NYC-Infrastructure" width="1082" loading="lazy" style="width: 1082px;" srcset="https://www.bjss.com/hs-fs/hubfs/AWS-NYC-Infrastructure.png?width=541&amp;name=AWS-NYC-Infrastructure.png 541w, https://www.bjss.com/hs-fs/hubfs/AWS-NYC-Infrastructure.png?width=1082&amp;name=AWS-NYC-Infrastructure.png 1082w, https://www.bjss.com/hs-fs/hubfs/AWS-NYC-Infrastructure.png?width=1623&amp;name=AWS-NYC-Infrastructure.png 1623w, https://www.bjss.com/hs-fs/hubfs/AWS-NYC-Infrastructure.png?width=2164&amp;name=AWS-NYC-Infrastructure.png 2164w, https://www.bjss.com/hs-fs/hubfs/AWS-NYC-Infrastructure.png?width=2705&amp;name=AWS-NYC-Infrastructure.png 2705w, https://www.bjss.com/hs-fs/hubfs/AWS-NYC-Infrastructure.png?width=3246&amp;name=AWS-NYC-Infrastructure.png 3246w" sizes="(max-width: 1082px) 100vw, 1082px">
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(4, 30, 66, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4 style="color: #ffffff;">Why I Chose Amazon Web Services</h4>
+<p style="color: #ffffff;">Measurement and notification both occur in the office, but AWS handles communication between the volume-sensing device and the notification device (plug/bulb). An obvious question comes up - why not just have the sensing device contact the notification device directly? The answer is simple - data! Many of us use virtual home assistants such as Alexa or Google to control our home, but what you may not have considered is how they know to ask you things like, "Would you like me to turn off your lights every day at 8pm?” when you have turned your lights off at 8pm every day for the last month. These programs store most, if not all, of your commands. This information is valuable to Google and Amazon because they can analyze the data for any number of reasons, such as:</p>
+<ul>
+<li style="color: #ffffff;">Tracking the number of times a request has to be repeated</li>
+<li style="color: #ffffff;">Testing their voice recognition software in real world scenarios</li>
+<li style="color: #ffffff;">Suggesting (marketing) additional features, apps, or merchandise</li>
+<li style="color: #ffffff;">Machine Learning &amp; Business Intelligence</li>
+<li style="color: #ffffff;">Other uses we (and those companies) have yet to discover</li>
+</ul>
+<p style="color: #ffffff;">In our case, we could easily have skipped the data collection step, but then we lose out on being able to answer questions like, "Which days tend to be loudest in the office?" or "Do people lower their voices when they see a VENS notification?" Coupled with knowledge of who is in the office on which days, we could even ask, "Are there select people or groups of people who are correlated with high noise levels?" If we want that type of insight, we need to store the data, and AWS is a logical choice as a cost-effective and easily configurable solution.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-parallex">
+    <div class="parallex-bg-wrap">
+      <div class="parallex-background" style="background-image: url(../hubfs/HOW-I-USED-INTERNET-OF-THINGS-DEVICES-WITH-AWS-TO-TRY-TO-MEASURE-OUR-OFFICE-NOISE-LEVELS-Image-gray-1.png);"></div>
+    </div>
+    <div class="page-center">
+      <div class="enginnering-post-inner-row">
+        <div class="enginnering-post-rich-tesx">
+          <h4>How I Did it</h4>
+<p>The AWS component of this IoT project was without question the easiest part, even for someone with little to no AWS experience like myself. After gaining some basic understanding of AWS I was able to:</p>
+<ul>
+<li>Set up a Raspberry Pi with the AWS Python SDK and register it with IoT Core;</li>
+<li>Automatically have a device send MQTT messages to IoT Core;</li>
+<li>Create a rule to send IoT messages from its MQTT topic to a Kinesis Data Stream and/or Kinesis Firehose;</li>
+<li>Process/enhance Data from a Kinesis Data Stream with Lambda; and</li>
+<li>Use Kinesis Firehose to store data in an S3 bucket directly from the IoT device or after passing through a Lambda.</li>
+</ul>
+<p>The difficult part was actually the heart of this project, which was finding an inexpensive device with minimal configuration requirements.</p>
+<h6 style="color: #81bec4; margin-top: 25px; margin-bottom: 15px;"><strong>Device Selection</strong></h6>
+<p>Choosing a noise sensing device required balancing three things:</p>
+<ul>
+<li><strong>Cost</strong> - Should we spend $500 on a highly sensitive industrial noise meter, or a basic $6 ESP32 chip and $4 microphone?</li>
+<li><strong>Ease of use</strong> - Does configuring the device require taking a course on electronics, or can we plug it in, write a few lines of code and make some noise?</li>
+<li><strong>Functionality</strong> - Can the device fulfil its intended purpose? Is there adequate documentation and/or existing code/libraries that specify how to measure noise on this device?</li>
+</ul>
+<p><img src="../hs-fs/hubfs/IoT-AWS-Devices9b74.jpg?width=1920&amp;name=IoT-AWS-Devices.jpg" alt="IoT-AWS-Devices" width="1920" loading="lazy" style="width: 1920px;" srcset="https://www.bjss.com/hs-fs/hubfs/IoT-AWS-Devices.jpg?width=960&amp;name=IoT-AWS-Devices.jpg 960w, https://www.bjss.com/hs-fs/hubfs/IoT-AWS-Devices.jpg?width=1920&amp;name=IoT-AWS-Devices.jpg 1920w, https://www.bjss.com/hs-fs/hubfs/IoT-AWS-Devices.jpg?width=2880&amp;name=IoT-AWS-Devices.jpg 2880w, https://www.bjss.com/hs-fs/hubfs/IoT-AWS-Devices.jpg?width=3840&amp;name=IoT-AWS-Devices.jpg 3840w, https://www.bjss.com/hs-fs/hubfs/IoT-AWS-Devices.jpg?width=4800&amp;name=IoT-AWS-Devices.jpg 4800w, https://www.bjss.com/hs-fs/hubfs/IoT-AWS-Devices.jpg?width=5760&amp;name=IoT-AWS-Devices.jpg 5760w" sizes="(max-width: 1920px) 100vw, 1920px"></p>
+<p>The Raspberry Pi was the first device considered and most of the initial AWS IoT Core investigation was done on it. This modest little computer has everything one could need for just about any IoT purpose, but a device capable of playing just about any retro arcade or console game was considered overkill. A plethora of available sensors and hats (plug and play sensors) exist on the market. Over a dozen microphones (including hats) are available at ThePiHut.com, ranging from $10-60. For a Raspberry Pi Model 3B, having a price point of under $50 and offering a lot of flexibility, it's not bad a bad choice. However, supply chain shortages meant these were either all sold out or back-ordered; at the time of writing, one would be lucky to find a new one for under $150 from a reputable third party.</p>
+<p>Alternatively, one could start with a reasonable understanding of electronics, breadboards, wiring diagrams, signal processing, voltage readings and follow any number of step-by-step tutorials on how to connect a variety of sensors to a microprocessor chip. Unfortunately, learning enough about electronics to understand how to create a noise meter from scratch was not practical, especially given the time constraints of an incubator project.</p>
+<p>The third, and perhaps least practical, approach, was to use my BJSS laptop, its built-in microphone, and a small app using the Java Sound library. I found some existing Java code that displays sound bars on the screen when noise is detected and left only the pressure RMS calculation to see if I could make it print a message when above a certain threshold. This took very little time to attempt but was useful in showing that it could be done on something like a Raspberry Pi, which can support a Java App that uses a USB microphone.</p>
+<p>The M5Stack Core2 was suggested for its ease-of-use and minimal requirement of electronics know-how. The device is compatible with multi-platform development (UiFlow, MicroPhython, Arduino, and more). Specifically, there are libraries that seamlessly integrate with AWS IoT Core and can be set up to send messages in minutes. It also contains an on-board microphone, as well as an optional omni-directional peripheral microphone unit, which we purchased just in case. Shipped directly from China in about seven business days, the device and microphone unit cost just under $52 with tax and shipping. I also found several examples of Arduino (C++) code for noise meters using other M5Stack devices (something that would later prove to be to our detriment). Given these considerations, the <strong><a href="https://shop.m5stack.com/products/m5stack-core2-esp32-iot-development-kit-for-aws-iot-edukit" style="color: #d90699;" rel="noopener" target="_blank">M5Stack Core2 AWS IoT EduKit</a></strong> seemed like a no-brainer.</p>
+<h6 style="color: #81bec4; margin-top: 25px; margin-bottom: 15px;"><strong>Sensor Selection</strong></h6>
+<p>Selecting a sensor proved to be less challenging, given that there were only two plug-and-play options. Configuring it, however, was a different story. Initially, I tried to configure the on-board microphone to capture noise but had no luck. At one point I even considered the rare case that the microphone might be defective. Working backwards from several Arduino code repos, and after a sustained period of rhythmic head-to-wall contact, it became apparent that the existing I2S (Inter-IC Sound) protocol libraries crucial to using the onboard microphone were not yet able to support the M5Stack Core2. After the omni-directional microphone unit arrived, I was able to connect it and, after some minor troubleshooting, start reading an analog signal using readily available MicroPython libraries.</p>
+<p>After successfully being able to get readings from the microphone unit I found that, although I could see spikes in sound when making loud noises, it was very difficult to use the device as a noise meter. Unfortunately, the only working microphone was only good enough to serve as a proof of concept, but not actually be used to accurately differentiate noise levels. I later found on a different seller's description (<strong><a href="https://sunhokey.cn/products/lm393-microphone-amplifier-sound-sensor-mic-voice-module-for-arduino" rel="noopener" target="_blank">Sunhokey</a></strong>) that says:</p>
+<blockquote style="margin-bottom: 50px; font-size: 24pt; font-weight: bold;">It can be used for audio detection and allows you to control your system with sound e.g., clap-on, clap-off control. Keep in mind it can only detect audio, not differentiate between varying audio levels.</blockquote>
+<h6 style="color: #81bec4; margin-top: 25px; margin-bottom: 15px;"><strong>Threshold Determination</strong></h6>
+<p>At first, there were two strategies for the Volume Excess Notification system:</p>
+<ol>
+<li>Send averaged noise messages frequently, process them with AWS Kinesis Data Analytics, and trigger the notification device with AWS Lambda.</li>
+<li>Measure noise and only send averaged noise messages when the measurement exceeds a set threshold.</li>
+</ol>
+<p>For the first approach, we could collect and stream regular intervals of averaged noise data, filter above-threshold values with Kinesis Data Analytics, and have a Lambda function determine whether to trigger actuation of the notification device (light bulb). Messages would need to be sent at least every few seconds because notifications shouldn't be significantly delayed. What use is an excess noise level notification if it's 30 seconds delayed? Given the frequency of these messages, we would be processing messages containing background noise. We could, of course, write code on the device to publish noise readings only during business hours, but there would still need to be several messages with averaged noise readings sent minute by minute. When making this decision, we were aware of the limitations of the microphone, and because Kinesis Data Analytics has an associated cost, it was impractical to send and process messages that effectively tell us nothing about the state of the office.</p>
+<p>Since the second approach was chosen, the next step was to determine when to send messages. Given the microphone could only be useful in detecting noise spikes, I came up with a very clunky approach to determine what could be considered above-threshold, (i.e., when a message should be sent). It was difficult to empirically determine what "loud" is, since it's very subjective. I decided to take the scientific approach and write some code where I could change one variable at a time and see if the noise meter could at least differentiate between a cough and playing loud music.</p>
+<p><img src="../hubfs/VENS%20MQTT%20to%20AWS%20IoT%20Core-PNG.png" loading="lazy" style="margin-top: 15px; margin-bottom: 25px;"></p>
+<p>The algorithm was written to measure the number of small noise spikes occurring over a set period of time. A spike threshold was set and these two values were adjusted until a cough would not trigger the microphone from three feet away, but loud music would. For example, if more than 20 noise spikes were recorded over a one second measurement window, a message would be sent. However, the averaged noise level over that time would always be indistinguishable from averaged background noise levels. This is because those spikes are only slightly higher than background, even in a loud environment. Spikes are also infrequent relative to the number of actual measurements taken. In addition to setting a threshold for the number of spikes, a threshold had to be determined for what is considered a spike. That was determined by playing an audio track of people speaking in a café at an uncomfortable level (again, very subjective) and determining to what average reading that noise corresponds. As much as I avoid using visual coding interfaces, for IDEs without autocomplete, this was the most user-friendly approach.</p>
+<p><img src="../hubfs/VENS%20office%20location%201-jpg.jpg" loading="lazy" style="margin-top: 15px; margin-bottom: 25px;"></p>
+<p>Having these numbers more or less figured out, the IoT device was installed in the NYC office and left hanging for a day while multiple people were present. Despite all attempts to get predictable messages, the device would occasionally recognize laughter from the break room or someone raising their voice, but not consistently enough to call the device an Excess Noise Monitoring System.</p>
+<h6 style="color: #81bec4; margin-top: 25px; margin-bottom: 15px;"><strong>Notification Device Selection</strong></h6>
+<p>The easiest way to notify people of excess noise was to install a smart plug in one of the higher up sockets in direct view of most of the seats in the office. Into the smart plug we could, for example, plug in a series of light strips to span the perimeter of the office. For demonstration purposes, a light bulb and socket adapter was plugged into the smart plug. The Kasa brand smart plug was used because it is one of the few inexpensive devices that can be accessed via an API, specifically via TP-Link Cloud. There are several examples and a community dedicated to creating third-party libraries to access the Kasa smart devices via their API key rather than through the cloud.</p>
+<p>As time ran out on the project, we did not integrate the device into the Volume Excess Notification System. It would have entailed re-using some existing Python to create a Lambda that calls the TP-Link Cloud API with credentials, retrieves a security token, and sends a request to the device via its API key to turn it on and then call it again in a short period of time to turn it off. If I can convince the right people, I would like to set up a device like this to flicker a color LED light strip in the office whenever Karma is sent, but that's a topic for another day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-bg" style="background-image: url(../hubfs/BJSS-Staff-Working-Eng-Insights.jpg);">
+
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(129, 190, 196, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4 style="color: #041e42; margin-top: 25px;">Conclusion</h4>
+<p style="color: #041e42;">The IoT incubator project was always meant to be a proof of concept, and at that it was successful. For a real-world application, a good Volume Excess Notification System would need a microphone that can accurately measure differences in noise levels. We would also need to use a proper noise averaging algorithm, like an RMS calculation, which requires a good understanding of sound processing. Were I to do it all over again, I would use a Raspberry Pi, or any other micro-PC, with the knowledge that I can attach multiple pre-built sensors via USB and use the PC as a multi-functional Smart Office data measurement device.</p>
+<p style="color: #041e42; margin-bottom: 25px;">On a personal level, one of the major lessons that I learned on this project is not to assume anything to be trivial. AWS integration, what I thought would be the difficult part, was relatively straight forward. What I thought would be trivial, based on seeing similar IoT devices being setup and from discussions with peers, turned out to be the most difficult and time-consuming component of the project. I was also able to appreciate how lucky we are as developers to be able to work with high-level programming languages which go hand-in-hand with so many well-tested libraries. In the end, I'm glad I was left to my own devices – quite literally.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+</div></div>
+</main>
+
+
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/footer.html"><footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__container main__footer">
+      <div class="footer__column footer__column1">
+        <div class="footerTitle">
+          <div id="hs_cos_wrapper_footerTitle" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footerTitle_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h4 style="color: #fff">EXPANDING<br>POSSIBILITIES</h4></span></div>
+        </div>
+        <div class="footerSocial">
+          <div id="hs_cos_wrapper_footerSocial" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><ul class="social-share">
+  <li class="socil-icon social-twitter">
+    <a href="https://twitter.com/bjssltd" title="Follow on Twitter" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-linkedin">
+    <a href="https://uk.linkedin.com/company/bjss" title="Follow on LinkedIn" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-instagram">
+    <a href="http://www.instagram.com/bjssltd" title="Follow on Instagram" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-youtube">
+    <a href="https://www.youtube.com/channel/UCUWB9XUNt_g_YGWIjneXuSg" title="Follow on Youtube" target="_blank" class="icon"></a>
+  </li>
+</ul></div>
+        </div>
+        <div class="footerImage">
+          <div id="hs_cos_wrapper_footerImage" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_footerImage_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="../hs-fs/hubfs/Princess-Award_%26_Queens-Awardc48d.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png" class="hs-image-widget " width="1000" height="563" alt="Princess-Award_&amp;_Queens-Award" title="Princess-Award_&amp;_Queens-Award" srcset="https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=500&amp;height=282&amp;name=Princess-Award_%26_Queens-Award.png 500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png 1000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1500&amp;height=845&amp;name=Princess-Award_%26_Queens-Award.png 1500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2000&amp;height=1126&amp;name=Princess-Award_%26_Queens-Award.png 2000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2500&amp;height=1408&amp;name=Princess-Award_%26_Queens-Award.png 2500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=3000&amp;height=1689&amp;name=Princess-Award_%26_Queens-Award.png 3000w" sizes="(max-width: 1000px) 100vw, 1000px"></span></div>
+        </div>
+      </div>
+      <div class="footer__column footer__column2">
+        <div class="footer__column_inner">
+          <div class="footer-navigation">
+            <span id="hs_cos_wrapper_footer_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_footer_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47366551648" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../contact/index.html" role="menuitem">Contact BJSS</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../news.html" role="menuitem">News</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../governance/index.html" role="menuitem">Governance</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../website-privacy-policy/index.html" role="menuitem">Privacy notice</a></li>
+ </ul>
+</div></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__column footer__column3">
+        <div class="footer__column_inner">
+          <div class="footer__search">
+            <div class="hs-search-field">
+              <div class="hs-search-field__bar">
+                <form action="https://www.bjss.com/hs-search-results">
+                  <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search BJSS">
+                  <input type="submit" value="Search" class="searchsubmit" style="">
+                </form>
+              </div>
+              <ul class="hs-search-field__suggestions"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__container copyright__footer">
+      <div class="footer__copyright">
+        <div id="hs_cos_wrapper_footer_copyright_text" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer_copyright_text_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="text">&nbsp;© 2023 BJSS Limited. Registered in England with company number 2777575 VAT Number GB613295452.&nbsp;‘Enterprise Agile®’ and ‘BJSS Enterprise Agile®’ are registered trademarks of BJSS Limited.</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<span class="back-to-top"></span></div>
+      
+    </div>
+    <script src="../hs/hsstatic/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+<script src="../hs/hsstatic/jquery-libs/static-1.4/jquery-migrate/jquery-migrate-1.2.1.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+<script>
+(function () {
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST.html', '/_hcms/perf', true /*async*/);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.onreadystatechange = function () {
+                // do nothing.
+            };
+            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            function populateNetworkInfo(name, connection, info) {
+                if (name in connection) {
+                    info[name] = connection[name];
+                }
+            }
+            var networkInfo = {};
+            if (connection) {
+                ['type', 'effectiveType', 'downlink', 'rtt'].forEach(function(name) {
+                    populateNetworkInfo(name, connection, networkInfo);
+                });
+            }
+            var perfData = {
+                url: location.href,
+                portal: 9399653,
+                content: 87587159719,
+                group: -1,
+                connection: networkInfo,
+                timing: performance.timing
+            };
+            xhr.send(JSON.stringify(perfData));
+        }, 3000);  // Execute this 3 seconds after onload.
+    });
+})();
+</script>
+
+<script src="../hs-fs/hub/9399653/hub_generated/template_assets/47365698976/1645632663800/BJSS_May2021/js/main.min.js"></script>
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script>
+
+<script src="../hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+<script src="../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844495/module_52098159278_language_switcher.min.js"></script>
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/www.bjss.com\/engineering-insights\/how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels"]);
+_hsq.push(["setPageId", "87587159719"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 87587159719,
+    "legacyPageId": "87587159719",
+    "contentFolderId": null,
+    "contentGroupId": 48313963830,
+    "abTestId": null,
+    "languageVariantId": 87587159719,
+    "languageCode": "en",
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="../hs/scriptloader/9399653.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    ticks: 1674411596274,
+    page_id: 87587159719,
+    
+    content_group_id: 48313963830,
+    portal_id: 9399653,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en",
+    analytics_page_type: "blog-post",
+    analytics_page_id: "87587159719",
+    category_id: 3,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+<script defer src="../hs/hsstatic/HubspotToolsMenu/static-1.143/js/index.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKPDZ5X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ <!-- End Google Tag Manager (noscript) -->
+
+
+<div id="fb-root"></div>
+ <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../../connect.facebook.net/en_GB/all.js#xfbml=1&status=0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ 
+
+
+  
+</body>
+<!-- Mirrored from www.bjss.com/engineering-insights/how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 10:41:53 GMT -->
+</html>

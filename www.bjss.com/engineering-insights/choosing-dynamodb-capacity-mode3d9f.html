@@ -1,0 +1,204 @@
+<!doctype html>
+<html amp lang="en" >
+  
+<!-- Mirrored from www.bjss.com/engineering-insights/choosing-dynamodb-capacity-mode?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:41:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Choosing a DynamoDB Capacity Mode</title>
+    <link rel="canonical" href="choosing-dynamodb-capacity-mode.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Jamie Kelly">
+
+    <meta name="description" content="Breaking down the two pricing models of AWS DynamoDB, Provisioned Capacity and On-demand Capacity, and how each one impacts total cost.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Choosing a DynamoDB Capacity Mode",
+        "datePublished": "2022-10-14T13:26:25Z",
+        "dateModified": "2023-01-11T16:42:34.548Z",
+        "mainEntityOfPage": "https://www.bjss.com/engineering-insights/choosing-dynamodb-capacity-mode",
+        "author": {
+          "@type": "Person",
+          "name": "Jamie Kelly"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1155,
+          
+          
+          "height": 854,
+          
+          "url": "https://9399653.fs1.hubspotusercontent-na1.net/hubfs/9399653/Feature%20-%20choosing-a-dynamodb-capacity-mode.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "/hs/hsstatic/content_shared_assets/static-1.4092/img/default-amp-logo.png",
+            "width": 60,
+            "height": 60
+            
+          },
+          "name": "Engineering Insights "
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../engineering-insights.html">
+        
+          <span class="logo-header-text">Engineering Insights | BJSS</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="choosing-dynamodb-capacity-mode.html">Choosing a DynamoDB Capacity Mode</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/jamie-kelly.html">Jamie Kelly</a> | Oct 14, 2022 1:26:25 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>In this blog post, I’m going to look at DynamoDB capacity modes and when you might choose one over the other. To start, I’ll introduce DynamoDB at a high level, then I’ll go through the two capacity modes and how they work, before finishing off with a few worked examples to give you an idea of how the bill would look in various situations.</p>
+
+<h4>what is dynamodb?</h4>
+<p>Taking the headline description straight from the <a href="https://aws.amazon.com/dynamodb/" rel="noopener" target="_blank">AWS DynamoDB Landing Page</a>, DynamoDB is marketed as:</p>
+<blockquote><strong>A fast, flexible NoSQL database service for single-digit millisecond performance at any scale.</strong></blockquote>
+<p>Let's break that down into a few constituent parts:</p>
+<ul>
+<li><strong>Fast</strong>: It can serve requests as fast as a few milliseconds (and if you use <a href="https://aws.amazon.com/dynamodb/dax/" rel="noopener" target="_blank">DynamoDB Accelerator</a>, microseconds).</li>
+</ul>
+<ul>
+<li><strong>Flexible NoSQL</strong>: It's a NoSQL database which can provide flexibility of design. To be clear, this doesn't mean you don't have to design how you use it, but that's a post for another day.</li>
+<li><strong>Database Service</strong>: It's a managed service offered by AWS. No servers to manage, no administration, no patching, etc.</li>
+<li><strong>Performance At Any Scale</strong>: Fast is great. But if your database is going to slow down the bigger it gets, you'll have problems. Thankfully, the design of DynamoDB avoids this. It's rapid at any scale and can actually get faster as it grows.</li>
+</ul>
+<p>This is sounding pretty neat at this stage, so what does an item stored in DynamoDB look like? If you were to grab an item out of DynamoDB and expose it as JSON, it could look like this:</p>
+<p><code>{</code></p>
+<p><code>&nbsp;&nbsp;&nbsp; "Author": "John Grisham",</code></p>
+<p><code>&nbsp;&nbsp;&nbsp; "Title": "The Rainmaker",</code></p>
+<p><code>&nbsp;&nbsp;&nbsp; "Formats": {</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Hardcover": "J4SUKVGU",</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Paperback": "D7YF4FCX"</code></p>
+<p><code>&nbsp;&nbsp;&nbsp; },</code></p>
+<p><code>&nbsp;&nbsp;&nbsp; "Category": "Suspense"</code></p>
+<p><code>}</code></p></span>
+        </div>
+        <div class="full-link">
+          <a href="choosing-dynamodb-capacity-mode.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq453c.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Choosing+a+DynamoDB+Capacity+Mode&amp;pi=87867834457&amp;a=9399653&amp;nc=true&amp;cgi=48313963830&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.bjss.com/engineering-insights/choosing-dynamodb-capacity-mode?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:41:51 GMT -->
+</html>

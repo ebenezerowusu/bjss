@@ -1,0 +1,225 @@
+<!doctype html>
+<html amp lang="en" >
+  
+<!-- Mirrored from www.bjss.com/engineering-insights/how-can-high-performance-code-be-produced-from-dynamic-languages?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:54:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Dynamic Languages: How Can High Performance Code Be Produced?</title>
+    <link rel="canonical" href="how-can-high-performance-code-be-produced-from-dynamic-languages.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Andrew Bennett">
+
+    <meta name="description" content="We cover the toolchains that are used to compile and run programs written in dynamic languages along with how they produce high performance code.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Dynamic Languages: How Can High Performance Code Be Produced?",
+        "datePublished": "2020-10-15T18:44:22Z",
+        "dateModified": "2022-01-04T15:43:31.154Z",
+        "mainEntityOfPage": "https://www.bjss.com/engineering-insights/how-can-high-performance-code-be-produced-from-dynamic-languages",
+        "author": {
+          "@type": "Person",
+          "name": "Andrew Bennett"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 866,
+          
+          
+          "height": 640,
+          
+          "url": "https://f.hubspotusercontent00.net/hubfs/9399653/Feature_how-can-high-performance-code-be-produced-from-dynamic-languages.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "/hs/hsstatic/content_shared_assets/static-1.4092/img/default-amp-logo.png",
+            "width": 60,
+            "height": 60
+            
+          },
+          "name": "Engineering Insights "
+        }
+      }
+    </script>
+    <script async custom-element="amp-iframe" src="../../cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../engineering-insights.html">
+        
+          <span class="logo-header-text">Engineering Insights | BJSS</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="how-can-high-performance-code-be-produced-from-dynamic-languages.html">Dynamic Languages: How Can High Performance Code Be Produced?</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/andrew-bennett.html">Andrew Bennett</a> | Oct 15, 2020 6:44:22 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><h4>About Andrew...</h4>
+<p>Andrew’s interest in computing started when he learnt to program on his Atari 800XL as a child. He has worked in research labs for computer vision and machine learning and has produced toolchains for embedded systems. More recently, with BJSS, he has worked on frontend and backend systems for medical and financial clients.</p>
+<p><amp-iframe width="300" height="100" layout="responsive" resizable sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation allow-forms" src="https://amp.hubspot.net/_hcms/cta?portalId=9399653&amp;ctaGuid=d0993674-0185-431d-8ae0-88443e0e9886&amp;analyticsPageId=50034951477&amp;contentType=blog-post&amp;referrerUrl=https://www.bjss.com/engineering-insights/how-can-high-performance-code-be-produced-from-dynamic-languages?hs_amp%3Dtrue">
+  <amp-img layout="fixed" height="25" width="25" class="iframe-placeholder" src="../hs/hsstatic/content_shared_assets/static-1.4092/img/iframe-expand.png" placeholder overflow></amp-img>
+</amp-iframe></p>
+
+<p>Outside work he is a keen runner and enjoys spending time with his family and taking their dog out for walks in the countryside.</p>
+<p>There are a number of dynamic languages used in production systems, but the most popular are Ruby, Python and JavaScript. This article will cover the toolchains that are used to compile and run programs written in these languages along with how they produce high-performance code.</p>
+<p>&nbsp;</p>
+<h4>a little introduction</h4>
+<p>Before we take a deep dive into toolchains let’s talk a little about what dynamic languages are, and how they differ from static languages like Java or C#. The dynamic element of these languages means that a program can change its structure at runtime. Methods or fields on a class can be added, modified or removed at runtime. There is also no typing of variables, fields or arguments as you would see in a Java program. The operations are performed given the current object assigned to the variable. If the object has the required method or field the program will run correctly (which allows us to use techniques like duck typing). This means that a lot of the checks to ensure the operations you are trying to do are valid will happen at runtime, as opposed to build or compile time with static languages.</p>
+<p>The lack of typing and ability to change program structure at runtime are the two main performance problems in dynamic languages, and there are various ways to solve them as we will see later on in this article.</p>
+<p>&nbsp;</p>
+<h4>SOME EXAMPLE DYNAMIC LANGUAGE TOOLCHAINS</h4>
+<p>Let’s now look at some example toolchains for Python, Ruby and JavaScript and how they produce high-performance code. Please refer to my <strong><a href="de-mystifying-compilers.html" rel="noopener">previous article on compilers</a></strong> for an overview of how they work.</p>
+<p>The first set of toolchains are ones that just have an interpreter but do not have a JIT. This is the approach used by CPython and the standard Ruby toolchain. For both of these toolchains, the interpreter is written in C and is heavily specialised in running Python or Ruby bytecode. A lot of C tricks are used in the code to improve performance. The code for the interpreter is then compiled down using a C compiler to machine code for the target machine so it can run quickly. In Python, methods and constants can change during the lifetime of the program. We need a quick way to get back the current value of a method or constant. Caching techniques are used to do this so that performance is not impacted.</p>
+<p>The next set of toolchains are ones that use a pre-existing JIT. The aim here is to write our dynamic toolchain in a language like Java or C#. This is the approach used by: JRuby, Jython (written in Java) and IronPython and IronRuby (written in C#). There are two reasons to do this. Firstly, we hope to use the JITs in the Java or C# toolchains to improve performance. These JITs have been used for many years and have a huge amount of work done on them to make them fast The aim is to piggyback off that to improve performance. Secondly, polyglot programming can be used, as the dynamic language can access the static language and vice-versa. For example, JRuby allows Java and Ruby to interact.</p>
+<p>There are two main problems that need to be solved when using this approach.</p>
+<p>Firstly, we have a dynamic language that is untyped, and an abstract syntax tree (AST) representing our program written in that language. What we would like to do is map this on to Java Bytecode or CIL; and Java or C# libraries. Both the bytecode and libraries are typed, so we need to perform some form of typing when we convert the AST to get this to work.</p>
+<p>The other aspect, as covered previously, is because the language is dynamic we need to have techniques to deal with the method and constant field lookups. These need to be fast to prevent the lookups from being a bottleneck on the application.</p>
+<p>&nbsp;</p>
+<h4>How to map to Bytecode</h4>
+<p>So, how do we map a dynamic language to static bytecode? IronPython and IronRuby make use of the Dynamic Language Runtime (DLR) to produce CIL. To use this library you convert the AST for your program into a AST used by the DLR. From this AST the DLR will then create bytecode. Jython and JRuby have custom code that walk the AST tree and from this process generate Java Bytecode including any type conversions required.</p>
+<p>Next, how do we make looking up methods, fields, and constants quick?&nbsp;&nbsp;In IronRuby and IronPython they use DLR’s polymorphic caching feature. This associates a method cache function with each location where a call is made in the code. When the method call is performed it goes through the method cache function. This will look at the arguments and if it has seen it before will return back the cached method. Otherwise, it will ask the DLR to look up the location of the method (based on the arguments), and also to update the code in the method cache function to match this new method, so that next time the lookup is a lot faster.</p>
+<p>The other approach is what Jython and JRuby use. These make use of the invokedynamic bytecode instruction in the JVM. In the same principle as before we need to make a call to a method, or get the value of a field or constant, but we do not know where it is. The call is wrapped up in the invokedynamic instruction. When the JVM hits this instruction the first time it will run a bootstrap method associated with it. This bootstrap method returns back a method handle. The method handle contains a set of operations to run to tell the JVM where to find the current location of the method, field or constant. These operations can be optimised away by the JVM making it fast. The next time we need to call the method or get the field or constant value at this point in the bytecode we will just use the result returned by the initial invokedynamic call.</p>
+<p>Let’s look at an example from JRuby to show these two concepts. This has an output method that takes two arguments, x and y, adds them together and prints the result to the screen. The output method is then called up with two integer arguments, and secondly with two string arguments.</p>
+<p><amp-img src="../hs-fs/hubfs/jruby1-239x1900e1e.png?width=239&amp;name=jruby1-239x190.png" alt="jruby1-239x190" width="239.0" srcset="https://www.bjss.com/hs-fs/hubfs/jruby1-239x190.png?width=120&amp;name=jruby1-239x190.png 120w, https://www.bjss.com/hs-fs/hubfs/jruby1-239x190.png?width=239&amp;name=jruby1-239x190.png 239w, https://www.bjss.com/hs-fs/hubfs/jruby1-239x190.png?width=359&amp;name=jruby1-239x190.png 359w, https://www.bjss.com/hs-fs/hubfs/jruby1-239x190.png?width=478&amp;name=jruby1-239x190.png 478w, https://www.bjss.com/hs-fs/hubfs/jruby1-239x190.png?width=598&amp;name=jruby1-239x190.png 598w, https://www.bjss.com/hs-fs/hubfs/jruby1-239x190.png?width=717&amp;name=jruby1-239x190.png 717w" height="190.0"></amp-img></p>
+<p>When we run&nbsp;<strong>jruby</strong>&nbsp;with the&nbsp;bytecode&nbsp;option it will output the Java bytecode required to run this program with the JRuby Java libraries. If we look at a small section of the bytecode below to make the integer call to&nbsp;output&nbsp;we can see the use of the&nbsp;invokedynamic&nbsp;instruction and type conversion that needs to be performed before making the call to the output method.</p>
+<p>There are two lines that convert the values 99 and 55 to the Ruby’s Fixnum format. To do this we need to make a call to the fixnum method. We use the invokedynamic instruction along with the org/jruby/ir/targets/FixnumObjectSite.bootstrap bootstrap method to find the current definition of the method. When the method runs it returns back an object that implements the IRubyObject interface which allows it to work with the JRuby Java libraries used in the test.invokeOther2:output method.</p>
+<p><amp-img src="../hs-fs/hubfs/rubyinvoke-720x4352f70.png?width=720&amp;name=rubyinvoke-720x435.png" alt="rubyinvoke-720x435" width="720.0" srcset="https://www.bjss.com/hs-fs/hubfs/rubyinvoke-720x435.png?width=360&amp;name=rubyinvoke-720x435.png 360w, https://www.bjss.com/hs-fs/hubfs/rubyinvoke-720x435.png?width=720&amp;name=rubyinvoke-720x435.png 720w, https://www.bjss.com/hs-fs/hubfs/rubyinvoke-720x435.png?width=1080&amp;name=rubyinvoke-720x435.png 1080w, https://www.bjss.com/hs-fs/hubfs/rubyinvoke-720x435.png?width=1440&amp;name=rubyinvoke-720x435.png 1440w, https://www.bjss.com/hs-fs/hubfs/rubyinvoke-720x435.png?width=1800&amp;name=rubyinvoke-720x435.png 1800w, https://www.bjss.com/hs-fs/hubfs/rubyinvoke-720x435.png?width=2160&amp;name=rubyinvoke-720x435.png 2160w" height="435.0" layout="responsive"></amp-img></p>
+<p>However, there are problems with using these JITs as they are optimised for static languages like C# and Java, and the bytecode that is typically generated from these languages. This means they are not really designed for dynamic languages, and some performance problems still exist because certain bytecode sequences generated by the dynamic language toolchains are not always optimised properly by the JIT. To gain higher performance we need to look at writing our own JIT so that we have greater control over the machine code that gets generated, and then ultimately higher performance.</p>
+<p><amp-img src="../hs-fs/hubfs/code-andrew%20bennett-12c37.jpg?width=669&amp;name=code-andrew%20bennett-1.jpg" alt="code-andrew bennett-1" width="669.0" srcset="https://www.bjss.com/hs-fs/hubfs/code-andrew%20bennett-1.jpg?width=335&amp;name=code-andrew%20bennett-1.jpg 335w, https://www.bjss.com/hs-fs/hubfs/code-andrew%20bennett-1.jpg?width=669&amp;name=code-andrew%20bennett-1.jpg 669w, https://www.bjss.com/hs-fs/hubfs/code-andrew%20bennett-1.jpg?width=1004&amp;name=code-andrew%20bennett-1.jpg 1004w, https://www.bjss.com/hs-fs/hubfs/code-andrew%20bennett-1.jpg?width=1338&amp;name=code-andrew%20bennett-1.jpg 1338w, https://www.bjss.com/hs-fs/hubfs/code-andrew%20bennett-1.jpg?width=1673&amp;name=code-andrew%20bennett-1.jpg 1673w, https://www.bjss.com/hs-fs/hubfs/code-andrew%20bennett-1.jpg?width=2007&amp;name=code-andrew%20bennett-1.jpg 2007w" height="687.0" layout="responsive"></amp-img></p>
+<p>The major problem with converting dynamic bytecode to machine code is that machine code is static. Firstly, it is typed; for example, an add instruction will only work with integer values, but it won’t be able to deal with strings. Secondly, it assumes functions and data structures appear in the same place in memory and won’t change. This means it can’t deal with the dynamic aspects of languages, for example, if a new field is added to a class.</p>
+<p>So how do we convert dynamic bytecode into static machine code? While the interpreter has been running the bytecode it records hot regions of bytecode that are run with a specific type. For example, if we had a method that took two arguments and added them together, and this happened a large amount of time with integers. The interpreter would pass this information onto the JIT which would convert the bytecode to machine code, by selecting machine code instructions that are for the specific type we are specializing to, in our example this would be integer add instructions. Checks and guards are also added to the start of machine code to ensure it is only run for that specific data type. If these checks or guards fail, for example, if we tried to pass in strings to our method, we would deoptimize back to the interpreter. The interpreter would then use the bytecode to run this method with the failing arguments.</p>
+<p>This is the approach used by the V8 JavaScript engine used in Node and the Chrome web browser. Its bytecode interpreter is called Ignition and its JIT is called TurboFan. Let’s walk through an example showing the machine code generated by TurboFan for a simple JavaScript program.</p>
+<p><amp-img src="../hs-fs/hubfs/a-345x2169c78.png?width=345&amp;name=a-345x216.png" alt="a-345x216" width="345.0" srcset="https://www.bjss.com/hs-fs/hubfs/a-345x216.png?width=173&amp;name=a-345x216.png 173w, https://www.bjss.com/hs-fs/hubfs/a-345x216.png?width=345&amp;name=a-345x216.png 345w, https://www.bjss.com/hs-fs/hubfs/a-345x216.png?width=518&amp;name=a-345x216.png 518w, https://www.bjss.com/hs-fs/hubfs/a-345x216.png?width=690&amp;name=a-345x216.png 690w, https://www.bjss.com/hs-fs/hubfs/a-345x216.png?width=863&amp;name=a-345x216.png 863w, https://www.bjss.com/hs-fs/hubfs/a-345x216.png?width=1035&amp;name=a-345x216.png 1035w" height="216.0" layout="responsive"></amp-img></p>
+<p>This example has a function called&nbsp;output&nbsp;that adds its two arguments together and appends the result to the end of the array&nbsp;a.&nbsp;&nbsp;We then call this function 10000 times to allow the JIT to be activated to optimize the code.&nbsp;&nbsp;On the right is a snippet of the machine code that is generated by TurboFan.&nbsp;&nbsp;The lines in red show where it is checking the first argument to the method is an integer, and if this fails it calls a function to deoptimize back to the interpreter.&nbsp;&nbsp;The line in green shows that it has made use of the&nbsp;addl&nbsp;x86 machine code instruction to add the two integers together.</p>
+<p>&nbsp;</p>
+<h4>An Alternative Approach</h4>
+<p>An alternative JITing approach is done by PyPy.&nbsp;PyPy is written in Python and takes a program written in RPython and converts it to machine code. RPython is a restricted form of Python that makes it easy to infer the types used in the program. There are interpreters written in RPython for Python, Ruby and PHP. PyPy can also add a Tracing JIT to the interpreter. This looks for loops in the user’s code. When this happens a trace of the interpreter operations during the loop is recorded. This trace is then converted to machine code and executed. Guards are used to check that the objects used in the loop have not changed their state. If they do, PyPy deoptimizes back to the interpreter.</p>
+<p>Finally, instead of writing an entire toolchain from scratch could we just change the JIT in an existing toolchain? GraalVM is a project to do just that. It replaces the JVMs JIT with a JIT written in Java. It is currently being used for a number of reasons. Firstly, Ahead Of Time (AOT) compilation of Java classes to produce native images to improve startup performance. Secondly, to run JavaScript, Python, Java, R, C, C++ and Ruby on the same JVM via the Truffle framework. And finally, zero-overhead interoperability between these programming languages, by using the Polygot library.</p>
+<p>Let’s look in more detail at Truffle. This is a Java framework for writing AST interpreters for programming languages. Using the framework we write code to deal with each of the different types of AST nodes. For example add, if statements or calling methods. When an AST is run on the AST interpreter the AST nodes will use a technique called partial evaluation to specialise themselves. This means the nodes will specialise themselves to the current state of the program i.e. types of function arguments or which path is taken in an if statement. When the bytecode and fields for these AST nodes are sent to the GraalVM JIT it will assume they are static and won’t change.&nbsp;&nbsp;It will then produce machine code based on these assumptions. If the assumptions are invalidated, we deoptimize back to the AST interpreter which can then specialise the AST nodes again. Currently, Truffle is experimental for Ruby and Python and is not designed for production use yet.</p>
+<p>&nbsp;</p>
+<h4>In Summary</h4>
+<p>This article has covered how different dynamic languages can produce high-performance code. There has been a large amount of recent work on performance improvements to dynamic languages, and it will be interesting to see if this allows the use of them to increase, both standalone and with traditional static languages via polyglot programming.</p></span>
+        </div>
+        <div class="full-link">
+          <a href="how-can-high-performance-code-be-produced-from-dynamic-languages.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptqf6d5.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Dynamic+Languages%3A+How+Can+High+Performance+Code+Be+Produced%3F&amp;pi=50034951477&amp;a=9399653&amp;nc=true&amp;cgi=48313963830&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.bjss.com/engineering-insights/how-can-high-performance-code-be-produced-from-dynamic-languages?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:54:34 GMT -->
+</html>

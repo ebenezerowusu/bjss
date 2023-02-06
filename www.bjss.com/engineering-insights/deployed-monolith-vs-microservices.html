@@ -1,0 +1,585 @@
+<!doctype html><html lang="en">
+<!-- Mirrored from www.bjss.com/engineering-insights/deployed-monolith-vs-microservices by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:43:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Deployed: Monolith vs Microservices</title>
+    <link rel="shortcut icon" href="../hubfs/BJSSfav-01.png">
+    <meta name="description" content="Jonathan Gill has worked for BJSS for over 15 years. This blog discusses opinions around the often discussed topic of Monolith vs Microservice.">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <meta property="og:description" content="Jonathan Gill has worked for BJSS for over 15 years. This blog discusses opinions around the often discussed topic of Monolith vs Microservice.">
+    <meta property="og:title" content="Deployed: Monolith vs Microservices">
+    <meta name="twitter:description" content="Jonathan Gill has worked for BJSS for over 15 years. This blog discusses opinions around the often discussed topic of Monolith vs Microservice.">
+    <meta name="twitter:title" content="Deployed: Monolith vs Microservices">
+
+    
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365676184/1622442584700/BJSS_May2021/css/layout.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365604017/1671180309381/BJSS_May2021/css/main.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Lato:400,700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,200,300,400,500,600,700,800,900%7CDroid+Serif:400,700%7CMontserrat:100,200,300,400,500,600,700,800,900%7CLato:300,400,700,900%7CAnton%7CBarlow+Condensed:100,200,300,400,500,600,700%7CSource+Code+Pro:300,400,500,600,700">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365604651/1630588080644/BJSS_May2021/css/theme-overrides.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844591/module_52098159278_language_switcher.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/48374514008/1642518516330/module_48374514008_Engineering_Insights_Post_Banner.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/48372652123/1664435298183/module_48372652123_Engineering_Insights_Post_Content.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/47366505811/1642518516986/module_47366505811_Follow_Us.min.css">
+    
+
+    
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script id="Cookiebot" src="../../consent.cookiebot.com/uc.js" data-cbid="1e8015ed-e92b-4a8a-81af-cd363b75ae3f" data-blockingmode="auto" type="text/javascript"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKPDZ5X');</script>
+<!-- End Google Tag Manager -->
+<script>
+(function(g,e,o,t,a,r,ge,tl,y,s){
+g.getElementsByTagName(o)[0].insertAdjacentHTML('afterbegin','<style id="georedirect1630578272721style">body{opacity:0.0 !important;}</style>');
+s=function(){g.getElementById('georedirect1630578272721style').innerHTML='body{opacity:1.0 !important;}';};
+t=g.getElementsByTagName(o)[0];y=g.createElement(e);y.async=true;
+y.src='https://g792337340.co/gr?id=-Mia1T_TRP_QsDX3xGqm&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);
+t.parentNode.insertBefore(y,t);y.onerror=function(){s()};
+georedirect1630578272721loaded=function(redirect){var to=0;if(redirect){to=5000};
+setTimeout(function(){s();},to)};
+})(document,'script','head');
+</script>
+<meta name="google-site-verification" content="XE271XJfF68am7oHm2x4veUqLyGeIVskmS7V3t-JVh0">
+
+<link rel="amphtml" href="deployed-monolith-vs-microservices3d9f.html?hs_amp=true">
+
+<meta property="og:image" content="https://www.bjss.com/hubfs/Feature_Monolith-vs-Microservices.jpg#keepProtocol">
+<meta property="og:image:width" content="866">
+<meta property="og:image:height" content="640">
+
+<meta name="twitter:image" content="https://www.bjss.com/hubfs/Feature_Monolith-vs-Microservices.jpg#keepProtocol">
+
+
+<meta property="og:url" content="https://www.bjss.com/engineering-insights/deployed-monolith-vs-microservices">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="deployed-monolith-vs-microservices.html">
+
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/rss+xml" href="rss.xml">
+<meta name="twitter:domain" content="www.bjss.com">
+<script src="../../platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+</script>
+
+<meta http-equiv="content-language" content="en">
+
+
+
+
+
+
+    
+  <meta name="generator" content="HubSpot"></head>
+  <body>
+    <div class="body-wrapper   hs-content-id-50034951481 hs-blog-post hs-blog-id-48313963830">
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/header.html"><header class="header">
+  <div class="main-header">
+    <div class="header__container">
+      <div class="headerLogo">
+        
+        <div id="hs_cos_wrapper_header_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  <span id="hs_cos_wrapper_header_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../index.html" id="hs-link-header_logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="../hubfs/bjss_logo_25_Blue%26Navy%20(RGB).svg" class="hs-image-widget " style="width:100px;border-width:0px;border:0px;" width="100" alt="bjss_logo_25_Blue&amp;Navy (RGB)" title="bjss_logo_25_Blue&amp;Navy (RGB)"></a></span>
+</div>
+      </div>
+      <div class="headerNavigation">
+        <div class="custom-menu-primary">
+          <span id="hs_cos_wrapper_header_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_header_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47367390570" aria-label="Navigation Menu">
+ <ul role="menu" class="active-branch">
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../about/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">About BJSS</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../our-work.html" role="menuitem">Our Work</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../community/index.html" role="menuitem">BJSS in the Community</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../governance/index.html" role="menuitem">Governance</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../our-sustainability.html" role="menuitem">Our Sustainability</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../greenfield.html" role="menuitem">Green Field</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../services/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Our Services</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../strategy-and-transformation.html" role="menuitem">Strategy &amp; Transformation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../design/index.html" role="menuitem">Design &amp; Innovation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../technology-engineering/index.html" role="menuitem">Technology &amp; Engineering</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../managed-service/index.html" role="menuitem">Managed Service</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../low-code-and-automation.html" role="menuitem">Low Code &amp; Automation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../data/index.html" role="menuitem">Data &amp; AI</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../cloud/index.html" role="menuitem">Cloud &amp; Platform</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../cyber-security.html" role="menuitem">Cyber Security</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../sustainability.html" role="menuitem">Sustainability</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../industries/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Your Industry</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../energy-commodities-utilities.html" role="menuitem">Energy, Commodities &amp; Utilities</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../financial-services.html" role="menuitem">Financial Services</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../health/index.html" role="menuitem">Health &amp; Social Care</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../public/index.html" role="menuitem">Public Sector</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../retail/index.html" role="menuitem">Retail &amp; Consumer Markets</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../enterprise-agile.html" role="menuitem">Enterprise Agile®</a></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch" role="none"><a href="../insights/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Insights</a>
+   <ul role="menu" class="hs-menu-children-wrapper active-branch">
+    <li class="hs-menu-item hs-menu-depth-2 active active-branch" role="none"><a href="../engineering-insights.html" role="menuitem">Engineering Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../industry-insights.html" role="menuitem">Industry Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../news.html" role="menuitem">News Centre</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../events/index.html" role="menuitem">Events</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../future-of-retail/index.html" role="menuitem">Future of Retail</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../careers.html" role="menuitem">Careers</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../contact/index.html" role="menuitem">Contact</a></li>
+ </ul>
+</div></span>
+        </div>
+        <div class="custom-menu-primary">
+          <div id="hs_cos_wrapper_module_16279825775607" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16279825775607_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="language_switcher"></span></div>
+        </div>
+        <div class="search-icon">
+          <span class="search-icon-in"></span>
+        </div>
+        <div class="mobile-navigation">
+          <div class="mobile-navigation-inner">
+            <span class="mobile-trigger"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search-outer">
+    <div class="header__container">
+      <div class="hs-search-field">
+        <div class="hs-search-field__bar">
+          <form action="https://www.bjss.com/hs-search-results">
+            <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search …">
+          </form>
+          <span class="close-search"></span>
+        </div>
+        <ul class="hs-search-field__suggestions"></ul>
+      </div>
+      
+    </div>
+  </div>
+</header></div>
+      
+
+      
+<main class="body-container-wrapper blog blog_post engineering_post">
+  <div class="blog-wrapper">
+    <div id="hs_cos_wrapper_post_banner" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="blog-banner post-banner engineering__banner" style="background-image: url(../hubfs/Banner_Monolith-vs-Microservices.jpg)">
+  <div class="content-wrapper">
+    <div class="post-banner-col post-banner-col7">
+      <div class="post-banner-rich-text">
+        <h4><span id="hs_cos_wrapper_name" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="text">Deployed: Monolith vs Microservices</span></h4>
+        <p>By Jonathan Gill, Technical Architect, BJSS</p>
+      </div>
+    </div>
+    
+    <div class="post-banner-col post-banner-col5">
+      <div class="post-banner-image">
+        <span class="post-banner-img">
+          <img src="../hubfs/Jonathan-Gill.jpg" alt="Jonathan Gill">
+        </span>
+      </div>
+    </div>
+    
+  </div>
+</div></div>
+  </div>
+  <div class="blog-single-wrapper">
+    <div class="content-wrapper ">
+      <div class="blog-post__body">
+        <span id="hs_cos_wrapper_post_body" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="rich_text"><h4><span style="color: #31b595;">Background...</span></h4>
+<div style="height: 12px;">&nbsp;</div>
+<!--more-->
+<p>Jon has been designing and building solutions for over 15 years, focusing on delivering quality and pragmatic solutions that meet the needs of the client. Jon has worked across many domains, including Public Sector, Finance, National Security and Utilities.</p>
+<p>Away from the office Jon enjoys endurance fitness events, particularly multi-disciplinary events and he is currently training for his first Ironman.</p>
+<p>Following our first <a href="deployed-containerisation.html" rel="noopener" target="_blank"><span style="font-weight: bold;">Deployed article on Containerisation</span></a>, and the subsequent <strong><a href="#podcast" rel="noopener noreferrer">podcast</a></strong>, this episode discusses opinions on the oft-discussed Monolith vs Microservice.</p></span>
+      </div>
+    </div>
+  </div>
+  <div id="hs_cos_wrapper_post_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="enginnering-post-content">
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-bg" style="background-image: url(../hubfs/stonehenge-3160614_960_720-871x600-1.jpg);">
+
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4><span style="color: #ffffff;">Perception</span></h4>
+<div style="height: 12px;">&nbsp;</div>
+<p>It’s almost accepted wisdom that Microservice architectures&nbsp;are universally good. Non-microservice architectures are seen as being Monolithic&nbsp;and&nbsp;exhibiting (among other things):</p>
+<ul>
+<li>A lack of agility</li>
+<li>Hidden complexity due to opaque design and tight coupling</li>
+<li>Uncertainty when estimating time and costs associated with change.</li>
+</ul>
+<p>This leads organisations to&nbsp;fear&nbsp;investing in&nbsp;change&nbsp;and consequently inhibits innovation&nbsp;– a key business differentiator in today’s digital age.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(4, 30, 66, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4><span style="color: #ffffff;">What IS the BJSS view on Monoliths and Microservices?</span></h4>
+<div style="height: 12px;">&nbsp;</div>
+<p>We learn at pace about technologies and trends by being at the coal face of large-scale deliveries. Any opportunity to plumb the depths of BJSS's practitioners’ real-world experience is worth taking.</p>
+<p><strong>So we asked.</strong></p>
+<p>We talked with our technical people across a range of different roles; platform engineers, developers, testers and architects. We interviewed those from infrastructure and sysadmin backgrounds as well as those with a background in software engineering.</p>
+<p>The answer turned out to be a familiar one. As is often the case, the journey to the answer proved far more valuable.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-bg" style="background-image: url(../hubfs/gray-monolith-on-body-of-water-under-white-sky-800x450-1.jpg);">
+
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4><span style="color: #ffffff;">Recap</span></h4>
+<div style="height: 12px;">&nbsp;</div>
+<p>Many areas of technology and IT overload phrases and concepts, so let’s briefly describe&nbsp;what  we mean when discussing  Monoliths and Microservices.</p>
+<p>A Monolithic application is characterised by a single, often large code base which provides all the functionality in a single tier  encompassing: User Interfaces, Business Logic, Data Access and cross-cutting concerns such as Logging and Security.</p>
+<p>Microservices in contrast represent a very different approach.  A Microservice architecture decomposes the problem into a number of independent,  appropriately sized, discrete services.  Crucially the services can be developed, tested  and deployed independently.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-parallex">
+    <div class="parallex-bg-wrap">
+      <div class="parallex-background" style="background-image: url(../hubfs/Engineering-Banner-12.jpg);"></div>
+    </div>
+    <div class="page-center">
+      <div class="enginnering-post-inner-row">
+        <div class="enginnering-post-rich-tesx">
+          <h4><span style="color: #31b595;">Monolith: The Verdict</span></h4>
+<div style="height: 12px;">&nbsp;</div>
+<p>The archetypal monolith encompasses a raft of areas of responsibility,&nbsp;covering all&nbsp;user journeys&nbsp;and use cases.&nbsp;New functionality is often bolted on over time, sometimes complementing the initial design and other times in-spite of it.</p>
+<p><strong>“Monoliths are generally bad - they  become too large and unwieldy, but things don't usually start with the intention of being monoliths.”</strong></p>
+<p>Considering just three of the 'ilities:</p>
+<p><strong>Responsibility</strong>: Monoliths by definition represent an aggregation of all the things an application or system needs to do. By their nature therefore, they are responsible for a potentially large and varied number of actions. This leads to a proliferation of exposed interfaces, interdependencies and consequently poor separation of concerns.</p>
+<p><strong>Maintainability</strong>: Monoliths often evolve over time&nbsp;(years). With new functionality being introduced,&nbsp;the&nbsp;code base continues to expand&nbsp;with inconsistent adherence to coding standards. Code duplication rather than re-use is&nbsp;common,&nbsp;and the testability of solutions&nbsp;becomes increasingly difficult.&nbsp;Tight coupling between constituent parts&nbsp;of&nbsp;a&nbsp;monolith&nbsp;result in changes to one component affecting&nbsp;seemingly&nbsp;unconnected components&nbsp;(temporal coupling).</p>
+<p><strong>Deployability:</strong> Deploying updates to a monolith requires the full application to be&nbsp;rebuilt, retested and&nbsp;deployed. This is a daunting task in many cases, frequently compounded by a lack of a robust and comprehensive CI/CD pipeline.&nbsp;Regression test suites (if they exist) are too time consuming to support a ‘fail-fast’ methodology&nbsp;all of which&nbsp;contributes&nbsp;to&nbsp;undesirably&nbsp;long&nbsp;Cycle and Lead times.</p>
+<p>However, for those having first-hand experience of the alternatives it’s clear Monoliths can still have their place.</p>
+<p><strong>“I think monoliths are misunderstood and not always bad."</strong></p>
+<p>"Don’t solve bad engineering with bad architecture.”</p>
+<p>Experience has taught us that&nbsp;it’s not&nbsp;Monoliths that are the&nbsp;real&nbsp;problem, rather how they have been architected.</p>
+<p>A well-architected solution need not be microservice-based. A&nbsp;well-built&nbsp;application,&nbsp;adopting good software design and development methodologies&nbsp;can form the basis of a solution that offers many of the&nbsp;purported&nbsp;advantages of microservices.</p>
+<p><strong>“Dogma does not beat good design&nbsp;– or rather, it shouldn’t.”</strong></p>
+<p>The&nbsp;backlash against Monoliths has been driven in part by&nbsp;organisations suffering from failed IT projects,&nbsp;delays and cost overruns.&nbsp;Microservices have become the de-facto&nbsp;solution in many places.</p>
+<p>This dogmatic&nbsp;approach&nbsp;masks the&nbsp;underlying issue&nbsp;which is often one of&nbsp;insufficient&nbsp;software architectural oversight when scoping and designing systems.&nbsp;Blindly adopting Microservice architectures will not&nbsp;address the issues Monoliths are perceived to cause, and if executed poorly could well result in an even more problematic solution.</p>
+<h4>&nbsp;</h4>
+<h4><span style="color: #31b595;">Microservices: The Verdict</span></h4>
+<div style="height: 12px;">&nbsp;</div>
+<p><strong>"Microservices are a design principle for creating distributed, highly scalable, easily extendable systems.”</strong></p>
+<p><strong>“Loose coupling between services allows services to be independently developed, maintained, and scaled with minimal impact.”</strong></p>
+<p>Looking at the same ‘ilities as before, this time from the perspective of Microservices:</p>
+<p><strong>Responsibility</strong>:&nbsp;Architecture is comprised of&nbsp;a number of&nbsp;independent&nbsp;small&nbsp;services, each having a single responsibility, areas of concern are readily&nbsp;isolated by design&nbsp;and dependencies are abstracted from the implementation.</p>
+<p>&nbsp;</p>
+<p><strong><img src="../hs-fs/hubfs/13109673843_f002b5be271024x724754e.jpg?width=1024&amp;name=13109673843_f002b5be271024x724.jpg" alt="13109673843_f002b5be271024x724" width="1024" loading="lazy" style="width: 1024px;" srcset="https://www.bjss.com/hs-fs/hubfs/13109673843_f002b5be271024x724.jpg?width=512&amp;name=13109673843_f002b5be271024x724.jpg 512w, https://www.bjss.com/hs-fs/hubfs/13109673843_f002b5be271024x724.jpg?width=1024&amp;name=13109673843_f002b5be271024x724.jpg 1024w, https://www.bjss.com/hs-fs/hubfs/13109673843_f002b5be271024x724.jpg?width=1536&amp;name=13109673843_f002b5be271024x724.jpg 1536w, https://www.bjss.com/hs-fs/hubfs/13109673843_f002b5be271024x724.jpg?width=2048&amp;name=13109673843_f002b5be271024x724.jpg 2048w, https://www.bjss.com/hs-fs/hubfs/13109673843_f002b5be271024x724.jpg?width=2560&amp;name=13109673843_f002b5be271024x724.jpg 2560w, https://www.bjss.com/hs-fs/hubfs/13109673843_f002b5be271024x724.jpg?width=3072&amp;name=13109673843_f002b5be271024x724.jpg 3072w" sizes="(max-width: 1024px) 100vw, 1024px"></strong></p>
+<p>&nbsp;</p>
+<p><strong>Maintainability</strong>:&nbsp;A service’s code base is relatively small and focussed on a single domain. This&nbsp;yields&nbsp;more tractable code which is easier to PR and well suited to&nbsp;analysis tools providing actionable insights. Coding standards are easier to&nbsp;adopt,&nbsp;and re-use is&nbsp;encouraged&nbsp;through use of other&nbsp;loosely coupled&nbsp;services.</p>
+<p><strong>Deployability</strong>:&nbsp;Microservices are typified by incremental, small, fast, independent deployments, orchestrated by solid DevOps&nbsp;principles&nbsp;delivered&nbsp;by&nbsp;CI/CD pipelines.&nbsp;Regression tests run in a timely fashion supporting a ‘fail-fast’ way of working&nbsp;and allow for short Cycle and Lead times.</p>
+<p>The word Monolith has become a shorthand for large intractable systems consumed with technical debt. However, BJSS has been working with Microservice architectures for long enough to understand that a Microservice architecture can have a cost.</p>
+<p><strong>"Microservices do not reduce complexity, they just move the complexity&nbsp;elsewhere.”</strong></p>
+<p>That cost manifests itself as solution complexity.&nbsp;The theme of complexity was a common one in our research and covers such aspects as: service interdependency, transactional operations, service version approaches, security and local development.</p>
+<p><strong>“Most projects are not&nbsp;Netflix or Amazon and do not have their requirements.”</strong></p>
+<p>Is that additional complexity worth it? Well that depends on the problem in hand. Netflix and Amazon are both renowned for their&nbsp;advocacy&nbsp;and&nbsp;adoption of Microservice architectures, but as the quote&nbsp;suggests, few projects have similar requirements to theirs, so with that in mind:</p>
+<p><strong>“Microservices should not be the default answer.”</strong></p>
+<p>Microservices&nbsp;introduce complexity, however they have&nbsp;potential to provide an architecture that enables&nbsp;a business to respond to change quickly and safely.&nbsp;If agility&nbsp;and innovation are&nbsp;key,&nbsp;then microservices may&nbsp;well&nbsp;be&nbsp;the&nbsp;ideal&nbsp;fit&nbsp;if you’re able to amortize the cost of the complexity&nbsp;over&nbsp;the lifetime of&nbsp;a&nbsp;project.</p>
+<p>&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(4, 30, 66, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4>Wrap up</h4>
+<div>&nbsp;</div>
+<p><strong>Microservice architectures can provide&nbsp;advantages, however&nbsp;realising those advantages comes at&nbsp;the&nbsp;cost of increased solution complexity. Many projects, particularly those deployed into change-heavy organisations&nbsp;repay the costs many times over,&nbsp;making the investment justified and essential.</strong></p>
+<p>Key is understanding the problem to be solved and architecting the&nbsp;necessary and sufficient&nbsp;solution. Delivering an elegantly architected microservices-based solution nine months after the competition&nbsp;has&nbsp;acquired&nbsp;a&nbsp;majority share of a&nbsp;new market&nbsp;is folly.</p>
+<p>Monolith vs Microservice? On reflection&nbsp;it’s&nbsp;not really&nbsp;the right&nbsp;question,&nbsp;the answer however is:&nbsp; It doesn’t matter what you call it, architect the right solution, one&nbsp;that&nbsp;meets&nbsp;the client’s needs&nbsp;and do not be driven by architectural hype, fads and&nbsp;dogma.</p>
+<p><strong>“Architectural and software engineering purism just burns money.”</strong></p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content " style="background-color: rgba(#null, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4><span style="color: #041e42;">Listen to the podcast...</span></h4>
+<div><span style="color: #041e42;">&nbsp;</span></div>
+<p><span style="color: #041e42;">In this first episode of the BJSS Deployed Podcast, Lee Crossley and John Gill discuss the pros and cons of monolithic vs microservices architectures based on experiences gained on a range of recent engagements.<br>&nbsp;</span></p>
+<div class="hs-embed-wrapper" data-service="buzzsprout" data-script-embed="true" data-responsive="true" style="position: relative; overflow: hidden; width: 100%; height: auto; padding: 0px; max-width: 285px; min-width: 256px; display: inline-block; margin: auto 0px; max-height: 204px;"><div class="hs-embed-content-wrapper"><div id="buzzsprout-player-4143503">&nbsp;</div>
+<script src="../../www.buzzsprout.com/250687/4143503-bjss-deployed-episode-1-monolith-vs-microservices0775.js?container_id=buzzsprout-player-4143503&amp;player=small" type="text/javascript" charset="utf-8"></script></div></div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <p><a href="../engineering-roles.html" rel="noopener"><img src="../hs-fs/hubfs/Lead-magnet-recruitment7ef7.png?width=1200&amp;name=Lead-magnet-recruitment.png" alt="Lead-magnet-recruitment" width="1200" loading="lazy" style="width: 1200px;" srcset="https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=600&amp;name=Lead-magnet-recruitment.png 600w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=1200&amp;name=Lead-magnet-recruitment.png 1200w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=1800&amp;name=Lead-magnet-recruitment.png 1800w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=2400&amp;name=Lead-magnet-recruitment.png 2400w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=3000&amp;name=Lead-magnet-recruitment.png 3000w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=3600&amp;name=Lead-magnet-recruitment.png 3600w" sizes="(max-width: 1200px) 100vw, 1200px"></a></p>
+<p>&nbsp;</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+</div></div>
+</main>
+
+
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/footer.html"><footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__container main__footer">
+      <div class="footer__column footer__column1">
+        <div class="footerTitle">
+          <div id="hs_cos_wrapper_footerTitle" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footerTitle_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h4 style="color: #fff">EXPANDING<br>POSSIBILITIES</h4></span></div>
+        </div>
+        <div class="footerSocial">
+          <div id="hs_cos_wrapper_footerSocial" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><ul class="social-share">
+  <li class="socil-icon social-twitter">
+    <a href="https://twitter.com/bjssltd" title="Follow on Twitter" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-linkedin">
+    <a href="https://uk.linkedin.com/company/bjss" title="Follow on LinkedIn" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-instagram">
+    <a href="http://www.instagram.com/bjssltd" title="Follow on Instagram" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-youtube">
+    <a href="https://www.youtube.com/channel/UCUWB9XUNt_g_YGWIjneXuSg" title="Follow on Youtube" target="_blank" class="icon"></a>
+  </li>
+</ul></div>
+        </div>
+        <div class="footerImage">
+          <div id="hs_cos_wrapper_footerImage" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_footerImage_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="../hs-fs/hubfs/Princess-Award_%26_Queens-Awardc48d.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png" class="hs-image-widget " width="1000" height="563" alt="Princess-Award_&amp;_Queens-Award" title="Princess-Award_&amp;_Queens-Award" srcset="https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=500&amp;height=282&amp;name=Princess-Award_%26_Queens-Award.png 500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png 1000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1500&amp;height=845&amp;name=Princess-Award_%26_Queens-Award.png 1500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2000&amp;height=1126&amp;name=Princess-Award_%26_Queens-Award.png 2000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2500&amp;height=1408&amp;name=Princess-Award_%26_Queens-Award.png 2500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=3000&amp;height=1689&amp;name=Princess-Award_%26_Queens-Award.png 3000w" sizes="(max-width: 1000px) 100vw, 1000px"></span></div>
+        </div>
+      </div>
+      <div class="footer__column footer__column2">
+        <div class="footer__column_inner">
+          <div class="footer-navigation">
+            <span id="hs_cos_wrapper_footer_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_footer_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47366551648" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../contact/index.html" role="menuitem">Contact BJSS</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../news.html" role="menuitem">News</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../governance/index.html" role="menuitem">Governance</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../website-privacy-policy/index.html" role="menuitem">Privacy notice</a></li>
+ </ul>
+</div></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__column footer__column3">
+        <div class="footer__column_inner">
+          <div class="footer__search">
+            <div class="hs-search-field">
+              <div class="hs-search-field__bar">
+                <form action="https://www.bjss.com/hs-search-results">
+                  <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search BJSS">
+                  <input type="submit" value="Search" class="searchsubmit" style="">
+                </form>
+              </div>
+              <ul class="hs-search-field__suggestions"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__container copyright__footer">
+      <div class="footer__copyright">
+        <div id="hs_cos_wrapper_footer_copyright_text" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer_copyright_text_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="text">&nbsp;© 2023 BJSS Limited. Registered in England with company number 2777575 VAT Number GB613295452.&nbsp;‘Enterprise Agile®’ and ‘BJSS Enterprise Agile®’ are registered trademarks of BJSS Limited.</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<span class="back-to-top"></span></div>
+      
+    </div>
+    <script src="../hs/hsstatic/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+<script src="../hs/hsstatic/jquery-libs/static-1.4/jquery-migrate/jquery-migrate-1.2.1.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+<script>
+(function () {
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST.html', '/_hcms/perf', true /*async*/);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.onreadystatechange = function () {
+                // do nothing.
+            };
+            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            function populateNetworkInfo(name, connection, info) {
+                if (name in connection) {
+                    info[name] = connection[name];
+                }
+            }
+            var networkInfo = {};
+            if (connection) {
+                ['type', 'effectiveType', 'downlink', 'rtt'].forEach(function(name) {
+                    populateNetworkInfo(name, connection, networkInfo);
+                });
+            }
+            var perfData = {
+                url: location.href,
+                portal: 9399653,
+                content: 50034951481,
+                group: -1,
+                connection: networkInfo,
+                timing: performance.timing
+            };
+            xhr.send(JSON.stringify(perfData));
+        }, 3000);  // Execute this 3 seconds after onload.
+    });
+})();
+</script>
+
+<script src="../hs-fs/hub/9399653/hub_generated/template_assets/47365698976/1645632663800/BJSS_May2021/js/main.min.js"></script>
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script>
+
+<script src="../hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+<script src="../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844495/module_52098159278_language_switcher.min.js"></script>
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/www.bjss.com\/engineering-insights\/deployed-monolith-vs-microservices"]);
+_hsq.push(["setPageId", "50034951481"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 50034951481,
+    "legacyPageId": "50034951481",
+    "contentFolderId": null,
+    "contentGroupId": 48313963830,
+    "abTestId": null,
+    "languageVariantId": 50034951481,
+    "languageCode": "en",
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="../hs/scriptloader/9399653.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    ticks: 1674411467098,
+    page_id: 50034951481,
+    
+    content_group_id: 48313963830,
+    portal_id: 9399653,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en",
+    analytics_page_type: "blog-post",
+    analytics_page_id: "50034951481",
+    category_id: 3,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+<script defer src="../hs/hsstatic/HubspotToolsMenu/static-1.143/js/index.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKPDZ5X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ <!-- End Google Tag Manager (noscript) -->
+
+
+<div id="fb-root"></div>
+ <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../../connect.facebook.net/en_GB/all.js#xfbml=1&status=0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ 
+
+
+  
+</body>
+<!-- Mirrored from www.bjss.com/engineering-insights/deployed-monolith-vs-microservices by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:43:32 GMT -->
+</html>

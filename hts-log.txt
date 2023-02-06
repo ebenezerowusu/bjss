@@ -1,0 +1,711 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 25 Jan 2023 10:21:28 at https://www.bjss.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.bjss.com/ -O1 "C:\My Web Sites\bjss" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+10:22:06	Error: 	"Bad Request" (400) at link https://www.googletagmanager.com/gtm.js?id= (from https://www.bjss.com/)
+10:31:37	Warning: 	Found for https://www.bjss.com/enterprise-agile/?hsLang=en-gb
+10:31:37	Warning: 	File has moved from https://www.bjss.com/enterprise-agile/?hsLang=en-gb to https://www.bjss.com/enterprise-agile
+10:31:38	Warning: 	Moved Permanently for https://www.bjss.com/energy/?hsLang=en-gb
+10:31:38	Warning: 	File has moved from https://www.bjss.com/energy/?hsLang=en-gb to https://www.bjss.com/commodities-utilities?hsLang=en-gb
+10:31:40	Warning: 	Found for https://www.bjss.com/financial-services/?hsLang=en-gb
+10:31:40	Warning: 	File has moved from https://www.bjss.com/financial-services/?hsLang=en-gb to https://www.bjss.com/financial-services
+10:31:40	Warning: 	Found for https://www.bjss.com/our-work/?hsLang=en-gb
+10:31:40	Warning: 	File has moved from https://www.bjss.com/our-work/?hsLang=en-gb to https://www.bjss.com/our-work
+10:31:40	Warning: 	Found for https://www.bjss.com/news/bjss-announced-as-winners-at-the-uk-it-industry-awards/?hsLang=en-gb
+10:31:40	Warning: 	File has moved from https://www.bjss.com/news/bjss-announced-as-winners-at-the-uk-it-industry-awards/?hsLang=en-gb to https://www.bjss.com/news/bjss-announced-as-winners-at-the-uk-it-industry-awards/
+10:31:46	Warning: 	Found for https://www.bjss.com/community/?hsLang=en-gb
+10:31:46	Warning: 	File has moved from https://www.bjss.com/community/?hsLang=en-gb to https://www.bjss.com/community/
+10:31:46	Warning: 	Found for https://www.bjss.com/events/?hsLang=en-gb
+10:31:46	Warning: 	File has moved from https://www.bjss.com/events/?hsLang=en-gb to https://www.bjss.com/events/
+10:31:46	Warning: 	Found for https://www.bjss.com/joinus/?hsLang=en-gb
+10:31:46	Warning: 	File has moved from https://www.bjss.com/joinus/?hsLang=en-gb to https://www.bjss.com/joinus/
+10:31:49	Error: 	"Not Found" (404) at link https://www.bjss.com/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/)
+10:31:49	Error: 	"Not Found" (404) at link https://www.bjss.com/POST (from https://www.bjss.com/)
+10:31:49	Warning: 	Temporary Redirect for https://www.bjss.com/?hsLang=en-au
+10:31:49	Warning: 	File has moved from https://www.bjss.com/?hsLang=en-au to https://www.bjss.com/en-au/
+10:31:49	Warning: 	Found for https://www.bjss.com/about/?hsLang=en-au
+10:31:49	Warning: 	File has moved from https://www.bjss.com/about/?hsLang=en-au to https://www.bjss.com/about/
+10:31:49	Warning: 	Found for https://www.bjss.com/enterprise-agile/?hsLang=en-au
+10:31:49	Warning: 	File has moved from https://www.bjss.com/enterprise-agile/?hsLang=en-au to https://www.bjss.com/enterprise-agile
+10:31:49	Warning: 	Found for https://www.bjss.com/services/?hsLang=en-au
+10:31:49	Warning: 	File has moved from https://www.bjss.com/services/?hsLang=en-au to https://www.bjss.com/services/
+10:31:49	Warning: 	Moved Permanently for https://www.bjss.com/energy/?hsLang=en-au
+10:31:49	Warning: 	File has moved from https://www.bjss.com/energy/?hsLang=en-au to https://www.bjss.com/commodities-utilities?hsLang=en-au
+10:31:51	Warning: 	Found for https://www.bjss.com/financial-services/?hsLang=en-au
+10:31:51	Warning: 	File has moved from https://www.bjss.com/financial-services/?hsLang=en-au to https://www.bjss.com/financial-services
+10:31:51	Warning: 	Found for https://www.bjss.com/health/?hsLang=en-au
+10:31:51	Warning: 	File has moved from https://www.bjss.com/health/?hsLang=en-au to https://www.bjss.com/health/
+10:31:51	Warning: 	Found for https://www.bjss.com/public/?hsLang=en-au
+10:31:51	Warning: 	File has moved from https://www.bjss.com/public/?hsLang=en-au to https://www.bjss.com/public/
+10:31:51	Warning: 	Found for https://www.bjss.com/retail/?hsLang=en-au
+10:31:51	Warning: 	File has moved from https://www.bjss.com/retail/?hsLang=en-au to https://www.bjss.com/retail/
+10:31:51	Warning: 	Found for https://www.bjss.com/our-work/?hsLang=en-au
+10:31:51	Warning: 	File has moved from https://www.bjss.com/our-work/?hsLang=en-au to https://www.bjss.com/our-work
+10:31:51	Warning: 	Found for https://www.bjss.com/news/bjss-announced-as-winners-at-the-uk-it-industry-awards/?hsLang=en-au
+10:31:51	Warning: 	File has moved from https://www.bjss.com/news/bjss-announced-as-winners-at-the-uk-it-industry-awards/?hsLang=en-au to https://www.bjss.com/news/bjss-announced-as-winners-at-the-uk-it-industry-awards/
+10:31:54	Warning: 	Found for https://www.bjss.com/community/?hsLang=en-au
+10:31:54	Warning: 	File has moved from https://www.bjss.com/community/?hsLang=en-au to https://www.bjss.com/community/
+10:31:54	Warning: 	Found for https://www.bjss.com/events/?hsLang=en-au
+10:31:54	Warning: 	File has moved from https://www.bjss.com/events/?hsLang=en-au to https://www.bjss.com/events/
+10:31:54	Warning: 	Found for https://www.bjss.com/joinus/?hsLang=en-au
+10:31:54	Warning: 	File has moved from https://www.bjss.com/joinus/?hsLang=en-au to https://www.bjss.com/joinus/
+10:31:54	Warning: 	Found for https://www.bjss.com/website-privacy-policy/?hsLang=en-au
+10:31:54	Warning: 	File has moved from https://www.bjss.com/website-privacy-policy/?hsLang=en-au to https://www.bjss.com/website-privacy-policy/
+10:31:54	Error: 	"Not Found" (404) at link https://www.bjss.com/en-au/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/en-au/)
+10:31:54	Error: 	"Not Found" (404) at link https://www.bjss.com/en-au/POST (from https://www.bjss.com/en-au/)
+10:31:54	Warning: 	Temporary Redirect for https://www.bjss.com/?hsLang=en-us
+10:31:54	Warning: 	File has moved from https://www.bjss.com/?hsLang=en-us to https://www.bjss.com/en-us/
+10:32:00	Warning: 	Found for https://www.bjss.com/enterprise-agile/?hsLang=en-us
+10:32:00	Warning: 	File has moved from https://www.bjss.com/enterprise-agile/?hsLang=en-us to https://www.bjss.com/en-us/enterprise-agile
+10:32:00	Warning: 	Found for https://www.bjss.com/services/?hsLang=en-us
+10:32:00	Warning: 	File has moved from https://www.bjss.com/services/?hsLang=en-us to https://www.bjss.com/services/
+10:32:03	Warning: 	Found for https://www.bjss.com/financial-services/?hsLang=en-us
+10:32:03	Warning: 	File has moved from https://www.bjss.com/financial-services/?hsLang=en-us to https://www.bjss.com/financial-services
+10:32:03	Warning: 	Found for https://www.bjss.com/retail/?hsLang=en-us
+10:32:03	Warning: 	File has moved from https://www.bjss.com/retail/?hsLang=en-us to https://www.bjss.com/retail/
+10:32:03	Warning: 	Found for https://www.bjss.com/our-work/?hsLang=en-us
+10:32:03	Warning: 	File has moved from https://www.bjss.com/our-work/?hsLang=en-us to https://www.bjss.com/en-us/our-work
+10:32:03	Warning: 	Found for https://www.bjss.com/events/?hsLang=en-us
+10:32:03	Warning: 	File has moved from https://www.bjss.com/events/?hsLang=en-us to https://www.bjss.com/events/
+10:32:16	Warning: 	Found for https://www.bjss.com/website-privacy-policy/?hsLang=en-us
+10:32:16	Warning: 	File has moved from https://www.bjss.com/website-privacy-policy/?hsLang=en-us to https://www.bjss.com/website-privacy-policy/
+10:32:16	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/en-us/)
+10:32:16	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/POST (from https://www.bjss.com/en-us/)
+10:32:21	Warning: 	Found for https://www.bjss.com/governance/?hsLang=en-gb
+10:32:21	Warning: 	File has moved from https://www.bjss.com/governance/?hsLang=en-gb to https://www.bjss.com/governance/
+10:32:21	Warning: 	Moved Permanently for https://www.bjss.com/queens/?hsLang=en-gb
+10:32:21	Warning: 	File has moved from https://www.bjss.com/queens/?hsLang=en-gb to https://www.bjss.com/news/bjss-wins-the-queens-award-for-enterprise-for-agile-approach-to-software?hsLang=en-gb
+10:32:23	Error: 	"Not Found" (404) at link https://www.bjss.com/about/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/about/)
+10:32:23	Error: 	"Not Found" (404) at link https://www.bjss.com/about/POST (from https://www.bjss.com/about/)
+10:34:30	Error: 	"Not Found" (404) at link https://www.bjss.com/community/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/community/)
+10:34:30	Error: 	"Not Found" (404) at link https://www.bjss.com/community/POST (from https://www.bjss.com/community/)
+10:34:30	Warning: 	Found for https://www.bjss.com/genderpaygap/?hsLang=en-gb
+10:34:30	Warning: 	File has moved from https://www.bjss.com/genderpaygap/?hsLang=en-gb to https://www.bjss.com/genderpaygap/
+10:34:30	Error: 	"Not Found" (404) at link https://www.bjss.com/governance/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/governance/)
+10:34:30	Error: 	"Not Found" (404) at link https://www.bjss.com/governance/POST (from https://www.bjss.com/governance/)
+10:34:38	Warning: 	Moved Permanently for https://www.bjss.com/strategy/?hsLang=en-gb
+10:34:38	Warning: 	File has moved from https://www.bjss.com/strategy/?hsLang=en-gb to https://www.bjss.com/strategy-and-transformation?hsLang=en-gb
+10:34:39	Warning: 	Found for https://www.bjss.com/technology-engineering/?hsLang=en-gb
+10:34:39	Warning: 	File has moved from https://www.bjss.com/technology-engineering/?hsLang=en-gb to https://www.bjss.com/technology-engineering/
+10:34:39	Warning: 	Found for https://www.bjss.com/managed-service/?hsLang=en-gb
+10:34:39	Warning: 	File has moved from https://www.bjss.com/managed-service/?hsLang=en-gb to https://www.bjss.com/managed-service/
+10:34:39	Warning: 	Found for https://www.bjss.com/data/?hsLang=en-gb
+10:34:39	Warning: 	File has moved from https://www.bjss.com/data/?hsLang=en-gb to https://www.bjss.com/data/
+10:34:39	Error: 	"Not Found" (404) at link https://www.bjss.com/services/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/services/)
+10:34:39	Error: 	"Not Found" (404) at link https://www.bjss.com/services/POST (from https://www.bjss.com/services/)
+10:34:47	Error: 	"Not Found" (404) at link https://www.bjss.com/design/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/design/)
+10:34:47	Error: 	"Not Found" (404) at link https://www.bjss.com/design/POST (from https://www.bjss.com/design/)
+10:34:58	Error: 	"Not Found" (404) at link https://www.bjss.com/technology-engineering/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/technology-engineering/)
+10:34:58	Error: 	"Not Found" (404) at link https://www.bjss.com/technology-engineering/POST (from https://www.bjss.com/technology-engineering/)
+10:35:00	Warning: 	Found for https://www.bjss.com/lendingcrowd-delivering-an-aws-architecture-for-growth/?hsLang=en-gb
+10:35:00	Warning: 	File has moved from https://www.bjss.com/lendingcrowd-delivering-an-aws-architecture-for-growth/?hsLang=en-gb to https://www.bjss.com/lendingcrowd-delivering-an-aws-architecture-for-growth/
+10:35:00	Error: 	"Not Found" (404) at link https://www.bjss.com/managed-service/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/managed-service/)
+10:35:00	Error: 	"Not Found" (404) at link https://www.bjss.com/managed-service/POST (from https://www.bjss.com/managed-service/)
+10:35:00	Warning: 	Found for https://www.bjss.com/ipa-ebook/?hsLang=en-gb
+10:35:00	Warning: 	File has moved from https://www.bjss.com/ipa-ebook/?hsLang=en-gb to https://www.bjss.com/ipa-ebook/
+10:35:04	Warning: 	Found for https://www.bjss.com/datapaper/?hsLang=en-gb
+10:35:04	Warning: 	File has moved from https://www.bjss.com/datapaper/?hsLang=en-gb to https://www.bjss.com/datapaper/
+10:35:09	Warning: 	Found for https://www.bjss.com/aws/?hsLang=en-gb
+10:35:09	Warning: 	File has moved from https://www.bjss.com/aws/?hsLang=en-gb to https://www.bjss.com/aws/
+10:35:09	Warning: 	Found for https://www.bjss.com/azure/?hsLang=en-gb
+10:35:09	Warning: 	File has moved from https://www.bjss.com/azure/?hsLang=en-gb to https://www.bjss.com/azure/
+10:35:20	Error: 	"Not Found" (404) at link https://www.bjss.com/data/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/data/)
+10:35:20	Error: 	"Not Found" (404) at link https://www.bjss.com/data/POST (from https://www.bjss.com/data/)
+10:36:00	Error: 	"Not Found" (404) at link https://www.bjss.com/cloud/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/cloud/)
+10:36:00	Error: 	"Not Found" (404) at link https://www.bjss.com/cloud/POST (from https://www.bjss.com/cloud/)
+10:36:00	Warning: 	Found for https://www.bjss.com/enterprise-cloud-accelerating-time-to-value/?hsLang=en-gb
+10:36:00	Warning: 	File has moved from https://www.bjss.com/enterprise-cloud-accelerating-time-to-value/?hsLang=en-gb to https://www.bjss.com/enterprise-cloud-accelerating-time-to-value/
+10:36:30	Warning: 	Found for https://www.bjss.com/industry-insights/?hsLang=en-gb
+10:36:30	Warning: 	File has moved from https://www.bjss.com/industry-insights/?hsLang=en-gb to https://www.bjss.com/industry-insights
+10:36:45	Warning: 	Moved Permanently for https://www.bjss.com/waitrose-re-engineering-waitroses-handheld-device-applications-and-delivery-process-to-improve-reliability/?hsLang=en-gb
+10:36:45	Warning: 	File has moved from https://www.bjss.com/waitrose-re-engineering-waitroses-handheld-device-applications-and-delivery-process-to-improve-reliability/?hsLang=en-gb to https://www.bjss.com/waitrose-re-engineering-waitroses-handheld-device-applications-and-delivery-process-to-improve-reliability?hsLang=en-gb
+10:36:46	Warning: 	Moved Permanently for https://www.bjss.com/co-op-an-award-winning-loyalty-proposition/?hsLang=en-gb
+10:36:46	Warning: 	File has moved from https://www.bjss.com/co-op-an-award-winning-loyalty-proposition/?hsLang=en-gb to https://www.bjss.com/co-op-an-award-winning-loyalty-proposition?hsLang=en-gb
+10:36:49	Error: 	"Not Found" (404) at link https://www.bjss.com/industries/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/industries/)
+10:36:49	Error: 	"Not Found" (404) at link https://www.bjss.com/industries/POST (from https://www.bjss.com/industries/)
+10:40:14	Warning: 	Found for https://www.bjss.com/how-banks-can-thrive-in-2021/?hsLang=en-gb
+10:40:14	Warning: 	File has moved from https://www.bjss.com/how-banks-can-thrive-in-2021/?hsLang=en-gb to https://www.bjss.com/how-banks-can-thrive-in-2021/
+10:40:14	Warning: 	Found for https://www.bjss.com/industry-insights/five-strategic-areas-financial-services-firms-can-adopt-to-accelerate-their-cloud-journey/?hsLang=en-gb
+10:40:14	Warning: 	File has moved from https://www.bjss.com/industry-insights/five-strategic-areas-financial-services-firms-can-adopt-to-accelerate-their-cloud-journey/?hsLang=en-gb to https://www.bjss.com/industry-insights/five-strategic-areas-financial-services-firms-can-adopt-to-accelerate-their-cloud-journey/
+10:40:15	Warning: 	Found for https://www.bjss.com/design/?hsLang=en-gb
+10:40:15	Warning: 	File has moved from https://www.bjss.com/design/?hsLang=en-gb to https://www.bjss.com/design/
+10:40:15	Warning: 	Found for https://www.bjss.com/cloud/?hsLang=en-gb
+10:40:15	Warning: 	File has moved from https://www.bjss.com/cloud/?hsLang=en-gb to https://www.bjss.com/cloud/
+10:40:15	Error: 	"Not Found" (404) at link https://www.bjss.com/health/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/health/)
+10:40:15	Error: 	"Not Found" (404) at link https://www.bjss.com/health/POST (from https://www.bjss.com/health/)
+10:40:17	Warning: 	Moved Permanently for https://www.bjss.com/digitaltransformation/?hsLang=en-gb
+10:40:17	Warning: 	File has moved from https://www.bjss.com/digitaltransformation/?hsLang=en-gb to https://www.bjss.com/services/?hsLang=en-gb
+10:40:17	Warning: 	Moved Permanently for https://www.bjss.com/disclosure-and-barring-service-accurate-referall-forecasting-at-dbs/?hsLang=en-gb
+10:40:17	Warning: 	File has moved from https://www.bjss.com/disclosure-and-barring-service-accurate-referall-forecasting-at-dbs/?hsLang=en-gb to https://www.bjss.com/disclosure-and-barring-service-accurate-referall-forecasting-at-dbs?hsLang=en-gb
+10:40:18	Warning: 	Moved Permanently for https://www.bjss.com/highways-england-progresses-its-journey-to-a-data-driven-organisation/?hsLang=en-gb
+10:40:18	Warning: 	File has moved from https://www.bjss.com/highways-england-progresses-its-journey-to-a-data-driven-organisation/?hsLang=en-gb to https://www.bjss.com/highways-england-progresses-its-journey-to-a-data-driven-organisation?hsLang=en-gb
+10:40:20	Error: 	"Not Found" (404) at link https://www.bjss.com/public/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/public/)
+10:40:20	Error: 	"Not Found" (404) at link https://www.bjss.com/public/POST (from https://www.bjss.com/public/)
+10:40:23	Warning: 	Moved Permanently for https://www.bjss.com/intelligent-automation/?hsLang=en-gb
+10:40:23	Warning: 	File has moved from https://www.bjss.com/intelligent-automation/?hsLang=en-gb to https://www.bjss.com/low-code-and-automation?hsLang=en-gb
+10:40:24	Error: 	"Not Found" (404) at link https://www.bjss.com/retail/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/retail/)
+10:40:24	Error: 	"Not Found" (404) at link https://www.bjss.com/retail/POST (from https://www.bjss.com/retail/)
+10:40:43	Error: 	"Not Found" (404) at link https://www.bjss.com/insights/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/insights/)
+10:40:43	Error: 	"Not Found" (404) at link https://www.bjss.com/insights/POST (from https://www.bjss.com/insights/)
+10:46:29	Warning: 	Found for https://www.bjss.com/past-events/?hsLang=en-gb
+10:46:29	Warning: 	File has moved from https://www.bjss.com/past-events/?hsLang=en-gb to https://www.bjss.com/past-events/
+10:46:29	Error: 	"Not Found" (404) at link https://www.bjss.com/event-insights/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/events/)
+10:46:29	Error: 	"Not Found" (404) at link https://www.bjss.com/event-insights/POST (from https://www.bjss.com/events/)
+10:46:29	Error: 	"Not Found" (404) at link https://www.bjss.com/future-of-retail/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/future-of-retail/)
+10:46:29	Error: 	"Not Found" (404) at link https://www.bjss.com/future-of-retail/POST (from https://www.bjss.com/future-of-retail/)
+10:49:46	Error: 	"Not Found" (404) at link https://www.bjss.com/careers/team/Operations?hsLang=en-gb (from https://www.bjss.com/careers)
+10:49:54	Error: 	"Bad Request" (400) at link https://www.bjss.com/{type=CONTENT, content_id=47448637790, href=https://www.bjss.com/contact/} (from https://www.bjss.com/careers)
+10:50:25	Error: 	"Not Found" (404) at link https://www.bjss.com/contact/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/contact/)
+10:50:25	Error: 	"Not Found" (404) at link https://www.bjss.com/contact/POST (from https://www.bjss.com/contact/)
+10:50:25	Error: 	"Not Found" (404) at link https://www.bjss.com/BJSS_May2021/templates/partials/footer_landing_page.html (from https://www.bjss.com/top-4-trends-are-shaping-the-future-of-public-cloud)
+10:50:30	Warning: 	Found for https://www.bjss.com/?hsLang=en
+10:50:30	Warning: 	File has moved from https://www.bjss.com/?hsLang=en to https://www.bjss.com
+10:50:30	Error: 	"Not Found" (404) at link https://www.bjss.com/news/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/financial-times-uk-leading-management-consultant-for-the-third-year-running)
+10:50:30	Error: 	"Not Found" (404) at link https://www.bjss.com/news/POST (from https://www.bjss.com/news/financial-times-uk-leading-management-consultant-for-the-third-year-running)
+10:50:30	Warning: 	Moved Permanently for https://www.bjss.com/joinus/
+10:50:30	Warning: 	File has moved from https://www.bjss.com/joinus/ to https://www.bjss.com/careers
+10:50:30	Error: 	"Not Found" (404) at link https://www.bjss.com/website-privacy-policy/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/website-privacy-policy/?hsLang=en-gb)
+10:50:30	Error: 	"Not Found" (404) at link https://www.bjss.com/website-privacy-policy/POST (from https://www.bjss.com/website-privacy-policy/?hsLang=en-gb)
+10:50:38	Warning: 	Moved Permanently for https://www.bjss.com/bjss-rises-to-the-skills-challenge-through-80-new-roles-for-young-people-and-those-retraining-or-returning-to-work/?hsLang=en
+10:50:38	Warning: 	File has moved from https://www.bjss.com/bjss-rises-to-the-skills-challenge-through-80-new-roles-for-young-people-and-those-retraining-or-returning-to-work/?hsLang=en to https://www.bjss.com/bjss-rises-to-the-skills-challenge-through-80-new-roles-for-young-people-and-those-retraining-or-returning-to-work?hsLang=en
+10:50:39	Warning: 	Moved Permanently for https://www.bjss.com/british-technology-and-engineering-consultancy-bjss-expands-into-portugal-with-opening-of-lisbon-office/?hsLang=en
+10:50:39	Warning: 	File has moved from https://www.bjss.com/british-technology-and-engineering-consultancy-bjss-expands-into-portugal-with-opening-of-lisbon-office/?hsLang=en to https://www.bjss.com/news/bjss-expands-into-portugal-with-lisbon-office?hsLang=en
+10:50:46	Warning: 	Found for https://www.bjss.com/governance/?hsLang=en-us
+10:50:46	Warning: 	File has moved from https://www.bjss.com/governance/?hsLang=en-us to https://www.bjss.com/governance/
+10:50:46	Warning: 	Found for https://www.bjss.com/joinus/?hsLang=en-us
+10:50:46	Warning: 	File has moved from https://www.bjss.com/joinus/?hsLang=en-us to https://www.bjss.com/en-us/joinus
+10:50:46	Warning: 	Temporary Redirect for https://www.bjss.com/contact/?hsLang=en-us
+10:50:46	Warning: 	File has moved from https://www.bjss.com/contact/?hsLang=en-us to https://www.bjss.com/en-us/contact
+10:50:46	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/BJSS_May2021/templates/partials/footer_landing_page.html (from https://www.bjss.com/en-us/ecommerce-customer-experience?hsLang=en-us)
+10:51:03	Warning: 	Found for https://www.bjss.com/?hsLang=pt
+10:51:03	Warning: 	File has moved from https://www.bjss.com/?hsLang=pt to https://www.bjss.com
+10:51:03	Warning: 	Found for https://www.bjss.com/services/?hsLang=pt
+10:51:03	Warning: 	File has moved from https://www.bjss.com/services/?hsLang=pt to https://www.bjss.com/services/
+10:51:03	Warning: 	Found for https://www.bjss.com/governance/?hsLang=pt
+10:51:03	Warning: 	File has moved from https://www.bjss.com/governance/?hsLang=pt to https://www.bjss.com/governance/
+10:51:03	Warning: 	Found for https://www.bjss.com/community/?hsLang=pt
+10:51:03	Warning: 	File has moved from https://www.bjss.com/community/?hsLang=pt to https://www.bjss.com/community/
+10:51:03	Warning: 	Moved Permanently for https://www.bjss.com/queens/?hsLang=pt
+10:51:03	Warning: 	File has moved from https://www.bjss.com/queens/?hsLang=pt to https://www.bjss.com/news/bjss-wins-the-queens-award-for-enterprise-for-agile-approach-to-software?hsLang=pt
+10:51:04	Warning: 	Moved Permanently for https://www.bjss.com/bjss-clinches-aws-public-sector-partner-of-the-year-win/?hsLang=pt
+10:51:04	Warning: 	File has moved from https://www.bjss.com/bjss-clinches-aws-public-sector-partner-of-the-year-win/?hsLang=pt to https://www.bjss.com/bjss-clinches-aws-public-sector-partner-of-the-year-win?hsLang=pt
+10:51:05	Warning: 	Moved Permanently for https://www.bjss.com/bjss-triumphs-at-retail-week-tech-sprint-hackathon/?hsLang=pt
+10:51:05	Warning: 	File has moved from https://www.bjss.com/bjss-triumphs-at-retail-week-tech-sprint-hackathon/?hsLang=pt to https://www.bjss.com/bjss-triumphs-at-retail-week-tech-sprint-hackathon?hsLang=pt
+10:51:07	Warning: 	Found for https://www.bjss.com/joinus/?hsLang=pt
+10:51:07	Warning: 	File has moved from https://www.bjss.com/joinus/?hsLang=pt to https://www.bjss.com/joinus/
+10:51:07	Warning: 	Found for https://www.bjss.com/contact/?hsLang=pt
+10:51:07	Warning: 	File has moved from https://www.bjss.com/contact/?hsLang=pt to https://www.bjss.com/contact/
+10:51:07	Warning: 	Temporary Redirect for https://www.bjss.com/website-privacy-policy/?hsLang=pt
+10:51:07	Warning: 	File has moved from https://www.bjss.com/website-privacy-policy/?hsLang=pt to https://www.bjss.com/pt/website-privacy-policy
+10:51:07	Error: 	"Not Found" (404) at link https://www.bjss.com/pt/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/pt/sober-a-bjss)
+10:51:07	Error: 	"Not Found" (404) at link https://www.bjss.com/pt/POST (from https://www.bjss.com/pt/sober-a-bjss)
+10:51:34	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/page/POST (from https://www.bjss.com/our-work/page/2)
+10:51:53	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/tag/POST (from https://www.bjss.com/our-work/tag/technology-and-engineering-case-study)
+10:52:31	Warning: 	Found for https://www.bjss.com/contact/?hsLang=en
+10:52:31	Warning: 	File has moved from https://www.bjss.com/contact/?hsLang=en to https://www.bjss.com/contact/
+10:52:31	Warning: 	Found for https://www.bjss.com/website-privacy-policy/?hsLang=en
+10:52:31	Warning: 	File has moved from https://www.bjss.com/website-privacy-policy/?hsLang=en to https://www.bjss.com/website-privacy-policy/
+10:52:31	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/our-work/the-nhs-reinvents-its-national-digital-channel-strategy-with-bjss-and-sparck)
+10:52:31	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/POST (from https://www.bjss.com/our-work/the-nhs-reinvents-its-national-digital-channel-strategy-with-bjss-and-sparck)
+10:52:41	Warning: 	Found for https://www.bjss.com/retail/?hsLang=en
+10:52:41	Warning: 	File has moved from https://www.bjss.com/retail/?hsLang=en to https://www.bjss.com/retail/
+10:53:07	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/engineering-insights/green-software-development)
+10:53:07	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/POST (from https://www.bjss.com/engineering-insights/green-software-development)
+10:53:49	Error: 	"Not Found" (404) at link https://www.bjss.com/careers/POST (from https://www.bjss.com/careers/academy)
+10:53:51	Error: 	"Not Found" (404) at link https://www.bjss.com/azure/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/azure/)
+10:53:51	Error: 	"Not Found" (404) at link https://www.bjss.com/azure/POST (from https://www.bjss.com/azure/)
+10:53:57	Warning: 	Found for https://www.bjss.com/health/?hsLang=pt
+10:53:57	Warning: 	File has moved from https://www.bjss.com/health/?hsLang=pt to https://www.bjss.com/health/
+10:53:57	Warning: 	Found for https://www.bjss.com/public/?hsLang=pt
+10:53:57	Warning: 	File has moved from https://www.bjss.com/public/?hsLang=pt to https://www.bjss.com/public/
+10:53:57	Warning: 	Found for https://www.bjss.com/retail/?hsLang=pt
+10:53:57	Warning: 	File has moved from https://www.bjss.com/retail/?hsLang=pt to https://www.bjss.com/retail/
+10:53:57	Warning: 	Found for https://www.bjss.com/our-work/?hsLang=pt
+10:53:57	Warning: 	File has moved from https://www.bjss.com/our-work/?hsLang=pt to https://www.bjss.com/our-work
+10:53:57	Warning: 	Found for https://www.bjss.com/industry-insights/?hsLang=pt
+10:53:57	Warning: 	File has moved from https://www.bjss.com/industry-insights/?hsLang=pt to https://www.bjss.com/industry-insights
+10:54:17	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/industry-insights/we-asked-bjss-people-what-they-want-from-their-energy-provider)
+10:54:17	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/POST (from https://www.bjss.com/industry-insights/we-asked-bjss-people-what-they-want-from-their-energy-provider)
+10:54:42	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/tag/POST (from https://www.bjss.com/industry-insights/tag/commodities-utilities-insight)
+10:54:54	Warning: 	Retry after error -2 (Receive Time Out) at link https://www.bjss.com/hubfs/FS-Insurance-3.jpg (from https://www.bjss.com/fs-insurance)
+10:54:54	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/FS_Insurance-Header.jpg (from https://www.bjss.com/fs-insurance)
+10:54:54	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/FS-Blog-Five-Ways-Insurers-Can-Ensure-Successful-Insurtech-Partnerships.jpg (from https://www.bjss.com/fs-insurance)
+10:54:55	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/industry-insights/five-ways-insurers-can-ensure-succesful-insurtech-partnerships?hsLang=en-gb (from https://www.bjss.com/fs-insurance)
+10:54:56	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/FS-Blog-Where-are-the-Insurtech-Unicorns.jpg (from https://www.bjss.com/fs-insurance)
+10:54:56	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/industry-insights/digital-transformation-in-insurance-conference-may22-reflection?hsLang=en-gb (from https://www.bjss.com/fs-insurance)
+10:54:59	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/FS-Success-Study-9.jpg (from https://www.bjss.com/fs-insurance)
+10:54:59	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/FS-Success-Study-10.jpg (from https://www.bjss.com/fs-insurance)
+10:55:01	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/FS-Success-Study-11.jpg (from https://www.bjss.com/fs-insurance)
+10:55:01	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/FS-Success-Study-12.jpg (from https://www.bjss.com/fs-insurance)
+10:55:02	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/accelerating-insurance-digital-transformation/?hsLang=en-gb (from https://www.bjss.com/fs-insurance)
+10:55:03	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/how-banks-can-thrive-in-2021/ (from https://www.bjss.com/how-banks-can-thrive-in-2021/?hsLang=en-gb)
+10:55:04	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/BJSS_May2021/Images/Accelerating-Insurance-Digital-Transformation-Header-Banner.jpg (from https://www.bjss.com/accelerating-insurance-digital-transformation/)
+10:55:06	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/BJSS_May2021/Images/Accelerating-Insurance-Digital-Transformation_White-Paper-1.jpg (from https://www.bjss.com/accelerating-insurance-digital-transformation/)
+10:55:08	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/fs-old?hsLang=en-gb (from https://www.bjss.com/accelerating-insurance-digital-transformation/)
+10:55:09	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/accelerating-insurance-digital-transformation/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/accelerating-insurance-digital-transformation/)
+10:55:11	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/accelerating-insurance-digital-transformation/POST (from https://www.bjss.com/accelerating-insurance-digital-transformation/)
+10:55:11	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/industry-insights/five-strategic-areas-financial-services-firms-can-adopt-to-accelerate-their-cloud-journey/ (from https://www.bjss.com/industry-insights/five-strategic-areas-financial-services-firms-can-adopt-to-accelerate-their-cloud-journey/?hsLang=en-gb)
+10:55:14	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/industry-insights/tag/financial-services-insight/page/2 (from https://www.bjss.com/industry-insights/tag/financial-services-insight)
+10:55:14	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/Trading Tech Insights Banner.jpg (from https://www.bjss.com/industry-insights/tag/financial-services-insight)
+10:55:17	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/industry-insights/trading-tech (from https://www.bjss.com/industry-insights/tag/financial-services-insight)
+10:55:17	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/america-banker-digital-feature.png (from https://www.bjss.com/industry-insights/tag/financial-services-insight)
+10:55:20	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/industry-insights/american-banker-digital-banking-2022-conference-takeaways (from https://www.bjss.com/industry-insights/tag/financial-services-insight)
+10:55:23	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/digital-transformation-in-insurance-may22-key-takeaways-feature.png (from https://www.bjss.com/industry-insights/tag/financial-services-insight)
+10:55:24	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/industry-insights/digital-transformation-in-insurance-conference-may22-reflection (from https://www.bjss.com/industry-insights/tag/financial-services-insight)
+10:55:27	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/5-banks-getting-cloud-right-feature.png (from https://www.bjss.com/industry-insights/tag/financial-services-insight)
+10:55:28	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/industry-insights/5-banks-getting-cloud-right (from https://www.bjss.com/industry-insights/tag/financial-services-insight)
+10:55:31	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/How-Can-Banks-Capture-The-Full-Value-of-the-Cloud-1920x500.jpg (from https://www.bjss.com/industry-insights/tag/financial-services-insight)
+10:55:32	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/industry-insights/how-banks-can-capture-cloud-value (from https://www.bjss.com/industry-insights/tag/financial-services-insight)
+10:55:34	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/industry-insights/tag/financial-services-insight/page/1 (from https://www.bjss.com/industry-insights/tag/financial-services-insight)
+10:55:35	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/industry-insights/tag/financial-services-insight/page/3 (from https://www.bjss.com/industry-insights/tag/financial-services-insight)
+10:55:37	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/Banner-Digital-Health-and-care-2022.jpg (from https://www.bjss.com/digital-transformation-in-healthcare)
+10:55:38	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hs-fs/hubfs/Art-of-the-possible-eBook-Mockup.jpg?width=800&height=702&name=Art-of-the-possible-eBook-Mockup.jpg (from https://www.bjss.com/digital-transformation-in-healthcare)
+10:55:40	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hubfs/data and ai page banner.png (from https://www.bjss.com/a-technological-hierarchy)
+10:55:41	Warning: 	Retry after error -4 (Connect Error) at link https://www.bjss.com/hs-fs/hubfs/data-and-ai-whitepaper-image.png?width=768&name=data-and-ai-whitepaper-image.png (from https://www.bjss.com/a-technological-hierarchy)
+11:40:22	Error: 	"Not Found" (404) at link https://www.bjss.com/how-to-achieve-retail-growth-with-ecommerce/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/how-to-achieve-retail-growth-with-ecommerce/?hsLang=en-gb)
+11:40:22	Error: 	"Not Found" (404) at link https://www.bjss.com/how-to-achieve-retail-growth-with-ecommerce/POST (from https://www.bjss.com/how-to-achieve-retail-growth-with-ecommerce/?hsLang=en-gb)
+11:41:46	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/page/POST (from https://www.bjss.com/engineering-insights/page/2)
+11:44:09	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/page/POST (from https://www.bjss.com/industry-insights/page/2)
+11:44:45	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/tag/6 (from https://www.bjss.com/industry-insights/tag/retail-consumer-markets-insight)
+11:45:26	Error: 	"Not Found" (404) at link https://www.bjss.com/career/2417346?hsLang=en (from https://www.bjss.com/industry-insights/how-to-become-an-effective-leader-and-drive-positive-business-transformation)
+11:45:26	Warning: 	Found for https://www.bjss.com/datapaper/?hsLang=en
+11:45:26	Warning: 	File has moved from https://www.bjss.com/datapaper/?hsLang=en to https://www.bjss.com/datapaper/
+11:45:26	Error: 	"Not Found" (404) at link https://www.bjss.com/career/3508600?hsLang=en-gb (from https://www.bjss.com/industry-insights/how-to-become-an-effective-leader-and-drive-positive-business-transformation)
+11:46:30	Error: 	"Not Found" (404) at link https://www.bjss.com/news/page/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/page/2)
+11:46:30	Error: 	"Not Found" (404) at link https://www.bjss.com/news/page/POST (from https://www.bjss.com/news/page/2)
+11:46:34	Error: 	"Not Found" (404) at link https://www.bjss.com/pt-pt/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/pt-pt/news)
+11:46:34	Error: 	"Not Found" (404) at link https://www.bjss.com/pt-pt/POST (from https://www.bjss.com/pt-pt/news)
+11:46:44	Warning: 	Found for https://www.bjss.com/azure/?hsLang=en
+11:46:44	Warning: 	File has moved from https://www.bjss.com/azure/?hsLang=en to https://www.bjss.com/azure/
+11:46:44	Error: 	"Not Found" (404) at link https://www.bjss.com/media-toolkit/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/media-toolkit/)
+11:46:44	Error: 	"Not Found" (404) at link https://www.bjss.com/media-toolkit/POST (from https://www.bjss.com/media-toolkit/)
+11:46:46	Warning: 	Moved Permanently for https://www.bjss.com/enterprise-agile/
+11:46:46	Warning: 	File has moved from https://www.bjss.com/enterprise-agile/ to https://www.bjss.com/enterprise-agile
+11:49:19	Error: 	"Not Found" (404) at link https://www.bjss.com/careers/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/careers/our-teams)
+11:49:45	Error: 	"Not Found" (404) at link https://www.bjss.com/careers/team/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/careers/team/delivery-management)
+11:49:45	Error: 	"Not Found" (404) at link https://www.bjss.com/careers/team/POST (from https://www.bjss.com/careers/team/delivery-management)
+11:50:19	Error: 	"Bad Request" (400) at link https://www.bjss.com/careers/team/{type=CONTENT, content_id=47448637790, href=https://www.bjss.com/contact/} (from https://www.bjss.com/careers/team/platform-and-security)
+11:51:31	Error: 	"Not Found" (404) at link https://www.bjss.com/career/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/career/4823144?hsLang=en-gb)
+11:51:31	Error: 	"Not Found" (404) at link https://www.bjss.com/career/POST (from https://www.bjss.com/career/4823144?hsLang=en-gb)
+11:51:38	Error: 	"Not Found" (404) at link https://www.bjss.com/news/bjss-announced-as-winners-at-the-uk-it-industry-awards/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/bjss-announced-as-winners-at-the-uk-it-industry-awards/)
+11:51:38	Error: 	"Not Found" (404) at link https://www.bjss.com/news/bjss-announced-as-winners-at-the-uk-it-industry-awards/POST (from https://www.bjss.com/news/bjss-announced-as-winners-at-the-uk-it-industry-awards/)
+11:51:42	Error: 	"Not Found" (404) at link https://www.bjss.com/how-to-make-change-work-for-your-organisation/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/how-to-make-change-work-for-your-organisation/)
+11:51:42	Error: 	"Not Found" (404) at link https://www.bjss.com/how-to-make-change-work-for-your-organisation/POST (from https://www.bjss.com/how-to-make-change-work-for-your-organisation/)
+11:51:50	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/our-work/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/en-us/our-work/enterprise-agile-recovers-project?hsLang=en-us)
+11:51:50	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/our-work/POST (from https://www.bjss.com/en-us/our-work/enterprise-agile-recovers-project?hsLang=en-us)
+11:52:11	Warning: 	Moved Permanently for https://www.bjss.com/dvsa-introducing-digital-driving-tests/
+11:52:11	Warning: 	File has moved from https://www.bjss.com/dvsa-introducing-digital-driving-tests/ to https://www.bjss.com/dvsa-introducing-digital-driving-tests
+11:52:12	Warning: 	Found for https://www.bjss.com/enterprise-agile/?hsLang=en
+11:52:12	Warning: 	File has moved from https://www.bjss.com/enterprise-agile/?hsLang=en to https://www.bjss.com/enterprise-agile
+11:52:13	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/our-work/tag/POST (from https://www.bjss.com/en-us/our-work/tag/data-and-ai-case-study)
+11:52:13	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/our-work/page/POST (from https://www.bjss.com/en-us/our-work/page/1)
+11:52:15	Warning: 	Moved Permanently for https://www.bjss.com/rapid-delivery-of-robust-responsive-applications/?hsLang=en
+11:52:15	Warning: 	File has moved from https://www.bjss.com/rapid-delivery-of-robust-responsive-applications/?hsLang=en to https://www.bjss.com/rapid-delivery-of-robust-responsive-applications?hsLang=en
+11:52:16	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/a-new-gds-approved-digital-service-delivered-in-just-nine-weeks/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/our-work/a-new-gds-approved-digital-service-delivered-in-just-nine-weeks/)
+11:52:16	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/a-new-gds-approved-digital-service-delivered-in-just-nine-weeks/POST (from https://www.bjss.com/our-work/a-new-gds-approved-digital-service-delivered-in-just-nine-weeks/)
+11:52:26	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/tag/technology-and-engineering-case-study/page/POST (from https://www.bjss.com/our-work/tag/technology-and-engineering-case-study/page/2)
+11:52:29	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/tag/cloud-platform-case-study/page/POST (from https://www.bjss.com/our-work/tag/cloud-platform-case-study/page/2)
+11:52:30	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/tag/data-and-ai-case-study/page/POST (from https://www.bjss.com/our-work/tag/data-and-ai-case-study/page/1)
+11:52:30	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/tag/strategy-case-study/page/POST (from https://www.bjss.com/our-work/tag/strategy-case-study/page/1)
+11:52:31	Warning: 	Found for https://www.bjss.com/managed-service/?hsLang=en
+11:52:31	Warning: 	File has moved from https://www.bjss.com/managed-service/?hsLang=en to https://www.bjss.com/managed-service/
+11:52:31	Warning: 	Moved Permanently for https://www.bjss.com/bjss-recognised-itsmf-uk-dvsa-technical-support-service/?hsLang=en
+11:52:31	Warning: 	File has moved from https://www.bjss.com/bjss-recognised-itsmf-uk-dvsa-technical-support-service/?hsLang=en to https://www.bjss.com/bjss-recognised-itsmf-uk-dvsa-technical-support-service?hsLang=en
+11:52:33	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/tag/managed-service-case-study/page/POST (from https://www.bjss.com/our-work/tag/managed-service-case-study/page/1)
+11:52:33	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/tag/design-case-study/page/POST (from https://www.bjss.com/our-work/tag/design-case-study/page/1)
+11:52:33	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/tag/low-code-automation-case-study/page/POST (from https://www.bjss.com/our-work/tag/low-code-automation-case-study/page/1)
+11:52:33	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/tag/health-and-social-care-case-study/page/POST (from https://www.bjss.com/our-work/tag/health-and-social-care-case-study/page/1)
+11:52:39	Warning: 	Moved Permanently for https://www.bjss.com/academy/
+11:52:39	Warning: 	File has moved from https://www.bjss.com/academy/ to https://www.bjss.com/academy
+11:52:48	Error: 	"Not Found" (404) at link https://www.bjss.com/genderpaygap/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/genderpaygap/)
+11:52:48	Error: 	"Not Found" (404) at link https://www.bjss.com/genderpaygap/POST (from https://www.bjss.com/genderpaygap/)
+11:52:51	Error: 	"Not Found" (404) at link https://www.bjss.com/lendingcrowd-delivering-an-aws-architecture-for-growth/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/lendingcrowd-delivering-an-aws-architecture-for-growth/)
+11:52:51	Error: 	"Not Found" (404) at link https://www.bjss.com/lendingcrowd-delivering-an-aws-architecture-for-growth/POST (from https://www.bjss.com/lendingcrowd-delivering-an-aws-architecture-for-growth/)
+11:52:51	Error: 	"Not Found" (404) at link https://www.bjss.com/ipa-ebook/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/ipa-ebook/)
+11:52:51	Error: 	"Not Found" (404) at link https://www.bjss.com/ipa-ebook/POST (from https://www.bjss.com/ipa-ebook/)
+11:52:51	Error: 	"Not Found" (404) at link https://www.bjss.com/datapaper/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/datapaper/)
+11:52:51	Error: 	"Not Found" (404) at link https://www.bjss.com/datapaper/POST (from https://www.bjss.com/datapaper/)
+11:52:51	Error: 	"Not Found" (404) at link https://www.bjss.com/aws/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/aws/)
+11:52:51	Error: 	"Not Found" (404) at link https://www.bjss.com/aws/POST (from https://www.bjss.com/aws/)
+11:52:56	Error: 	"Not Found" (404) at link https://www.bjss.com/enterprise-cloud-accelerating-time-to-value/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/enterprise-cloud-accelerating-time-to-value/)
+11:52:56	Error: 	"Not Found" (404) at link https://www.bjss.com/enterprise-cloud-accelerating-time-to-value/POST (from https://www.bjss.com/enterprise-cloud-accelerating-time-to-value/)
+11:53:21	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/tag/commodities-utilities-insight/page/POST (from https://www.bjss.com/industry-insights/tag/commodities-utilities-insight/page/2)
+11:53:23	Warning: 	Found for https://www.bjss.com/cost-optimisation/?hsLang=en
+11:53:23	Warning: 	File has moved from https://www.bjss.com/cost-optimisation/?hsLang=en to https://www.bjss.com/cost-optimisation/
+11:53:27	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/are-your-cost-reduction-measures-enough-for-long-term-survival/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/industry-insights/are-your-cost-reduction-measures-enough-for-long-term-survival/)
+11:53:27	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/are-your-cost-reduction-measures-enough-for-long-term-survival/POST (from https://www.bjss.com/industry-insights/are-your-cost-reduction-measures-enough-for-long-term-survival/)
+11:53:30	Error: 	"Not Found" (404) at link https://www.bjss.com/how-to-grasp-the-opportunities-of-iso-20022/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/how-to-grasp-the-opportunities-of-iso-20022/?hsLang=en-gb)
+11:53:30	Error: 	"Not Found" (404) at link https://www.bjss.com/how-to-grasp-the-opportunities-of-iso-20022/POST (from https://www.bjss.com/how-to-grasp-the-opportunities-of-iso-20022/?hsLang=en-gb)
+11:53:31	Warning: 	Found for https://www.bjss.com/industry-insights/five-ways-insurers-can-ensure-succesful-insurtech-partnerships?hsLang=en-gb
+11:53:31	Warning: 	File has moved from https://www.bjss.com/industry-insights/five-ways-insurers-can-ensure-succesful-insurtech-partnerships?hsLang=en-gb to https://www.bjss.com/industry-insights/five-ways-insurers-can-ensure-succesful-insurtech-partnerships
+11:53:31	Warning: 	Found for https://www.bjss.com/industry-insights/digital-transformation-in-insurance-conference-may22-reflection?hsLang=en-gb
+11:53:31	Warning: 	File has moved from https://www.bjss.com/industry-insights/digital-transformation-in-insurance-conference-may22-reflection?hsLang=en-gb to https://www.bjss.com/industry-insights/digital-transformation-in-insurance-conference-may22-reflection
+11:53:31	Warning: 	Found for https://www.bjss.com/accelerating-insurance-digital-transformation/?hsLang=en-gb
+11:53:31	Warning: 	File has moved from https://www.bjss.com/accelerating-insurance-digital-transformation/?hsLang=en-gb to https://www.bjss.com/accelerating-insurance-digital-transformation/
+11:53:35	Warning: 	Moved Permanently for https://www.bjss.com/fs-old?hsLang=en-gb
+11:53:35	Warning: 	File has moved from https://www.bjss.com/fs-old?hsLang=en-gb to https://www.bjss.com/financial-services?hsLang=en-gb
+11:53:36	Error: 	"Not Found" (404) at link https://www.bjss.com/accelerating-insurance-digital-transformation/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/accelerating-insurance-digital-transformation/)
+11:53:36	Error: 	"Not Found" (404) at link https://www.bjss.com/accelerating-insurance-digital-transformation/POST (from https://www.bjss.com/accelerating-insurance-digital-transformation/)
+11:53:48	Warning: 	Retry after error -2 (Receive Time Out) at link https://www.bjss.com/hs-fs/hubfs/data-and-ai-whitepaper-image.png?width=768&name=data-and-ai-whitepaper-image.png (from https://www.bjss.com/a-technological-hierarchy)
+11:53:55	Warning: 	Moved Permanently for https://www.bjss.com/intelligent-automation/
+11:53:55	Warning: 	File has moved from https://www.bjss.com/intelligent-automation/ to https://www.bjss.com/low-code-and-automation
+11:53:55	Warning: 	Moved Permanently for https://www.bjss.com/digitaltransformation/
+11:53:55	Warning: 	File has moved from https://www.bjss.com/digitaltransformation/ to https://www.bjss.com/services/
+11:54:30	Warning: 	Moved Permanently for https://www.bjss.com/our-work/
+11:54:30	Warning: 	File has moved from https://www.bjss.com/our-work/ to https://www.bjss.com/our-work
+11:54:30	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/how-to-accelerate-your-cloud-adoption-programme/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/engineering-insights/how-to-accelerate-your-cloud-adoption-programme/)
+11:54:30	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/how-to-accelerate-your-cloud-adoption-programme/POST (from https://www.bjss.com/engineering-insights/how-to-accelerate-your-cloud-adoption-programme/)
+11:54:31	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/the-testing-pyramid-is-dead/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/engineering-insights/the-testing-pyramid-is-dead/)
+11:54:31	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/the-testing-pyramid-is-dead/POST (from https://www.bjss.com/engineering-insights/the-testing-pyramid-is-dead/)
+11:54:32	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/spotlight-anthony-garratt/POST (from https://www.bjss.com/engineering-insights/spotlight-anthony-garratt/)
+11:54:44	Warning: 	Found for https://www.bjss.com/data/?hsLang=en
+11:54:44	Warning: 	File has moved from https://www.bjss.com/data/?hsLang=en to https://www.bjss.com/data/
+11:54:57	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/industry-insights/tag/POST (from https://www.bjss.com/en-us/industry-insights/tag/retail-consumer-markets-insight)
+11:54:58	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/industry-insights/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/en-us/industry-insights/retailers-leverage-technology-circular-supply-chain)
+11:54:58	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/industry-insights/POST (from https://www.bjss.com/en-us/industry-insights/retailers-leverage-technology-circular-supply-chain)
+11:54:59	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/industry-insights/page/POST (from https://www.bjss.com/en-us/industry-insights/page/1)
+11:54:59	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/tag/retail-consumer-markets-insight/page/POST (from https://www.bjss.com/industry-insights/tag/retail-consumer-markets-insight/page/2)
+11:55:17	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/tag/health-social-care-insight/page/POST (from https://www.bjss.com/industry-insights/tag/health-social-care-insight/page/2)
+11:55:18	Warning: 	Found for https://www.bjss.com/public/?hsLang=en
+11:55:18	Warning: 	File has moved from https://www.bjss.com/public/?hsLang=en to https://www.bjss.com/public/
+11:55:19	Warning: 	Found for https://www.bjss.com/about/?hsLang=en
+11:55:19	Warning: 	File has moved from https://www.bjss.com/about/?hsLang=en to https://www.bjss.com/about/
+11:55:19	Warning: 	Found for https://www.bjss.com/health/?hsLang=en
+11:55:19	Warning: 	File has moved from https://www.bjss.com/health/?hsLang=en to https://www.bjss.com/health/
+11:55:20	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/tag/public-sector-insight/page/POST (from https://www.bjss.com/industry-insights/tag/public-sector-insight/page/2)
+11:55:25	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/tag/event-insights/page/POST (from https://www.bjss.com/industry-insights/tag/event-insights/page/1)
+11:55:25	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/tag/cloud-banking/page/POST (from https://www.bjss.com/industry-insights/tag/cloud-banking/page/1)
+11:55:25	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/tag/data-and-ai-case-study/page/POST (from https://www.bjss.com/industry-insights/tag/data-and-ai-case-study/page/1)
+11:55:25	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/tag/public-service-case-study/page/POST (from https://www.bjss.com/industry-insights/tag/public-service-case-study/page/1)
+11:55:25	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/tag/sustainability-case-study/page/POST (from https://www.bjss.com/industry-insights/tag/sustainability-case-study/page/1)
+11:55:25	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/tag/banking-insight/page/POST (from https://www.bjss.com/industry-insights/tag/banking-insight/page/1)
+11:55:41	Warning: 	Found for https://www.bjss.com/accelerating-insurance-digital-transformation/?hsLang=en
+11:55:41	Warning: 	File has moved from https://www.bjss.com/accelerating-insurance-digital-transformation/?hsLang=en to https://www.bjss.com/accelerating-insurance-digital-transformation/
+11:55:46	Warning: 	Moved Permanently for https://www.bjss.com/intelligent-automation/?hsLang=en
+11:55:46	Warning: 	File has moved from https://www.bjss.com/intelligent-automation/?hsLang=en to https://www.bjss.com/low-code-and-automation?hsLang=en
+11:55:49	Warning: 	Found for https://www.bjss.com/future-of-retail/?hsLang=en
+11:55:49	Warning: 	File has moved from https://www.bjss.com/future-of-retail/?hsLang=en to https://www.bjss.com/future-of-retail/
+11:55:50	Warning: 	Moved Permanently for https://www.bjss.com/democratising-data/?hsLang=en
+11:55:50	Warning: 	File has moved from https://www.bjss.com/democratising-data/?hsLang=en to https://www.bjss.com/democratising-data-webinar/?hsLang=en
+11:55:51	Warning: 	Found for https://www.bjss.com/how-to-achieve-retail-growth-with-ecommerce/?hsLang=en
+11:55:51	Warning: 	File has moved from https://www.bjss.com/how-to-achieve-retail-growth-with-ecommerce/?hsLang=en to https://www.bjss.com/how-to-achieve-retail-growth-with-ecommerce/
+11:55:51	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/five-retailers-who-are-leading-the-way-in-e-commerce/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/industry-insights/five-retailers-who-are-leading-the-way-in-e-commerce/)
+11:55:51	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/five-retailers-who-are-leading-the-way-in-e-commerce/POST (from https://www.bjss.com/industry-insights/five-retailers-who-are-leading-the-way-in-e-commerce/)
+11:55:54	Warning: 	Moved Permanently for https://www.bjss.com/2020-and-covid-19-what-can-be-learnt-about-managing-change-part-1/?hsLang=en
+11:55:54	Warning: 	File has moved from https://www.bjss.com/2020-and-covid-19-what-can-be-learnt-about-managing-change-part-1/?hsLang=en to https://www.bjss.com/2020-and-covid-19-what-can-be-learnt-about-managing-change-part-1?hsLang=en
+11:56:03	Warning: 	Moved Permanently for https://www.bjss.com/unified-commerce/?hsLang=en
+11:56:03	Warning: 	File has moved from https://www.bjss.com/unified-commerce/?hsLang=en to https://www.bjss.com/industry-insights/unified-commerce-retails-new-normal-in-a-post-covid-19-world?hsLang=en
+11:56:05	Warning: 	Moved Permanently for https://www.bjss.com/covid-19-as-a-catalyst-for-digital-transformation/?hsLang=en
+11:56:05	Warning: 	File has moved from https://www.bjss.com/covid-19-as-a-catalyst-for-digital-transformation/?hsLang=en to https://www.bjss.com/industry-insights/how-bjss-is-helping-nhs-respond-to-covid-19-pandemic?hsLang=en
+11:56:07	Warning: 	Moved Permanently for https://www.bjss.com/the-purest-most-disruptive-black-swan-ever/?hsLang=en
+11:56:07	Warning: 	File has moved from https://www.bjss.com/the-purest-most-disruptive-black-swan-ever/?hsLang=en to https://www.bjss.com/the-purest-most-disruptive-black-swan-ever?hsLang=en
+11:56:07	Warning: 	Moved Permanently for https://www.bjss.com/do-you-really-know-your-supply-chain/?hsLang=en
+11:56:07	Warning: 	File has moved from https://www.bjss.com/do-you-really-know-your-supply-chain/?hsLang=en to https://www.bjss.com/do-you-really-know-your-supply-chain?hsLang=en
+11:56:09	Warning: 	Moved Permanently for https://www.bjss.com/productivity-people-and-utilisation-along-the-supply-chain/?hsLang=en
+11:56:09	Warning: 	File has moved from https://www.bjss.com/productivity-people-and-utilisation-along-the-supply-chain/?hsLang=en to https://www.bjss.com/productivity-people-and-utilisation-along-the-supply-chain?hsLang=en
+11:56:11	Warning: 	Found for https://www.bjss.com/covid-19/?hsLang=en
+11:56:11	Warning: 	File has moved from https://www.bjss.com/covid-19/?hsLang=en to https://www.bjss.com/covid-19
+11:56:13	Warning: 	Moved Permanently for https://www.bjss.com/ea/?hsLang=en
+11:56:13	Warning: 	File has moved from https://www.bjss.com/ea/?hsLang=en to https://www.bjss.com/enterprise-agile/?hsLang=en
+11:56:29	Warning: 	Found for https://www.bjss.com/design/?hsLang=en
+11:56:29	Warning: 	File has moved from https://www.bjss.com/design/?hsLang=en to https://www.bjss.com/design/
+11:56:29	Warning: 	Moved Permanently for https://www.bjss.com/sheffield/?hsLang=en
+11:56:29	Warning: 	File has moved from https://www.bjss.com/sheffield/?hsLang=en to https://www.bjss.com/contact/sheffield?hsLang=en
+11:56:31	Warning: 	Found for https://www.bjss.com/?hsLang=pt-pt
+11:56:31	Warning: 	File has moved from https://www.bjss.com/?hsLang=pt-pt to https://www.bjss.com
+11:56:31	Error: 	"Not Found" (404) at link https://www.bjss.com/pt-pt/news/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/pt-pt/news/anuncia-novo-portugal-escritório)
+11:56:31	Error: 	"Not Found" (404) at link https://www.bjss.com/pt-pt/news/POST (from https://www.bjss.com/pt-pt/news/anuncia-novo-portugal-escritório)
+11:57:20	Warning: 	Found for https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem/?hsLang=en-gb
+11:57:20	Warning: 	File has moved from https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem/?hsLang=en-gb to https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem/
+11:57:20	Warning: 	Found for https://www.bjss.com/democratising-data-webinar/?hsLang=en-gb
+11:57:20	Warning: 	File has moved from https://www.bjss.com/democratising-data-webinar/?hsLang=en-gb to https://www.bjss.com/democratising-data-webinar/
+11:57:20	Warning: 	Found for https://www.bjss.com/sparck-service-design-take-away/?hsLang=en-gb
+11:57:20	Warning: 	File has moved from https://www.bjss.com/sparck-service-design-take-away/?hsLang=en-gb to https://www.bjss.com/sparck-service-design-take-away/
+11:57:20	Warning: 	Found for https://www.bjss.com/servelec-and-bjss-working-together-to-innovate-in-health-and-social-care/?hsLang=en-gb
+11:57:20	Warning: 	File has moved from https://www.bjss.com/servelec-and-bjss-working-together-to-innovate-in-health-and-social-care/?hsLang=en-gb to https://www.bjss.com/servelec-and-bjss-working-together-to-innovate-in-health-and-social-care/
+11:58:20	Error: 	"Not Found" (404) at link https://www.bjss.com/past-events/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/past-events/)
+11:58:20	Error: 	"Not Found" (404) at link https://www.bjss.com/past-events/POST (from https://www.bjss.com/past-events/)
+12:02:11	Error: 	"Not Found" (404) at link https://www.bjss.com/news/author/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/author/chloe-coggins)
+12:02:11	Error: 	"Not Found" (404) at link https://www.bjss.com/news/author/POST (from https://www.bjss.com/news/author/chloe-coggins)
+12:02:22	Warning: 	Moved Permanently for https://www.bjss.com/bjss-employee-named-europes-top-young-software-tester/?hsLang=en
+12:02:22	Warning: 	File has moved from https://www.bjss.com/bjss-employee-named-europes-top-young-software-tester/?hsLang=en to https://www.bjss.com/bjss-employee-named-europes-top-young-software-tester?hsLang=en
+12:02:32	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/our-work/tag/data-and-ai-case-study/page/POST (from https://www.bjss.com/en-us/our-work/tag/data-and-ai-case-study/page/1)
+12:02:36	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/author/POST (from https://www.bjss.com/our-work/author/admin)
+12:02:44	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/POST (from https://www.bjss.com/engineering-insights/author/carl-austin)
+12:02:50	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/POST (from https://www.bjss.com/industry-insights/author/ben-cooper)
+12:02:58	Warning: 	Moved Permanently for https://www.bjss.com/old-strategy/?hsLang=en-gb
+12:02:58	Warning: 	File has moved from https://www.bjss.com/old-strategy/?hsLang=en-gb to https://www.bjss.com/strategy-and-transformation?hsLang=en-gb
+12:02:59	Error: 	"Not Found" (404) at link https://www.bjss.com/cost-optimisation/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/cost-optimisation/)
+12:02:59	Error: 	"Not Found" (404) at link https://www.bjss.com/cost-optimisation/POST (from https://www.bjss.com/cost-optimisation/)
+12:03:03	Error: 	"Not Found" (404) at link https://www.bjss.com/how-banks-can-thrive-in-2021/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/how-banks-can-thrive-in-2021/)
+12:03:03	Error: 	"Not Found" (404) at link https://www.bjss.com/how-banks-can-thrive-in-2021/POST (from https://www.bjss.com/how-banks-can-thrive-in-2021/)
+12:03:04	Warning: 	Found for https://www.bjss.com/how-banks-can-thrive-in-2021/?hsLang=en
+12:03:04	Warning: 	File has moved from https://www.bjss.com/how-banks-can-thrive-in-2021/?hsLang=en to https://www.bjss.com/how-banks-can-thrive-in-2021/
+12:03:04	Warning: 	Found for https://www.bjss.com/how-to-devise-an-effective-cloud-computing-strategy/?hsLang=en
+12:03:04	Warning: 	File has moved from https://www.bjss.com/how-to-devise-an-effective-cloud-computing-strategy/?hsLang=en to https://www.bjss.com/how-to-devise-an-effective-cloud-computing-strategy/
+12:03:04	Warning: 	Found for https://www.bjss.com/cloud/?hsLang=en
+12:03:04	Warning: 	File has moved from https://www.bjss.com/cloud/?hsLang=en to https://www.bjss.com/cloud/
+12:03:04	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/five-strategic-areas-financial-services-firms-can-adopt-to-accelerate-their-cloud-journey/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/industry-insights/five-strategic-areas-financial-services-firms-can-adopt-to-accelerate-their-cloud-journey/)
+12:03:04	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/five-strategic-areas-financial-services-firms-can-adopt-to-accelerate-their-cloud-journey/POST (from https://www.bjss.com/industry-insights/five-strategic-areas-financial-services-firms-can-adopt-to-accelerate-their-cloud-journey/)
+12:03:04	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/tag/financial-services-insight/page/POST (from https://www.bjss.com/industry-insights/tag/financial-services-insight/page/2)
+12:03:05	Warning: 	Found for https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem/?hsLang=en
+12:03:05	Warning: 	File has moved from https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem/?hsLang=en to https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem/
+12:03:45	Warning: 	Found for https://www.bjss.com/enterprise-cloud-accelerating-time-to-value/?hsLang=en
+12:03:45	Warning: 	File has moved from https://www.bjss.com/enterprise-cloud-accelerating-time-to-value/?hsLang=en to https://www.bjss.com/enterprise-cloud-accelerating-time-to-value/
+12:03:45	Error: 	"Not Found" (404) at link https://www.bjss.com/news/bjss-expands-its-cloud-platform-capability-with-the-launch-of-bjss-enterprise-cloud-and-cloud-consulting/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/bjss-expands-its-cloud-platform-capability-with-the-launch-of-bjss-enterprise-cloud-and-cloud-consulting/)
+12:03:45	Error: 	"Not Found" (404) at link https://www.bjss.com/news/bjss-expands-its-cloud-platform-capability-with-the-launch-of-bjss-enterprise-cloud-and-cloud-consulting/POST (from https://www.bjss.com/news/bjss-expands-its-cloud-platform-capability-with-the-launch-of-bjss-enterprise-cloud-and-cloud-consulting/)
+12:04:04	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/industry-insights/tag/retail-consumer-markets-insight/page/POST (from https://www.bjss.com/en-us/industry-insights/tag/retail-consumer-markets-insight/page/1)
+12:04:11	Warning: 	Moved Permanently for https://www.bjss.com/why-do-retailers-need-to-care-about-sustainability/?hsLang=en
+12:04:11	Warning: 	File has moved from https://www.bjss.com/why-do-retailers-need-to-care-about-sustainability/?hsLang=en to https://www.bjss.com/why-do-retailers-need-to-care-about-sustainability?hsLang=en
+12:04:15	Warning: 	Moved Permanently for https://www.bjss.com/london_download/?hsLang=en
+12:04:15	Warning: 	File has moved from https://www.bjss.com/london_download/?hsLang=en to https://www.bjss.com/?hsLang=en
+12:04:41	Warning: 	Moved Permanently for https://www.bjss.com/open-banking-getting-the-basics-right/?hsLang=en
+12:04:41	Warning: 	File has moved from https://www.bjss.com/open-banking-getting-the-basics-right/?hsLang=en to https://www.bjss.com/open-banking-getting-the-basics-right?hsLang=en
+12:04:44	Warning: 	Found for https://www.bjss.com/democratising-data-webinar/?hsLang=en
+12:04:44	Warning: 	File has moved from https://www.bjss.com/democratising-data-webinar/?hsLang=en to https://www.bjss.com/democratising-data-webinar/
+12:05:23	Warning: 	Found for https://www.bjss.com/academy/?hsLang=en-gb
+12:05:23	Warning: 	File has moved from https://www.bjss.com/academy/?hsLang=en-gb to https://www.bjss.com/academy
+12:05:24	Warning: 	Found for https://www.bjss.com/enterprise-cloud-accelerating-time-to-value/?utm_source=AWS&utm_medium=AWS+Link+&utm_campaign=AWS&utm_id=AWS+Partner+Page+&hsLang=en
+12:05:24	Warning: 	File has moved from https://www.bjss.com/enterprise-cloud-accelerating-time-to-value/?utm_source=AWS&utm_medium=AWS+Link+&utm_campaign=AWS&utm_id=AWS+Partner+Page+&hsLang=en to https://www.bjss.com/enterprise-cloud-accelerating-time-to-value/?utm_source=AWS&utm_medium=AWS+Link+&utm_campaign=AWS&utm_id=AWS+Partner+Page+
+12:05:24	Warning: 	Found for https://www.bjss.com/academy/?hsLang=en
+12:05:24	Warning: 	File has moved from https://www.bjss.com/academy/?hsLang=en to https://www.bjss.com/academy
+12:05:36	Error: 	"Not Found" (404) at link https://www.bjss.com/event-insights/author/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/event-insights/author/marzena-jagucka-shasheen-roberts-lisa-harris-and-phil-kennaugh)
+12:05:36	Error: 	"Not Found" (404) at link https://www.bjss.com/event-insights/author/POST (from https://www.bjss.com/event-insights/author/marzena-jagucka-shasheen-roberts-lisa-harris-and-phil-kennaugh)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/how-do-i-become-a-better-business-analyst/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/how-do-i-become-a-better-business-analyst/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/how-do-i-become-a-better-business-analyst/POST (from https://www.bjss.com/how-do-i-become-a-better-business-analyst/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/the-atomic-design-lifecycle/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/the-atomic-design-lifecycle/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/the-atomic-design-lifecycle/POST (from https://www.bjss.com/the-atomic-design-lifecycle/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/maintaining-maintainable-code/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/maintaining-maintainable-code/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/maintaining-maintainable-code/POST (from https://www.bjss.com/maintaining-maintainable-code/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/why-change-should-be-measured-as-a-metric-of-success-in-your-cloud-adoption/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/why-change-should-be-measured-as-a-metric-of-success-in-your-cloud-adoption/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/why-change-should-be-measured-as-a-metric-of-success-in-your-cloud-adoption/POST (from https://www.bjss.com/why-change-should-be-measured-as-a-metric-of-success-in-your-cloud-adoption/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/driving-development-demystifying-tdd-bdd-friends/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/driving-development-demystifying-tdd-bdd-friends/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/driving-development-demystifying-tdd-bdd-friends/POST (from https://www.bjss.com/driving-development-demystifying-tdd-bdd-friends/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/hubfs/Speaker-Sarah-Tulip.jpg (from https://www.bjss.com/the-story-of-a-global-consultancy-born-in-leeds/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/the-story-of-a-global-consultancy-born-in-leeds/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/the-story-of-a-global-consultancy-born-in-leeds/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/the-story-of-a-global-consultancy-born-in-leeds/POST (from https://www.bjss.com/the-story-of-a-global-consultancy-born-in-leeds/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/harnessing-data-to-accelerate-bringing-drugs-and-vaccines-to-market/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/harnessing-data-to-accelerate-bringing-drugs-and-vaccines-to-market/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/harnessing-data-to-accelerate-bringing-drugs-and-vaccines-to-market/POST (from https://www.bjss.com/harnessing-data-to-accelerate-bringing-drugs-and-vaccines-to-market/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/digital-transformation-for-engineering-panel/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/digital-transformation-for-engineering-panel/)
+12:06:02	Error: 	"Not Found" (404) at link https://www.bjss.com/digital-transformation-for-engineering-panel/POST (from https://www.bjss.com/digital-transformation-for-engineering-panel/)
+12:09:45	Error: 	"Not Found" (404) at link https://www.bjss.com/news/author/chloe-coggins/page/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/author/chloe-coggins/page/2)
+12:09:45	Error: 	"Not Found" (404) at link https://www.bjss.com/news/author/chloe-coggins/page/POST (from https://www.bjss.com/news/author/chloe-coggins/page/2)
+12:09:45	Error: 	"Not Found" (404) at link https://www.bjss.com/pt-pt/news/author/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/pt-pt/news/author/chloe-coggins)
+12:09:45	Error: 	"Not Found" (404) at link https://www.bjss.com/pt-pt/news/author/POST (from https://www.bjss.com/pt-pt/news/author/chloe-coggins)
+12:09:53	Error: 	"Not Found" (404) at link https://www.bjss.com/news/author/david-clark/page/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/author/david-clark/page/2)
+12:09:53	Error: 	"Not Found" (404) at link https://www.bjss.com/news/author/david-clark/page/POST (from https://www.bjss.com/news/author/david-clark/page/2)
+12:09:56	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/our-work/author/POST (from https://www.bjss.com/en-us/our-work/author/chloe-coggins)
+12:09:59	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/author/admin/page/POST (from https://www.bjss.com/our-work/author/admin/page/1)
+12:09:59	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/author/natalie-ball/page/POST (from https://www.bjss.com/our-work/author/natalie-ball/page/2)
+12:10:00	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/author/joshua-devenport-1/page/POST (from https://www.bjss.com/our-work/author/joshua-devenport-1/page/1)
+12:10:00	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/author/becca-bennett/page/POST (from https://www.bjss.com/our-work/author/becca-bennett/page/1)
+12:10:00	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/author/adam-roche/page/POST (from https://www.bjss.com/our-work/author/adam-roche/page/2)
+12:10:00	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/author/michael-jenkins/page/POST (from https://www.bjss.com/our-work/author/michael-jenkins/page/1)
+12:10:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/carl-austin/page/POST (from https://www.bjss.com/engineering-insights/author/carl-austin/page/1)
+12:10:03	Error: 	"Not Found" (404) at link https://www.bjss.com/our-work/author/david-clark/page/POST (from https://www.bjss.com/our-work/author/david-clark/page/1)
+12:10:03	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/carl-austin-and-ricky-barefield/page/POST (from https://www.bjss.com/engineering-insights/author/carl-austin-and-ricky-barefield/page/1)
+12:10:04	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/ben-cooper/page/POST (from https://www.bjss.com/industry-insights/author/ben-cooper/page/1)
+12:10:04	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/dan-hopkinson/page/POST (from https://www.bjss.com/industry-insights/author/dan-hopkinson/page/1)
+12:10:33	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/mario-de-cristofano/page/POST (from https://www.bjss.com/engineering-insights/author/mario-de-cristofano/page/1)
+12:10:33	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/ryan-little/page/POST (from https://www.bjss.com/engineering-insights/author/ryan-little/page/1)
+12:10:33	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/rosie-pickersgill/page/POST (from https://www.bjss.com/engineering-insights/author/rosie-pickersgill/page/1)
+12:10:33	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/chloe-jones/page/POST (from https://www.bjss.com/engineering-insights/author/chloe-jones/page/1)
+12:10:33	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/jamie-kelly/page/POST (from https://www.bjss.com/engineering-insights/author/jamie-kelly/page/1)
+12:10:33	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/alex-khrizman/page/POST (from https://www.bjss.com/engineering-insights/author/alex-khrizman/page/1)
+12:10:33	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/jack-savage/page/POST (from https://www.bjss.com/engineering-insights/author/jack-savage/page/1)
+12:10:33	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/james-lewis/page/POST (from https://www.bjss.com/engineering-insights/author/james-lewis/page/1)
+12:10:33	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/adam-hall/page/POST (from https://www.bjss.com/engineering-insights/author/adam-hall/page/1)
+12:10:33	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/rosie-pickersgill-and-joe-campbell/page/POST (from https://www.bjss.com/engineering-insights/author/rosie-pickersgill-and-joe-campbell/page/1)
+12:11:10	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/industry-insights/author/POST (from https://www.bjss.com/en-us/industry-insights/author/elena-bergmann)
+12:11:21	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/tim-hancock/page/POST (from https://www.bjss.com/industry-insights/author/tim-hancock/page/1)
+12:11:21	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/jed-morley/page/POST (from https://www.bjss.com/industry-insights/author/jed-morley/page/1)
+12:11:21	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/michael-tattersall/page/POST (from https://www.bjss.com/industry-insights/author/michael-tattersall/page/1)
+12:11:21	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/charlie-hope/page/POST (from https://www.bjss.com/industry-insights/author/charlie-hope/page/1)
+12:11:21	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/orla-parry/page/POST (from https://www.bjss.com/industry-insights/author/orla-parry/page/1)
+12:11:21	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/ralph-robinson/page/POST (from https://www.bjss.com/industry-insights/author/ralph-robinson/page/1)
+12:11:21	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/fiona-bunker/page/POST (from https://www.bjss.com/industry-insights/author/fiona-bunker/page/1)
+12:11:21	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/the-bjss-consulting-diversity-inclusion-team/page/POST (from https://www.bjss.com/industry-insights/author/the-bjss-consulting-diversity-inclusion-team/page/1)
+12:11:21	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/david-crisp/page/POST (from https://www.bjss.com/industry-insights/author/david-crisp/page/1)
+12:11:21	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/simon-hull/page/POST (from https://www.bjss.com/industry-insights/author/simon-hull/page/1)
+12:12:12	Error: 	"Not Found" (404) at link https://www.bjss.com/news/author/adam-roche/page/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/author/adam-roche/page/2)
+12:12:12	Error: 	"Not Found" (404) at link https://www.bjss.com/news/author/adam-roche/page/POST (from https://www.bjss.com/news/author/adam-roche/page/2)
+12:12:12	Error: 	"Not Found" (404) at link https://www.bjss.com/event-insights/tag/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/event-insights/tag/event-insights)
+12:12:12	Error: 	"Not Found" (404) at link https://www.bjss.com/event-insights/tag/POST (from https://www.bjss.com/event-insights/tag/event-insights)
+12:12:12	Warning: 	Found for https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem-webinar/?hsLang=en-gb
+12:12:12	Warning: 	File has moved from https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem-webinar/?hsLang=en-gb to https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem-webinar/
+12:12:12	Error: 	"Not Found" (404) at link https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem/)
+12:12:12	Error: 	"Not Found" (404) at link https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem/POST (from https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem/)
+12:12:12	Error: 	"Not Found" (404) at link https://www.bjss.com/democratising-data-webinar/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/democratising-data-webinar/)
+12:12:12	Error: 	"Not Found" (404) at link https://www.bjss.com/democratising-data-webinar/POST (from https://www.bjss.com/democratising-data-webinar/)
+12:12:12	Error: 	"Not Found" (404) at link https://www.bjss.com/sparck-service-design-take-away/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/sparck-service-design-take-away/)
+12:12:12	Error: 	"Not Found" (404) at link https://www.bjss.com/sparck-service-design-take-away/POST (from https://www.bjss.com/sparck-service-design-take-away/)
+12:12:12	Error: 	"Not Found" (404) at link https://www.bjss.com/servelec-and-bjss-working-together-to-innovate-in-health-and-social-care/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/servelec-and-bjss-working-together-to-innovate-in-health-and-social-care/)
+12:12:12	Error: 	"Not Found" (404) at link https://www.bjss.com/servelec-and-bjss-working-together-to-innovate-in-health-and-social-care/POST (from https://www.bjss.com/servelec-and-bjss-working-together-to-innovate-in-health-and-social-care/)
+12:13:39	Error: 	"Not Found" (404) at link https://www.bjss.com/news/author/admin/page/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/author/admin/page/2)
+12:13:39	Error: 	"Not Found" (404) at link https://www.bjss.com/news/author/admin/page/POST (from https://www.bjss.com/news/author/admin/page/2)
+12:13:40	Error: 	"Not Found" (404) at link https://www.bjss.com/news/bjss-strengthens-its-partnership-with-aws-by-becoming-an-official-immersion-day-partner/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/bjss-strengthens-its-partnership-with-aws-by-becoming-an-official-immersion-day-partner/)
+12:13:40	Error: 	"Not Found" (404) at link https://www.bjss.com/news/bjss-strengthens-its-partnership-with-aws-by-becoming-an-official-immersion-day-partner/POST (from https://www.bjss.com/news/bjss-strengthens-its-partnership-with-aws-by-becoming-an-official-immersion-day-partner/)
+12:13:40	Error: 	"Not Found" (404) at link https://www.bjss.com/news/leading-british-digital-health-exporter-dit/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/leading-british-digital-health-exporter-dit/)
+12:13:40	Error: 	"Not Found" (404) at link https://www.bjss.com/news/leading-british-digital-health-exporter-dit/POST (from https://www.bjss.com/news/leading-british-digital-health-exporter-dit/)
+12:13:40	Error: 	"Not Found" (404) at link https://www.bjss.com/news/bjss-joins-the-northern-powerhouse-to-further-support-digital-innovation-and-skills-investment/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/bjss-joins-the-northern-powerhouse-to-further-support-digital-innovation-and-skills-investment/)
+12:13:40	Error: 	"Not Found" (404) at link https://www.bjss.com/news/bjss-joins-the-northern-powerhouse-to-further-support-digital-innovation-and-skills-investment/POST (from https://www.bjss.com/news/bjss-joins-the-northern-powerhouse-to-further-support-digital-innovation-and-skills-investment/)
+12:13:41	Error: 	"Not Found" (404) at link https://www.bjss.com/news/bjss-welcomed-to-buckingham-palace/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/bjss-welcomed-to-buckingham-palace/)
+12:13:41	Error: 	"Not Found" (404) at link https://www.bjss.com/news/bjss-welcomed-to-buckingham-palace/POST (from https://www.bjss.com/news/bjss-welcomed-to-buckingham-palace/)
+12:13:51	Warning: 	Moved Permanently for https://www.bjss.com/queens/?hsLang=en
+12:13:51	Warning: 	File has moved from https://www.bjss.com/queens/?hsLang=en to https://www.bjss.com/news/bjss-wins-the-queens-award-for-enterprise-for-agile-approach-to-software?hsLang=en
+12:13:51	Warning: 	Found for https://www.bjss.com/community/?hsLang=en
+12:13:51	Warning: 	File has moved from https://www.bjss.com/community/?hsLang=en to https://www.bjss.com/community/
+12:13:53	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/our-work/author/chloe-coggins/page/POST (from https://www.bjss.com/en-us/our-work/author/chloe-coggins/page/1)
+12:13:53	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/sonia-ingram/page/POST (from https://www.bjss.com/engineering-insights/author/sonia-ingram/page/1)
+12:13:53	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/ammar-haider/page/POST (from https://www.bjss.com/engineering-insights/author/ammar-haider/page/1)
+12:13:53	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/joshua-devenport-1/page/POST (from https://www.bjss.com/engineering-insights/author/joshua-devenport-1/page/1)
+12:13:53	Warning: 	Moved Permanently for https://www.bjss.com/e-rs-cloud-migration/?hsLang=en
+12:13:53	Warning: 	File has moved from https://www.bjss.com/e-rs-cloud-migration/?hsLang=en to https://www.bjss.com/e-rs-cloud-migration?hsLang=en
+12:13:54	Warning: 	Moved Permanently for https://www.bjss.com/driving-the-dvsa-to-the-cloud/?hsLang=en
+12:13:54	Warning: 	File has moved from https://www.bjss.com/driving-the-dvsa-to-the-cloud/?hsLang=en to https://www.bjss.com/driving-the-dvsa-to-the-cloud?hsLang=en
+12:13:55	Warning: 	Moved Permanently for https://www.bjss.com/goal-group-creating-a-future-proof-business/?hsLang=en
+12:13:55	Warning: 	File has moved from https://www.bjss.com/goal-group-creating-a-future-proof-business/?hsLang=en to https://www.bjss.com/goal-group-creating-a-future-proof-business?hsLang=en
+12:13:56	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/mercia-silva/page/POST (from https://www.bjss.com/engineering-insights/author/mercia-silva/page/1)
+12:13:58	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/vrindha-venu-jacob-hughes-and-richard-seely/page/POST (from https://www.bjss.com/industry-insights/author/vrindha-venu-jacob-hughes-and-richard-seely/page/1)
+12:13:58	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/georgia-price/page/POST (from https://www.bjss.com/industry-insights/author/georgia-price/page/1)
+12:13:58	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/joshua-devenport-1/page/POST (from https://www.bjss.com/industry-insights/author/joshua-devenport-1/page/1)
+12:13:58	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/becca/page/POST (from https://www.bjss.com/industry-insights/author/becca/page/1)
+12:13:58	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/georgia-price-becca-duncan-georgina-wickman-and-amin-rhalem/page/POST (from https://www.bjss.com/industry-insights/author/georgia-price-becca-duncan-georgina-wickman-and-amin-rhalem/page/1)
+12:13:58	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/giorgia-gallarati/page/POST (from https://www.bjss.com/industry-insights/author/giorgia-gallarati/page/1)
+12:13:58	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/larry-ryan/page/POST (from https://www.bjss.com/industry-insights/author/larry-ryan/page/1)
+12:13:58	Error: 	"Not Found" (404) at link https://www.bjss.com/how-to-devise-an-effective-cloud-computing-strategy/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/how-to-devise-an-effective-cloud-computing-strategy/)
+12:13:58	Error: 	"Not Found" (404) at link https://www.bjss.com/how-to-devise-an-effective-cloud-computing-strategy/POST (from https://www.bjss.com/how-to-devise-an-effective-cloud-computing-strategy/)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/benjamin-collingwood/page/POST (from https://www.bjss.com/engineering-insights/author/benjamin-collingwood/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/james-taylor/page/POST (from https://www.bjss.com/engineering-insights/author/james-taylor/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/martyn-jones/page/POST (from https://www.bjss.com/engineering-insights/author/martyn-jones/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/simon-josling/page/POST (from https://www.bjss.com/engineering-insights/author/simon-josling/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/jonny-muir/page/POST (from https://www.bjss.com/engineering-insights/author/jonny-muir/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/michael-winter/page/POST (from https://www.bjss.com/engineering-insights/author/michael-winter/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/tim-walpole/page/POST (from https://www.bjss.com/engineering-insights/author/tim-walpole/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/ismahil-khan/page/POST (from https://www.bjss.com/engineering-insights/author/ismahil-khan/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/azeem-butt/page/POST (from https://www.bjss.com/engineering-insights/author/azeem-butt/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/mike-peachy/page/POST (from https://www.bjss.com/engineering-insights/author/mike-peachy/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/scott-hackeson/page/POST (from https://www.bjss.com/engineering-insights/author/scott-hackeson/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/lara-ramsay/page/POST (from https://www.bjss.com/engineering-insights/author/lara-ramsay/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/adam-roche/page/POST (from https://www.bjss.com/engineering-insights/author/adam-roche/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/oliver-hathaway/page/POST (from https://www.bjss.com/engineering-insights/author/oliver-hathaway/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/dan-childs/page/POST (from https://www.bjss.com/engineering-insights/author/dan-childs/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/natsumi-nakayama/page/POST (from https://www.bjss.com/engineering-insights/author/natsumi-nakayama/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/fawad-ali/page/POST (from https://www.bjss.com/engineering-insights/author/fawad-ali/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/tom-webb-abigail-chubb-and-luca-ciraolo/page/POST (from https://www.bjss.com/engineering-insights/author/tom-webb-abigail-chubb-and-luca-ciraolo/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/rachel-artiss/page/POST (from https://www.bjss.com/engineering-insights/author/rachel-artiss/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/georgia-price/page/POST (from https://www.bjss.com/engineering-insights/author/georgia-price/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/josh-hewer/page/POST (from https://www.bjss.com/engineering-insights/author/josh-hewer/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/robin-hyman/page/POST (from https://www.bjss.com/engineering-insights/author/robin-hyman/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/susheel-dodeja-and-robert-van-tol/page/POST (from https://www.bjss.com/engineering-insights/author/susheel-dodeja-and-robert-van-tol/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/ross-duncan/page/POST (from https://www.bjss.com/engineering-insights/author/ross-duncan/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/tim-hancock/page/POST (from https://www.bjss.com/engineering-insights/author/tim-hancock/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/richard-mcintyre/page/POST (from https://www.bjss.com/engineering-insights/author/richard-mcintyre/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/anthony-garratt/page/POST (from https://www.bjss.com/engineering-insights/author/anthony-garratt/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/doug-yeum/page/POST (from https://www.bjss.com/engineering-insights/author/doug-yeum/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/andrew-bennett/page/POST (from https://www.bjss.com/engineering-insights/author/andrew-bennett/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/colin-wren/page/POST (from https://www.bjss.com/engineering-insights/author/colin-wren/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/craig-howarth-charlotte-sutton-donna-tosney-and-leah-unsworth-hughes/page/POST (from https://www.bjss.com/engineering-insights/author/craig-howarth-charlotte-sutton-donna-tosney-and-leah-unsworth-hughes/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/ocean-haghighi-daly/page/POST (from https://www.bjss.com/engineering-insights/author/ocean-haghighi-daly/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/lee-crossley/page/POST (from https://www.bjss.com/engineering-insights/author/lee-crossley/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/jonathan-gill/page/POST (from https://www.bjss.com/engineering-insights/author/jonathan-gill/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/engineering-insights/author/chris-stewart/page/POST (from https://www.bjss.com/engineering-insights/author/chris-stewart/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/claire-judkins/page/POST (from https://www.bjss.com/industry-insights/author/claire-judkins/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/james-storr/page/POST (from https://www.bjss.com/industry-insights/author/james-storr/page/1)
+12:14:00	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/kam-bhatoa/page/POST (from https://www.bjss.com/industry-insights/author/kam-bhatoa/page/1)
+12:14:05	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/industry-insights/author/elena-bergmann/page/POST (from https://www.bjss.com/en-us/industry-insights/author/elena-bergmann/page/1)
+12:14:05	Error: 	"Not Found" (404) at link https://www.bjss.com/en-us/industry-insights/author/ralph-robinson/page/POST (from https://www.bjss.com/en-us/industry-insights/author/ralph-robinson/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/tom-mellor/page/POST (from https://www.bjss.com/industry-insights/author/tom-mellor/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/lauren-bevan-and-ralph-robinson/page/POST (from https://www.bjss.com/industry-insights/author/lauren-bevan-and-ralph-robinson/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/josh-hewer/page/POST (from https://www.bjss.com/industry-insights/author/josh-hewer/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/gabriella-howson/page/POST (from https://www.bjss.com/industry-insights/author/gabriella-howson/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/simon-de-timary/page/POST (from https://www.bjss.com/industry-insights/author/simon-de-timary/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/larry-tab-larry-ryan-greg-allen-and-evan-bauer/page/POST (from https://www.bjss.com/industry-insights/author/larry-tab-larry-ryan-greg-allen-and-evan-bauer/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/gavin-bramer-and-konrad-empacher/page/POST (from https://www.bjss.com/industry-insights/author/gavin-bramer-and-konrad-empacher/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/sam-woolard/page/POST (from https://www.bjss.com/industry-insights/author/sam-woolard/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/elena-bergmann/page/POST (from https://www.bjss.com/industry-insights/author/elena-bergmann/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/harry-freeman/page/POST (from https://www.bjss.com/industry-insights/author/harry-freeman/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/tom-rich/page/POST (from https://www.bjss.com/industry-insights/author/tom-rich/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/adam-roche/page/POST (from https://www.bjss.com/industry-insights/author/adam-roche/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/anna-clymo-and-freya-hansen/page/POST (from https://www.bjss.com/industry-insights/author/anna-clymo-and-freya-hansen/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/david-gore/page/POST (from https://www.bjss.com/industry-insights/author/david-gore/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/chloe-coggins/page/POST (from https://www.bjss.com/industry-insights/author/chloe-coggins/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/christopher-chan/page/POST (from https://www.bjss.com/industry-insights/author/christopher-chan/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/anna-clymo/page/POST (from https://www.bjss.com/industry-insights/author/anna-clymo/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/daniel-selywn-and-tom-rich/page/POST (from https://www.bjss.com/industry-insights/author/daniel-selywn-and-tom-rich/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/georgina-wickman-and-giorgia-gallarati/page/POST (from https://www.bjss.com/industry-insights/author/georgina-wickman-and-giorgia-gallarati/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/georgina-wickman/page/POST (from https://www.bjss.com/industry-insights/author/georgina-wickman/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/freya-hansen/page/POST (from https://www.bjss.com/industry-insights/author/freya-hansen/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/georgina-wickman-and-ellie-colvin/page/POST (from https://www.bjss.com/industry-insights/author/georgina-wickman-and-ellie-colvin/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/josh-dresner/page/POST (from https://www.bjss.com/industry-insights/author/josh-dresner/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/hannah-tharp/page/POST (from https://www.bjss.com/industry-insights/author/hannah-tharp/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/rachel-artiss-freya-hansen-and-ellie-colvin/page/POST (from https://www.bjss.com/industry-insights/author/rachel-artiss-freya-hansen-and-ellie-colvin/page/1)
+12:14:07	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/jake-knowles/page/POST (from https://www.bjss.com/industry-insights/author/jake-knowles/page/1)
+12:14:08	Error: 	"Not Found" (404) at link https://www.bjss.com/covid-19/tag/POST (from https://www.bjss.com/covid-19/tag/financial-services-insight)
+12:14:10	Error: 	"Not Found" (404) at link https://www.bjss.com/covid-19/a-search-for-calmer-waters/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/covid-19/a-search-for-calmer-waters/)
+12:14:10	Error: 	"Not Found" (404) at link https://www.bjss.com/covid-19/a-search-for-calmer-waters/POST (from https://www.bjss.com/covid-19/a-search-for-calmer-waters/)
+12:14:10	Error: 	"Not Found" (404) at link https://www.bjss.com/covid-19/a-central-bank-digital-currency-a-serious-consideration-or-a-pipedream/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/covid-19/a-central-bank-digital-currency-a-serious-consideration-or-a-pipedream/)
+12:14:10	Error: 	"Not Found" (404) at link https://www.bjss.com/covid-19/a-central-bank-digital-currency-a-serious-consideration-or-a-pipedream/POST (from https://www.bjss.com/covid-19/a-central-bank-digital-currency-a-serious-consideration-or-a-pipedream/)
+12:14:11	Error: 	"Not Found" (404) at link https://www.bjss.com/covid-19/the-new-beauty-trends/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/covid-19/the-new-beauty-trends/)
+12:14:11	Error: 	"Not Found" (404) at link https://www.bjss.com/covid-19/the-new-beauty-trends/POST (from https://www.bjss.com/covid-19/the-new-beauty-trends/)
+12:14:11	Error: 	"Not Found" (404) at link https://www.bjss.com/covid-19/page/POST (from https://www.bjss.com/covid-19/page/1)
+12:14:11	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/anna-cheong/page/POST (from https://www.bjss.com/industry-insights/author/anna-cheong/page/1)
+12:14:11	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/christopher-chan-and-daniel-selwyn/page/POST (from https://www.bjss.com/industry-insights/author/christopher-chan-and-daniel-selwyn/page/1)
+12:14:11	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/lizzie-willett/page/POST (from https://www.bjss.com/industry-insights/author/lizzie-willett/page/1)
+12:14:11	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/mike-buck/page/POST (from https://www.bjss.com/industry-insights/author/mike-buck/page/1)
+12:14:11	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/kate-bassett/page/POST (from https://www.bjss.com/industry-insights/author/kate-bassett/page/1)
+12:14:11	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/richard-meirion-williams/page/POST (from https://www.bjss.com/industry-insights/author/richard-meirion-williams/page/1)
+12:15:14	Error: 	"Not Found" (404) at link https://www.bjss.com/news/bjss-to-create-70-local-jobs-with-new-scottish-hub/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/news/bjss-to-create-70-local-jobs-with-new-scottish-hub/)
+12:15:14	Error: 	"Not Found" (404) at link https://www.bjss.com/news/bjss-to-create-70-local-jobs-with-new-scottish-hub/POST (from https://www.bjss.com/news/bjss-to-create-70-local-jobs-with-new-scottish-hub/)
+12:15:23	Warning: 	Moved Permanently for https://www.bjss.com/queens-2/?hsLang=en
+12:15:23	Warning: 	File has moved from https://www.bjss.com/queens-2/?hsLang=en to https://www.bjss.com/news/bjss-wins-the-queens-award-for-enterprise-for-agile-approach-to-software?hsLang=en
+12:15:24	Error: 	"Not Found" (404) at link https://www.bjss.com/wp-content/uploads/Stuart-Bullock.jpg?hsLang=en (from https://www.bjss.com/news/bjss-appoints-stuart-bullock-as-managing-director)
+12:15:24	Error: 	"Not Found" (404) at link https://www.bjss.com/wp-content/uploads/Pickard.jpg?hsLang=en (from https://www.bjss.com/news/bjss-appoints-stuart-bullock-as-managing-director)
+12:15:24	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/bruce-wen/page/POST (from https://www.bjss.com/industry-insights/author/bruce-wen/page/1)
+12:15:24	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/tom-silver/page/POST (from https://www.bjss.com/industry-insights/author/tom-silver/page/1)
+12:15:24	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/erik-schmidt/page/POST (from https://www.bjss.com/industry-insights/author/erik-schmidt/page/1)
+12:15:24	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/daniel-selywm-tom-rich-and-christopher-chan/page/POST (from https://www.bjss.com/industry-insights/author/daniel-selywm-tom-rich-and-christopher-chan/page/1)
+12:15:24	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/lauren-bevan/page/POST (from https://www.bjss.com/industry-insights/author/lauren-bevan/page/1)
+12:15:24	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/susheel-dodeja/page/POST (from https://www.bjss.com/industry-insights/author/susheel-dodeja/page/1)
+12:15:24	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/dennis-collet/page/POST (from https://www.bjss.com/industry-insights/author/dennis-collet/page/1)
+12:15:24	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/josh-hurman/page/POST (from https://www.bjss.com/industry-insights/author/josh-hurman/page/1)
+12:15:24	Error: 	"Not Found" (404) at link https://www.bjss.com/industry-insights/author/mel-wade/page/POST (from https://www.bjss.com/industry-insights/author/mel-wade/page/1)
+12:15:24	Error: 	"Not Found" (404) at link https://www.bjss.com/covid-19/tag/financial-services-insight/page/POST (from https://www.bjss.com/covid-19/tag/financial-services-insight/page/1)
+12:15:24	Error: 	"Not Found" (404) at link https://www.bjss.com/covid-19/tag/retail-consumer-markets-insight/page/POST (from https://www.bjss.com/covid-19/tag/retail-consumer-markets-insight/page/1)
+12:15:29	Error: 	"Not Found" (404) at link https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem-webinar/BJSS_May2021/templates/partials/footer.html (from https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem-webinar/)
+12:15:29	Error: 	"Not Found" (404) at link https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem-webinar/POST (from https://www.bjss.com/dont-make-cloud-tomorrows-legacy-problem-webinar/)
+12:16:05	Error: 	"Not Found" (404) at link https://www.bjss.com/covid-19/author/POST (from https://www.bjss.com/covid-19/author/tom-rich)
+12:16:27	Error: 	"Not Found" (404) at link https://www.bjss.com/covid-19/author/tom-rich/page/POST (from https://www.bjss.com/covid-19/author/tom-rich/page/1)
+12:16:27	Error: 	"Not Found" (404) at link https://www.bjss.com/covid-19/author/georgina-wickman-and-giorgia-gallarati/page/POST (from https://www.bjss.com/covid-19/author/georgina-wickman-and-giorgia-gallarati/page/1)
+12:17:03	Warning: 	Moved Permanently for https://www.bjss.com/12138-2/?hsLang=en
+12:17:03	Warning: 	File has moved from https://www.bjss.com/12138-2/?hsLang=en to https://www.bjss.com/12138-2?hsLang=en
+12:17:03	Warning: 	Moved Permanently for https://www.bjss.com/bjss-representara-al-reino-unido-en-los-european-business-awards-2016-17/?hsLang=en
+12:17:03	Warning: 	File has moved from https://www.bjss.com/bjss-representara-al-reino-unido-en-los-european-business-awards-2016-17/?hsLang=en to https://www.bjss.com/bjss-representara-al-reino-unido-en-los-european-business-awards-2016-17?hsLang=en
+12:17:04	Warning: 	Moved Permanently for https://www.bjss.com/bjss-represent-uk-european-business-awards-201617/?hsLang=en
+12:17:04	Warning: 	File has moved from https://www.bjss.com/bjss-represent-uk-european-business-awards-201617/?hsLang=en to https://www.bjss.com/bjss-represent-uk-european-business-awards-201617?hsLang=en
+12:17:06	Error: 	"Not Found" (404) at link https://www.bjss.com/careers/team/Finance?hsLang=en-gb (from https://www.bjss.com/careers/search?job_search=&country=&location=&department=&type=&page=10)
+12:17:25	Warning: 	Moved Permanently for https://www.bjss.com/youthhack/?hsLang=en
+12:17:25	Warning: 	File has moved from https://www.bjss.com/youthhack/?hsLang=en to https://www.bjss.com/community/?hsLang=en
+12:17:27	Error: 	"Not Found" (404) at link https://www.bjss.com/careers/team/IT and Security (from https://www.bjss.com/careers/search?job_search=&country=&location=&department=&type=&page=11)
+12:17:44	Warning: 	Moved Permanently for https://www.bjss.com/bjss-named-national-champion-in-the-european-business-awards-201415/?hsLang=en
+12:17:44	Warning: 	File has moved from https://www.bjss.com/bjss-named-national-champion-in-the-european-business-awards-201415/?hsLang=en to https://www.bjss.com/bjss-named-national-champion-in-the-european-business-awards-201415?hsLang=en
+12:17:46	Warning: 	Moved Permanently for https://www.bjss.com/bjss-wins-2014-stevie-international-business-award/?hsLang=en
+12:17:46	Warning: 	File has moved from https://www.bjss.com/bjss-wins-2014-stevie-international-business-award/?hsLang=en to https://www.bjss.com/bjss-wins-2014-stevie-international-business-award?hsLang=en
+12:17:49	Error: 	"Not Found" (404) at link https://www.bjss.com/careers/team/Sales?hsLang=en-gb (from https://www.bjss.com/careers/search?job_search=&country=&location=&department=&type=&page=12)
+12:18:30	Warning: 	Found for https://www.bjss.com/news/bjss-re-engineers-data-platform-supporting-hospital-episode-statistics-hes/?hsLang=en
+12:18:30	Warning: 	File has moved from https://www.bjss.com/news/bjss-re-engineers-data-platform-supporting-hospital-episode-statistics-hes/?hsLang=en to https://www.bjss.com/news/bjss-re-engineers-data-platform-supporting-hospital-episode-statistics-hes
+12:18:30	Warning: 	Moved Permanently for https://www.bjss.com/news/nhs-engages-bjss-build-nhs-e-referral-service/?hsLang=en
+12:18:30	Warning: 	File has moved from https://www.bjss.com/news/nhs-engages-bjss-build-nhs-e-referral-service/?hsLang=en to https://www.bjss.com/our-work/nhs-e-rs?hsLang=en
+12:18:40	Warning: 	Moved Permanently for https://www.bjss.com/bjss-to-develop-infrastructure-options-for-nhs-connecting-for-health/?hsLang=en
+12:18:40	Warning: 	File has moved from https://www.bjss.com/bjss-to-develop-infrastructure-options-for-nhs-connecting-for-health/?hsLang=en to https://www.bjss.com/bjss-to-develop-infrastructure-options-for-nhs-connecting-for-health?hsLang=en
+12:18:41	Warning: 	Moved Permanently for https://www.bjss.com/nhs-engages-bjss-to-build-nhs-e-referral-service/?hsLang=en
+12:18:41	Warning: 	File has moved from https://www.bjss.com/nhs-engages-bjss-to-build-nhs-e-referral-service/?hsLang=en to https://www.bjss.com/nhs-engages-bjss-to-build-nhs-e-referral-service?hsLang=en
+12:18:46	Error: 	"Not Found" (404) at link https://www.bjss.com/careers/team/Client Services (from https://www.bjss.com/careers/search?job_search=&country=&location=&department=&type=&page=16)
+12:19:20	Error: 	"Not Found" (404) at link https://www.bjss.com/careers/team/Management?hsLang=en-gb (from https://www.bjss.com/careers/search?job_search=&country=&location=&department=&type=&page=25)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 hours 58 minutes 2 seconds : 4893 links scanned, 4345 files written (504695482 bytes overall) [451707976 bytes received at 63782 bytes/sec], 95620201 bytes transferred using HTTP compression in 2719 files, ratio 22%, 36.0 requests per connection
+(358 errors, 342 warnings, 0 messages)

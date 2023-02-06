@@ -1,0 +1,1490 @@
+<!doctype html><html lang="en-gb">
+<!-- Mirrored from www.bjss.com/enterprise-agile-in-action by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 10:40:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Enterprise Agile®: In Action</title>
+    <link rel="shortcut icon" href="hubfs/BJSSfav-01.png">
+    <meta name="description" content="Learn how to apply key concepts and best practices from the Enterprise Agile approach to your organisation and become aware of the antipatterns to avoid. ">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <meta property="og:description" content="Learn how to apply key concepts and best practices from the Enterprise Agile approach to your organisation and become aware of the antipatterns to avoid. ">
+    <meta property="og:title" content="Enterprise Agile®: In Action">
+    <meta name="twitter:description" content="Learn how to apply key concepts and best practices from the Enterprise Agile approach to your organisation and become aware of the antipatterns to avoid. ">
+    <meta name="twitter:title" content="Enterprise Agile®: In Action">
+
+    
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+<link rel="stylesheet" href="hs-fs/hub/9399653/hub_generated/template_assets/47365676184/1622442584700/BJSS_May2021/css/layout.min.css">
+<link rel="stylesheet" href="hs-fs/hub/9399653/hub_generated/template_assets/47365604017/1671180309381/BJSS_May2021/css/main.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Lato:400,700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,200,300,400,500,600,700,800,900%7CDroid+Serif:400,700%7CMontserrat:100,200,300,400,500,600,700,800,900%7CLato:300,400,700,900%7CAnton%7CBarlow+Condensed:100,200,300,400,500,600,700%7CSource+Code+Pro:300,400,500,600,700">
+<link rel="stylesheet" href="hs-fs/hub/9399653/hub_generated/template_assets/47365604651/1630588080644/BJSS_May2021/css/theme-overrides.min.css">
+<link rel="stylesheet" href="hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844591/module_52098159278_language_switcher.min.css">
+<link rel="stylesheet" href="hs-fs/hub/9399653/hub_generated/module_assets/47366505811/1642518516986/module_47366505811_Follow_Us.min.css">
+<!-- Editor Styles -->
+<style id="hs_editor_style" type="text/css">
+#hs_cos_wrapper_widget_1641990510528  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_widget_1641917647206  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_widget_1641917702314  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_16692055938508  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_16692055938509  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_16692059198868  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_16692059198869  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_16696517529449  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_166965175294410  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_1670241257477  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_1670241263877  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_1669651752945  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_1671106914094  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_16735325160619  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_167353251606110  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_1674493219478  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_1674493282040  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_16735325160623  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_widget_1641986847215  { display: block !important; margin-top: 30px !important }
+#hs_cos_wrapper_module_16419866374205  { display: block !important; padding-bottom: 30px !important; padding-top: 30px !important }
+#hs_cos_wrapper_widget_1641990510528  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_16692059198868  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_16692059198869  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_16692055938508  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_16692055938509  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_widget_1641917647206  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_widget_1641917702314  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_1669651752945  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_1671106914094  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_1670241257477  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_1670241263877  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_16696517529449  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_166965175294410  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_16735325160623  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_1674493219478  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_1674493282040  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_16735325160619  { display: block !important; padding-bottom: 25px !important; padding-top: 25px !important }
+#hs_cos_wrapper_module_167353251606110  { display: block !important; margin-bottom: 40px !important }
+#hs_cos_wrapper_module_16419866374205  { display: block !important; padding-bottom: 30px !important; padding-top: 30px !important }
+#hs_cos_wrapper_widget_1641986847215  { display: block !important; margin-top: 30px !important }
+.video_section-row-0-background-image {
+  background-image: url('hubfs/EA-2022-Header.jpg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+.video_section-row-4-background-gradient {
+  background-image: linear-gradient(to bottom right, rgba(14, 218, 123, 1), rgba(36, 107, 235, 1)) !important;
+}
+.widget_1641990510528-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: start !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start;
+}
+.widget_1641990510528-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_16691186089584-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.module_16691186089584-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_16692059198869-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: start !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start;
+}
+.module_16692059198869-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_166920539980612-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.module_166920539980612-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_16692055938509-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: start !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start;
+}
+.module_16692055938509-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.widget_1669118199832-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.widget_1669118199832-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.widget_1641917702314-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: start !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start;
+}
+.widget_1641917702314-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_1671106826483-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.module_1671106826483-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_1671106914094-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: start !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start;
+}
+.module_1671106914094-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_1670241245520-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.module_1670241245520-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_1670241263877-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: start !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start;
+}
+.module_1670241263877-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_16696517529448-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.module_16696517529448-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_166965175294410-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: start !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start;
+}
+.module_166965175294410-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_1674493195637-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.module_1674493195637-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_1674493282040-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: start !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start;
+}
+.module_1674493282040-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_16735325160618-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: center !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.module_16735325160618-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_167353251606110-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: start !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start;
+}
+.module_167353251606110-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.module_16419866374205-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: start !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start;
+}
+.module_16419866374205-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+.widget_1641986847215-flexbox-positioning {
+  display: -ms-flexbox !important;
+  -ms-flex-direction: column !important;
+  -ms-flex-align: start !important;
+  -ms-flex-pack: start;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start;
+}
+.widget_1641986847215-flexbox-positioning > div {
+  max-width: 100%;
+  flex-shrink: 0 !important;
+}
+/* HubSpot Non-stacked Media Query Styles */
+@media (min-width:768px) {
+  .video_section-row-1-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .video_section-row-2-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .video_section-row-3-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .video_section-row-4-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .cell_1669211459291-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+  .cell_1669211459291-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_1669211460798-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+  .cell_1669211460798-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_1669205291686-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+  .cell_1669205291686-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16696517529444-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+  .cell_16696517529444-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16696517529443-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+  .cell_16696517529443-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16696517529443-row-1-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .cell_1670241259015-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_1670241259015-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16696517529442-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+  .cell_16696517529442-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16735325160614-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+  .cell_16735325160614-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16735325160613-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+  .cell_16735325160613-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16735325160613-row-0-vertical-alignment > .row-fluid {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: row;
+    display: flex !important;
+    flex-direction: row;
+  }
+  .cell_167353251606115-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_167353251606115-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16735325160612-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+  .cell_16735325160612-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_1669119026337-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_1669119026337-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+  .cell_16419866374202-vertical-alignment {
+    display: -ms-flexbox !important;
+    -ms-flex-direction: column !important;
+    -ms-flex-pack: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+  .cell_16419866374202-vertical-alignment > div {
+    flex-shrink: 0 !important;
+  }
+}
+/* HubSpot Styles (default) */
+.video_section-row-1-padding {
+  padding-top: 45px !important;
+  padding-bottom: 0px !important;
+}
+.video_section-row-2-margin {
+  margin-top: -35px !important;
+}
+.video_section-row-2-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.video_section-row-3-margin {
+  margin-top: -35px !important;
+}
+.video_section-row-3-padding {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+.video_section-row-4-padding {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+.cell_16419903433972-margin {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+.cell_16419866374202-margin {
+  margin-top: 10px !important;
+  margin-bottom: 5px !important;
+}
+</style>
+    
+
+    
+    <link rel="canonical" href="enterprise-agile-in-action.html">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script id="Cookiebot" src="../consent.cookiebot.com/uc.js" data-cbid="1e8015ed-e92b-4a8a-81af-cd363b75ae3f" data-blockingmode="auto" type="text/javascript"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKPDZ5X');</script>
+<!-- End Google Tag Manager -->
+<script>
+(function(g,e,o,t,a,r,ge,tl,y,s){
+g.getElementsByTagName(o)[0].insertAdjacentHTML('afterbegin','<style id="georedirect1630578272721style">body{opacity:0.0 !important;}</style>');
+s=function(){g.getElementById('georedirect1630578272721style').innerHTML='body{opacity:1.0 !important;}';};
+t=g.getElementsByTagName(o)[0];y=g.createElement(e);y.async=true;
+y.src='https://g792337340.co/gr?id=-Mia1T_TRP_QsDX3xGqm&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);
+t.parentNode.insertBefore(y,t);y.onerror=function(){s()};
+georedirect1630578272721loaded=function(redirect){var to=0;if(redirect){to=5000};
+setTimeout(function(){s();},to)};
+})(document,'script','head');
+</script>
+<meta name="google-site-verification" content="XE271XJfF68am7oHm2x4veUqLyGeIVskmS7V3t-JVh0">
+
+<meta property="og:url" content="https://www.bjss.com/enterprise-agile-in-action">
+<meta name="twitter:card" content="summary">
+<meta http-equiv="content-language" content="en-gb">
+
+
+
+
+
+
+    
+  <meta name="generator" content="HubSpot"></head>
+  <body>
+    <div class="body-wrapper   hs-content-id-92641627477 hs-landing-page hs-page ">
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/header.html"><header class="header">
+  <div class="main-header">
+    <div class="header__container">
+      <div class="headerLogo">
+        
+        <div id="hs_cos_wrapper_header_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  <span id="hs_cos_wrapper_header_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="index6177.html?hsLang=en-gb" id="hs-link-header_logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="hubfs/bjss_logo_25_Blue%26Navy%20(RGB).svg" class="hs-image-widget " style="width:100px;border-width:0px;border:0px;" width="100" alt="bjss_logo_25_Blue&amp;Navy (RGB)" title="bjss_logo_25_Blue&amp;Navy (RGB)"></a></span>
+</div>
+      </div>
+      <div class="headerNavigation">
+        <div class="custom-menu-primary">
+          <span id="hs_cos_wrapper_header_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_header_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47367390570" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="about/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">About BJSS</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="our-work.html" role="menuitem">Our Work</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="community/index.html" role="menuitem">BJSS in the Community</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="governance/index.html" role="menuitem">Governance</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="our-sustainability.html" role="menuitem">Our Sustainability</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="greenfield.html" role="menuitem">Green Field</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="services/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Our Services</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="strategy-and-transformation.html" role="menuitem">Strategy &amp; Transformation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="design/index.html" role="menuitem">Design &amp; Innovation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="technology-engineering/index.html" role="menuitem">Technology &amp; Engineering</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="managed-service/index.html" role="menuitem">Managed Service</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="low-code-and-automation.html" role="menuitem">Low Code &amp; Automation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="data/index.html" role="menuitem">Data &amp; AI</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="cloud/index.html" role="menuitem">Cloud &amp; Platform</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="cyber-security.html" role="menuitem">Cyber Security</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="sustainability.html" role="menuitem">Sustainability</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="industries/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Your Industry</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="energy-commodities-utilities.html" role="menuitem">Energy, Commodities &amp; Utilities</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="financial-services.html" role="menuitem">Financial Services</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="health/index.html" role="menuitem">Health &amp; Social Care</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="public/index.html" role="menuitem">Public Sector</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="retail/index.html" role="menuitem">Retail &amp; Consumer Markets</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="enterprise-agile.html" role="menuitem">Enterprise Agile®</a></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="insights/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Insights</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="engineering-insights.html" role="menuitem">Engineering Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="industry-insights.html" role="menuitem">Industry Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="news.html" role="menuitem">News Centre</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="events/index.html" role="menuitem">Events</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="future-of-retail/index.html" role="menuitem">Future of Retail</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="careers.html" role="menuitem">Careers</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="contact/index.html" role="menuitem">Contact</a></li>
+ </ul>
+</div></span>
+        </div>
+        <div class="custom-menu-primary">
+          <div id="hs_cos_wrapper_module_16279825775607" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16279825775607_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="language_switcher"></span></div>
+        </div>
+        <div class="search-icon">
+          <span class="search-icon-in"></span>
+        </div>
+        <div class="mobile-navigation">
+          <div class="mobile-navigation-inner">
+            <span class="mobile-trigger"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search-outer">
+    <div class="header__container">
+      <div class="hs-search-field">
+        <div class="hs-search-field__bar">
+          <form action="https://www.bjss.com/hs-search-results">
+            <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search …">
+          </form>
+          <span class="close-search"></span>
+        </div>
+        <ul class="hs-search-field__suggestions"></ul>
+      </div>
+      
+    </div>
+  </div>
+</header></div>
+      
+
+      
+
+<main class="body-container-wrapper about-page">
+
+
+  <div class="container-fluid about-video">
+<div class="row-fluid-wrapper">
+<div class="row-fluid">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 video_section-row-0-background-image dnd-section">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell cell_16419903433972-margin dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget widget_1641990510528-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_widget_1641990510528" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_widget_1641990510528_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="hs-fs/hubfs/EA-Full-Logo-White-RGBd000.png?width=280&amp;height=80&amp;name=EA-Full-Logo-White-RGB.png" class="hs-image-widget " width="280" height="80" style="max-width: 100%; height: auto;" alt="EA-Full-Logo-White-RGB" title="EA-Full-Logo-White-RGB" loading="lazy" srcset="https://www.bjss.com/hs-fs/hubfs/EA-Full-Logo-White-RGB.png?width=140&amp;height=40&amp;name=EA-Full-Logo-White-RGB.png 140w, https://www.bjss.com/hs-fs/hubfs/EA-Full-Logo-White-RGB.png?width=280&amp;height=80&amp;name=EA-Full-Logo-White-RGB.png 280w, https://www.bjss.com/hs-fs/hubfs/EA-Full-Logo-White-RGB.png?width=420&amp;height=120&amp;name=EA-Full-Logo-White-RGB.png 420w, https://www.bjss.com/hs-fs/hubfs/EA-Full-Logo-White-RGB.png?width=560&amp;height=160&amp;name=EA-Full-Logo-White-RGB.png 560w, https://www.bjss.com/hs-fs/hubfs/EA-Full-Logo-White-RGB.png?width=700&amp;height=200&amp;name=EA-Full-Logo-White-RGB.png 700w, https://www.bjss.com/hs-fs/hubfs/EA-Full-Logo-White-RGB.png?width=840&amp;height=240&amp;name=EA-Full-Logo-White-RGB.png 840w" sizes="(max-width: 280px) 100vw, 280px"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_widget_1641990343162" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_widget_1641990343162_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h4 style="color: #ffffff;">Enterprise Agile: In Action</h4>
+<p style="color: #ffffff;">The Enterprise Agile: In Action white paper series brings the insights and methods described in the BJSS Enterprise Agile book to life. Learn how to apply key concepts and best practices from the approach to your organisation and become aware of the antipatterns to avoid.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 dnd-section video_section-row-1-padding video_section-row-1-vertical-alignment">
+<div class="row-fluid ">
+<div class="span4 widget-span widget-type-cell cell_1669205291686-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="0" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget widget_1669118199832-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_widget_1669118199832" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_widget_1669118199832_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="hubfs/EA-In-Action-Organisational-Agility.jpg" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="EA-In-Action-Organisational-Agility" title="EA-In-Action-Organisational-Agility" loading="lazy"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_widget_1641917647206" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_widget_1641917647206_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-weight: bold;">Module 1</p>
+<h6 style="font-weight: bold; color: #246beb; margin-bottom: 10px; font-size: 24px;">Organisational Agility</h6>
+<p style="font-size: 17px; line-height: 24px;">Explore the macro-level themes affecting organisations today and the innovative approaches taken by successful businesses to stay competitive.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module widget_1641917702314-flexbox-positioning" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_widget_1641917702314" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+    
+  
+
+
+
+<a class="hs-button " href="ea-organisational-agility.html?hsLang=en-gb" id="hs-button_widget_1641917702314" rel="">
+  Download
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-cell dnd-column cell_1669211460798-vertical-alignment" style="" data-widget-type="cell" data-x="4" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-8 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module module_166920539980612-flexbox-positioning" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_166920539980612" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_166920539980612_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="hubfs/EA-In-Action-Architecture.jpg" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="EA-In-Action-Architecture" title="EA-In-Action-Architecture" loading="lazy"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-9 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16692055938508" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16692055938508_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-weight: bold;">Module 2</p>
+<h6 style="font-weight: bold; color: #246beb; margin-bottom: 10px; font-size: 24px;">Architecture</h6>
+<p style="font-size: 17px; line-height: 24px;">Discover the core architectural principles which BJSS practitioners follow to enable delivery.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-10 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget module_16692055938509-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16692055938509" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+    
+  
+
+
+
+<a class="hs-button " href="ea-architecture.html?hsLang=en-gb" id="hs-button_module_16692055938509" rel="">
+  Download
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-cell cell_1669211459291-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="8" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-11 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module module_16691186089584-flexbox-positioning" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16691186089584" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_16691186089584_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="hubfs/EA-In-Action-Delivery-Patterns.jpg" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="EA-In-Action-Delivery-Patterns" title="EA-In-Action-Delivery-Patterns" loading="lazy"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-12 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16692059198868" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16692059198868_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-weight: bold;">Module 3</p>
+<h6 style="font-weight: bold; color: #246beb; margin-bottom: 10px; font-size: 24px;">Delivery Patterns</h6>
+<p style="font-size: 17px; line-height: 24px;">Explore some of the delivery patterns BJSS uses to deliver positive business outcomes for clients.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-13 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget module_16692059198869-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16692059198869" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+    
+  
+
+
+
+<a class="hs-button " href="ea-delivery-patterns.html?hsLang=en-gb" id="hs-button_module_16692059198869" rel="">
+  Download
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-14 video_section-row-2-padding dnd-section video_section-row-2-margin video_section-row-2-vertical-alignment">
+<div class="row-fluid ">
+<div class="span4 widget-span widget-type-cell cell_16696517529442-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="0" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-15 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget module_16696517529448-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16696517529448" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_16696517529448_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="hubfs/EA-In-Action-Scaling.jpg" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="EA-In-Action-Scaling" title="EA-In-Action-Scaling" loading="lazy"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-16 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16696517529449" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16696517529449_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-weight: bold;">Module 4</p>
+<h6 style="font-weight: bold; color: #246beb; margin-bottom: 10px; font-size: 24px;">Scaling</h6>
+<p style="font-size: 17px; line-height: 24px;">Learn how to navigate the contradictory challenges of trying to do more without adding management complexity that can impact velocity.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-17 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget module_166965175294410-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_166965175294410" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+    
+  
+
+
+
+<a class="hs-button " href="ea-scaling.html?hsLang=en-gb" id="hs-button_module_166965175294410" rel="">
+  Download
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-cell cell_16696517529443-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="4" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-18 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget module_1670241245520-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1670241245520" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_1670241245520_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="hubfs/EA-In-Action-Teams-and-Collaboration.jpg" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="EA-In-Action-Teams-and-Collaboration" title="EA-In-Action-Teams-and-Collaboration" loading="lazy"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-19 cell_16696517529443-row-1-vertical-alignment dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell cell_1670241259015-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-20 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1670241257477" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_1670241257477_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-weight: bold;">Module 5</p>
+<h6 style="font-weight: bold; color: #246beb; margin-bottom: 10px; font-size: 24px;">Teams and Collaboration</h6>
+<p style="font-size: 17px; line-height: 24px;">Delve into the latest team building and collaboration trends and gain insight into the right mix of team skills, how to avoid or resolve conflict, and how to get multiple suppliers to collaborate efficiently.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-21 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget module_1670241263877-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1670241263877" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+    
+  
+
+
+
+<a class="hs-button " href="ea-teams-collaboration.html?hsLang=en-gb" id="hs-button_module_1670241263877" rel="">
+  Download
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-cell cell_16696517529444-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="8" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-22 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module module_1671106826483-flexbox-positioning" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1671106826483" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_1671106826483_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="hubfs/EA-In-Action-Planning-and-Leading.jpg" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="EA-In-Action-Planning-and-Leading" title="EA-In-Action-Planning-and-Leading" loading="lazy"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-23 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1669651752945" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_1669651752945_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-weight: bold;">Module 6</p>
+<h6 style="font-weight: bold; color: #246beb; margin-bottom: 10px; font-size: 24px;">Planning and Leading</h6>
+<p style="font-size: 17px; line-height: 24px;">Find out some of the tools and techniques BJSS uses to lead a modern Digital Delivery Team.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-24 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget module_1671106914094-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1671106914094" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+    
+  
+
+
+
+<a class="hs-button " href="ea-planning-leading.html?hsLang=en-gb" id="hs-button_module_1671106914094" rel="">
+  Download
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-25 video_section-row-3-padding video_section-row-3-margin dnd-section video_section-row-3-vertical-alignment">
+<div class="row-fluid ">
+<div class="span4 widget-span widget-type-cell cell_16735325160612-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="0" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-26 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget module_16735325160618-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16735325160618" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_16735325160618_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="hubfs/EA-In-Action-Human-Centred-Design.jpg" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="EA-In-Action-Human-Centred-Design" title="EA-In-Action-Human-Centred-Design" loading="lazy"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-27 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16735325160619" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16735325160619_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-weight: bold;">Module 7</p>
+<h6 style="font-weight: bold; color: #246beb; margin-bottom: 10px; font-size: 24px;">Human-Centred Design</h6>
+<p style="font-size: 17px; line-height: 24px;">Uncover the benefits of Human-centred design for software products. Learn how to marry design and Agile together to deliver high-quality digital user experiences.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-28 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget module_167353251606110-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_167353251606110" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+    
+  
+
+
+
+<a class="hs-button " href="ea-human-centred-design.html?hsLang=en-gb" id="hs-button_module_167353251606110" rel="">
+  Download
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-cell cell_16735325160613-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="4" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-29 cell_16735325160613-row-0-vertical-alignment dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell cell_167353251606115-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-30 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget module_1674493195637-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1674493195637" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_1674493195637_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="hubfs/EA-In-Action-Transformation-Revolution-vs-Evolution-1.jpg" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="EA-In-Action-Transformation-Revolution-vs-Evolution-1" title="EA-In-Action-Transformation-Revolution-vs-Evolution-1" loading="lazy"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-31 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1674493219478" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_1674493219478_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-weight: bold;">Module 8</p>
+<h6 style="font-weight: bold; color: #246beb; margin-bottom: 10px; font-size: 24px;">Transformation: Revolution vs Evolution</h6>
+<p style="font-size: 17px; line-height: 24px;">Learn how to get from where you are today to where you want to be as a modern digital delivery organisation.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-32 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget module_1674493282040-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1674493282040" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+    
+  
+
+
+
+<a class="hs-button " href="ea-transformation-revolution-evolution.html?hsLang=en-gb" id="hs-button_module_1674493282040" rel="">
+  Download
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-cell cell_16735325160614-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="8" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-33 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16735325160623" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16735325160623_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-34 video_section-row-4-vertical-alignment dnd-section video_section-row-4-padding video_section-row-4-background-gradient">
+<div class="row-fluid ">
+<div class="span8 widget-span widget-type-cell cell_16419866374202-vertical-alignment cell_16419866374202-margin dnd-column" style="" data-widget-type="cell" data-x="0" data-w="8">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-35 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16419866374206" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16419866374206_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-size: 28px; line-height: 36px; color: #ffffff;">For a deeper dive into Enterprise Agile, please consider downloading the BJSS Enterprise Agile book. Here, you’ll gain practical guidance to help you excel in delivering and supporting technology-led products and services.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-36 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget widget_1641986847215-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_widget_1641986847215" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+    
+  
+
+
+
+<a class="hs-button " href="enterprise-agile6177.html?hsLang=en-gb" id="hs-button_widget_1641986847215" rel="">
+  Learn more
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-cell cell_1669119026337-vertical-alignment dnd-column" style="" data-widget-type="cell" data-x="8" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-37 dnd-row">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget module_16419866374205-flexbox-positioning dnd-module" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16419866374205" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_16419866374205_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="hs-fs/hubfs/EA-Book-Mock-up-1-1106d.png?width=800&amp;height=1105&amp;name=EA-Book-Mock-up-1-1.png" class="hs-image-widget " width="800" height="1105" style="max-width: 100%; height: auto;" alt="EA-Book-Mock-up-1-1" title="EA-Book-Mock-up-1-1" loading="lazy" srcset="https://www.bjss.com/hs-fs/hubfs/EA-Book-Mock-up-1-1.png?width=400&amp;height=553&amp;name=EA-Book-Mock-up-1-1.png 400w, https://www.bjss.com/hs-fs/hubfs/EA-Book-Mock-up-1-1.png?width=800&amp;height=1105&amp;name=EA-Book-Mock-up-1-1.png 800w, https://www.bjss.com/hs-fs/hubfs/EA-Book-Mock-up-1-1.png?width=1200&amp;height=1658&amp;name=EA-Book-Mock-up-1-1.png 1200w, https://www.bjss.com/hs-fs/hubfs/EA-Book-Mock-up-1-1.png?width=1600&amp;height=2210&amp;name=EA-Book-Mock-up-1-1.png 1600w, https://www.bjss.com/hs-fs/hubfs/EA-Book-Mock-up-1-1.png?width=2000&amp;height=2763&amp;name=EA-Book-Mock-up-1-1.png 2000w, https://www.bjss.com/hs-fs/hubfs/EA-Book-Mock-up-1-1.png?width=2400&amp;height=3315&amp;name=EA-Book-Mock-up-1-1.png 2400w" sizes="(max-width: 800px) 100vw, 800px"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div>
+</div>
+</div>
+  
+ 
+  
+
+</main>
+
+
+
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/footer.html"><footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__container main__footer">
+      <div class="footer__column footer__column1">
+        <div class="footerTitle">
+          <div id="hs_cos_wrapper_footerTitle" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footerTitle_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h4 style="color: #fff">EXPANDING<br>POSSIBILITIES</h4></span></div>
+        </div>
+        <div class="footerSocial">
+          <div id="hs_cos_wrapper_footerSocial" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><ul class="social-share">
+  <li class="socil-icon social-twitter">
+    <a href="https://twitter.com/bjssltd" title="Follow on Twitter" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-linkedin">
+    <a href="https://uk.linkedin.com/company/bjss" title="Follow on LinkedIn" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-instagram">
+    <a href="http://www.instagram.com/bjssltd" title="Follow on Instagram" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-youtube">
+    <a href="https://www.youtube.com/channel/UCUWB9XUNt_g_YGWIjneXuSg" title="Follow on Youtube" target="_blank" class="icon"></a>
+  </li>
+</ul></div>
+        </div>
+        <div class="footerImage">
+          <div id="hs_cos_wrapper_footerImage" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_footerImage_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="hs-fs/hubfs/Princess-Award_%26_Queens-Awardc48d.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png" class="hs-image-widget " width="1000" height="563" alt="Princess-Award_&amp;_Queens-Award" title="Princess-Award_&amp;_Queens-Award" srcset="https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=500&amp;height=282&amp;name=Princess-Award_%26_Queens-Award.png 500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png 1000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1500&amp;height=845&amp;name=Princess-Award_%26_Queens-Award.png 1500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2000&amp;height=1126&amp;name=Princess-Award_%26_Queens-Award.png 2000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2500&amp;height=1408&amp;name=Princess-Award_%26_Queens-Award.png 2500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=3000&amp;height=1689&amp;name=Princess-Award_%26_Queens-Award.png 3000w" sizes="(max-width: 1000px) 100vw, 1000px"></span></div>
+        </div>
+      </div>
+      <div class="footer__column footer__column2">
+        <div class="footer__column_inner">
+          <div class="footer-navigation">
+            <span id="hs_cos_wrapper_footer_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_footer_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47366551648" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="contact/index.html" role="menuitem">Contact BJSS</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="news.html" role="menuitem">News</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="governance/index.html" role="menuitem">Governance</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="website-privacy-policy/index.html" role="menuitem">Privacy notice</a></li>
+ </ul>
+</div></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__column footer__column3">
+        <div class="footer__column_inner">
+          <div class="footer__search">
+            <div class="hs-search-field">
+              <div class="hs-search-field__bar">
+                <form action="https://www.bjss.com/hs-search-results">
+                  <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search BJSS">
+                  <input type="submit" value="Search" class="searchsubmit" style="">
+                </form>
+              </div>
+              <ul class="hs-search-field__suggestions"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__container copyright__footer">
+      <div class="footer__copyright">
+        <div id="hs_cos_wrapper_footer_copyright_text" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer_copyright_text_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="text">&nbsp;© 2023 BJSS Limited. Registered in England with company number 2777575 VAT Number GB613295452.&nbsp;‘Enterprise Agile®’ and ‘BJSS Enterprise Agile®’ are registered trademarks of BJSS Limited.</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<span class="back-to-top"></span></div>
+      
+    </div>
+    <script src="hs/hsstatic/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+<script src="hs/hsstatic/jquery-libs/static-1.4/jquery-migrate/jquery-migrate-1.2.1.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+<script>
+(function () {
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST.html', '/_hcms/perf', true /*async*/);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.onreadystatechange = function () {
+                // do nothing.
+            };
+            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            function populateNetworkInfo(name, connection, info) {
+                if (name in connection) {
+                    info[name] = connection[name];
+                }
+            }
+            var networkInfo = {};
+            if (connection) {
+                ['type', 'effectiveType', 'downlink', 'rtt'].forEach(function(name) {
+                    populateNetworkInfo(name, connection, networkInfo);
+                });
+            }
+            var perfData = {
+                url: location.href,
+                portal: 9399653,
+                content: 92641627477,
+                group: -1,
+                connection: networkInfo,
+                timing: performance.timing
+            };
+            xhr.send(JSON.stringify(perfData));
+        }, 3000);  // Execute this 3 seconds after onload.
+    });
+})();
+</script>
+
+<script src="hs-fs/hub/9399653/hub_generated/template_assets/47365698976/1645632663800/BJSS_May2021/js/main.min.js"></script>
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en-gb';
+</script>
+
+<script src="hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+<script src="hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844495/module_52098159278_language_switcher.min.js"></script>
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "landing-page"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/www.bjss.com\/enterprise-agile-in-action"]);
+_hsq.push(["setPageId", "92641627477"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 92641627477,
+    "legacyPageId": "92641627477",
+    "contentFolderId": null,
+    "contentGroupId": null,
+    "abTestId": null,
+    "languageVariantId": 92641627477,
+    "languageCode": "en-gb",
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="hs/scriptloader/9399653.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    ticks: 1674614542520,
+    page_id: 92641627477,
+    
+    content_group_id: 0,
+    portal_id: 9399653,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en-gb",
+    analytics_page_type: "landing-page",
+    analytics_page_id: "92641627477",
+    category_id: 1,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+<script defer src="hs/hsstatic/HubspotToolsMenu/static-1.143/js/index.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKPDZ5X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ <!-- End Google Tag Manager (noscript) -->
+
+
+
+  
+</body>
+<!-- Mirrored from www.bjss.com/enterprise-agile-in-action by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 10:40:42 GMT -->
+</html>

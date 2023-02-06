@@ -1,0 +1,562 @@
+<!doctype html><html lang="en">
+<!-- Mirrored from www.bjss.com/engineering-insights/deployed-containerisation by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:43:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Deployed - Containerisation</title>
+    <link rel="shortcut icon" href="../hubfs/BJSSfav-01.png">
+    <meta name="description" content="BJSS Engineer Chris Stewart discusses opinions around containerisation, taken from surveys of BJSS engineers from a range of sectors.">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <meta property="og:description" content="BJSS Engineer Chris Stewart discusses opinions around containerisation, taken from surveys of BJSS engineers from a range of sectors.">
+    <meta property="og:title" content="Deployed - Containerisation">
+    <meta name="twitter:description" content="BJSS Engineer Chris Stewart discusses opinions around containerisation, taken from surveys of BJSS engineers from a range of sectors.">
+    <meta name="twitter:title" content="Deployed - Containerisation">
+
+    
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365676184/1622442584700/BJSS_May2021/css/layout.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365604017/1671180309381/BJSS_May2021/css/main.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Lato:400,700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,200,300,400,500,600,700,800,900%7CDroid+Serif:400,700%7CMontserrat:100,200,300,400,500,600,700,800,900%7CLato:300,400,700,900%7CAnton%7CBarlow+Condensed:100,200,300,400,500,600,700%7CSource+Code+Pro:300,400,500,600,700">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365604651/1630588080644/BJSS_May2021/css/theme-overrides.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844591/module_52098159278_language_switcher.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/48374514008/1642518516330/module_48374514008_Engineering_Insights_Post_Banner.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/48372652123/1664435298183/module_48372652123_Engineering_Insights_Post_Content.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/47366505811/1642518516986/module_47366505811_Follow_Us.min.css">
+    
+
+    
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script id="Cookiebot" src="../../consent.cookiebot.com/uc.js" data-cbid="1e8015ed-e92b-4a8a-81af-cd363b75ae3f" data-blockingmode="auto" type="text/javascript"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKPDZ5X');</script>
+<!-- End Google Tag Manager -->
+<script>
+(function(g,e,o,t,a,r,ge,tl,y,s){
+g.getElementsByTagName(o)[0].insertAdjacentHTML('afterbegin','<style id="georedirect1630578272721style">body{opacity:0.0 !important;}</style>');
+s=function(){g.getElementById('georedirect1630578272721style').innerHTML='body{opacity:1.0 !important;}';};
+t=g.getElementsByTagName(o)[0];y=g.createElement(e);y.async=true;
+y.src='https://g792337340.co/gr?id=-Mia1T_TRP_QsDX3xGqm&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);
+t.parentNode.insertBefore(y,t);y.onerror=function(){s()};
+georedirect1630578272721loaded=function(redirect){var to=0;if(redirect){to=5000};
+setTimeout(function(){s();},to)};
+})(document,'script','head');
+</script>
+<meta name="google-site-verification" content="XE271XJfF68am7oHm2x4veUqLyGeIVskmS7V3t-JVh0">
+
+<link rel="amphtml" href="deployed-containerisation3d9f.html?hs_amp=true">
+
+<meta property="og:image" content="https://www.bjss.com/hubfs/Feature_Deployed-containerisation.jpg#keepProtocol">
+<meta property="og:image:width" content="866">
+<meta property="og:image:height" content="640">
+
+<meta name="twitter:image" content="https://www.bjss.com/hubfs/Feature_Deployed-containerisation.jpg#keepProtocol">
+
+
+<meta property="og:url" content="https://www.bjss.com/engineering-insights/deployed-containerisation">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="deployed-containerisation.html">
+
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/rss+xml" href="rss.xml">
+<meta name="twitter:domain" content="www.bjss.com">
+<script src="../../platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+</script>
+
+<meta http-equiv="content-language" content="en">
+
+
+
+
+
+
+    
+  <meta name="generator" content="HubSpot"></head>
+  <body>
+    <div class="body-wrapper   hs-content-id-50032008612 hs-blog-post hs-blog-id-48313963830">
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/header.html"><header class="header">
+  <div class="main-header">
+    <div class="header__container">
+      <div class="headerLogo">
+        
+        <div id="hs_cos_wrapper_header_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  <span id="hs_cos_wrapper_header_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../index.html" id="hs-link-header_logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="../hubfs/bjss_logo_25_Blue%26Navy%20(RGB).svg" class="hs-image-widget " style="width:100px;border-width:0px;border:0px;" width="100" alt="bjss_logo_25_Blue&amp;Navy (RGB)" title="bjss_logo_25_Blue&amp;Navy (RGB)"></a></span>
+</div>
+      </div>
+      <div class="headerNavigation">
+        <div class="custom-menu-primary">
+          <span id="hs_cos_wrapper_header_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_header_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47367390570" aria-label="Navigation Menu">
+ <ul role="menu" class="active-branch">
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../about/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">About BJSS</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../our-work.html" role="menuitem">Our Work</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../community/index.html" role="menuitem">BJSS in the Community</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../governance/index.html" role="menuitem">Governance</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../our-sustainability.html" role="menuitem">Our Sustainability</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../greenfield.html" role="menuitem">Green Field</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../services/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Our Services</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../strategy-and-transformation.html" role="menuitem">Strategy &amp; Transformation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../design/index.html" role="menuitem">Design &amp; Innovation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../technology-engineering/index.html" role="menuitem">Technology &amp; Engineering</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../managed-service/index.html" role="menuitem">Managed Service</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../low-code-and-automation.html" role="menuitem">Low Code &amp; Automation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../data/index.html" role="menuitem">Data &amp; AI</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../cloud/index.html" role="menuitem">Cloud &amp; Platform</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../cyber-security.html" role="menuitem">Cyber Security</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../sustainability.html" role="menuitem">Sustainability</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../industries/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Your Industry</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../energy-commodities-utilities.html" role="menuitem">Energy, Commodities &amp; Utilities</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../financial-services.html" role="menuitem">Financial Services</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../health/index.html" role="menuitem">Health &amp; Social Care</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../public/index.html" role="menuitem">Public Sector</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../retail/index.html" role="menuitem">Retail &amp; Consumer Markets</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../enterprise-agile.html" role="menuitem">Enterprise Agile®</a></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch" role="none"><a href="../insights/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Insights</a>
+   <ul role="menu" class="hs-menu-children-wrapper active-branch">
+    <li class="hs-menu-item hs-menu-depth-2 active active-branch" role="none"><a href="../engineering-insights.html" role="menuitem">Engineering Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../industry-insights.html" role="menuitem">Industry Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../news.html" role="menuitem">News Centre</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../events/index.html" role="menuitem">Events</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../future-of-retail/index.html" role="menuitem">Future of Retail</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../careers.html" role="menuitem">Careers</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../contact/index.html" role="menuitem">Contact</a></li>
+ </ul>
+</div></span>
+        </div>
+        <div class="custom-menu-primary">
+          <div id="hs_cos_wrapper_module_16279825775607" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16279825775607_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="language_switcher"></span></div>
+        </div>
+        <div class="search-icon">
+          <span class="search-icon-in"></span>
+        </div>
+        <div class="mobile-navigation">
+          <div class="mobile-navigation-inner">
+            <span class="mobile-trigger"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search-outer">
+    <div class="header__container">
+      <div class="hs-search-field">
+        <div class="hs-search-field__bar">
+          <form action="https://www.bjss.com/hs-search-results">
+            <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search …">
+          </form>
+          <span class="close-search"></span>
+        </div>
+        <ul class="hs-search-field__suggestions"></ul>
+      </div>
+      
+    </div>
+  </div>
+</header></div>
+      
+
+      
+<main class="body-container-wrapper blog blog_post engineering_post">
+  <div class="blog-wrapper">
+    <div id="hs_cos_wrapper_post_banner" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="blog-banner post-banner engineering__banner" style="background-image: url(../hubfs/Banner_Deployed-containerisation.jpg)">
+  <div class="content-wrapper">
+    <div class="post-banner-col post-banner-col7">
+      <div class="post-banner-rich-text">
+        <h4><span id="hs_cos_wrapper_name" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="text">Deployed - Containerisation</span></h4>
+        <p>By Chris Stewart, Chief Engineer, BJSS</p>
+      </div>
+    </div>
+    
+    <div class="post-banner-col post-banner-col5">
+      <div class="post-banner-image">
+        <span class="post-banner-img">
+          <img src="../hubfs/Chris-Stewart.jpg" alt="Chris Stewart">
+        </span>
+      </div>
+    </div>
+    
+  </div>
+</div></div>
+  </div>
+  <div class="blog-single-wrapper">
+    <div class="content-wrapper ">
+      <div class="blog-post__body">
+        <span id="hs_cos_wrapper_post_body" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="rich_text"><h4><span style="color: #0047bb;">Background...</span></h4>
+<!--more--><span style="background-color: transparent;">Chris combines a passion for software development and the people who do it with a pragmatic delivery focus. He has helped to deliver products in many sectors, working with multinational corporations, medium sized businesses and even helped found a couple of start-ups. He enjoys learning and talking about all aspects of the craft and science of software, but is particularly interested in things that revisit and challenge assumptions about the ways we design, build and deliver.</span>
+<p>In his spare time he works hard at being a mediocre club runner and particularly enjoys running down fells. He runs up them with less enthusiasm.</p>
+<p>This is the first in a series of articles that will share the opinions of BJSS engineers on a number of topics, both complementary and cautious. For the first topic of containerisation, we've surveyed engineers from a range of BJSS locations and projects, working in industries such as financial services, public sector and retail.</p></span>
+      </div>
+    </div>
+  </div>
+  <div id="hs_cos_wrapper_post_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="enginnering-post-content">
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(4, 30, 66, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4><span style="color: #ffffff;">What we heard</span></h4>
+<p>If you spend any time sitting amongst any development/engineering teams it won't be long before you overhear discussions about Containers and the various surrounding technologies and patterns.&nbsp;It's a big topic with lots of different angles to it. Adoption and practice vary across the organisations we work with which led us to a question:</p>
+<h4>&nbsp;</h4>
+<h4><span style="color: #ffffff;">What is the BJSS view on Containerisation?</span></h4>
+<div style="padding-bottom: 12px;">&nbsp;</div>
+<p>We learn at pace about technologies and trends by being at the coal face of large-scale deliveries. Any opportunity to plumb the depths of BJSS's practitioners’ real-world experience is worth taking.</p>
+<div style="padding-bottom: 40px;"><span style="color: #0047bb;">&nbsp;</span></div>
+<h4><span style="color: #ffffff;">So we asked...</span></h4>
+<div style="padding-bottom: 12px;">&nbsp;</div>
+<p>We talked with our technical people across a range of different roles; platform engineers, developers, testers and architects. We interviewed those from infrastructure and sysadmin backgrounds as well as those with a background in software engineering.</p>
+<p class=" h-align-left">The answer turned out to be a familiar one. As is often the case, the journey to the answer proved far more valuable.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(0, 71, 187, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4><span style="color: #ffffff;">Recap</span></h4>
+<p>With any hot topic in software there's often an implicit assumption that we’re all talking about the same thing. Often, we’re not. By ‘containers’ we can mean any way of packaging and deploying our software: Zip files, Virtual Machines, etc.</p>
+<p>But when we’re talking about Containerisation, we mean something more specific: a way of bundling up our software, its runtime, tools and libraries to create an executable package. As far as our running software is concerned a container looks exactly like a real machine or full Virtual Machine. We trade stronger security isolation for a smaller, faster-starting, less resource-heavy, and easier to manage package.</p>
+<p>Containers, Containerisation and Container Management have been popularised by the fashion for Microservices - splitting our software up into many small services meant that managing the proliferation of Virtual Machines became a significant overhead.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-bg" style="background-image: url(../hubfs/Container-ship.jpg);">
+
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-parallex">
+    <div class="parallex-bg-wrap">
+      <div class="parallex-background" style="background-image: url(../hubfs/background-image-deployed-containerisation.jpg);"></div>
+    </div>
+    <div class="page-center">
+      <div class="enginnering-post-inner-row">
+        <div class="enginnering-post-rich-tesx">
+          <h4><span style="color: #0047bb;">Containerisation: Three opinions forged from our experience<br><br></span></h4>
+<h5 style="font-weight: bold;"><span style="color: #0047bb;">1. Containers are the future</span></h5>
+<p><br>While lots of technologies exist in today's applications, Containerisation is being welcomed as a cornerstone of their design. It’s not surprising that the technology has made its way into some of our largest, most critical engagements.</p>
+<p><strong><span>“</span>For any medium or fairly large modern application; container and container management should be the cornerstone of any architectural design right from the beginning.</strong></p>
+<p>The simplicity of consistent environments came up as a major selling point for lots of our projects.</p>
+<p><strong><span>“</span>Containers provide a consistent deployment across all environments, effectively it’s the same thing deployed in each environment."</strong></p>
+<p><strong><span>“</span>It’s great for developers as it saves polluting your dev env, and great for lightweight/stateless components."</strong></p>
+<p><strong><span>“</span>I like them, they make life easier."</strong></p>
+<p>Consistency carries other benefits when applied across many teams.</p>
+<p><strong><span>“</span>This will improve security and increase efficiency by 25% plus."</strong></p>
+<p>The Service Mesh pattern fits well with containers. We’ve found this pattern brings further consistency to logging, tracing, alerting, authorisation and service lookup. Service Meshes also ease adoption of more sophisticated deployment and resiliency patterns – such as Blue/Green Deployments, Circuit Breakers and Retry.</p>
+<p><strong><span>“</span>Pushing common patterns to the mesh enables developers to spend more time on business logic."</strong></p>
+<p>Many of our customers have concerns (or rules) about the level of lock-in cloud PaaS offerings require.</p>
+<p><strong><span>“</span>Being cloud vendor agnostic was also major selling factor."</strong></p>
+<p>Containers and orchestration offer a middle ground, allowing customers to benefit from PaaS offerings without jumping in with a provider. One mature approach in highly regulated environments is to mandate that core Systems of Record are cloud agnostic while allowing Systems of Innovation to iterate quickly using PaaS.</p>
+<p>Clearly, lock-in should always be a consideration with any software build, especially one that is expected to be a long-term investment. However, lock-in is only one aspect of the decision making… which leads us to our next opinion.</p>
+<p>&nbsp;</p>
+<h5 style="font-weight: bold;"><span style="color: #0047bb;">2. Containers add unnecessary&nbsp;complexity<br></span></h5>
+<p style="font-weight: bold;"><br>One thing came up again and again - concern about the complexity of containerisation and the surrounding ecosystem, specifically container management.</p>
+<p>Sometimes it’s called out directly:</p>
+<p><strong>We removed all of the complexity from our code and put it into YAML files..."</strong></p>
+<p><strong><span>“</span>...risk of ending up with a way over-engineered solution, something that can be very complex to manage..."</strong></p>
+<p>Then sometimes the impact of that complexity can be seen in confusion and uncertainty.</p>
+<p><strong><span>“</span>What’s clear to me however is that people aren’t understanding the basics of orchestration."</strong></p>
+<p><strong><span>“</span>I personally do not understand the security implications."</strong></p>
+<p><strong><span>“</span>This stuff seems to be taking a lot of time to build."</strong></p>
+<p>Container Management solutions add complexity. The requirement to upskill teams, the operational processes and the weight of many new APIs. Also, software is not really proven until it is in production. So to prove you are genuinely vendor agnostic you need production systems running in different clouds – further adding to complexity to upskilling and governance.</p>
+<p>This complexity can outweigh the benefits. Even where it makes sense, it is not a static area of technology; today’s obvious choice may be tomorrow's legacy.</p>
+<p>There is clearly a battle of hearts and minds being fought as people see and feel the benefits but are struggling with the incidental challenges a technology brings.<br>&nbsp;</p>
+<h5 style="font-weight: bold;"><span style="color: #0047bb;">3. Containers are already obsolete</span></h5>
+<p style="font-weight: bold;"><br>While many respondents clearly see Containerisation as the future, there was another strongly voiced opinion - that it’s already been consigned to the history books.</p>
+<p><strong><span>“</span>Think the next evolution for some of these would just to be to go serverless."</strong></p>
+<p><strong><span>“</span>I am a fan of serverless – I certainly think it’s easier than running your own Kubernetes Cluster."</strong></p>
+<p><strong><span>“</span>My preference would be cloud native serverless (lambdas/azure functions)."</strong></p>
+<p>We’ve already said that avoiding cloud lock-in is a key selling point of Containerisation. But for some the value of agility&nbsp;now, outweighs the cost of lock-in later.</p>
+<p><strong>“Portability is good, but truly serverless is better.”</strong></p>
+<p>While the term ‘Serverless’ does include a degree of ambiguity, it’s clear from the responses that there is a lot of positivity for NOT having access to the underlying OS.</p>
+<p>“Containers feel a bit ‘old world’. Architects should aspire to serverless architectures negating the need for containers and the associated container management.”</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-bg" style="background-image: url(../hubfs/Shipping-container2.jpg);">
+
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(255, 255, 255, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4><span style="color: #0047bb;">Wrap up</span></h4>
+<p><span style="color: #041e42;"><strong>Containers bring benefits. They provide a well adopted, uniform way to reason about, package and manage long-running software services.</strong></span></p>
+<p><span style="color: #041e42;">Unlike cloud provider-specific technologies, they’re built on open standards with open-source and a healthy vendor ecosystem. Choosing a vendor-agnostic route is often a good strategy. But containers also bring complexity on two fronts.</span></p>
+<p><span style="color: #041e42;">Firstly, the vendor-agnostic route means you must own and run the pieces that would otherwise be run by your cloud provider. For core strategic systems this cost may be worth bearing, but in many cases this is low value, undifferentiated work that is preventing you from tackling real business problems.</span></p>
+<p><span style="color: #041e42;">The second source of complexity is less obvious. Because containers promise to make microservice deployment simple, there is a tendency for some teams to build ultra-simple components that aren’t meaningful on their own. Just because you can build a massively distributed system doesn’t mean that you should. The complexity of the overall solution does not disappear, it is just shifted to the container management and orchestration systems. Container management becomes seen as a problem, when it is merely a symptom.</span></p>
+<p><span style="color: #041e42;">Finally, there is an increasingly popular architectural pattern of leaning as hard as possible on cloud-provider services - ‘Serverless’. The potential future debt of vendor lock-in is traded against the ability to focus right now on the core pieces that differentiate your business. Containers, which still carry a cost of management and patching, play a much smaller part in this future. Our research has painted a familiar picture of technology adoption - there are benefits and pain.<br><br><br></span></p>
+<h4><span style="color: #0047bb;">So, what's the bjss view on containerisation?</span></h4>
+<div>
+<div style="padding-bottom: 12px;">&nbsp;<span style="color: #041e42;">Based on the experiences of our skilled practitioners, the answer is not surprising - a strong <strong>'it depends on the context'.</strong></span></div>
+</div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(0, 71, 187, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <div>
+<div style="padding-bottom: 12px;">&nbsp;<a href="../engineering-roles.html" rel="noopener"><img src="../hs-fs/hubfs/Lead-magnet-recruitment7ef7.png?width=1200&amp;name=Lead-magnet-recruitment.png" alt="Lead-magnet-recruitment" width="1200" loading="lazy" style="width: 1200px;" srcset="https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=600&amp;name=Lead-magnet-recruitment.png 600w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=1200&amp;name=Lead-magnet-recruitment.png 1200w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=1800&amp;name=Lead-magnet-recruitment.png 1800w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=2400&amp;name=Lead-magnet-recruitment.png 2400w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=3000&amp;name=Lead-magnet-recruitment.png 3000w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=3600&amp;name=Lead-magnet-recruitment.png 3600w" sizes="(max-width: 1200px) 100vw, 1200px"></a></div>
+<div style="padding-bottom: 12px;">&nbsp;</div>
+<p>&nbsp;</p>
+</div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+</div></div>
+</main>
+
+
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/footer.html"><footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__container main__footer">
+      <div class="footer__column footer__column1">
+        <div class="footerTitle">
+          <div id="hs_cos_wrapper_footerTitle" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footerTitle_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h4 style="color: #fff">EXPANDING<br>POSSIBILITIES</h4></span></div>
+        </div>
+        <div class="footerSocial">
+          <div id="hs_cos_wrapper_footerSocial" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><ul class="social-share">
+  <li class="socil-icon social-twitter">
+    <a href="https://twitter.com/bjssltd" title="Follow on Twitter" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-linkedin">
+    <a href="https://uk.linkedin.com/company/bjss" title="Follow on LinkedIn" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-instagram">
+    <a href="http://www.instagram.com/bjssltd" title="Follow on Instagram" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-youtube">
+    <a href="https://www.youtube.com/channel/UCUWB9XUNt_g_YGWIjneXuSg" title="Follow on Youtube" target="_blank" class="icon"></a>
+  </li>
+</ul></div>
+        </div>
+        <div class="footerImage">
+          <div id="hs_cos_wrapper_footerImage" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_footerImage_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="../hs-fs/hubfs/Princess-Award_%26_Queens-Awardc48d.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png" class="hs-image-widget " width="1000" height="563" alt="Princess-Award_&amp;_Queens-Award" title="Princess-Award_&amp;_Queens-Award" srcset="https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=500&amp;height=282&amp;name=Princess-Award_%26_Queens-Award.png 500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png 1000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1500&amp;height=845&amp;name=Princess-Award_%26_Queens-Award.png 1500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2000&amp;height=1126&amp;name=Princess-Award_%26_Queens-Award.png 2000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2500&amp;height=1408&amp;name=Princess-Award_%26_Queens-Award.png 2500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=3000&amp;height=1689&amp;name=Princess-Award_%26_Queens-Award.png 3000w" sizes="(max-width: 1000px) 100vw, 1000px"></span></div>
+        </div>
+      </div>
+      <div class="footer__column footer__column2">
+        <div class="footer__column_inner">
+          <div class="footer-navigation">
+            <span id="hs_cos_wrapper_footer_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_footer_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47366551648" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../contact/index.html" role="menuitem">Contact BJSS</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../news.html" role="menuitem">News</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../governance/index.html" role="menuitem">Governance</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../website-privacy-policy/index.html" role="menuitem">Privacy notice</a></li>
+ </ul>
+</div></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__column footer__column3">
+        <div class="footer__column_inner">
+          <div class="footer__search">
+            <div class="hs-search-field">
+              <div class="hs-search-field__bar">
+                <form action="https://www.bjss.com/hs-search-results">
+                  <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search BJSS">
+                  <input type="submit" value="Search" class="searchsubmit" style="">
+                </form>
+              </div>
+              <ul class="hs-search-field__suggestions"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__container copyright__footer">
+      <div class="footer__copyright">
+        <div id="hs_cos_wrapper_footer_copyright_text" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer_copyright_text_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="text">&nbsp;© 2023 BJSS Limited. Registered in England with company number 2777575 VAT Number GB613295452.&nbsp;‘Enterprise Agile®’ and ‘BJSS Enterprise Agile®’ are registered trademarks of BJSS Limited.</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<span class="back-to-top"></span></div>
+      
+    </div>
+    <script src="../hs/hsstatic/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+<script src="../hs/hsstatic/jquery-libs/static-1.4/jquery-migrate/jquery-migrate-1.2.1.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+<script>
+(function () {
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST.html', '/_hcms/perf', true /*async*/);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.onreadystatechange = function () {
+                // do nothing.
+            };
+            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            function populateNetworkInfo(name, connection, info) {
+                if (name in connection) {
+                    info[name] = connection[name];
+                }
+            }
+            var networkInfo = {};
+            if (connection) {
+                ['type', 'effectiveType', 'downlink', 'rtt'].forEach(function(name) {
+                    populateNetworkInfo(name, connection, networkInfo);
+                });
+            }
+            var perfData = {
+                url: location.href,
+                portal: 9399653,
+                content: 50032008612,
+                group: -1,
+                connection: networkInfo,
+                timing: performance.timing
+            };
+            xhr.send(JSON.stringify(perfData));
+        }, 3000);  // Execute this 3 seconds after onload.
+    });
+})();
+</script>
+
+<script src="../hs-fs/hub/9399653/hub_generated/template_assets/47365698976/1645632663800/BJSS_May2021/js/main.min.js"></script>
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script>
+
+<script src="../hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+<script src="../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844495/module_52098159278_language_switcher.min.js"></script>
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/www.bjss.com\/engineering-insights\/deployed-containerisation"]);
+_hsq.push(["setPageId", "50032008612"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 50032008612,
+    "legacyPageId": "50032008612",
+    "contentFolderId": null,
+    "contentGroupId": 48313963830,
+    "abTestId": null,
+    "languageVariantId": 50032008612,
+    "languageCode": "en",
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="../hs/scriptloader/9399653.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    ticks: 1674411463187,
+    page_id: 50032008612,
+    
+    content_group_id: 48313963830,
+    portal_id: 9399653,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en",
+    analytics_page_type: "blog-post",
+    analytics_page_id: "50032008612",
+    category_id: 3,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+<script defer src="../hs/hsstatic/HubspotToolsMenu/static-1.143/js/index.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKPDZ5X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ <!-- End Google Tag Manager (noscript) -->
+
+
+<div id="fb-root"></div>
+ <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../../connect.facebook.net/en_GB/all.js#xfbml=1&status=0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ 
+
+
+  
+</body>
+<!-- Mirrored from www.bjss.com/engineering-insights/deployed-containerisation by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:43:38 GMT -->
+</html>

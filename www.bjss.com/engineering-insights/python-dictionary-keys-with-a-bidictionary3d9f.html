@@ -1,0 +1,192 @@
+<!doctype html>
+<html amp lang="en" >
+  
+<!-- Mirrored from www.bjss.com/engineering-insights/python-dictionary-keys-with-a-bidictionary?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:54:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Make More of Python Dictionary Keys with a Bidictionary</title>
+    <link rel="canonical" href="python-dictionary-keys-with-a-bidictionary.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Dan Childs">
+
+    <meta name="description" content="Using keys in the dictionary in Python is great for one-way searching but often we need reverse lookup search facilitated by a bidictionary or bimap.">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Make More of Python Dictionary Keys with a Bidictionary",
+        "datePublished": "2021-08-12T12:06:18Z",
+        "dateModified": "2022-01-04T14:58:36.420Z",
+        "mainEntityOfPage": "https://www.bjss.com/engineering-insights/python-dictionary-keys-with-a-bidictionary",
+        "author": {
+          "@type": "Person",
+          "name": "Dan Childs"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 866,
+          
+          
+          "height": 640,
+          
+          "url": "https://f.hubspotusercontent00.net/hubfs/9399653/make%20more%20of%20python%20engineering%20insight%20feature.png"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "/hs/hsstatic/content_shared_assets/static-1.4092/img/default-amp-logo.png",
+            "width": 60,
+            "height": 60
+            
+          },
+          "name": "Engineering Insights "
+        }
+      }
+    </script>
+    <script async custom-element="amp-iframe" src="../../cdn.ampproject.org/v0/amp-iframe-0.1.js"></script><script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../engineering-insights.html">
+        
+          <span class="logo-header-text">Engineering Insights | BJSS</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="python-dictionary-keys-with-a-bidictionary.html">Make More of Python Dictionary Keys with a Bidictionary</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/dan-childs.html">Dan Childs</a> | Aug 12, 2021 12:06:18 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p><span>The Python dictionary data structure is powerful. But to get the most out of it, you need to think about the data a dictionary stores and how you want to use it. In other words, as with all programming, you’ve got to think from the outside in, not the inside out. You’ve got to know what the point of all the data in the dictionary is, what it’s going to be used for, and how you want to structure and query it. </span></p>
+<p><span>With that in mind, let’s take a look at a data structure problem using Python dictionary keys and values, with a really practical example.</span></p>
+<p><amp-iframe width="300" height="100" layout="responsive" resizable sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation allow-forms" src="https://amp.hubspot.net/_hcms/cta?portalId=9399653&amp;ctaGuid=d0993674-0185-431d-8ae0-88443e0e9886&amp;analyticsPageId=52559002920&amp;contentType=blog-post&amp;referrerUrl=https://www.bjss.com/engineering-insights/python-dictionary-keys-with-a-bidictionary?hs_amp%3Dtrue">
+  <amp-img layout="fixed" height="25" width="25" class="iframe-placeholder" src="../hs/hsstatic/content_shared_assets/static-1.4092/img/iframe-expand.png" placeholder overflow></amp-img>
+</amp-iframe></p>
+
+<h4>what is a dictionary for?</h4>
+<amp-img src="../hs-fs/hubfs/books-RX2JT8T14dc.jpg?width=496&amp;name=books-RX2JT8T.jpg" alt="books-RX2JT8T" width="495.99997" srcset="https://www.bjss.com/hs-fs/hubfs/books-RX2JT8T.jpg?width=248&amp;name=books-RX2JT8T.jpg 248w, https://www.bjss.com/hs-fs/hubfs/books-RX2JT8T.jpg?width=496&amp;name=books-RX2JT8T.jpg 496w, https://www.bjss.com/hs-fs/hubfs/books-RX2JT8T.jpg?width=744&amp;name=books-RX2JT8T.jpg 744w, https://www.bjss.com/hs-fs/hubfs/books-RX2JT8T.jpg?width=992&amp;name=books-RX2JT8T.jpg 992w, https://www.bjss.com/hs-fs/hubfs/books-RX2JT8T.jpg?width=1240&amp;name=books-RX2JT8T.jpg 1240w, https://www.bjss.com/hs-fs/hubfs/books-RX2JT8T.jpg?width=1488&amp;name=books-RX2JT8T.jpg 1488w" height="330.66666" layout="responsive"></amp-img><span></span>
+<p>First, a digression. Let’s think about the word ’‘literally'. That guy on the Zoom call who said he is ‘literally melting in this heat'. Is he in need of urgent medical attention, or is there a different meaning of this word?</p>
+<p>In the old days, to check the meaning <span>of ‘literally’ you would pull out a dictionary, a meaty doorstep of knowledge. How would you find a single word in something that has 3,000 pages?</span></p>
+<p>One way would be to start at the first page, check all the words on that page, and then try the next page until you find the page with your word on it. But this would be crazy! There is a more efficient algorithm for using a paper dictionary. All the words are listed alphabetically, so you’d open the book roughly halfway, where you guess the ‘L’ section might be, flip back and forth a little until you get to words starting with ’‘Li', then look more closely for ‘literally’.</p>
+<p>The time difference between starting at page one and carefully scanning every word and flicking to where you know ‘literally’ will be in the dictionary is huge. Seconds versus many hours.</p></span>
+        </div>
+        <div class="full-link">
+          <a href="python-dictionary-keys-with-a-bidictionary.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq5044.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=Make+More+of+Python+Dictionary+Keys+with+a+Bidictionary&amp;pi=52559002920&amp;a=9399653&amp;nc=true&amp;cgi=48313963830&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.bjss.com/engineering-insights/python-dictionary-keys-with-a-bidictionary?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:54:17 GMT -->
+</html>

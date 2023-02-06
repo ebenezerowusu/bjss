@@ -1,0 +1,1054 @@
+<!doctype html><html lang="en">
+<!-- Mirrored from www.bjss.com/engineering-insights/the-bjss-guide-to-green-software-development by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 10:36:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>The BJSS Guide to Green Software Development</title>
+    <link rel="shortcut icon" href="../hubfs/BJSSfav-01.png">
+    <meta name="description" content="Our CTO, Carl Austin, and Engineering Lead, Ricky Barefield, share their thoughts on where the world is at with green software development and how we can make the engineering world even greener.">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <meta property="og:description" content="Our CTO, Carl Austin, and Engineering Lead, Ricky Barefield, share their thoughts on where the world is at with green software development and how we can make the engineering world even greener.">
+    <meta property="og:title" content="The BJSS Guide to Green Software Development">
+    <meta name="twitter:description" content="Our CTO, Carl Austin, and Engineering Lead, Ricky Barefield, share their thoughts on where the world is at with green software development and how we can make the engineering world even greener.">
+    <meta name="twitter:title" content="The BJSS Guide to Green Software Development">
+
+    
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365676184/1622442584700/BJSS_May2021/css/layout.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365604017/1671180309381/BJSS_May2021/css/main.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Lato:400,700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,200,300,400,500,600,700,800,900%7CDroid+Serif:400,700%7CMontserrat:100,200,300,400,500,600,700,800,900%7CLato:300,400,700,900%7CAnton%7CBarlow+Condensed:100,200,300,400,500,600,700%7CSource+Code+Pro:300,400,500,600,700">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365604651/1630588080644/BJSS_May2021/css/theme-overrides.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844591/module_52098159278_language_switcher.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/48374514008/1642518516330/module_48374514008_Engineering_Insights_Post_Banner.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/48372652123/1664435298183/module_48372652123_Engineering_Insights_Post_Content.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/47366505811/1642518516986/module_47366505811_Follow_Us.min.css">
+    
+
+    
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script id="Cookiebot" src="../../consent.cookiebot.com/uc.js" data-cbid="1e8015ed-e92b-4a8a-81af-cd363b75ae3f" data-blockingmode="auto" type="text/javascript"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKPDZ5X');</script>
+<!-- End Google Tag Manager -->
+<script>
+(function(g,e,o,t,a,r,ge,tl,y,s){
+g.getElementsByTagName(o)[0].insertAdjacentHTML('afterbegin','<style id="georedirect1630578272721style">body{opacity:0.0 !important;}</style>');
+s=function(){g.getElementById('georedirect1630578272721style').innerHTML='body{opacity:1.0 !important;}';};
+t=g.getElementsByTagName(o)[0];y=g.createElement(e);y.async=true;
+y.src='https://g792337340.co/gr?id=-Mia1T_TRP_QsDX3xGqm&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);
+t.parentNode.insertBefore(y,t);y.onerror=function(){s()};
+georedirect1630578272721loaded=function(redirect){var to=0;if(redirect){to=5000};
+setTimeout(function(){s();},to)};
+})(document,'script','head');
+</script>
+<meta name="google-site-verification" content="XE271XJfF68am7oHm2x4veUqLyGeIVskmS7V3t-JVh0">
+
+<link rel="amphtml" href="the-bjss-guide-to-green-software-development3d9f.html?hs_amp=true">
+
+<meta property="og:image" content="https://www.bjss.com/hubfs/Green-Software-Development-Featured-Image.jpg#keepProtocol">
+<meta property="og:image:width" content="866">
+<meta property="og:image:height" content="640">
+
+<meta name="twitter:image" content="https://www.bjss.com/hubfs/Green-Software-Development-Featured-Image.jpg#keepProtocol">
+
+
+<meta property="og:url" content="https://www.bjss.com/engineering-insights/the-bjss-guide-to-green-software-development">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="the-bjss-guide-to-green-software-development.html">
+
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/rss+xml" href="rss.xml">
+<meta name="twitter:domain" content="www.bjss.com">
+<script src="../../platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+</script>
+
+<meta http-equiv="content-language" content="en">
+
+
+
+
+
+
+    
+  <meta name="generator" content="HubSpot"></head>
+  <body>
+    <div class="body-wrapper   hs-content-id-83412040368 hs-blog-post hs-blog-id-48313963830">
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/header.html"><header class="header">
+  <div class="main-header">
+    <div class="header__container">
+      <div class="headerLogo">
+        
+        <div id="hs_cos_wrapper_header_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  <span id="hs_cos_wrapper_header_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../index.html" id="hs-link-header_logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="../hubfs/bjss_logo_25_Blue%26Navy%20(RGB).svg" class="hs-image-widget " style="width:100px;border-width:0px;border:0px;" width="100" alt="bjss_logo_25_Blue&amp;Navy (RGB)" title="bjss_logo_25_Blue&amp;Navy (RGB)"></a></span>
+</div>
+      </div>
+      <div class="headerNavigation">
+        <div class="custom-menu-primary">
+          <span id="hs_cos_wrapper_header_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_header_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47367390570" aria-label="Navigation Menu">
+ <ul role="menu" class="active-branch">
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../about/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">About BJSS</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../our-work.html" role="menuitem">Our Work</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../community/index.html" role="menuitem">BJSS in the Community</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../governance/index.html" role="menuitem">Governance</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../our-sustainability.html" role="menuitem">Our Sustainability</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../greenfield.html" role="menuitem">Green Field</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../services/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Our Services</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../strategy-and-transformation.html" role="menuitem">Strategy &amp; Transformation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../design/index.html" role="menuitem">Design &amp; Innovation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../technology-engineering/index.html" role="menuitem">Technology &amp; Engineering</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../managed-service/index.html" role="menuitem">Managed Service</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../low-code-and-automation.html" role="menuitem">Low Code &amp; Automation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../data/index.html" role="menuitem">Data &amp; AI</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../cloud/index.html" role="menuitem">Cloud &amp; Platform</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../cyber-security.html" role="menuitem">Cyber Security</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../sustainability.html" role="menuitem">Sustainability</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../industries/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Your Industry</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../energy-commodities-utilities.html" role="menuitem">Energy, Commodities &amp; Utilities</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../financial-services.html" role="menuitem">Financial Services</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../health/index.html" role="menuitem">Health &amp; Social Care</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../public/index.html" role="menuitem">Public Sector</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../retail/index.html" role="menuitem">Retail &amp; Consumer Markets</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../enterprise-agile.html" role="menuitem">Enterprise Agile®</a></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch" role="none"><a href="../insights/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Insights</a>
+   <ul role="menu" class="hs-menu-children-wrapper active-branch">
+    <li class="hs-menu-item hs-menu-depth-2 active active-branch" role="none"><a href="../engineering-insights.html" role="menuitem">Engineering Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../industry-insights.html" role="menuitem">Industry Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../news.html" role="menuitem">News Centre</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../events/index.html" role="menuitem">Events</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../future-of-retail/index.html" role="menuitem">Future of Retail</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../careers.html" role="menuitem">Careers</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../contact/index.html" role="menuitem">Contact</a></li>
+ </ul>
+</div></span>
+        </div>
+        <div class="custom-menu-primary">
+          <div id="hs_cos_wrapper_module_16279825775607" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16279825775607_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="language_switcher"></span></div>
+        </div>
+        <div class="search-icon">
+          <span class="search-icon-in"></span>
+        </div>
+        <div class="mobile-navigation">
+          <div class="mobile-navigation-inner">
+            <span class="mobile-trigger"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search-outer">
+    <div class="header__container">
+      <div class="hs-search-field">
+        <div class="hs-search-field__bar">
+          <form action="https://www.bjss.com/hs-search-results">
+            <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search …">
+          </form>
+          <span class="close-search"></span>
+        </div>
+        <ul class="hs-search-field__suggestions"></ul>
+      </div>
+      
+    </div>
+  </div>
+</header></div>
+      
+
+      
+<main class="body-container-wrapper blog blog_post engineering_post">
+  <div class="blog-wrapper">
+    <div id="hs_cos_wrapper_post_banner" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="blog-banner post-banner engineering__banner" style="background-image: url(../hubfs/Green-Software-Development-Main.jpg)">
+  <div class="content-wrapper">
+    <div class="post-banner-col post-banner-col7">
+      <div class="post-banner-rich-text">
+        <h4><span id="hs_cos_wrapper_name" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="text">The BJSS Guide to Green Software Development</span></h4>
+        <p>By Carl Austin and Ricky Barefield, CTO and Engineering Lead</p>
+      </div>
+    </div>
+    
+    <div class="post-banner-col post-banner-col5">
+      <div class="post-banner-image">
+        <span class="post-banner-img">
+          <img src="../hubfs/Carl%20Austin.png" alt="Carl Austin and Ricky Barefield">
+        </span>
+      </div>
+    </div>
+    
+  </div>
+</div></div>
+  </div>
+  <div class="blog-single-wrapper">
+    <div class="content-wrapper ">
+      <div class="blog-post__body">
+        <span id="hs_cos_wrapper_post_body" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="rich_text"><h4 style="margin-top: 25px; color: #31b595;">Discover how you can use the software delivery lifecycle to build greener software in the enterprise setting</h4>
+<p>Green software development is an approach to software engineering that prioritizes energy-efficient patterns and processes throughout the delivery lifecycle.</p>
+<!--more-->
+<p>The approach holds great promise for enterprises looking to reduce their carbon emissions and costs associated with expensive and inefficient legacy technology and processes.</p>
+<p>Except the industry understanding of green software development is somewhat lacking. Despite the clear benefits, the approach remains on the sidelines, with many organizations opting for greater developer productivity and velocity – at odds with efficiency.</p>
+<p>Because of this, greenhouse gas emissions from software are increasing, with the ICT industry set to reach a <span style="color: #31b595;"><a href="https://www.greencarcongress.com/2018/03/20180306-mcmaster.html" style="font-weight: bold; color: #31b595; text-decoration: underline;" rel="noopener" target="_blank">14% share of global emissions by 2040</a></span>. Furthermore, the currently popular approaches to software delivery don’t always offer the best sustainable outcomes.</p>
+<p>To become more sustainable as a business, now is the time to embrace green software development. To help get you started, our Chief Technology Officer, Carl Austin, and Engineering Lead, Ricky Barefield, share their insights on how you can use the software delivery lifecycle to build greener software in the enterprise setting.</p></span>
+      </div>
+    </div>
+  </div>
+  <div id="hs_cos_wrapper_post_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="enginnering-post-content">
+  
+  
+  <!-- Tiles -->
+  
+    <div style="background-color: rgba(4, 30, 66">
+      <div class="page-center blog_tiles">
+        <h2 style="color: rgba(255, 255, 255">CONTENTS</h2>
+        <div class="blog_tiles--wrapper">
+          
+
+            <div class="blog_tiles__tile">
+              <h3 style="color: rgba(4, 30, 66); font-size: 22px">One: Where is the software industry today on green software development?</h3>
+              <p></p>
+              <strong>
+                <span style="color: #31b595;"><a href="#anchor1" rel="noopener" style="color: #31b595;">Read now &gt;</a></span>
+              </strong>
+            </div>
+
+          
+
+            <div class="blog_tiles__tile">
+              <h3 style="color: rgba(4, 30, 66); font-size: 22px">Two: Introduction to the Sustainable Software Delivery Lifecycle</h3>
+              <p></p>
+              <strong>
+                <span style="color: #31b595;"><a href="#anchor2" rel="noopener" style="color: #31b595;">Read now &gt;</a></span>
+              </strong>
+            </div>
+
+          
+
+            <div class="blog_tiles__tile">
+              <h3 style="color: rgba(4, 30, 66); font-size: 22px">Three: Green software requirements</h3>
+              <p></p>
+              <strong>
+                <span style="color: #31b595;"><a href="#anchor3" rel="noopener" style="color: #31b595;">Read more &gt;</a></span>
+              </strong>
+            </div>
+
+          
+
+            <div class="blog_tiles__tile">
+              <h3 style="color: rgba(4, 30, 66); font-size: 22px">Four: Green software design</h3>
+              <p></p>
+              <strong>
+                <span style="color: #31b595;"><a href="#anchor4" rel="noopener" style="color: #31b595;">Read more &gt;</a></span>
+              </strong>
+            </div>
+
+          
+
+            <div class="blog_tiles__tile">
+              <h3 style="color: rgba(4, 30, 66); font-size: 22px">Five: Green software development</h3>
+              <p></p>
+              <strong>
+                <span style="color: #31b595;"><a href="#anchor5" rel="noopener" style="color: #31b595;">Read more &gt;</a></span>
+              </strong>
+            </div>
+
+          
+
+            <div class="blog_tiles__tile">
+              <h3 style="color: rgba(4, 30, 66); font-size: 22px">Six: Green software testing </h3>
+              <p></p>
+              <strong>
+                <span style="color: #31b595;"><a href="#anchor6" rel="noopener" style="color: #31b595;">Read more &gt;</a></span>
+              </strong>
+            </div>
+
+          
+
+            <div class="blog_tiles__tile">
+              <h3 style="color: rgba(4, 30, 66); font-size: 22px">Seven: Green software deployment &amp; review</h3>
+              <p></p>
+              <strong>
+                <span style="color: #31b595;"><a href="#anchor7" rel="noopener" style="color: #31b595;">Read more &gt;</a></span>
+              </strong>
+            </div>
+
+          
+
+            <div class="blog_tiles__tile">
+              <h3 style="color: rgba(4, 30, 66); font-size: 22px">Eight: In Conclusion</h3>
+              <p></p>
+              <strong>
+                <span style="color: #31b595;"><a href="#anchor8" rel="noopener" style="color: #31b595;">Read more &gt;</a></span>
+              </strong>
+            </div>
+
+          
+        </div>
+      </div>
+    </div>
+  
+  <!-- End tiles -->
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content " style="background-color: rgba(#null, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <p>The Information and Communications Technology (ICT) industry is <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S095965261733233X" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">responsible for up to 3.9% </a></strong><strong><a href="https://www.sciencedirect.com/science/article/abs/pii/S095965261733233X" rel="noopener" target="_blank" id="__hsNewLink" style="color: #31b595; text-decoration: underline;">of global greenhouse gas</a></strong></span></span> (GHG) emissions today. This figure was 1.6% in 2007, and scholars at McMaster University predict it to reach a 14% share by 2040 as technology adoption continues to accelerate worldwide.</p>
+<p>The challenge in reducing these emissions is multi-layered. But the impact of the energy used to power the hardware and software we build is a significant contributor to these statistics.</p>
+<p>Compute power is becoming more and more efficient, performant, and readily available. As a result, software efficiency has taken a backseat in favor of developer productivity and delivery velocity. And with this behavior, GHG emissions from software are increasing somewhat unchecked.</p>
+<p>The necessary drive to reduce emissions presents an excellent opportunity to interrupt this trend and place greater importance on software efficiency. While researchers have been looking into green software development for some years now, it is only recently that community sentiment has picked up steam.</p>
+<p>We’re starting to see positive movement. But most people I speak to in software delivery are still relatively underinformed. They lack a clear understanding of technology’s impact on the environment and the steps they can take to improve things as part of their role.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-bg" style="background-image: url(../hubfs/Green-Software-Development-2.jpg);">
+
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content " style="background-color: rgba(#null, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <a id="anchor1" data-hs-anchor="true"></a>
+<h4 style="color: #31b595;">One: Where is the Software Industry today on Green Software Development?</h4>
+<p>The industry’s understanding of green software development is still in its infancy. Today, the focus on the concept has been somewhat intangible, primarily through community building and awareness initiatives. These exercises all help to form the foundational puzzle pieces, but there is still limited evidence of tangible implementation advice for those who build software.</p>
+<p>To date, the most advanced tangible aspect of green software delivery is measurement - specifically in the cloud. AWS, Azure, and GCP have each developed tools to measure and analyze cloud emissions. These are in addition to <span style="color: #31b595;"><strong><a href="https://www.cloudcarbonfootprint.org/" rel="noopener" target="_blank" style="color: #31b595;"><span style="text-decoration: underline;">Cloud Carbon Footprint’s</span></a></strong></span> open-source measurement tool. But, these solutions provide variable granularity and transparency. In some cases, they don’t include embodied carbon – a proportional share of carbon emitted in the manufacture and disposal of the hardware itself and an essential factor in measurement.</p>
+<p>This carbon can be a <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><strong><a href="https://digitalinfranetwork.com/opinions/70-90-per-cent-of-lifetime-embodied-carbon-is-consumed-in-new-equipment-production/" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">majority of the overall picture</a></strong></span></span>, and not measuring it can hide the true carbon impact of cloud services. Furthermore, if you rely on cloud measurements alone, you will likely miss many supporting systems (see box below) and all end-user devices. This can be another significant factor for a high-usage app or website.</p>
+<p>Still, cloud measurement is a valuable piece of the overall picture and an essential part of green software development. It enables the observability of energy and carbon costs as used in the “test and learn” loop. Without cloud measurement, it becomes a challenge to identify the full scale of emissions and the impact any improvements may have had.</p>
+<p>Cloud measurement tools are central to a CarbonOps approach, similar to FinOps, whereby you can monitor cost (in this case, carbon cost) and the actions taken to reduce expense over time. As a result, you can reduce the emissions of existing software already in production use.</p>
+<p>This CarbonOps approach requires a starting point upon which to implement incremental improvement. When developing new software, the starting point does not exist until the system reaches a certain level of development and use, perhaps the MVP. This is especially true in the enterprise setting. Here, getting code into production use quickly may not be possible, and you may need to extend feedback loops over long release windows.</p>
+<p>Considering this, if the software is designed and built with poor consideration of emissions, you may find yourself locked into a poorly optimized solution. One that is hard to improve, based on architectural decisions you cannot easily reverse. Waiting until you can measure is too late.</p>
+<p>Beyond MVP, when building each new iteration, we want to give it our best shot as we develop and “test and learn” on top. This is especially true where release windows are far apart. We believe you can make greener software as you go by considering the concept throughout the software delivery lifecycle rather than treating it as an afterthought.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h5 style="margin-bottom: 15px;"><span style="color: #041e42;"><strong>Contributors to emissions in software</strong></span></h5>
+<p>In the introduction, we touched on the multi-layered nature of software emissions. To identify the different ways in which you can reduce software emissions, you need to understand what these layers are. This knowledge is vital to anyone working in software delivery who wants to reduce their software’s environmental impact.</p>
+<p>The most apparent cause of emissions is the energy used by the software's hardware in each layer (database, business logic, middleware, user interface, etc.). The hardware’s energy consumption and associated manufacturing and disposal are to blame for creating these emissions.</p>
+<p>Additionally, there is a range of supporting systems involved in developing and operating software, for example:</p>
+<ul>
+<li>Continuous delivery pipelines</li>
+<li>Automated testing</li>
+<li>Idle compute</li>
+<li>Network transfer</li>
+<li>Storage</li>
+<li>Monitoring</li>
+<li>Logging</li>
+<li>Backups</li>
+<li>Failover/redundant resources.</li>
+</ul>
+<p>Each of these may significantly contribute to overall emissions depending on the design of your software. For example, long-term data retention on large datasets or network transfer for streaming video to many users can increase your emissions. In understanding and reducing the emissions of software, you should also take into account supporting systems.</p>
+<p>The <span style="text-decoration: underline;"><span style="color: #041e42; text-decoration: underline;"><strong><a href="https://github.com/Green-Software-Foundation/software_carbon_intensity/blob/dev/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md" rel="noopener" target="_blank" style="color: #041e42; text-decoration: underline;">Software Carbon Intensity Specification (alpha)</a></strong></span></span> is an open resource with further detail on this.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-bg" style="background-image: url(../hubfs/Green-Software-Development_3.jpg);">
+
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(4, 30, 66, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <a id="anchor2" data-hs-anchor="true"></a>
+<h4 style="margin-bottom: 25px;">Two: Introduction to the Sustainable Software Delivery Lifecycle</h4>
+<h5 style="margin-bottom: 15px;"><span style="color: #31b595;"><strong>Recap: the product and software delivery cycles</strong></span></h5>
+<p>As discussed in the <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><strong><a href="../enterprise-agile.html" style="color: #31b595; text-decoration: underline;">BJSS Enterprise Agile book</a></strong></span></span>, the product lifecycle describes the stages from the inception of an idea all the way through to build and eventual retirement. All products require some upfront work to get them to a state where they are sufficiently defined to start building and have enough substance to roll out to some or all users – the Minimum Viable Product (MVP). From here, the product is iterated, evolving to meet growing user needs.</p>
+<p><img src="../hubfs/Green-Software-Development-Product-Lifecycle.png" style="margin: 25px auto 40px; width: 85%; height: auto; display: block;"></p>
+<p>The Agile software delivery lifecycle (SDLC) describes the activities undertaken in a product iteration when using an Agile development methodology. Below is the SDLC for Scrum.</p>
+<p><img src="../hubfs/Green-Software-Development-SDLC.png" style="margin: 25px auto 40px; width: 60%; height: auto; display: block;"></p>
+<p>By understanding the SDLC, we propose that an effective way to implement green software actions is to align them to the different activities in the Agile SDLC – a Sustainable Software Delivery Lifecycle.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content " style="background-color: rgba(#null, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h5 style="margin-bottom: 15px; color: #31b595;"><strong>Pre-Delivery</strong></h5>
+<p style="margin-bottom: 15px;">Before the team starts delivery, they must understand the carbon literacy concepts and their organization's climate strategy. Knowledge of these will support the critical thinking required to build greener software.</p>
+<h6 style="margin-bottom: 15px;"><strong>Carbon literacy</strong></h6>
+<p>Your delivery team must be familiar with the fundamental concepts of energy usage, carbon emissions, and the actions you can take when designing and building software to reduce carbon emissions.</p>
+<p>Awareness of critical concepts such as carbon intensity (combined and <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><strong><a href="https://electricitymaps.com/blog/marginal-emissions-what-they-are-and-when-to-use-them/" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">marginal</a></strong></span></span>) and <strong><a href="https://principles.green/principles/embodied-carbon/" rel="noopener" target="_blank"><span style="color: #31b595;"><span style="text-decoration: underline;">embodied carbon</span></span></a></strong> provides teams with the knowledge needed to understand the environmental impact of their decisions.</p>
+<p>As you read this article, you’ll see that a great deal of critical thinking is required to develop greener software, and carbon literacy is necessary to support that.</p>
+<p>Microsoft has a <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><strong><a href="https://docs.microsoft.com/en-us/learn/modules/sustainable-software-engineering-overview/" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">short learning module on sustainable software engineering</a></strong></span></span> principles, which the company has designed for those working in software delivery. It’s worth each of your team members taking an hour to read through this and take it on board – it’s the same set of topics covered <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><a href="https://principles.green/" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;"><strong>here</strong></a></span></span>.</p>
+<p>These principles will be expanded to include patterns and practices in the near future, making them a more useful practical resource. Additionally, the <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><strong><a href="https://greensoftware.foundation/" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">Green Software Foundation</a></strong></span></span> is developing a green software development certification with the aim of having 1 million certified globally before the close of 2023. Though in development currently, it’s worth keeping an eye out for its release.</p>
+<p style="margin-bottom: 15px;">Finally, we also recommend giving people some time to do their own research. There’s a considerable amount of information, and it’s a great learning experience to work through it naturally.</p>
+<h6 style="margin-bottom: 15px;"><strong>Understand your organization’s climate strategy, if it has one</strong></h6>
+<p>As with any technology delivery, it must align with the business strategy in some way, and this is true in the case of sustainability. For example, you will need to:</p>
+<ul>
+<li>Understand how the project, product, system, or technology supports the organization in achieving its climate goals. What are the mechanisms by which the technology will deliver the desired change?</li>
+<li>Be sure that all the team knows how the project aligns with the sustainability goals and outcomes of the organization</li>
+<li>Be clear on who your climate or sustainability stakeholders are inside and outside of the business. Document and manage this list throughout the project lifecycle in a stakeholder map. You can use this article to identify each person's vested interest in the project's outcome from a sustainability perspective. Types of stakeholders to consider include:
+<ul>
+<li>Champions: those whose job it is to deliver and promote sustainable outcomes</li>
+<li>Advocates: those passionate about sustainability, even if it’s not part of their responsibilities.</li>
+</ul>
+</li>
+</ul>
+<p>This understanding will empower your software delivery teams to make green decisions throughout development and demonstrate their alignment with your organization’s strategy and stakeholder needs.</p>
+<p>Numerous trade-offs and balances will impact both the green credentials of your software and the cost, effort and time taken to develop features. Ensuring alignment with organizational strategy will help balance those decisions with green software development in mind.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(4, 30, 66, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h5 style="margin-bottom: 15px; color: #31b595;"><strong>Delivery</strong></h5>
+<p>As a familiar and well-trodden pattern, we believe green thinking can be anchored to the Agile SDLC, ensuring consideration is given to energy use at each stage.</p>
+<p>We’ll walk through each aspect of the Agile SDLC below and propose some considerations, actions, and resources that could support green software delivery in each stage.</p>
+<p>Some of the ideas below are good software delivery practices with sustainable outcomes. Many of them align with other positive outcomes, such as cost reduction. Where this is the case, you can always add a green lens to ensure you prioritize decisions with sustainability in mind.</p>
+<p>It's worth noting that whichever Agile approach you take, or even if you aren’t using Agile, you can still apply the below ideas to your methodology. Most of these ideas aren’t tied to a specific approach; you can interpret and apply them to any software delivery methodology.</p>
+<p><img src="../hubfs/Green-Software-Development_SDLC_Extended.png" style="margin-top: 25px; display: block;"></p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h6 style="margin-bottom: 25px;"><strong>Build vs. Operational Emissions</strong></h6>
+<blockquote style="margin-bottom: 40px;">
+<h6 style="color: #041e42; margin-bottom: 25px;">“Our pilot covering 30 software products across different industry sectors, including financial services, government, and software companies, has shown that there are high carbon emissions costs related to the build and the operation of software.<br><br>A key stat stands out for us when we look back at the results: <strong>the total annualized run impact can be up to 129% of the original build cost of the software</strong>. That's the ongoing impact every year the software is in operation. The good news is that we are also calculating actions that can reduce those run costs by up to 45%."</h6>
+<p><span style="color: #041e42;"><strong>Eric Zie, CEO, GoCodeGreen</strong></span></p>
+</blockquote>
+<p>A piece of software’s build and operations have an emissions impact, the balance of that impact is important to know. If the emissions impact of building software was an order of magnitude larger than operating it, then it would also demand an order of magnitude more time and effort when it comes to improvement.</p>
+<p>However, as Eric Zie, CEO of GoCodeGreen, explains in the quote above, the emissions impact of operating software can be higher than the entire original build impact. Not only that, but it can be higher even within a single year of operation. This demonstrates the importance of reducing the operational carbon emissions of the software you build.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-parallex">
+    <div class="parallex-bg-wrap">
+      <div class="parallex-background" style="background-image: url(../hubfs/Green-Software-Development-Scroll.jpg);"></div>
+    </div>
+    <div class="page-center">
+      <div class="enginnering-post-inner-row">
+        <div class="enginnering-post-rich-tesx">
+          <a id="anchor3" data-hs-anchor="true"></a>
+<h4 style="margin-bottom: 25px;">Three: Green Software Requirements</h4>
+<h5 style="margin-bottom: 25px; color: #31b595;"><strong>Do I really need it?</strong></h5>
+<blockquote style="margin-bottom: 40px;">
+<h6 style="color: #041e42; margin-bottom: 15px;">“There is nothing so useless as doing efficiently that which should not be done at all.”</h6>
+<p><strong>Peter Drucker</strong></p>
+</blockquote>
+<p>Software bloat is common, especially in the enterprise setting. Oft-quoted Standish Group research claimed that 64% of enterprise software features are rarely (19%) or never (45%) used. Further on, <strong><span style="text-decoration: underline;"><a href="https://www.standishgroup.com/sample_research_files/Exceeding Value_Layout.pdf" rel="noopener" target="_blank"><span style="color: #31b595; text-decoration: underline;">a larger set of data in 2014 estimated that 50% of features are hardly ever used and 80% have low to no value</span></a></span>.</strong></p>
+<p>While these statistics have been regularly discussed and challenged in Agile circles and have aged a degree, in our experience, they still hold true in many enterprises. There are undoubtedly good practice approaches in modern software delivery that aim to reduce waste, for example, Lean software development. But these aren’t always adopted effectively in the enterprise, and software development regularly leads to bloat and overcomplication.</p>
+<p>Given this, perhaps <strong>one of the most significant impacts</strong> you can make is asking: <strong>“Do I really need this? Should I even build it at all?”</strong></p>
+<p>Creating more minimal software is a straightforward way to reduce build and operational emissions. Of course, this won’t work if you replace one rejected feature with another; “more minimal software” is the key concept here.</p>
+<p>By building more minimal software, you’ll gain many other benefits too. You’ll refactor less, the software will be far easier to operate, cost less, be less complex, and what you create will be easier to observe and further improve the green credentials. You’ll also be able to get the software to your users more quickly.</p>
+<p>You can use the additional bandwidth in your team to improve the efficiency of what you have built rather than simply building more. You can even decommission features that you feel are no longer well used.</p>
+<p>In an enterprise, this can be incredibly challenging. Many stakeholders have differing views of what is minimally viable in terms of features and non-functional requirements. There will be a range of business stakeholders, user representatives, and teams with non-functional requirements of you; risk, regulatory, security, and more.</p>
+<p>It is not uncommon for many requirements to be conveyed as a “must have,” and stakeholders will often overstate non-functionals. You will need to help stakeholders question their perceived needs and demonstrate how a more minimal solution will provide greater benefits with appropriate compromise.</p>
+<p>A typical project in enterprise-scale organizations is application modernization. When modernizing or replacing a large, embedded system, it can be challenging to apply the minimalist mindset. The default, usually incorrect position, is often to build a replacement with the same features as the previous one with more on top and switch them over in a “big bang” approach.</p>
+<p>It’s almost impossible to observe a legacy system’s real-world use. Metrics aren’t always available, and injecting them can be challenging. As a result, the simple assumption is that you need all the features in the replacement. You’ll then end up rebuilding all the previous bloat, significantly impacting the software’s emissions and efficiency.</p>
+<p>In this case, it is essential to discover whether what you already have is even the right thing given the needs today and whether incremental replacement patterns are an option, as they can provide an effective way to build, measure, learn, and improve as you go.</p>
+<h5 style="margin-top: 15px; margin-bottom: 25px; color: #31b595;"><strong>Non-functional requirements and sustainability as a non-functional need</strong></h5>
+<p>In the early stages of the software lifecycle, you agree upon and define a product's non-functional requirements (NFRs). Through this process, you make trade-offs between non-functional needs and factors such as cost or complexity.</p>
+<p>The same is true of sustainability. Trading-off NFRs, such as response time or availability, will lead to architectures that require fewer resources and, in turn, less energy.</p>
+<p>By introducing sustainability into conversations about NFRs from day one, you can enable NFR trade-off discussions and question the service levels driving them.</p>
+<p>Commonly, NFRs are greater than the actual needs of an application, and you should encourage discussions that probe and test whether, for example, 99.99% availability is a necessity and upon what assumptions this necessity is based.</p>
+<p>An essential aspect of NFR balance is explaining the different solution options that NFRs drive, the potential energy and carbon impact, and the difference in service provided in each option. For example, the difference between pilot light, warm standby, or multi-site active/active disaster recovery approaches and their potential impact on emissions and service recovery time.</p>
+<p>For this reason, you should involve an architect with a good understanding of green software development principles in the NFR design process. NFRs are the foundation of software architecture, and their knowledge of solution options will help stakeholders agree on a realistic set of NFRs that can also help reduce energy use.</p>
+<p>It is also wise to revisit NFR decisions at key points in the green software development process. Assumptions that led to their initial definition may have changed, as may have your software’s usage. Architects will continue to design new capabilities to meet the NFRs, and if there is reason to loosen them, this can lead to greater efficiency in new developments.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <a id="anchor4" data-hs-anchor="true"></a>
+<h4 style="margin-bottom: 25px;">Four: Green Software Design</h4>
+<h5 style="margin-bottom: 25px;"><span style="color: #041e42;"><strong>Green Architecture</strong></span></h5>
+<p>Architectural decisions have some of the largest potential influences on software carbon intensity. They are also some of the most fundamental choices and hardest to back out of at a later point.</p>
+<p>These decisions significantly affect the amount of hardware you use, how efficiently you utilize that hardware, and the amount of data you store or send over networks when operating software.</p>
+<p>To ensure that you can make decisions with energy use and emissions in mind, architects must learn about sustainability concepts and take the time to understand how they can apply them to their designs.</p>
+<p>As discussed, the industry is early in the green software development journey. While <span style="text-decoration: underline;"><span style="color: #041e42; text-decoration: underline;"><a href="https://principles.green/" rel="noopener" target="_blank" style="color: #041e42; text-decoration: underline;"><strong>green principles</strong></a></span></span> are essential for any architect, there is limited implementation information about good patterns and practices.</p>
+<p>Given this, architects will need to put effort into assessing the potential emissions impact of different options. You may need to undertake spike work where differences are not evident on paper. You can use the eight green principles to help support this process, as well as the three categories of actions that can reduce emissions, as defined by the <a href="https://github.com/Green-Software-Foundation/software_carbon_intensity/blob/main/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md#software-sustainability-actions" rel="noopener" target="_blank"><strong><span style="color: #041e42;"><span style="text-decoration: underline;">Green Software Foundation</span></span></strong></a>:</p>
+<ul>
+<li><strong>Energy Efficiency: </strong>Actions taken to make software use less electricity to perform the same function</li>
+<li><strong>Hardware Efficiency:</strong> Actions taken to build software using fewer physical resources to perform the same function</li>
+<li><strong>Carbon Awareness:</strong> Actions taken to time or region-shift software computation to take advantage of clean, renewable, or low carbon sources of electricity.</li>
+</ul>
+<p>Taking these into account will support greener decision making. But it’s an inexact science when the scale of emissions resulting from a decision is often difficult to quantify, especially when software is not live and measurable.</p>
+<p>To create a green architecture culture, you should include references to sustainability motivations, assumptions, and implications in your key design decision (KDD) or architecture decision record (ADR) templates – prompting architects to include these aspects as part of their decision making.</p>
+<h5 style="margin-top: 15px; margin-bottom: 25px;"><span style="color: #041e42;"><strong>Minimal Architecture</strong></span></h5>
+<p>We’ve already discussed the green benefits of building minimal software in the requirements section. As well as reducing waste by limiting features to those that are valuable, developing minimal software also means using minimal architectures. It’s not unusual to see applications designed to support theoretical futures rather than implemented efficiently to support the known existing scenarios. Challenging the necessity of NFRs will help you build minimal architecture, as will a culture of developing minimally.</p>
+<p>Below are some examples of minimal architecture decisions you may take as an architect:</p>
+<ul>
+<li>Don’t distribute until you need to – a modular monolith is often a great place to start and will reduce complexity until required</li>
+<li>Select lightweight container management tools such as <span style="text-decoration: underline;"><a href="https://docs.docker.com/engine/swarm/" rel="noopener" target="_blank"><strong><span style="color: #041e42; text-decoration: underline;">Docker Swarm</span></strong></a></span> over heavyweight container management if suitable for your use case</li>
+<li>Replace a long-running service with a simple Function as a Service</li>
+<li>For pub-sub messaging, do you need a <a href="https://kafka.apache.org/intro" rel="noopener" target="_blank"><strong><span style="color: #041e42;"><span style="text-decoration: underline;">Kafka cluster</span></span></strong></a>, or at your expected medium-term scale, could you use <span style="color: #041e42;"><a href="https://redis.io/docs/manual/pubsub/" rel="noopener" target="_blank" style="color: #041e42;"><strong><span style="text-decoration: underline;">Redis</span></strong></a></span>, for example?</li>
+</ul>
+<p>Much like minimal requirements, minimal architectures provide many other benefits outside of software carbon intensity; lower cost, complexity, and maintenance effort, for example.</p>
+<h5 style="margin-top: 15px; margin-bottom: 25px;"><span style="color: #041e42;"><strong>API Design</strong></span></h5>
+<p>An overly sparse API may lead to client code needing to make multiple requests to a server. This ‘chattiness’ is highly inefficient as each call has an amount of processing, memory, and networking overhead, each of which will add to your software’s carbon intensity.</p>
+<p>Conversely, a particularly verbose API may also be inefficient as some or perhaps even most of the data will have been retrieved, communicated, and processed only to be discarded as superfluous by the client code.</p>
+<p>Getting the correct balance will require a good deal of knowledge about the actual API usage, which may have multiple clients. Futureproofing an API may be prudent and avoid future development costs but may prove unnecessary and have a negative carbon impact on an ongoing basis.</p>
+<p>There are several choices in developing an API approach that will impact efficiency. API architecture (e.g., REST, GraphQL, gRPC), protocol (TCP, UDP, custom wire protocols), and the data format used for request/response of your APIs, each have a balance of efficiency against other factors such as ease of debugging and development effort.</p>
+<p><strong><a href="https://graphql.org/" rel="noopener" target="_blank"><span style="color: #041e42;"><span style="text-decoration: underline;">GraphQL</span></span></a></strong> can give you the ability to only request the data you need rather than a uniform response (lessening the burden of API verbosity). REST is ubiquitous, quick to develop, more general purpose, and potentially less efficient. <span style="text-decoration: underline;"><strong><a href="https://grpc.io/" rel="noopener" target="_blank"><span style="color: #041e42; text-decoration: underline;">gRPC</span></a></strong></span> is lightweight, efficient, harder to debug, and more effortful to develop.</p>
+<p>Typical data formats used with enterprise APIs are human-readable such as JSON or XML. Often humans do not read the data, certainly not in production use. This introduces inefficiency (verbosity) in favor of simplicity but provides a clear advantage during development and debugging. Serialized data formats can increase processing and data transfer efficiency, for example, Protocol Buffers used by gRPC.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content " style="background-color: rgba(#null, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h5 style="margin-bottom: 25px; color: #31b595;"><strong>Examples of Green Architecture Decisions</strong></h5>
+<p>At the time of writing, there isn’t an open list of common green architecture patterns and practices in modern software delivery that you can crib from when architecting software.</p>
+<p>The green software foundation plans to introduce a list of patterns and practices to its green principles that will fill some of this gap and hopefully provide an excellent resource that the community can input into openly. For now, it provides a limited but valuable set of examples to <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><strong><a href="https://principles.green/principles/applied/microservices/" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">bring the principles to life</a></strong></span></span>.</p>
+<p>The following list provides some examples of common architectural decisions that can make a significant difference to the green credentials of the software you build.</p>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Choice of programming language</strong></h6>
+<p>Some languages are naturally more efficient than others. Of course, there is much more detail than that statement would suggest. Still, <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><a href="https://greenlab.di.uminho.pt/wp-content/uploads/2017/09/paperSLE.pdf" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;"><strong>research</strong></a></span></span> shows that compiled languages tend to be the fastest and most energy-efficient, followed by virtual machine, and finally, interpreted languages.</p>
+<p>According to research, <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><strong><a href="https://thenewstack.io/which-programming-languages-use-the-least-electricity/" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">Python performs in the bottom five of 27 languages</a></strong></span></span>. This finding is notable due to the language’s popularity (at the time of writing, it holds the top position in the <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><strong><a href="https://www.tiobe.com/tiobe-index/" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">TIOBE language index</a></strong></span></span>) and its prominent use in large-scale data platforms and analytics. As a result, Python applications can potentially generate colossal energy use in large-scale processing, storage, and network transfer. It’s also very easy to introduce inefficiency into these solutions, given their distributed and complex nature.</p>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Public cloud, choice of provider, and region</strong></h6>
+<p>Public cloud infrastructure is significantly more energy efficient than on-prem or enterprise data centers. Cloud-native services also utilize hardware more efficiently. Depending on the region, the carbon intensity of the energy supply can be better depending on the mix of energy supply that powers the local grid.</p>
+<p>Cloud providers each have differing sustainability commitments and progress. Therefore, your cloud provider choice and their operating region(s) can make a difference to your software’s green credentials. The creators behind <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><strong><a href="https://www.cloudcarbonfootprint.org/docs/methodology/" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">Cloud Carbon Footprint</a></strong></span></span> have developed a methodology to calculate cloud emissions and <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><strong><a href="https://www.climatiq.io/blog/cloud-computing-amazon-google-microsoft-helping-companies-go-green" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">Climatiq</a></strong></span></span> has used this approach to effectively visualize how different data centers compare in terms of carbon intensity.</p>
+<p>It's worth noting that cloud vendor claims of 100% renewable energy can be a little misleading. As you can see in the Climatiq article, cloud data centers have varying carbon intensity levels, sometimes a very high (e.g., Indonesia). While cloud vendors put a great deal of investment into renewable energy, it is often not possible to feed this renewable energy into the grids powering their data centers – it is instead a form of carbon offset. Local grids still produce carbon to generate their energy and this carbon intensity should be used for decision-making, rather than an assumption that “100% renewable energy” means zero carbon by-products.</p>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Platform as a Service (PaaS) and Serverless (e.g., Function as a Service (FaaS))</strong></h6>
+<p>PaaS and Serverless public cloud services are highly efficient uses of hardware. Cloud vendors have designed them to make the best possible use of available hardware resources, leading to far less idle time and significantly reduced energy use in many cases.</p>
+<p>But it is worth noting that using FaaS can lead to the development of overly small units with high amounts of network chatter and unnecessary complication, especially at enterprise scale. This is worth considering when developing large-scale software highly reliant on FaaS.</p>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Containers</strong></h6>
+<p>Containers can provide an effective way to maximize the utilization of available hardware if orchestrated effectively. Using cloud-managed container orchestration (or serverless containers) can further increase this benefit.</p>
+<p>You should take care to maximize the efficiency of the containers and their orchestration, requiring expert input in development and operation.</p>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Scheduling and batch vs. real-time</strong></h6>
+<p>With the ease of access to cloud-managed services that enable event-driven response, there is a natural lean towards these patterns where it may be unnecessary given non-functional requirements.</p>
+<p>For those things that do not need this immediacy, and may happen thousands or millions of times over, consider scheduling batch activities to run at another time or even in another region.</p>
+<p>By being aware of energy’s carbon intensity at different times of the day and in different locations, you can benefit from both batch execution efficiencies and lower emissions. Note that you will need to use forecast <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><a href="https://electricitymaps.com/blog/marginal-emissions-what-they-are-and-when-to-use-them/" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;"><strong>marginal carbon intensity</strong></a></span></span> rather than the combined carbon intensity of the grid. Marginal power sources will often have a greater intensity than combined.</p>
+<p>In advanced cases, you could develop schedulers to automate scheduling based on batch latency requirements and marginal carbon intensity in different cloud regions and times. Such a scheduler will automate running the task in the most carbon efficient way given boundaries for the latency of return. GCP uses this approach for its batch scheduling, for example.</p>
+<p>Another example is a paper on building <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><strong><a href="http://ceur-ws.org/Vol-2382/ICT4S2019_paper_28.pdf" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">carbon awareness into the Kubernetes Scheduler</a></strong></span></span>. APIs such as <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><a href="https://www.watttime.org/api-documentation/#introduction" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;"><strong>Watttime</strong></a></span></span> or <span style="text-decoration: underline;"><a href="https://static.electricitymap.org/api/docs/index.html" rel="noopener" target="_blank"><strong><span style="color: #31b595; text-decoration: underline;">Electricity Maps</span></strong></a></span> are available to query carbon intensity. They can also predict real-time, forecast, and marginal historical intensity using machine learning.</p>
+<p><strong>There are a host of other things you can do, some of them small but easy to overlook, such as cleaning up stored objects when no longer in use and setting appropriate retention periods for data and backups.</strong></p>
+<p><strong>The <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><a href="https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">AWS Well-Architected Sustainability Pillar documentation</a></span></span> has some specific examples worth noting, and we’d recommend reading their documentation.</strong></p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h6 style="margin-bottom: 25px;"><strong>Cost and Sustainability</strong></h6>
+<p>In many cases, reducing operational costs and sustainability are aligned. Building software that uses less energy and hardware will typically be cheaper to operate. But this isn’t necessarily true of the build phase, where the effort to build or refactor more efficient software can be greater, reducing your velocity.</p>
+<p style="margin-bottom: 25px;">As hardware becomes more efficient over time (Moore’s Law), software becomes less so. There has been a reducing need to account for hardware limitations, especially when compared to the business value of increased velocity.</p>
+<blockquote style="margin-bottom: 40px;">
+<h6 style="color: #041e42; margin-bottom: 15px;">Software efficiency halves every 18 months, compensating Moore’s Law</h6>
+<p><span style="color: #041e42;"><strong>May’s Law</strong></span></p>
+</blockquote>
+<p>Typically, this velocity vs. efficiency trade-off falls in favor of velocity unless the operational cost gains of efficiency are great enough to make it worthwhile. By including the sustainability benefits of efficiency, you can make a greater case to reduce velocity in favor of building more efficient software and reversing this trend somewhat.</p>
+<p>Still, the emissions benefit of point decisions is likely hard to quantify and value, making a trade-off challenging to support. This demonstrates the importance of a validated, open library of good practices and patterns that have been measured to show the typical impact of these practices.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-bg" style="background-image: url(../hubfs/Green-Software-Development-4.jpg);">
+
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(4, 30, 66, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <a id="anchor5" data-hs-anchor="true"></a>
+<h4>Five: Green Software Development</h4>
+<p>Moving from green architecture to green software development. Designing and writing efficient code is critical to reducing energy use.</p>
+<h5 style="margin-top: 15px; margin-bottom: 25px;"><span style="color: #31b595;"><strong>Simplicity and Efficiency Trade-offs</strong></span></h5>
+<p>There are many trade-offs when developing software - an important one in green software development is between simplicity and efficiency. One we’ve seen examples of already in the architecture section and closely aligned to the box-out on cost and sustainability.</p>
+<p>For example, consider two sorting algorithms - insertion sort and merge sort.</p>
+<p>Insertion sort takes each element of the unsorted list and moves it into the correct place in a new list. The code will be simple for most developers to understand. This will likely mean faster development, few functional bugs, and an easily maintainable piece of code. But insertion sort has a worst-case time complexity of O(n^2), meaning that as the amount of data increases, the time taken increases proportionally to the square of the increase in data. This can be highly inefficient in terms of running time and thus energy use.</p>
+<p>Merge sort, in contrast, is more complex to explain, involving splitting a list into several sublists, recursively sorting them, then merging the result. The code for this will take longer to develop, be more complex, harder to understand and maintain, and potentially more likely to contain bugs. But it has a time complexity of O(n log n), meaning the time taken to sort a list increases linearly with the number of elements to sort, resulting in less energy use, perhaps meaningfully so for large amounts of data.</p>
+<p>Which is the correct choice for software engineers is not straightforward. They will need to consider the system's non-functional requirements, the knowledge level of the developers likely to be maintaining the system, and the variance in data the system will process.</p>
+<p>Of course, this is a contrived example. It would be unusual in an enterprise setting to implement a sorting algorithm. Instead, the complexity tends to be hidden in a library that we expect to be well tested. However, in a particular domain, many comparable trade-offs can be made. It’s likely down to the developer to understand how to apply this trade-off, and their experience will play a significant part in the outcome.</p>
+<p>Over time and due mainly to Moore’s Law, these trade-off decisions have tended to favor simpler and quicker to write code as memory has become cheap and plentiful and processing becomes ever-more efficient. But it’s now time to revisit this, considering the knowledge that these decisions also impact our environment.</p>
+<h5 style="margin-top: 15px; margin-bottom: 25px;"><span style="color: #31b595;"><strong>Efficient Software</strong></span></h5>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Algorithms and data structures</strong></h6>
+<p>The example used above is one of algorithmic efficiency. Choosing more efficient algorithms for the expected data will likely have the most significant impact on carbon emissions at the lowest level of the stack.</p>
+<p>We do not always need the perfect result and can sometimes balance the quality of the outcome with the algorithm's efficiency. These are known as approximation algorithms and are very popular in some areas, such as route finding.</p>
+<p>Outcome quality vs. efficiency is also an essential factor in machine learning, where additional algorithmic improvement can come at the cost of exponential increases in model training time, energy, and emissions. It’s not unusual that even a small percentage increase in the performance of an already well-tuned model may require an order of magnitude more processing power.</p>
+<p>Hand in hand with algorithmic efficiency is choosing appropriate data structures. For instance, if, as part of an algorithm, it will be necessary to search for elements in a list, we may consider using collections based on hashing functions and ensure the hashing function has an appropriate distribution over the expected data set. This will reduce processor cycles as we will not need to traverse the entire collection.</p>
+<p>We may also consider an algorithm's trade-off between processing and memory usage. We may have opportunities to store derived data which will reduce duplicate processing. We may do this in the form of a cache or possibly at the database layer using materialized views.</p>
+<p>An algorithm's true efficiency will depend on the actual data it processes. Understanding the characteristics of production data is, therefore, vital. In particular, you need to understand the data variety and expected volume.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h6 style="margin-bottom: 25px;"><strong>Time efficiency ! = carbon savings</strong></h6>
+<p>We must also remember that while the time efficiency of algorithms and software carbon intensity are related, they are not always directly proportional. For example, greater parallelism can improve time efficiency, but greater parallelism means more energy use, which may not decrease our software’s carbon intensity.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(4, 30, 66, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h6 style="margin-bottom: 25px;"><strong>Software reduction</strong></h6>
+<p>Reduction in software engineering is the practice of reusing a library that solves a more general problem before reducing the result to what is needed rather than writing more specific new code. This approach is vital to productivity and sometimes security in enterprise engineering but does have a software efficiency trade-off.</p>
+<p>Again, the decision for the software engineer is to determine when the impact of reduction is too great. One way to help make this decision is to understand the library code and how it works and make profiling tools part of the engineering process. There is further discussion on the use of profiling tools below.</p>
+<a id="engineerforchange" data-hs-anchor="true"></a>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Engineer for change</strong></h6>
+<p>As established, there are many trade-offs during development. Often it is hard to quantify a development decision’s carbon intensity impact. But many software development principles can make it easier to defer some of the decisions.</p>
+<p>Most fundamentally, the principle to separate units of code around responsibilities and reasons to change is commonly referred to as the Single Responsibility Principle or Composite Reuse Principle.</p>
+<p>Applying this principle will ensure that when an engineer does decide that a more efficient algorithm is needed, the existing algorithm is not intertwined with other code areas. If we know upfront that change is likely, it would also be wise to ensure you develop a specific interface for the behavior (following the Interface Segregation Principle). Perhaps the specific implementation can be quickly injected into the codebase using an Inversion of Control container or an Abstract Factory if we’re looking to keep things simple.</p>
+<h5 style="margin-top: 15px; margin-bottom: 25px;"><span style="color: #31b595;"><strong>Efficient Continuous Delivery</strong></span></h5>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Efficient integration and delivery pipelines</strong></h6>
+<p>The product running in production is not the only contributor to carbon emissions and, therefore, not the only opportunity for reduction. We must also consider:</p>
+<ul>
+<li>Non-production environments, including various flavors of test environments</li>
+<li>The integration and continuous delivery pipelines and processes</li>
+<li>Development machines.</li>
+</ul>
+<p>In this article, we do not consider development machines further though these and associated peripherals, such as monitors, account for some of the carbon cost of delivering software.</p>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Environments</strong></h6>
+<p>What is necessary for a production environment may not be required for each environment on the path to live.</p>
+<p>Production aside, performance testing environments tend to be the only environments that need to mirror the scale. With the advent of cloud computing and Infrastructure as Code (IaC), it has become simpler to create standardized environments. With a little more intelligence in that code, we can consciously vary those environments and scale them for a given usage. For example, <a href="https://terragrunt.gruntwork.io/" rel="noopener" target="_blank"><strong><span style="color: #31b595;"><span style="text-decoration: underline;">Terragrunt</span></span></strong></a> extends the out-of-the-box capabilities of Terraform to offer this flexibility.</p>
+<p>Given that IaC lessens the burden of environment creation (and destruction), we should also consider creating environments on demand and destroying them when we are finished.</p>
+<p>Phantom power usage is generally associated with equipment around the home that is on but unused, continually drawing energy but not providing benefit. This term is also relevant to the many cloud environments which run unnecessarily.</p>
+<p>Moving to an on-demand model can also remove process bottlenecks associated with pre-provisioned environments.</p>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Pipeline processes</strong></h6>
+<p>Another path to live carbon cost is in the processing associated with running pipelines. Again, machines doing this processing should be ‘right-sized’ and ephemeral where possible. Even better, you could switch to cloud-native technologies that can make hardware more efficient.</p>
+<p>As stated earlier in this article, the largest carbon saving is to ask the question as to whether the product or functionality is necessary in the first place.</p>
+<p>Applying this to pipelines, we should therefore question whether each build we run is necessary or whether we trigger the build automatically because we can.</p>
+<p>You can design the development team’s branching strategy to consider this and build automatically only for shared branches or when you raise a merge request.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h5 style="margin-bottom: 25px;"><span style="color: #041e42;"><strong>Build carbon efficiency into quality processes</strong></span></h5>
+<p>Understanding what makes efficient software and what makes efficient delivery pipelines is not necessarily enough. Many software engineers claim to have a good knowledge of software design and maintainability. Still, many software systems suffer from problems in these areas and much unknown technical debt.</p>
+<p>To address this, we follow quality processes and bake them into our delivery approach and culture. These should be updated to include carbon efficiency as a desired outcome.</p>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Code and design review</strong></h6>
+<p>At BJSS, we advocate thorough code and code design reviews. We prefer to shift this left where possible to avoid redundant work or the temptation to stay with a suboptimal solution.</p>
+<p>Such reviews should also consider the abovementioned aspects, such as algorithmic and API efficiencies, and the importance of ensuring that you size environment provisioning appropriately.</p>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Making technical decisions consciously and allowing scrutiny</strong></h6>
+<p>As the green architecture section discussed, you should document decisions using Key Design Decisions (KDDs) or Architectural Decision Records (ADRs). These needn’t be architectural in level but could be lower-level choices. While documentation is prudent, you must make these decisions consciously and with the best information available.</p>
+<p>‘Cargo cult programming’ - the practice of blindly copying code or approaches without understanding - is all too commonplace in software development. Questioning such methods and insisting on the need to document key decisions can help avoid this.</p>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Questioning requirements</strong></h6>
+<p>In an Agile environment, software requirements are not the preserve of business analysts. Engineers should be included in gathering and refining requirements and will bring a unique perspective.</p>
+<p>They should be encouraged to bring an environmental lens to those discussions and use their knowledge to make suggestions early in the process and throughout development to offer more carbon efficient or aware solutions.</p>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Sustainability debt</strong></h6>
+<p>Technical debt is inevitable on projects. We can accrue technical debt consciously or by accident. Perhaps we become aware of alternative, more appropriate technologies or were unaware of all the facts during the initial development of a feature.</p>
+<p>Given the difficulty of estimating carbon costs during development, we could choose to delay adding complexity – <span style="color: #041e42;"><a href="#engineerforchange" rel="noopener" style="color: #041e42;"><span style="text-decoration: underline;"><strong>see engineering for change</strong></span></a></span>. If we do so, we must re-evaluate those decisions at a sensible cadence. The most natural way to do this seems to be to treat ‘sustainability debt’ as a type of technical debt.</p>
+<p>Once you’ve included this new debt, ensuring that your usual processes around technical debt management are robust is essential. You should evaluate, prioritize, and rectify that debt appropriately before the interest rate is overly onerous.</p>
+<h6 style="margin-top: 15px; margin-bottom: 25px;"><strong>Profiling tools and static analysis</strong></h6>
+<p>Depending on the system’s nature, performance, and load requirements, performance profiling tooling may be used during development or live running.</p>
+<p>These tools can be either intrusive or non-intrusive and can present information showing how load affects different parts of the system, highlighting bottlenecks and sub-optimal code. Although commonly run locally or in conjunction with a performance test suite in a dedicated environment, they can also continuously run during production and connect to automated alerting systems.</p>
+<p>Including these in your system and its associated delivery – even without stringent performance requirements - could have an environmental benefit.</p>
+<p>Similarly, and with less investment, static code analysis can often spot suboptimal code. Developers can use static code analyzers, integrate them with IDEs, or run them in integration pipelines, with results inspected in dashboards.</p>
+<p>There are some early attempts to include green considerations in static analysis. <span style="text-decoration: underline;"><span style="color: #041e42; text-decoration: underline;"><a href="https://www.castsoftware.com/green-it" rel="noopener" target="_blank" style="color: #041e42; text-decoration: underline;"><strong>CAST GreenIT Index</strong></a></span></span> is an automated green source code measure. <a href="https://github.com/cnumr/ecoCode" rel="noopener" target="_blank"><strong><span style="color: #041e42;"><span style="text-decoration: underline;">ecoCode plugin for SonarQube</span></span></strong></a> looks to codify 115 rules based on a French book on green web development, and the green software foundation has <span style="text-decoration: underline;"><span style="color: #041e42; text-decoration: underline;"><a href="https://github.com/Green-Software-Foundation/Carbon_CI_Pipeline_Tooling" rel="noopener" target="_blank" style="color: #041e42; text-decoration: underline;"><strong>plans to develop solutions in this space</strong></a></span></span> too.</p>
+<p>It’s important to note that we do not claim to have tried any of these static analysis solutions; they are still very early in their maturity.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-parallex">
+    <div class="parallex-bg-wrap">
+      <div class="parallex-background" style="background-image: url(../hubfs/Green-Software-Development-Scroll.jpg);"></div>
+    </div>
+    <div class="page-center">
+      <div class="enginnering-post-inner-row">
+        <div class="enginnering-post-rich-tesx">
+          <a id="anchor6" data-hs-anchor="true"></a>
+<h4 style="margin-bottom: 25px;">Six: Green Software Testing</h4>
+<p>While the topics covered so far are in their infancy but developing in the industry, there is little discussion about the role that testing has to play in green software development.</p>
+<p>In addition to verifying software functionality, testing is where we assure that we meet our non-functional needs. If we treat emissions as a non-functional need, is it an appropriate place to hold ourselves accountable for our software's energy use and emissions?</p>
+<p>What constitutes a test pass or fail? There often won’t be a quantifiable number that you can test an emissions pass/fail against, at least not until green software development becomes a much more mature field. But this doesn’t mean we can’t still measure, baseline, and understand the impact of new features and releases on the overall emissions picture.</p>
+<h5 style="margin-top: 15px; margin-bottom: 25px; color: #31b595;"><strong>Detecting unexpected changes</strong></h5>
+<p>Given that we most likely don’t understand what constitutes a pass/fail for emissions, can we baseline an application’s energy use and emissions in test, and then use this baseline to understand the relative change against the baseline of future releases?</p>
+<p>To create a good baseline, we would need to measure or model a few things at least, for example:</p>
+<ul>
+<li>Cloud energy use and emissions (including embodied) using cloud provider tools, or the cloud carbon footprint tool</li>
+<li>Non-cloud hardware energy use and emissions (including embodied carbon) using watt-hour meters or energy profilers</li>
+<li>End-user device energy use (and embodied carbon) using a watt-hour meter, an energy profiler, or a SaaS tool such as <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><a href="http://mobile-efficiency-index.com/en/" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;"><strong>Greenspector</strong></a></span></span> (which runs web pages on real mobile devices and measures energy use). In many cases, this is vital as end-user devices may significantly affect software energy use. Hardware power monitors are typically the most accurate way to measure end-user device energy use; however, they require the disassembly of mobile devices to connect directly to the power source.</li>
+</ul>
+<p>The Green Software Foundation has already developed an alpha version of a specification for measuring software’s carbon intensity - the <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><a href="https://github.com/Green-Software-Foundation/software_carbon_intensity/blob/main/Software_Carbon_Intensity/Software_Carbon_Intensity_Specification.md" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;"><strong>SCI Specification</strong></a></span></span>.</p>
+<p>While the equation is relatively simple, it’s not necessarily easy to calculate the numbers needed, and there is room for plenty of interpretation. The score is designed for benchmarking. As long as it is calculated consistently between releases, it will be sensitive to changes in the carbon intensity of your software caused by green software actions – demonstrating the impact that the changes between each calculation have had.</p>
+<p>With a measurement approach and baseline in place, it should be possible to alert to unexpected changes proportional to the baseline as part of the test approach. But this might not be easy to fully automate today, given the currently available tools and need for hardware meters.</p>
+<p>Another worthwhile benefit to using the SCI Specification for your internal measurement is the ability to publish your calculation, evidencing both the green credentials of your software today and the impact of improvements you have made in your releases. This could be a powerful way to show potential users that you are making sustainability an essential part of your work.</p>
+<h5 style="margin-top: 15px; margin-bottom: 25px; color: #31b595;"><strong>Change aware testing</strong></h5>
+<p>In modern Agile development, tests are automated. There are significant test packs at each testing level, and whenever code is changed, the tests are often all run to verify that change. This goes from running unit test packs on a developer machine to running integration and UI tests (among others) during a CI build.</p>
+<p>Each of these runs has an energy cost. For large enterprises with many large software solutions, datasets, and test suites, the impact could be significant (in energy, emissions, and time) – it’s certainly not rare for full regression packs to take hours to run.</p>
+<p>The ultimate example of this is the testing approach taken by Meta and Google. For example, Google has developed a <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><a href="https://www.researchgate.net/publication/318127138_Taming_Google-Scale_Continuous_Testing" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;"><strong>change-aware testing system</strong></a></span></span> for its Test Automation Platform, which carries out more than 150 million daily test runs. Even with Google’s massive compute resources, it was impossible to test code commits individually, and its solution limits test execution based on code changes. As well as widening a bottleneck, this will significantly impact energy use and emissions.</p>
+<p>Approaches to change aware testing run from tagging tests to control which are run depending on the context of code changes (e.g., run all tests that exercise the shopping cart functionality), through to Test Impact Analysis and even Predictive Test Selection at the advanced end of the spectrum.</p>
+<p>Pioneered by Microsoft, Test Impact Analysis analyzes the call graph when running tests and uses this analysis to determine which tests to run to exercise future production tests.</p>
+<p>Predictive Test Selection uses machine learning to predict which tests to run based on an extensive historical dataset of test outcomes – for example, see this <span style="color: #31b595;"><strong><a href="https://research.facebook.com/publications/predictive-test-selection/" rel="noopener" target="_blank" style="color: #31b595;"><span style="text-decoration: underline;">research paper by Meta</span></a></strong></span>.</p>
+<p>Test Impact Analysis is available in <span style="color: #31b595; text-decoration: underline;"><strong><a href="https://visualstudio.microsoft.com/" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">Visual Studio</a></strong></span>, and you can apply it to Azure Pipelines. Also, there are testing and CD frameworks that support this approach. You could even implement something yourself. Predictive Test Selection is just starting to reach availability in tooling such as <a href="https://docs.gradle.com/enterprise/predictive-test-selection/" rel="noopener" target="_blank"><strong><span style="color: #31b595;"><span style="text-decoration: underline;">Gradle Enterprise</span></span></strong></a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <a id="anchor7" data-hs-anchor="true"></a>
+<h4>Seven: Green Software Deployment &amp; Review</h4>
+<p>We’ve joined deployment and review here as they are closely linked and introduce a vital combined topic.</p>
+<h5 style="margin-top: 15px; margin-bottom: 25px;"><span style="color: #041e42;"><strong>Observability and CarbonOps</strong></span></h5>
+<p>An essential part of green software development is the ability to test, learn and improve – <a href="https://principles.green/principles/measurement/" rel="noopener" target="_blank"><strong><span style="color: #041e42;"><span style="text-decoration: underline;">measurement and optimization</span></span></strong></a> is the last of the green software principles. This feedback loop is enabled by deploying the right tools and metrics to provide detailed observations of the application, hardware, and supporting systems, while under use. This includes information on how users interact with the software, hardware utilization, energy use, and emissions. By observing these things, you can:</p>
+<ul>
+<li>Understand where opportunities are to implement green actions (see green architecture) and feed them into the backlog for future inclusion. For example, identifying opportunities to consolidate compute, right size environments, or where emissions hot spots exist and how we might refactor to reduce them</li>
+<li>Understand how an application is used to focus on areas your users find valuable and retire unused features. User activity telemetry enables you to build more efficient software based on real-world usage. But it can take a culture shift to retire features that evidence low usage or value. This telemetry can also provide insight into how features are used, allowing you to develop efficiencies to support popular features</li>
+<li>Measure and understand the impact of changes and optimizations you have made in a release. This is important as it is often difficult to accurately understand the level of impact that changes and optimizations will have before they are deployed and used in anger. This is especially true in an enterprise environment that may have fewer regular production releases. By collecting telemetry, you can calculate the real-world impact of changes, which you could eventually use to assign a sustainability “value” to your improvements and even create a view of the cost vs value relationship.</li>
+</ul>
+<p>A recent but important form of observability tool for green software delivery is Emissions Monitoring. As discussed, all the major cloud vendors provide operational reporting on cloud emissions. These give a simple way to report, understand, and refine the environmental impact of your estate. Some vendors can determine the generation of hardware, physical building location, and other factors that allow for more accurate measurements. Even within one logical cloud region, there can be variations.</p>
+<p>Using these tools enables an approach to incremental improvement similar to FinOps, which we call CarbonOps. Where FinOps brings financial accountability to the cloud, CarbonOps brings energy and emissions accountability. Through the analysis of observations across the application and infrastructure, we can propose and implement optimizations that reduce energy and emissions, much as we would with operational cost – and as discussed previously, the two are regularly well aligned.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(4, 30, 66, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h5 style="margin-bottom: 25px; color: #31b595;"><strong>Further Operational Considerations</strong></h5>
+<p>Once a solution is delivered and deployed, the application enters a run state - part of the DevOps cycle - which takes learnings from actual production deployment, feeds back, and optimizes the solution via Continuous Improvement. As well as CarbonOps, there are further opportunities in this phase to drive greener software with reduced emissions, including:</p>
+<p><strong>Automation: </strong>Large complex enterprise systems often initially require manual tasks to support repeatable operational requests. These may be related to user management, external legacy integration, or process optimization, as examples. Continuous Improvement models help remove repeatable manual activities, reducing emissions. At BJSS, we believe modern operations should drive towards 100% automation of run-type activities, improving user experience while having a green benefit.</p>
+<p><strong>Housekeeping: </strong>Large systems, especially with thousands of users, can waste storage and compute resources. Therefore, it’s essential to ensure the hygiene of operational data. You can achieve this by offboarding inactive users, carrying out the timely removal of temporary resources, and implementing shorter retention policies. All of which can reduce your emissions impact. Reducing used storage is one factor, but less obvious may be the impact on compute that wasteful resources can cause, for example, impacting query speed.</p>
+<h5 style="margin-top: 15px; margin-bottom: 25px; color: #31b595;"><strong>Retrospectives and knowledge sharing</strong></h5>
+<p>Given the early stage of green software development and delivery, assessing the impact of the approaches taken and changes made in retrospect is essential. This helps to understand the value returned for the effort spent on green approaches and identify those patterns and practices that have shown good value.</p>
+<p>Retrospectives are a standard Agile tool for team members to share feedback on what has worked and what hasn’t. They also help develop actions that improve delivery incrementally.</p>
+<p>As a new field, green software delivery would benefit from being discussed at retrospectives, sharing views within the team, identifying the practices and patterns that were deemed a success, and sharing these wider within your organization, or better yet, the green software community.</p>
+<h5 style="margin-top: 15px; margin-bottom: 25px; color: #31b595;"><strong>External Review and Certification</strong></h5>
+<p>It’s always beneficial to have an independent review of major enterprise technology implementations, and while the availability of review that includes green software is minimal, there are some early options.</p>
+<p>The first of these options, for those building in AWS, is an <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><strong><a href="https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;">AWS Well-Architected Review</a></strong></span></span> (WAR). The addition of the sustainability pillar to the AWS Well-Architected Framework means that each review now considers the sustainability of AWS-based solutions. These are short (one to a few days) reviews of your cloud estate or workload that cover a range of important pillars of good cloud practice. Undoubtedly, Azure will soon add a sustainability pillar to its <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><a href="https://docs.microsoft.com/en-us/azure/architecture/framework/" rel="noopener" target="_blank" style="color: #31b595; text-decoration: underline;"><strong>Well-Architected Framework</strong></a></span></span>.</p>
+<p>The other option is to certify your product with an independent certification of your software’s green credentials. <span style="color: #31b595;"><strong><a href="https://gocode.green/" rel="noopener" target="_blank" style="color: #31b595;"><span style="text-decoration: underline;">GoCodeGreen</span></a></strong></span> is an excellent example of this very early field of certification. In addition to improvement recommendations and peace of mind, you will also be able to publish this independent outcome to demonstrate your commitment to green software and sustainability.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-bg" style="background-image: url(../hubfs/Green-Software-Development-5.jpg);">
+
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content " style="background-color: rgba(#null, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <a id="anchor8" data-hs-anchor="true"></a>
+<h4 style="color: #31b595; margin-top: 25px;">Eight: In conclusion</h4>
+<p>Hopefully, this article has provided some interesting food for thought and brought together some existing resources and currently fragmented information about green software development.</p>
+<p>As covered early on, the biggest thing you can do is ask, “do I really need this?”. This applies to everything, from whether you even need to build the software to the features you build, the architecture you design, the code you develop, and the tests you perform. Minimalism is key to the development of green solutions.</p>
+<p>Many areas we’ve covered describe what may already be considered good practice; however, in many enterprise settings, good practice is not implemented effectively. This is another solid and purposeful reason to adopt such practices that will support the need for change. Additionally, many green software practices lead to lower operational costs as solutions use less hardware and energy.</p>
+<p>The biggest challenge to developing greener software, however, is perhaps two-fold.</p>
+<ul>
+<li><strong>The effort needed to apply theory and principle to actual implementation</strong> without well-proven, documented patterns and practices, much thought and experimentation must go into deciding what options are greenest and what impact they will make. In many cases, until you’ve tried it and got it live, you may not even know.</li>
+<li><strong>The increased cost of developing green software.</strong> Building more efficient software takes time, and that time comes at a cost, both a direct cost of development and an opportunity cost of reduced feature delivery velocity.</li>
+</ul>
+<p>Deciding to take on these challenges and accept the costs will be the real test of whether organizations intend to invest in developing more green software. Even if the costs are too high for you, there are things that you can do now to build lower carbon intensity software.</p>
+<p style="margin-bottom: 25px;"><strong>If you enjoyed this article, please consider downloading our eBook - <span style="text-decoration: underline;"><span style="color: #31b595; text-decoration: underline;"><a href="../sustainability-finops05a0.html?utm_source=GooglePPC&amp;utm_medium=cpc&amp;utm_campaign=finops&amp;utm_term=finops&amp;utm_term=finops&amp;utm_campaign=AWS+-+Sustainability+%26+FinOps&amp;utm_source=adwords&amp;utm_medium=ppc&amp;hsa_acc=9702970921&amp;hsa_cam=18066007627&amp;hsa_grp=135389895290&amp;hsa_ad=616889730947&amp;hsa_src=g&amp;hsa_tgt=kwd-320900763299&amp;hsa_kw=finops&amp;hsa_mt=p&amp;hsa_net=adwords&amp;hsa_ver=3&amp;gclid=CjwKCAjw4c-ZBhAEEiwAZ105RT8LJa8ryiyAYYjcN0rfne5AW27u0EU9hBj1T_Fn45EWZsdNIKM2RhoCftEQAvD_BwE" rel="noopener" style="color: #31b595; text-decoration: underline;">Sustainability, FinOps &amp; The Cloud: How to Reduce Cost &amp; Emissions Through Resource Optimisation</a></span></span>.</strong></p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+</div></div>
+</main>
+
+
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/footer.html"><footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__container main__footer">
+      <div class="footer__column footer__column1">
+        <div class="footerTitle">
+          <div id="hs_cos_wrapper_footerTitle" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footerTitle_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h4 style="color: #fff">EXPANDING<br>POSSIBILITIES</h4></span></div>
+        </div>
+        <div class="footerSocial">
+          <div id="hs_cos_wrapper_footerSocial" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><ul class="social-share">
+  <li class="socil-icon social-twitter">
+    <a href="https://twitter.com/bjssltd" title="Follow on Twitter" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-linkedin">
+    <a href="https://uk.linkedin.com/company/bjss" title="Follow on LinkedIn" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-instagram">
+    <a href="http://www.instagram.com/bjssltd" title="Follow on Instagram" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-youtube">
+    <a href="https://www.youtube.com/channel/UCUWB9XUNt_g_YGWIjneXuSg" title="Follow on Youtube" target="_blank" class="icon"></a>
+  </li>
+</ul></div>
+        </div>
+        <div class="footerImage">
+          <div id="hs_cos_wrapper_footerImage" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_footerImage_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="../hs-fs/hubfs/Princess-Award_%26_Queens-Awardc48d.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png" class="hs-image-widget " width="1000" height="563" alt="Princess-Award_&amp;_Queens-Award" title="Princess-Award_&amp;_Queens-Award" srcset="https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=500&amp;height=282&amp;name=Princess-Award_%26_Queens-Award.png 500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png 1000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1500&amp;height=845&amp;name=Princess-Award_%26_Queens-Award.png 1500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2000&amp;height=1126&amp;name=Princess-Award_%26_Queens-Award.png 2000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2500&amp;height=1408&amp;name=Princess-Award_%26_Queens-Award.png 2500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=3000&amp;height=1689&amp;name=Princess-Award_%26_Queens-Award.png 3000w" sizes="(max-width: 1000px) 100vw, 1000px"></span></div>
+        </div>
+      </div>
+      <div class="footer__column footer__column2">
+        <div class="footer__column_inner">
+          <div class="footer-navigation">
+            <span id="hs_cos_wrapper_footer_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_footer_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47366551648" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../contact/index.html" role="menuitem">Contact BJSS</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../news.html" role="menuitem">News</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../governance/index.html" role="menuitem">Governance</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../website-privacy-policy/index.html" role="menuitem">Privacy notice</a></li>
+ </ul>
+</div></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__column footer__column3">
+        <div class="footer__column_inner">
+          <div class="footer__search">
+            <div class="hs-search-field">
+              <div class="hs-search-field__bar">
+                <form action="https://www.bjss.com/hs-search-results">
+                  <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search BJSS">
+                  <input type="submit" value="Search" class="searchsubmit" style="">
+                </form>
+              </div>
+              <ul class="hs-search-field__suggestions"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__container copyright__footer">
+      <div class="footer__copyright">
+        <div id="hs_cos_wrapper_footer_copyright_text" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer_copyright_text_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="text">&nbsp;© 2023 BJSS Limited. Registered in England with company number 2777575 VAT Number GB613295452.&nbsp;‘Enterprise Agile®’ and ‘BJSS Enterprise Agile®’ are registered trademarks of BJSS Limited.</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<span class="back-to-top"></span></div>
+      
+    </div>
+    <script src="../hs/hsstatic/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+<script src="../hs/hsstatic/jquery-libs/static-1.4/jquery-migrate/jquery-migrate-1.2.1.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+<script>
+(function () {
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST.html', '/_hcms/perf', true /*async*/);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.onreadystatechange = function () {
+                // do nothing.
+            };
+            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            function populateNetworkInfo(name, connection, info) {
+                if (name in connection) {
+                    info[name] = connection[name];
+                }
+            }
+            var networkInfo = {};
+            if (connection) {
+                ['type', 'effectiveType', 'downlink', 'rtt'].forEach(function(name) {
+                    populateNetworkInfo(name, connection, networkInfo);
+                });
+            }
+            var perfData = {
+                url: location.href,
+                portal: 9399653,
+                content: 83412040368,
+                group: -1,
+                connection: networkInfo,
+                timing: performance.timing
+            };
+            xhr.send(JSON.stringify(perfData));
+        }, 3000);  // Execute this 3 seconds after onload.
+    });
+})();
+</script>
+
+<script src="../hs-fs/hub/9399653/hub_generated/template_assets/47365698976/1645632663800/BJSS_May2021/js/main.min.js"></script>
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script>
+
+<script src="../hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+<script src="../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844495/module_52098159278_language_switcher.min.js"></script>
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/www.bjss.com\/engineering-insights\/the-bjss-guide-to-green-software-development"]);
+_hsq.push(["setPageId", "83412040368"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 83412040368,
+    "legacyPageId": "83412040368",
+    "contentFolderId": null,
+    "contentGroupId": 48313963830,
+    "abTestId": null,
+    "languageVariantId": 83412040368,
+    "languageCode": "en",
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="../hs/scriptloader/9399653.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    ticks: 1674411592042,
+    page_id: 83412040368,
+    
+    content_group_id: 48313963830,
+    portal_id: 9399653,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en",
+    analytics_page_type: "blog-post",
+    analytics_page_id: "83412040368",
+    category_id: 3,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+<script defer src="../hs/hsstatic/HubspotToolsMenu/static-1.143/js/index.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKPDZ5X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ <!-- End Google Tag Manager (noscript) -->
+
+
+<div id="fb-root"></div>
+ <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../../connect.facebook.net/en_GB/all.js#xfbml=1&status=0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ 
+
+
+  
+</body>
+<!-- Mirrored from www.bjss.com/engineering-insights/the-bjss-guide-to-green-software-development by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 10:36:19 GMT -->
+</html>

@@ -1,0 +1,184 @@
+<!doctype html>
+<html amp lang="en" >
+  
+<!-- Mirrored from www.bjss.com/engineering-insights/how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:41:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>How I Used Internet of Things Devices with AWS to Measure Our Office Noise Levels</title>
+    <link rel="canonical" href="how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Alex Khrizman">
+
+    <meta name="description" content="How Amazon Web Services was used in conjunction Internet of Things devices for a data analytics project measuring sound volumes in an office location. ">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "How I Used Internet of Things Devices with AWS to Measure Our Office Noise Levels",
+        "datePublished": "2022-10-11T15:51:02Z",
+        "dateModified": "2023-01-11T16:43:08.492Z",
+        "mainEntityOfPage": "https://www.bjss.com/engineering-insights/how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels",
+        "author": {
+          "@type": "Person",
+          "name": "Alex Khrizman"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 1155,
+          
+          
+          "height": 854,
+          
+          "url": "https://9399653.fs1.hubspotusercontent-na1.net/hubfs/9399653/Feature-HOW%20I%20USED%20INTERNET%20OF%20THINGS%20DEVICES%20WITH%20AWS%20TO%20MEASURE%20OUR%20OFFICE%20NOISE%20LEVELS.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "/hs/hsstatic/content_shared_assets/static-1.4092/img/default-amp-logo.png",
+            "width": 60,
+            "height": 60
+            
+          },
+          "name": "Engineering Insights "
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../engineering-insights.html">
+        
+          <span class="logo-header-text">Engineering Insights | BJSS</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels.html">How I Used Internet of Things Devices with AWS to Measure Our Office Noise Levels</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/alex-khrizman.html">Alex Khrizman</a> | Oct 11, 2022 3:51:02 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><p>Growing up, I never found tinkering with gadgets interesting enough to explore. YouTube, and its plethora of everything about anything, wasn't a thing until I was finishing college, so technology felt very abstract. While I overheard talk of a robotics club in high school, I always considered things like that to be out of reach. Pursuing chemistry in college and grad school, I never even wrote a line of code (unless you count a Geocities website I made from HTML in the late 90s). In the last five years or so since I got into software development, my passion for all things technology sparked. I conquered my irrational fear of using Linux, set up various servers, hosted a website, networked my home, and so on. I've listened to talks about Internet of Things (IoT), learned how to do basic electrical work, and made my home a Smart Home.</p>
+
+<p>Coming in with experience as a Java Web Developer, when I joined BJSS I had no idea what was in store for me. In my first week, I was on calls trying to figure out what sort of incubator projects I could work on, and one involving <a href="https://aws.amazon.com/iot-core/" rel="noopener" target="_blank">AWS IoT Core</a> was the front runner. The first couple weeks involved researching what services AWS had to offer someone building, using, and managing IoT devices. I had a RaspberryPi 3B+ lying around that was at one point set up to work a Retro Gaming System, but I had only used it once. So, with little to no prior AWS experience, I quickly installed the Raspberry Pi OS and the AWS IoT Python SDK and started learning hands-on about messaging, pub/sub, and AWS features.</p>
+<p>As our small team started running out of ideas for what to research, and Smart Office solutions became the obvious direction, I remembered one of the things I noticed on my first day in the New York office: it was loud. An all-hands was scheduled that day, so the office was packed. I even overheard someone apologizing for the noise on their Zoom meeting. If only there was a way to help the office maintain a reasonable volume level. Hence, the idea for a Volume Excess Notification System was born.</p></span>
+        </div>
+        <div class="full-link">
+          <a href="how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptqbb91.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=How+I+Used+Internet+of+Things+Devices+with+AWS+to+Measure+Our+Office+Noise+Levels&amp;pi=87587159719&amp;a=9399653&amp;nc=true&amp;cgi=48313963830&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.bjss.com/engineering-insights/how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:41:52 GMT -->
+</html>

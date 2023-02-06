@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Engineering Insights | BJSS</title>
+    <link>https://www.bjss.com/engineering-insights</link>
+    <description>Since 1993 we’ve been finding better ways to solve complex problems with technology for some of the world’s largest organisations, and we’d like to share some of the things we’ve learned along the way.</description>
+    <language>en</language>
+    <pubDate>Fri, 20 Jan 2023 15:10:22 GMT</pubDate>
+    <dc:date>2023-01-20T15:10:22Z</dc:date>
+    <dc:language>en</dc:language>
+    <item>
+      <title>Green Software Design</title>
+      <link>https://www.bjss.com/engineering-insights/green-software-design</link>
+      <description>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/green-software-design" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature_Green-sofware-design.jpg" alt="Green Software Design" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;h4 style="margin-top: 25px; color: #31b595;"&gt;Green Architecture&lt;/h4&gt; 
+&lt;p&gt;Architectural decisions have some of the largest potential influences on software carbon intensity. They are also some of the most fundamental choices and hardest to back out of at a later point.&lt;/p&gt;</description>
+      <content:encoded>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/green-software-design" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature_Green-sofware-design.jpg" alt="Green Software Design" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;h4 style="margin-top: 25px; color: #31b595;"&gt;Green Architecture&lt;/h4&gt; 
+&lt;p&gt;Architectural decisions have some of the largest potential influences on software carbon intensity. They are also some of the most fundamental choices and hardest to back out of at a later point.&lt;/p&gt;  
+&lt;img src="https://track.hubspot.com/__ptq.gif?a=9399653&amp;amp;k=14&amp;amp;r=https%3A%2F%2Fwww.bjss.com%2Fengineering-insights%2Fgreen-software-design&amp;amp;bu=https%253A%252F%252Fwww.bjss.com%252Fengineering-insights&amp;amp;bvt=rss" alt="" width="1" height="1" style="min-height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important; "&gt;</content:encoded>
+      <pubDate>Fri, 20 Jan 2023 15:10:22 GMT</pubDate>
+      <guid>https://www.bjss.com/engineering-insights/green-software-design</guid>
+      <dc:date>2023-01-20T15:10:22Z</dc:date>
+      <dc:creator>Carl Austin and Ricky Barefield</dc:creator>
+    </item>
+    <item>
+      <title>Green Software Requirements</title>
+      <link>https://www.bjss.com/engineering-insights/green-software-requirements</link>
+      <description>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/green-software-requirements" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/EI-Green-Software-Requirements-866x640.jpeg" alt="Green Software Requirements" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;p style="margin-top: 25px;"&gt;In this, and following episodes of our Green Software Delivery Series, we’ll be walking through each aspect of the Agile SDLC starting with requirements. We’ll propose considerations, actions, and resources that could support green software delivery in each stage. As a familiar and well-trodden pattern, we believe green thinking can be anchored to the Agile SDLC, ensuring care is given to energy use at each stage.&lt;/p&gt;</description>
+      <content:encoded>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/green-software-requirements" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/EI-Green-Software-Requirements-866x640.jpeg" alt="Green Software Requirements" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;p style="margin-top: 25px;"&gt;In this, and following episodes of our Green Software Delivery Series, we’ll be walking through each aspect of the Agile SDLC starting with requirements. We’ll propose considerations, actions, and resources that could support green software delivery in each stage. As a familiar and well-trodden pattern, we believe green thinking can be anchored to the Agile SDLC, ensuring care is given to energy use at each stage.&lt;/p&gt;  
+&lt;img src="https://track.hubspot.com/__ptq.gif?a=9399653&amp;amp;k=14&amp;amp;r=https%3A%2F%2Fwww.bjss.com%2Fengineering-insights%2Fgreen-software-requirements&amp;amp;bu=https%253A%252F%252Fwww.bjss.com%252Fengineering-insights&amp;amp;bvt=rss" alt="" width="1" height="1" style="min-height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important; "&gt;</content:encoded>
+      <pubDate>Fri, 06 Jan 2023 13:27:03 GMT</pubDate>
+      <guid>https://www.bjss.com/engineering-insights/green-software-requirements</guid>
+      <dc:date>2023-01-06T13:27:03Z</dc:date>
+      <dc:creator>Carl Austin and Ricky Barefield</dc:creator>
+    </item>
+    <item>
+      <title>What makes a good Consultant?</title>
+      <link>https://www.bjss.com/engineering-insights/what-makes-a-good-consultant</link>
+      <description>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/what-makes-a-good-consultant" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature-%20What%20makes%20a%20good%20consultant.jpg" alt="What makes a good Consultant?" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;p style="padding-bottom: 40px; margin-top: 25px;"&gt;What makes a good consultant? What do clients look for, and how can we be better consultants? In this episode, I talk to two of our delivery managers Tim Haines and Alistair Wright, about the do's and don'ts of consultancy, what makes a good one, what we think our clients look for, and how we can be better.&lt;/p&gt;</description>
+      <content:encoded>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/what-makes-a-good-consultant" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature-%20What%20makes%20a%20good%20consultant.jpg" alt="What makes a good Consultant?" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;p style="padding-bottom: 40px; margin-top: 25px;"&gt;What makes a good consultant? What do clients look for, and how can we be better consultants? In this episode, I talk to two of our delivery managers Tim Haines and Alistair Wright, about the do's and don'ts of consultancy, what makes a good one, what we think our clients look for, and how we can be better.&lt;/p&gt;  
+&lt;img src="https://track.hubspot.com/__ptq.gif?a=9399653&amp;amp;k=14&amp;amp;r=https%3A%2F%2Fwww.bjss.com%2Fengineering-insights%2Fwhat-makes-a-good-consultant&amp;amp;bu=https%253A%252F%252Fwww.bjss.com%252Fengineering-insights&amp;amp;bvt=rss" alt="" width="1" height="1" style="min-height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important; "&gt;</content:encoded>
+      <pubDate>Mon, 19 Dec 2022 12:20:08 GMT</pubDate>
+      <guid>https://www.bjss.com/engineering-insights/what-makes-a-good-consultant</guid>
+      <dc:date>2022-12-19T12:20:08Z</dc:date>
+      <dc:creator>Mario De Cristofano</dc:creator>
+    </item>
+    <item>
+      <title>The Current State of the Industry on Green Software Development</title>
+      <link>https://www.bjss.com/engineering-insights/the-current-state-of-the-industry-on-green-software-development</link>
+      <description>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/the-current-state-of-the-industry-on-green-software-development" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature%20-%20THE%20CURRENT%20STATE%20OF%20THE%20INDUSTRY%20ON%20GREEN%20SOFTWARE%20DEVELOPMENT-1.jpg" alt="The Current State of the Industry on Green Software Development" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;h5 style="margin-top: 25px; color: #31b595; margin-bottom: 20px; font-weight: bold;"&gt;What is Green Software Development?&lt;/h5&gt; 
+&lt;p&gt;Green software development is an approach to software engineering that prioritizes energy-efficient patterns and processes throughout the delivery lifecycle.&lt;/p&gt;</description>
+      <content:encoded>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/the-current-state-of-the-industry-on-green-software-development" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature%20-%20THE%20CURRENT%20STATE%20OF%20THE%20INDUSTRY%20ON%20GREEN%20SOFTWARE%20DEVELOPMENT-1.jpg" alt="The Current State of the Industry on Green Software Development" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;h5 style="margin-top: 25px; color: #31b595; margin-bottom: 20px; font-weight: bold;"&gt;What is Green Software Development?&lt;/h5&gt; 
+&lt;p&gt;Green software development is an approach to software engineering that prioritizes energy-efficient patterns and processes throughout the delivery lifecycle.&lt;/p&gt;  
+&lt;img src="https://track.hubspot.com/__ptq.gif?a=9399653&amp;amp;k=14&amp;amp;r=https%3A%2F%2Fwww.bjss.com%2Fengineering-insights%2Fthe-current-state-of-the-industry-on-green-software-development&amp;amp;bu=https%253A%252F%252Fwww.bjss.com%252Fengineering-insights&amp;amp;bvt=rss" alt="" width="1" height="1" style="min-height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important; "&gt;</content:encoded>
+      <pubDate>Wed, 07 Dec 2022 09:48:54 GMT</pubDate>
+      <guid>https://www.bjss.com/engineering-insights/the-current-state-of-the-industry-on-green-software-development</guid>
+      <dc:date>2022-12-07T09:48:54Z</dc:date>
+      <dc:creator>Carl Austin and Ricky Barefield</dc:creator>
+    </item>
+    <item>
+      <title>How FinOps can help to achieve your cloud cost management / optimisation goals</title>
+      <link>https://www.bjss.com/engineering-insights/how-finops-can-help-to-achieve-your-cloud-cost-management-optimisation-goals</link>
+      <description>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/how-finops-can-help-to-achieve-your-cloud-cost-management-optimisation-goals" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature-%20HOW%20FINOPS%20CAN%20HELP%20TO%20ACHIEVE%20YOUR%20CLOUD%20COST%20MANAGEMENT%20OPTIMISATION%20GOALS-1.jpg" alt="How FinOps can help to achieve your cloud cost management / optimisation goals" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;h5 style="margin-top: 25px; color: #31b595; font-weight: bold;"&gt;Introduction&lt;/h5&gt;</description>
+      <content:encoded>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/how-finops-can-help-to-achieve-your-cloud-cost-management-optimisation-goals" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature-%20HOW%20FINOPS%20CAN%20HELP%20TO%20ACHIEVE%20YOUR%20CLOUD%20COST%20MANAGEMENT%20OPTIMISATION%20GOALS-1.jpg" alt="How FinOps can help to achieve your cloud cost management / optimisation goals" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;h5 style="margin-top: 25px; color: #31b595; font-weight: bold;"&gt;Introduction&lt;/h5&gt;  
+&lt;img src="https://track.hubspot.com/__ptq.gif?a=9399653&amp;amp;k=14&amp;amp;r=https%3A%2F%2Fwww.bjss.com%2Fengineering-insights%2Fhow-finops-can-help-to-achieve-your-cloud-cost-management-optimisation-goals&amp;amp;bu=https%253A%252F%252Fwww.bjss.com%252Fengineering-insights&amp;amp;bvt=rss" alt="" width="1" height="1" style="min-height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important; "&gt;</content:encoded>
+      <pubDate>Thu, 17 Nov 2022 12:00:42 GMT</pubDate>
+      <guid>https://www.bjss.com/engineering-insights/how-finops-can-help-to-achieve-your-cloud-cost-management-optimisation-goals</guid>
+      <dc:date>2022-11-17T12:00:42Z</dc:date>
+      <dc:creator>Ryan Little</dc:creator>
+    </item>
+    <item>
+      <title>Interns and Placements</title>
+      <link>https://www.bjss.com/engineering-insights/placements-interns</link>
+      <description>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/placements-interns" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature%20-%20Interns-and-placements.jpg" alt="Interns and Placements" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;h4 style="color: #511279; margin-top: 25px; margin-bottom: 25px;"&gt;Introduction&lt;/h4&gt; 
+&lt;h6 style="font-weight: bold; margin-bottom: 15px;"&gt;The BJSS Academy prides itself on giving opportunity to talented, pragmatic and enthusiastic individuals, with a flare for technology who just need the ‘right’ opportunity. We’re delighted to see the progress made by individuals and what better way to talk about it than to share our Good News Stories!&lt;/h6&gt; 
+&lt;p&gt;We asked a number of our interns and placement students to give an account of their experience, starting with the question: &lt;span style="font-weight: bold;"&gt;What did you enjoy about your experience as an intern/placement student at BJSS?&lt;/span&gt;&lt;/p&gt;</description>
+      <content:encoded>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/placements-interns" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature%20-%20Interns-and-placements.jpg" alt="Interns and Placements" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;h4 style="color: #511279; margin-top: 25px; margin-bottom: 25px;"&gt;Introduction&lt;/h4&gt; 
+&lt;h6 style="font-weight: bold; margin-bottom: 15px;"&gt;The BJSS Academy prides itself on giving opportunity to talented, pragmatic and enthusiastic individuals, with a flare for technology who just need the ‘right’ opportunity. We’re delighted to see the progress made by individuals and what better way to talk about it than to share our Good News Stories!&lt;/h6&gt; 
+&lt;p&gt;We asked a number of our interns and placement students to give an account of their experience, starting with the question: &lt;span style="font-weight: bold;"&gt;What did you enjoy about your experience as an intern/placement student at BJSS?&lt;/span&gt;&lt;/p&gt;  
+&lt;img src="https://track.hubspot.com/__ptq.gif?a=9399653&amp;amp;k=14&amp;amp;r=https%3A%2F%2Fwww.bjss.com%2Fengineering-insights%2Fplacements-interns&amp;amp;bu=https%253A%252F%252Fwww.bjss.com%252Fengineering-insights&amp;amp;bvt=rss" alt="" width="1" height="1" style="min-height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important; "&gt;</content:encoded>
+      <category>Engineering Insights</category>
+      <pubDate>Fri, 11 Nov 2022 16:08:01 GMT</pubDate>
+      <guid>https://www.bjss.com/engineering-insights/placements-interns</guid>
+      <dc:date>2022-11-11T16:08:01Z</dc:date>
+      <dc:creator>Rosie Pickersgill</dc:creator>
+    </item>
+    <item>
+      <title>Women in Tech</title>
+      <link>https://www.bjss.com/engineering-insights/women-in-tech</link>
+      <description>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/women-in-tech" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature%20-%20Women-in-Tech.jpg" alt="Women in Tech" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;h6 style="font-weight: bold; margin-top: 25px; margin-bottom: 15px;"&gt;The BJSS Academy prides itself on giving opportunity to talented, pragmatic and enthusiastic individuals, with a flare for technology who just need the ‘right’ opportunity. We’re delighted to see the progress made by individuals and what better way to talk about it than to share our Good News Stories!&lt;/h6&gt; 
+&lt;p style="margin-bottom: 50px;"&gt;There's still work to do across the IT industry to address the gender imbalance. At BJSS we are committed to increasing our opportunities to those from under-represented groups too. Ever wondered what it's like as a woman joining a predominantly male-oriented career and how the Academy helps?&lt;/p&gt; 
+&lt;div class="hs-video-widget"&gt; 
+ &lt;img src="https://api-na1.hubapi.com/video/v1/public/91329616017/poster?portalId=9399653" style="max-width: 3840px" alt="HubSpot Video"&gt; 
+&lt;/div&gt;</description>
+      <content:encoded>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/women-in-tech" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature%20-%20Women-in-Tech.jpg" alt="Women in Tech" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;h6 style="font-weight: bold; margin-top: 25px; margin-bottom: 15px;"&gt;The BJSS Academy prides itself on giving opportunity to talented, pragmatic and enthusiastic individuals, with a flare for technology who just need the ‘right’ opportunity. We’re delighted to see the progress made by individuals and what better way to talk about it than to share our Good News Stories!&lt;/h6&gt; 
+&lt;p style="margin-bottom: 50px;"&gt;There's still work to do across the IT industry to address the gender imbalance. At BJSS we are committed to increasing our opportunities to those from under-represented groups too. Ever wondered what it's like as a woman joining a predominantly male-oriented career and how the Academy helps?&lt;/p&gt; 
+&lt;div class="hs-video-widget"&gt; 
+ &lt;img src="https://api-na1.hubapi.com/video/v1/public/91329616017/poster?portalId=9399653" style="max-width: 3840px" alt="HubSpot Video"&gt; 
+&lt;/div&gt;  
+&lt;img src="https://track.hubspot.com/__ptq.gif?a=9399653&amp;amp;k=14&amp;amp;r=https%3A%2F%2Fwww.bjss.com%2Fengineering-insights%2Fwomen-in-tech&amp;amp;bu=https%253A%252F%252Fwww.bjss.com%252Fengineering-insights&amp;amp;bvt=rss" alt="" width="1" height="1" style="min-height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important; "&gt;</content:encoded>
+      <category>Engineering Insights</category>
+      <pubDate>Fri, 11 Nov 2022 15:41:27 GMT</pubDate>
+      <guid>https://www.bjss.com/engineering-insights/women-in-tech</guid>
+      <dc:date>2022-11-11T15:41:27Z</dc:date>
+      <dc:creator>Rosie Pickersgill</dc:creator>
+    </item>
+    <item>
+      <title>Spotlight - Chloe Jones</title>
+      <link>https://www.bjss.com/engineering-insights/spotlight-chloe-jones</link>
+      <description>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/spotlight-chloe-jones" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature%20-%20Spotlight-Chloe-Jones.jpg" alt="Spotlight - Chloe Jones" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;h4 style="margin-top: 25px; color: #d90699;"&gt;Background...&lt;/h4&gt; 
+&lt;p&gt;My journey into the tech industry started when I went to university in Manchester to complete a foundation year in engineering. I then studied for a bachelor’s degree in Material Science. I initially wanted to study for a PhD in Material Science which led me to complete a master’s in Material Science at Cambridge. Here, I was introduced to Python, which I used for all my data analysis. By using Python, I was able to save so much time and could rapidly produce visuals and graphs that wouldn’t have been possible with any other software.&lt;/p&gt;</description>
+      <content:encoded>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/spotlight-chloe-jones" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature%20-%20Spotlight-Chloe-Jones.jpg" alt="Spotlight - Chloe Jones" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;h4 style="margin-top: 25px; color: #d90699;"&gt;Background...&lt;/h4&gt; 
+&lt;p&gt;My journey into the tech industry started when I went to university in Manchester to complete a foundation year in engineering. I then studied for a bachelor’s degree in Material Science. I initially wanted to study for a PhD in Material Science which led me to complete a master’s in Material Science at Cambridge. Here, I was introduced to Python, which I used for all my data analysis. By using Python, I was able to save so much time and could rapidly produce visuals and graphs that wouldn’t have been possible with any other software.&lt;/p&gt;  
+&lt;img src="https://track.hubspot.com/__ptq.gif?a=9399653&amp;amp;k=14&amp;amp;r=https%3A%2F%2Fwww.bjss.com%2Fengineering-insights%2Fspotlight-chloe-jones&amp;amp;bu=https%253A%252F%252Fwww.bjss.com%252Fengineering-insights&amp;amp;bvt=rss" alt="" width="1" height="1" style="min-height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important; "&gt;</content:encoded>
+      <category>Engineering Insights</category>
+      <pubDate>Wed, 26 Oct 2022 09:22:36 GMT</pubDate>
+      <guid>https://www.bjss.com/engineering-insights/spotlight-chloe-jones</guid>
+      <dc:date>2022-10-26T09:22:36Z</dc:date>
+      <dc:creator>Chloe Jones</dc:creator>
+    </item>
+    <item>
+      <title>Choosing a DynamoDB Capacity Mode</title>
+      <link>https://www.bjss.com/engineering-insights/choosing-dynamodb-capacity-mode</link>
+      <description>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/choosing-dynamodb-capacity-mode" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature%20-%20choosing-a-dynamodb-capacity-mode.jpg" alt="Choosing a DynamoDB Capacity Mode" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;p style="margin-top: 25px; padding-bottom: 40px;"&gt;In this blog post, I’m going to look at DynamoDB capacity modes and when you might choose one over the other. To start, I’ll introduce DynamoDB at a high level, then I’ll go through the two capacity modes and how they work, before finishing off with a few worked examples to give you an idea of how the bill would look in various situations.&lt;/p&gt;</description>
+      <content:encoded>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/choosing-dynamodb-capacity-mode" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature%20-%20choosing-a-dynamodb-capacity-mode.jpg" alt="Choosing a DynamoDB Capacity Mode" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;p style="margin-top: 25px; padding-bottom: 40px;"&gt;In this blog post, I’m going to look at DynamoDB capacity modes and when you might choose one over the other. To start, I’ll introduce DynamoDB at a high level, then I’ll go through the two capacity modes and how they work, before finishing off with a few worked examples to give you an idea of how the bill would look in various situations.&lt;/p&gt;  
+&lt;img src="https://track.hubspot.com/__ptq.gif?a=9399653&amp;amp;k=14&amp;amp;r=https%3A%2F%2Fwww.bjss.com%2Fengineering-insights%2Fchoosing-dynamodb-capacity-mode&amp;amp;bu=https%253A%252F%252Fwww.bjss.com%252Fengineering-insights&amp;amp;bvt=rss" alt="" width="1" height="1" style="min-height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important; "&gt;</content:encoded>
+      <category>Engineering Insights</category>
+      <pubDate>Fri, 14 Oct 2022 13:26:25 GMT</pubDate>
+      <guid>https://www.bjss.com/engineering-insights/choosing-dynamodb-capacity-mode</guid>
+      <dc:date>2022-10-14T13:26:25Z</dc:date>
+      <dc:creator>Jamie Kelly</dc:creator>
+    </item>
+    <item>
+      <title>How I Used Internet of Things Devices with AWS to Measure Our Office Noise Levels</title>
+      <link>https://www.bjss.com/engineering-insights/how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels</link>
+      <description>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature-HOW%20I%20USED%20INTERNET%20OF%20THINGS%20DEVICES%20WITH%20AWS%20TO%20MEASURE%20OUR%20OFFICE%20NOISE%20LEVELS.jpg" alt="How I Used Internet of Things Devices with AWS to Measure Our Office Noise Levels" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;p style="margin-top: 25px;"&gt;Growing up, I never found tinkering with gadgets interesting enough to explore. YouTube, and its plethora of everything about anything, wasn't a thing until I was finishing college, so technology felt very abstract. While I overheard talk of a robotics club in high school, I always considered things like that to be out of reach. Pursuing chemistry in college and grad school, I never even wrote a line of code (unless you count a Geocities website I made from HTML in the late 90s). In the last five years or so since I got into software development, my passion for all things technology sparked. I conquered my irrational fear of using Linux, set up various servers, hosted a website, networked my home, and so on. I've listened to talks about Internet of Things (IoT), learned how to do basic electrical work, and made my home a Smart Home.&lt;/p&gt;</description>
+      <content:encoded>&lt;div class="hs-featured-image-wrapper"&gt; 
+ &lt;a href="https://www.bjss.com/engineering-insights/how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels" title="" class="hs-featured-image-link"&gt; &lt;img src="https://www.bjss.com/hubfs/Feature-HOW%20I%20USED%20INTERNET%20OF%20THINGS%20DEVICES%20WITH%20AWS%20TO%20MEASURE%20OUR%20OFFICE%20NOISE%20LEVELS.jpg" alt="How I Used Internet of Things Devices with AWS to Measure Our Office Noise Levels" class="hs-featured-image" style="width:auto !important; max-width:50%; float:left; margin:0 15px 15px 0;"&gt; &lt;/a&gt; 
+&lt;/div&gt; 
+&lt;p style="margin-top: 25px;"&gt;Growing up, I never found tinkering with gadgets interesting enough to explore. YouTube, and its plethora of everything about anything, wasn't a thing until I was finishing college, so technology felt very abstract. While I overheard talk of a robotics club in high school, I always considered things like that to be out of reach. Pursuing chemistry in college and grad school, I never even wrote a line of code (unless you count a Geocities website I made from HTML in the late 90s). In the last five years or so since I got into software development, my passion for all things technology sparked. I conquered my irrational fear of using Linux, set up various servers, hosted a website, networked my home, and so on. I've listened to talks about Internet of Things (IoT), learned how to do basic electrical work, and made my home a Smart Home.&lt;/p&gt;  
+&lt;img src="https://track.hubspot.com/__ptq.gif?a=9399653&amp;amp;k=14&amp;amp;r=https%3A%2F%2Fwww.bjss.com%2Fengineering-insights%2Fhow-i-used-internet-of-things-devices-to-measure-our-office-noise-levels&amp;amp;bu=https%253A%252F%252Fwww.bjss.com%252Fengineering-insights&amp;amp;bvt=rss" alt="" width="1" height="1" style="min-height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important; "&gt;</content:encoded>
+      <category>Engineering Insights</category>
+      <pubDate>Tue, 11 Oct 2022 15:51:02 GMT</pubDate>
+      <guid>https://www.bjss.com/engineering-insights/how-i-used-internet-of-things-devices-to-measure-our-office-noise-levels</guid>
+      <dc:date>2022-10-11T15:51:02Z</dc:date>
+      <dc:creator>Alex Khrizman</dc:creator>
+    </item>
+  </channel>
+</rss>

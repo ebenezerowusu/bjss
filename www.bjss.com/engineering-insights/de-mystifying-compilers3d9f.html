@@ -1,0 +1,255 @@
+<!doctype html>
+<html amp lang="en" >
+  
+<!-- Mirrored from www.bjss.com/engineering-insights/de-mystifying-compilers?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:54:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>De-Mystifying Compilers</title>
+    <link rel="canonical" href="de-mystifying-compilers.html" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <meta name="author" content="Andrew Bennett">
+
+    <meta name="description" content="De-Mystifying Compilers">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="generator" content="HubSpot">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "De-Mystifying Compilers",
+        "datePublished": "2020-08-26T15:12:18Z",
+        "dateModified": "2021-08-04T09:14:45.286Z",
+        "mainEntityOfPage": "https://www.bjss.com/engineering-insights/de-mystifying-compilers",
+        "author": {
+          "@type": "Person",
+          "name": "Andrew Bennett"
+        },
+        "image": {
+         "@type": "ImageObject",
+        
+          
+          "width": 866,
+          
+          
+          "height": 640,
+          
+          "url": "https://f.hubspotusercontent00.net/hubfs/9399653/Feature_De-mystifying-compliers.jpg"
+        
+        },
+        "publisher" : {
+          "@type": "Organization",
+          "logo": {
+            "@type": "ImageObject",
+            
+            "url": "/hs/hsstatic/content_shared_assets/static-1.4092/img/default-amp-logo.png",
+            "width": 60,
+            "height": 60
+            
+          },
+          "name": "Engineering Insights "
+        }
+      }
+    </script>
+    <script async custom-element="amp-analytics" src="../../cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript>
+      <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+  <style amp-custom>
+      body {
+        color: #404040;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      .hs-page-width-normal {
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 0 5vw 5vw;
+      }
+
+      .info {
+        font-size: 14px
+      }
+
+      h1 {
+        color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 26px;
+        line-height: 1.5;
+        font-weight: 600;
+      }
+
+      h1 a {
+        color: #404040;
+      }
+
+      h2 {
+        color: #404040;
+        font-size: 22px;
+        line-height: 38px;
+      }
+
+      a {
+        color: #416bb3;
+        text-decoration: none;
+      }
+
+      .logo-header-text {
+        color: #1e1e1e;
+        font-size: 36px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        line-height: 2.0;
+        font-weight: bold;
+        vertical-align: text-bottom;
+      }
+
+      .hs-page-width-normal {
+        padding: 5vw;
+      }
+
+      .iframe-placeholder {
+        background-color: #bbb;
+      }
+
+      .header-banner {
+        padding: 3vw 1vw;
+        border-color: #dcdcdc;
+        border-bottom-style: solid;
+        border-bottom-width: thin;
+        background-color: #ffffff;
+        color: #1e1e1e;
+        text-align: center;
+      }
+
+      .full-link {
+        text-align: center;
+      }
+
+      .full-link a {
+        border: 1px solid #dcdcdc;
+        background-color: transparent;
+        color: #416bb3;
+        cursor: pointer;
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        margin: 0 auto;
+        max-width: 200px;
+        padding: 11px 16px;
+        text-decoration: none;
+        width: 50%;
+      }
+
+    </style>
+    <script async src="../../cdn.ampproject.org/v0.js"></script>
+  </head>
+  <body>
+    <div class="row-fluid">
+      <div class="header-banner">
+        <a class="blog-link" href="../engineering-insights.html">
+        
+          <span class="logo-header-text">Engineering Insights | BJSS</span>
+         </a>
+      </div>  
+      <div class="hs-page-width-normal">
+        <div class="post-header">
+          <h1><a href="de-mystifying-compilers.html">De-Mystifying Compilers</a></h1>
+        </div>
+        <div class="info">
+          <span> Written by <a class="author-link" href="author/andrew-bennett.html">Andrew Bennett</a> | Aug 26, 2020 3:12:18 PM </span>
+        </div>
+        <div class="blog-section">
+          <span><h4>Background</h4>
+<p>Andrew’s interest for computing started when he learnt to program on his Atari 800XL as a child.&nbsp;&nbsp;He has worked in research labs for computer vision and machine learning and has produced toolchains for embedded systems.&nbsp;&nbsp;More recently, with BJSS, he has worked on frontend and backend systems for medical and financial clients.&nbsp;</p>
+<p>Outside work he is a keen runner and enjoys spending time with his family and taking their dog out for walks in the countryside.</p>
+<p>As developers, we rely on compilers everyday to produce and run our programs.&nbsp;&nbsp;They are often seen as a blackbox so it can be hard to understand code generation issues, for example if the code is not performing as expected.&nbsp;&nbsp;This article will explore their inner workings, to provide you with a greater understanding of how they work.</p>
+<p>&nbsp;</p>
+<h4>What is a compiler?</h4>
+<p>A compiler translates a set of source files into a program that can be run. This breaks down into four main areas:</p>
+<ul>
+<li>Checking the source files are valid.</li>
+<li>Translating the program into a set of operations.</li>
+<li>Optimising the program.</li>
+<li>Generating code that can be run on the target machine.</li>
+</ul>
+<p>To check the source files are valid the compiler needs to perform&nbsp;<strong>syntax analysis</strong>&nbsp;followed by a&nbsp;&nbsp;<strong>semantic analysis.</strong> The source files are then translated into&nbsp;an&nbsp;<strong>intermediate language</strong>&nbsp;which describes the program using a set of operations. Once in this form the program can be optimised by performing a set of&nbsp;<strong>code optimisations</strong>. Finally, code can be generated for a target machine by performing&nbsp;<strong>machine code generation</strong>&nbsp;to translate the intermediate language into target machine instructions.</p>
+<p>Let's look at each stage in more detail.</p>
+<div>&nbsp;</div>
+<h4>Syntax analysis</h4>
+<p>Syntax analysis checks that the source file follows the grammar of the programming language. It is performed in two stages. Firstly,&nbsp;<strong>tokenization</strong>&nbsp;, which breaks the program down into its language elements (tokens) such as symbols, numbers, and keywords.&nbsp;</p>
+<p>Next,&nbsp;<strong>parsing</strong>&nbsp;is performed. This takes the set of tokens and tries to match them against a set of rules describing the grammar of the programming language. If parsing is successful a&nbsp;<strong>parse tree</strong>&nbsp;is generated.&nbsp;</p>
+<p>Below is an example grammar that describes simple arithmetic expressions. The CONSTANT token will match numbers and the VARIABLE token will match variable names. The Expr grammar will then match adding, subtracting, multiplying or dividing variables or constants.</p>
+<p><amp-img src="../hs-fs/hubfs/grammar-355x268d741.png?width=355&amp;name=grammar-355x268.png" alt="grammar-355x268" width="355.0" srcset="https://www.bjss.com/hs-fs/hubfs/grammar-355x268.png?width=178&amp;name=grammar-355x268.png 178w, https://www.bjss.com/hs-fs/hubfs/grammar-355x268.png?width=355&amp;name=grammar-355x268.png 355w, https://www.bjss.com/hs-fs/hubfs/grammar-355x268.png?width=533&amp;name=grammar-355x268.png 533w, https://www.bjss.com/hs-fs/hubfs/grammar-355x268.png?width=710&amp;name=grammar-355x268.png 710w, https://www.bjss.com/hs-fs/hubfs/grammar-355x268.png?width=888&amp;name=grammar-355x268.png 888w, https://www.bjss.com/hs-fs/hubfs/grammar-355x268.png?width=1065&amp;name=grammar-355x268.png 1065w" height="268.0" layout="responsive"></amp-img></p>
+<p>For example, when the following expression a+b*2 is parsed using the previous grammar the following parse tree is generated.</p>
+<p><amp-img src="../hs-fs/hubfs/parsetree-537x372961a.png?width=537&amp;name=parsetree-537x372.png" alt="parsetree-537x372" width="537.0" srcset="https://www.bjss.com/hs-fs/hubfs/parsetree-537x372.png?width=269&amp;name=parsetree-537x372.png 269w, https://www.bjss.com/hs-fs/hubfs/parsetree-537x372.png?width=537&amp;name=parsetree-537x372.png 537w, https://www.bjss.com/hs-fs/hubfs/parsetree-537x372.png?width=806&amp;name=parsetree-537x372.png 806w, https://www.bjss.com/hs-fs/hubfs/parsetree-537x372.png?width=1074&amp;name=parsetree-537x372.png 1074w, https://www.bjss.com/hs-fs/hubfs/parsetree-537x372.png?width=1343&amp;name=parsetree-537x372.png 1343w, https://www.bjss.com/hs-fs/hubfs/parsetree-537x372.png?width=1611&amp;name=parsetree-537x372.png 1611w" height="372.0" layout="responsive"></amp-img></p>
+<p>Next,&nbsp;&nbsp;we need to convert the parse tree into a simpler tree-based representation called an <em>Abstract Syntax Tree (AST)</em><span>. This is a reduced form of the parse tree, which more closely matches the actual program making it is easier to use in the next stages of the compiler. The AST for our parse tree would look like this.<br></span></p>
+<p><span><amp-img src="../hs-fs/hubfs/ast-370x274c886.png?width=370&amp;name=ast-370x274.png" alt="ast-370x274" width="370.0" srcset="https://www.bjss.com/hs-fs/hubfs/ast-370x274.png?width=185&amp;name=ast-370x274.png 185w, https://www.bjss.com/hs-fs/hubfs/ast-370x274.png?width=370&amp;name=ast-370x274.png 370w, https://www.bjss.com/hs-fs/hubfs/ast-370x274.png?width=555&amp;name=ast-370x274.png 555w, https://www.bjss.com/hs-fs/hubfs/ast-370x274.png?width=740&amp;name=ast-370x274.png 740w, https://www.bjss.com/hs-fs/hubfs/ast-370x274.png?width=925&amp;name=ast-370x274.png 925w, https://www.bjss.com/hs-fs/hubfs/ast-370x274.png?width=1110&amp;name=ast-370x274.png 1110w" height="274.0" layout="responsive"></amp-img></span></p>
+<p>&nbsp;</p>
+<h4>Semantic analysis</h4>
+<amp-img src="../hubfs/cil-402x985.webp" alt="cil-402x985" width="402.0" height="985.0" layout="responsive"></amp-img>
+<p>Semantic analysis checks that the “meaning” of the program is valid; for example, “Time flies like an arrow” is&nbsp;grammatically correct, but not semantically correct. Semantic analysis is typically only performed for static languages like C# and Java. One key area it is used for is type checking. This relies on the type information of things like variables, methods and classes collected during the syntax analysis phase, which is stored in a symbol table. Type checking checks that:</p>
+<ul>
+<li>Variables are defined before they are used.&nbsp;</li>
+<li>Variables are assigned data of the correct type.&nbsp;</li>
+<li>Expressions are using constants or variables of the content type.&nbsp;</li>
+<li>The arguments provided to a method call are of the correct type.&nbsp;</li>
+<li>The correct number of arguments are provided to a method call.</li>
+</ul>
+<p>&nbsp;</p>
+<h4>Intermediate language generation</h4>
+<p class="">The next stage is to convert the AST into an&nbsp;<strong>intermediate language</strong>&nbsp;which represents the program as a set of computational operations like loads, stores, add or multiply. The compiler translates the AST into the intermediate language by converting each of the&nbsp;sub-nodes&nbsp;into sets of intermediate language operations. A common intermediate language approach is to use bytecode which represents a set of simple operations that operate on a stack. For example, in dynamic languages Python uses Python bytecode, and Ruby uses YARV. In static languages Java uses Bytecode and .Net uses Common Intermediate Language (CIL).</p>
+<p class="">As an example, to the right we can see the CIL generated for the following C# program:</p>
+<p class=""><amp-img src="../hs-fs/hubfs/main-329x188e320.png?width=329&amp;name=main-329x188.png" alt="main-329x188" width="329.0" srcset="https://www.bjss.com/hs-fs/hubfs/main-329x188.png?width=165&amp;name=main-329x188.png 165w, https://www.bjss.com/hs-fs/hubfs/main-329x188.png?width=329&amp;name=main-329x188.png 329w, https://www.bjss.com/hs-fs/hubfs/main-329x188.png?width=494&amp;name=main-329x188.png 494w, https://www.bjss.com/hs-fs/hubfs/main-329x188.png?width=658&amp;name=main-329x188.png 658w, https://www.bjss.com/hs-fs/hubfs/main-329x188.png?width=823&amp;name=main-329x188.png 823w, https://www.bjss.com/hs-fs/hubfs/main-329x188.png?width=987&amp;name=main-329x188.png 987w" height="188.0" layout="responsive"></amp-img></p>
+<p>Let’s examine the main set of bytecode operations highlighted in green. The first two operations are for setting up the value of variable a. The value of 2 is pushed onto the stack using the ldc operation, and then it is popped off the stack and stored in local slot 0 using the stloc operation. The next two bytecode operations perform the same sequence to set up the value for variable b storing it in local slot 1.&nbsp;</p>
+<p>Now we need to perform the calculation of variable&nbsp;c. Firstly, we need to perform the addition operation. using the&nbsp;ldloc&nbsp;operation we push back onto the stack the values of variables&nbsp;a&nbsp;and&nbsp;b. Then we pop them both off the stack and add them together using&nbsp;add&nbsp;and push the result back onto the stack.</p>
+<p>Next comes the multiplication operation. We push the value of 2 using the&nbsp;ldc&nbsp;operation onto the stack. Then we pop off the previous addition result and the value 2 from the stack and multiply them together using the&nbsp;mul&nbsp;operation, pushing this result back onto the stack.&nbsp;</p>
+<p>Next, to store the result in variable c we use the&nbsp;stloc&nbsp;operation to pop the value off the stack and store it in local slot 2. To return the result back to the caller of this function we push the value of variable&nbsp;c&nbsp;back onto the stack using&nbsp;ldloc&nbsp;then pop it off the stack and store in local slot 3 using&nbsp;stloc.&nbsp;</p>
+<p>Finally, we jump to where we will be returning from the function (using the&nbsp;br&nbsp;operation), here we push the value of the return result back onto the stack using&nbsp;ldloc&nbsp;and use the&nbsp;ret&nbsp;operation to pop the result off the stack and return this back to the calling function.</p>
+<p>&nbsp;</p>
+<h4>Code optimisers</h4>
+<div>&nbsp;</div>
+<p>Once the program has been translated into an intermediate language there are typically optimisations that can be applied, so that when it is converted into the final set of target machine instructions their performance and/or size is improved. Some example optimisations include:</p>
+<ul>
+<li>Removing repeated code</li>
+<li>Removing unused or dead code&nbsp;</li>
+<li>Constant propagation&nbsp;</li>
+<li>Constant folding&nbsp;</li>
+<li>Loop unrolling&nbsp;</li>
+<li>Removing redundant load/stores&nbsp;</li>
+</ul>
+<p>Constant propagation involves replacing variables which have a constant value with their actual value. For example,&nbsp;a = 6; b = a + 2&nbsp;would become&nbsp;a = 6; b = 6 + 2.</p>
+<p>Constant folding involves reducing arithmetic expressions involving constant values with the final resulting value. For example,&nbsp;a = (6 * 5) + 4&nbsp;would become&nbsp;a = 34.</p>
+<p>Loop unrolling involves changing code that uses a loop into a repeated set of operations. This means that there is less of a branch penalty when the code is run.&nbsp;For example:</p>
+<p><amp-img src="../hs-fs/hubfs/for-323x5315d7.png?width=323&amp;name=for-323x53.png" alt="for-323x53" width="323.0" srcset="https://www.bjss.com/hs-fs/hubfs/for-323x53.png?width=162&amp;name=for-323x53.png 162w, https://www.bjss.com/hs-fs/hubfs/for-323x53.png?width=323&amp;name=for-323x53.png 323w, https://www.bjss.com/hs-fs/hubfs/for-323x53.png?width=485&amp;name=for-323x53.png 485w, https://www.bjss.com/hs-fs/hubfs/for-323x53.png?width=646&amp;name=for-323x53.png 646w, https://www.bjss.com/hs-fs/hubfs/for-323x53.png?width=808&amp;name=for-323x53.png 808w, https://www.bjss.com/hs-fs/hubfs/for-323x53.png?width=969&amp;name=for-323x53.png 969w" height="53.0" layout="responsive"></amp-img></p>
+<p>Would become:</p>
+<p><amp-img src="../hs-fs/hubfs/a0-154x132ae0f.png?width=154&amp;name=a0-154x132.png" alt="a0-154x132" width="154.0" srcset="https://www.bjss.com/hs-fs/hubfs/a0-154x132.png?width=77&amp;name=a0-154x132.png 77w, https://www.bjss.com/hs-fs/hubfs/a0-154x132.png?width=154&amp;name=a0-154x132.png 154w, https://www.bjss.com/hs-fs/hubfs/a0-154x132.png?width=231&amp;name=a0-154x132.png 231w, https://www.bjss.com/hs-fs/hubfs/a0-154x132.png?width=308&amp;name=a0-154x132.png 308w, https://www.bjss.com/hs-fs/hubfs/a0-154x132.png?width=385&amp;name=a0-154x132.png 385w, https://www.bjss.com/hs-fs/hubfs/a0-154x132.png?width=462&amp;name=a0-154x132.png 462w" height="132.0"></amp-img></p>
+<p>&nbsp;</p>
+<h4>Generating target machine code</h4>
+<div>&nbsp;</div>
+<p>Machine code generation involves converting the intermediate language into target machine code. One approach is to perform ahead of time compilation. This is the approach used by compilers for languages like C++ or Go. These take intermediate language generated from the source files, optimise it, and map it down onto target machine instructions, outputting the result as a binary file.</p>
+<p>An alternative approach used by languages like C# and Java is to run the bytecode inside a virtual machine. Initially the bytecode is interpreted by sequentially performing each bytecode operation. The virtual machine also uses a stack and a frame to store the current state of the program. In some virtual machines, whilst running the bytecode it will identify regions of ‘hot’ bytecode that are executed many times. These regions are then sent to a Just In Time (JIT) compilew which will translate the bytecode into target machine code instructions. The compiler will also try to apply optimisations during the translation. When these regions of code are executed the target machine instructions are run rather than running the bytecode through the interpreter which improves performance.</p>
+<p>The x86 machine code below shows the JITed code for the bytecode in the previous example. The highlighted machine instructions in green are doing the actual work to perform the calculations. In the x86 instruction set rax and eax represent different sections of the ax register. For simplicity I will just use ax in this explanation. Firstly, we push the value of 3 onto the stack and then load it back into register ax. Then, using the lea (load effective address) instruction we double ax and add 4 to it. Finally, we return from the function using ret and the caller of the function will be able to access the result in register ax.</p>
+<p>Note that a lot of the redundant bytecode operations that load to and from the local storage have been removed. Also, the addition and multiplication operations have been combined together into one machine instruction to improve speed and reduce the size of the code.</p>
+<p><amp-img src="../hs-fs/hubfs/bytecode-431x3628c89.png?width=431&amp;name=bytecode-431x362.png" alt="bytecode-431x362" width="431.0" srcset="https://www.bjss.com/hs-fs/hubfs/bytecode-431x362.png?width=216&amp;name=bytecode-431x362.png 216w, https://www.bjss.com/hs-fs/hubfs/bytecode-431x362.png?width=431&amp;name=bytecode-431x362.png 431w, https://www.bjss.com/hs-fs/hubfs/bytecode-431x362.png?width=647&amp;name=bytecode-431x362.png 647w, https://www.bjss.com/hs-fs/hubfs/bytecode-431x362.png?width=862&amp;name=bytecode-431x362.png 862w, https://www.bjss.com/hs-fs/hubfs/bytecode-431x362.png?width=1078&amp;name=bytecode-431x362.png 1078w, https://www.bjss.com/hs-fs/hubfs/bytecode-431x362.png?width=1293&amp;name=bytecode-431x362.png 1293w" height="362.0" layout="responsive"></amp-img></p>
+<h4>Conclusion</h4>
+<div>&nbsp;</div>
+<p>This article has covered the different stages a compiler goes through to be able to run your program on a target machine and has shown you examples of what happens at each stage. In a follow-up article we will explore code performance in a more detail, and will look at the compilers used for dynamic programming languages and how they produce high performance code.</p></span>
+        </div>
+        <div class="full-link">
+          <a href="de-mystifying-compilers.html">View full post</a>
+        </div>
+      </div>
+    </div>
+    
+    <amp-pixel src="../../track.hubspot.com/__ptq80f7.gif?cd=SCREEN_COLOR_DEPTH-bit&amp;cs=DOCUMENT_CHARSET&amp;ln=BROWSER_LANGUAGE&amp;sd=AVAILABLE_SCREEN_WIDTHxAVAILABLE_SCREEN_HEIGHT&amp;v=1.1&amp;iaa=1&amp;k=1&amp;ccu=CANONICAL_URL&amp;r=DOCUMENT_REFERRER&amp;ct=blog-post&amp;t=De-Mystifying+Compilers&amp;pi=50034951479&amp;a=9399653&amp;nc=true&amp;cgi=48313963830&amp;vi=CLIENT_ID(hubspotutk)&amp;ai=CLIENT_ID(amputk)">
+    </amp-pixel>
+    
+  </body>
+
+<!-- Mirrored from www.bjss.com/engineering-insights/de-mystifying-compilers?hs_amp=true by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:54:37 GMT -->
+</html>

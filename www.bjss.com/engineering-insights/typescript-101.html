@@ -1,0 +1,690 @@
+<!doctype html><html lang="en">
+<!-- Mirrored from www.bjss.com/engineering-insights/typescript-101 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:41:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Typescript 101 for Platform Engineers</title>
+    <link rel="shortcut icon" href="../hubfs/BJSSfav-01.png">
+    <meta name="description" content="Learn the basics of how to use TypeScript to build functional development processes for projects. ">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <meta property="og:description" content="Learn the basics of how to use TypeScript to build functional development processes for projects. ">
+    <meta property="og:title" content="Typescript 101 for Platform Engineers">
+    <meta name="twitter:description" content="Learn the basics of how to use TypeScript to build functional development processes for projects. ">
+    <meta name="twitter:title" content="Typescript 101 for Platform Engineers">
+
+    
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365676184/1622442584700/BJSS_May2021/css/layout.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365604017/1671180309381/BJSS_May2021/css/main.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Lato:400,700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,200,300,400,500,600,700,800,900%7CDroid+Serif:400,700%7CMontserrat:100,200,300,400,500,600,700,800,900%7CLato:300,400,700,900%7CAnton%7CBarlow+Condensed:100,200,300,400,500,600,700%7CSource+Code+Pro:300,400,500,600,700">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365604651/1630588080644/BJSS_May2021/css/theme-overrides.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844591/module_52098159278_language_switcher.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/48374514008/1642518516330/module_48374514008_Engineering_Insights_Post_Banner.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/48372652123/1664435298183/module_48372652123_Engineering_Insights_Post_Content.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/47366505811/1642518516986/module_47366505811_Follow_Us.min.css">
+    
+
+    
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script id="Cookiebot" src="../../consent.cookiebot.com/uc.js" data-cbid="1e8015ed-e92b-4a8a-81af-cd363b75ae3f" data-blockingmode="auto" type="text/javascript"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKPDZ5X');</script>
+<!-- End Google Tag Manager -->
+<script>
+(function(g,e,o,t,a,r,ge,tl,y,s){
+g.getElementsByTagName(o)[0].insertAdjacentHTML('afterbegin','<style id="georedirect1630578272721style">body{opacity:0.0 !important;}</style>');
+s=function(){g.getElementById('georedirect1630578272721style').innerHTML='body{opacity:1.0 !important;}';};
+t=g.getElementsByTagName(o)[0];y=g.createElement(e);y.async=true;
+y.src='https://g792337340.co/gr?id=-Mia1T_TRP_QsDX3xGqm&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);
+t.parentNode.insertBefore(y,t);y.onerror=function(){s()};
+georedirect1630578272721loaded=function(redirect){var to=0;if(redirect){to=5000};
+setTimeout(function(){s();},to)};
+})(document,'script','head');
+</script>
+<meta name="google-site-verification" content="XE271XJfF68am7oHm2x4veUqLyGeIVskmS7V3t-JVh0">
+
+<link rel="amphtml" href="typescript-1013d9f.html?hs_amp=true">
+
+<meta property="og:image" content="https://www.bjss.com/hubfs/typescript%20feature.png#keepProtocol">
+<meta property="og:image:width" content="866">
+<meta property="og:image:height" content="640">
+
+<meta name="twitter:image" content="https://www.bjss.com/hubfs/typescript%20feature.png#keepProtocol">
+
+
+<meta property="og:url" content="https://www.bjss.com/engineering-insights/typescript-101">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="typescript-101.html">
+
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/rss+xml" href="rss.xml">
+<meta name="twitter:domain" content="www.bjss.com">
+<script src="../../platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+</script>
+
+<meta http-equiv="content-language" content="en">
+
+
+
+
+
+
+    
+  <meta name="generator" content="HubSpot"></head>
+  <body>
+    <div class="body-wrapper   hs-content-id-56335450675 hs-blog-post hs-blog-id-48313963830">
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/header.html"><header class="header">
+  <div class="main-header">
+    <div class="header__container">
+      <div class="headerLogo">
+        
+        <div id="hs_cos_wrapper_header_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  <span id="hs_cos_wrapper_header_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../index.html" id="hs-link-header_logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="../hubfs/bjss_logo_25_Blue%26Navy%20(RGB).svg" class="hs-image-widget " style="width:100px;border-width:0px;border:0px;" width="100" alt="bjss_logo_25_Blue&amp;Navy (RGB)" title="bjss_logo_25_Blue&amp;Navy (RGB)"></a></span>
+</div>
+      </div>
+      <div class="headerNavigation">
+        <div class="custom-menu-primary">
+          <span id="hs_cos_wrapper_header_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_header_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47367390570" aria-label="Navigation Menu">
+ <ul role="menu" class="active-branch">
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../about/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">About BJSS</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../our-work.html" role="menuitem">Our Work</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../community/index.html" role="menuitem">BJSS in the Community</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../governance/index.html" role="menuitem">Governance</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../our-sustainability.html" role="menuitem">Our Sustainability</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../greenfield.html" role="menuitem">Green Field</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../services/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Our Services</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../strategy-and-transformation.html" role="menuitem">Strategy &amp; Transformation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../design/index.html" role="menuitem">Design &amp; Innovation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../technology-engineering/index.html" role="menuitem">Technology &amp; Engineering</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../managed-service/index.html" role="menuitem">Managed Service</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../low-code-and-automation.html" role="menuitem">Low Code &amp; Automation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../data/index.html" role="menuitem">Data &amp; AI</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../cloud/index.html" role="menuitem">Cloud &amp; Platform</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../cyber-security.html" role="menuitem">Cyber Security</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../sustainability.html" role="menuitem">Sustainability</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../industries/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Your Industry</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../energy-commodities-utilities.html" role="menuitem">Energy, Commodities &amp; Utilities</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../financial-services.html" role="menuitem">Financial Services</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../health/index.html" role="menuitem">Health &amp; Social Care</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../public/index.html" role="menuitem">Public Sector</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../retail/index.html" role="menuitem">Retail &amp; Consumer Markets</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../enterprise-agile.html" role="menuitem">Enterprise Agile®</a></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch" role="none"><a href="../insights/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Insights</a>
+   <ul role="menu" class="hs-menu-children-wrapper active-branch">
+    <li class="hs-menu-item hs-menu-depth-2 active active-branch" role="none"><a href="../engineering-insights.html" role="menuitem">Engineering Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../industry-insights.html" role="menuitem">Industry Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../news.html" role="menuitem">News Centre</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../events/index.html" role="menuitem">Events</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../future-of-retail/index.html" role="menuitem">Future of Retail</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../careers.html" role="menuitem">Careers</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../contact/index.html" role="menuitem">Contact</a></li>
+ </ul>
+</div></span>
+        </div>
+        <div class="custom-menu-primary">
+          <div id="hs_cos_wrapper_module_16279825775607" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16279825775607_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="language_switcher"></span></div>
+        </div>
+        <div class="search-icon">
+          <span class="search-icon-in"></span>
+        </div>
+        <div class="mobile-navigation">
+          <div class="mobile-navigation-inner">
+            <span class="mobile-trigger"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search-outer">
+    <div class="header__container">
+      <div class="hs-search-field">
+        <div class="hs-search-field__bar">
+          <form action="https://www.bjss.com/hs-search-results">
+            <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search …">
+          </form>
+          <span class="close-search"></span>
+        </div>
+        <ul class="hs-search-field__suggestions"></ul>
+      </div>
+      
+    </div>
+  </div>
+</header></div>
+      
+
+      
+<main class="body-container-wrapper blog blog_post engineering_post">
+  <div class="blog-wrapper">
+    <div id="hs_cos_wrapper_post_banner" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="blog-banner post-banner engineering__banner" style="background-image: url(../hubfs/typescript%20101%20banner-1.png)">
+  <div class="content-wrapper">
+    <div class="post-banner-col post-banner-col7">
+      <div class="post-banner-rich-text">
+        <h4><span id="hs_cos_wrapper_name" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="text">Typescript 101 for Platform Engineers</span></h4>
+        <p>By Mike Peachey, Principal Platform Architect at BJSS</p>
+      </div>
+    </div>
+    
+    <div class="post-banner-col post-banner-col5">
+      <div class="post-banner-image">
+        <span class="post-banner-img">
+          <img src="../hubfs/mike%20peachy.png" alt="Mike Peachey">
+        </span>
+      </div>
+    </div>
+    
+  </div>
+</div></div>
+  </div>
+  <div class="blog-single-wrapper">
+    <div class="content-wrapper ">
+      <div class="blog-post__body">
+        <span id="hs_cos_wrapper_post_body" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="rich_text"><p><span data-contrast="none">I have just finished creating my first TypeScript project: <a href="orgtomate-aws-organizations-inventory-and-control-parallelised.html" rel="noopener" target="_blank" style="font-weight: bold;">Orgtomate</a><span style="font-weight: normal;">.</span> Before this project, I had an approximate grasp of JavaScript and a scant grasp of Asynchronous JavaScript, and I won't pretend that I have a total grasp of it now, but certainly enough to confidently deliver functional async modules. I chose JavaScript because, after a lot of experience throwing together lambda functions for automating AWS platform tasks in both JavaScript and Python, I know that there is a big difference in performance and significantly less overhead in trying to execute code in parallel in JavaScript than using Python's multiprocessing library. That and the fact that I’m personally not the biggest fan of Python in the first place.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559738&quot;:150,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+<!--more-->
+<p><span data-contrast="none">Having begun in JavaScript,&nbsp;it&nbsp;was suggested to me that I consider using TypeScript instead. I initially regarded this suggestion as a stretch goal I wouldn't have the opportunity to consider, however,&nbsp;I took the plunge,&nbsp;am very pleased that I did,&nbsp;and wish I had been using it from the beginning. It turns JavaScript from something powerful but dangerous into something that has the fortitude to challenge the other contenders in the space. Type-safety matters and it's available for JavaScript!</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559738&quot;:150,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+<p><span data-contrast="none">However, with a new language, even as an extension of an existing one, comes a lot to learn, and a new ecosystem of supporting development tools. With all of these being open-source tools, with competing options and limited documentation and cohesion, it takes a long time to decide upon which tools to use and how to bring them together to construct a functional development process for a project. I've been through this process from scratch, with all the most modern options to choose from, and thought that perhaps others might benefit from the lessons I've learned, the choices I've made, and the results I've produced.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559738&quot;:150,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+<p><span data-contrast="none">I'm especially interested in looking at this from a Platform Engineering and a NodeJS perspective, which can be very different from approaches needed for browser-based application development. It is my hope that I can start to foster some love for JavaScript and TypeScript in the platform engineering community so that it is not a scary prospect when it is the right tool for a job. This is especially relevant in AWS Lambda functions, where every microsecond of execution and every megabyte of RAM is chargeable, and regularly executing JavaScript is going to cost less over a lot of functions over long periods of time – which all add up.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559738&quot;:150,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+<p><span data-contrast="none">I am going to presume a basic grasp of JavaScript from the reader, but only so far as knocking together a couple of functions to do some simple tasks with the odd required library. I am also going to try to use terms and references that are familiar to people who have not been doing JavaScript and TypeScript development for years - wording things for the purpose of understanding, rather than a scientific explanation of programming concepts. So many questions and answers available on the internet involve someone new to the language asking a simple question to try to understand what they're dealing with and being bombarded with answers that are no clearer than the documentation the asker was struggling to grasp. I prefer a Russell Stannard/Carl Sagan approach.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559738&quot;:150,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+<p><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559738&quot;:150,&quot;335559739&quot;:160,&quot;335559740&quot;:240}"><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-d0993674-0185-431d-8ae0-88443e0e9886"><span class="hs-cta-node hs-cta-d0993674-0185-431d-8ae0-88443e0e9886" id="hs-cta-d0993674-0185-431d-8ae0-88443e0e9886"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/9399653/d0993674-0185-431d-8ae0-88443e0e9886" target="_blank" rel="noopener"><img class="hs-cta-img" id="hs-cta-img-d0993674-0185-431d-8ae0-88443e0e9886" style="border-width:0px;" height="450" width="1200" src="../../no-cache.hubspot.com/cta/default/9399653/d0993674-0185-431d-8ae0-88443e0e9886.png" alt="Top 10 Skills For Technologists In 2022"></a></span><script charset="utf-8" src="../hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(9399653, 'd0993674-0185-431d-8ae0-88443e0e9886', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></span></p></span>
+      </div>
+    </div>
+  </div>
+  <div id="hs_cos_wrapper_post_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="enginnering-post-content">
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4><span>Contents</span></h4>
+<ol>
+<li><span style="color: #ffffff;"><a href="#what-is-typescript" rel="noopener" style="color: #ffffff;">What is TypeScript?</a></span></li>
+<li><span style="color: #ffffff;"><a href="#interacting-with-external-typescript-modules" rel="noopener" style="color: #ffffff;">Interacting with External TypeScript Modules</a></span></li>
+<li><span style="color: #ffffff;"><a href="#when-should-you-use-javascript-and-when-should-i-" rel="noopener" style="color: #ffffff;">When Should I use JavaScript and When Should I use TypeScript?</a></span></li>
+<li><span style="color: #ffffff;"><a href="#turning-javascript-into-typescript" rel="noopener" style="color: #ffffff;">Turning JavaScript into TypeScript</a></span></li>
+<li><span style="color: #ffffff;"><a href="#writing-asynchronous-javascript" rel="noopener" style="color: #ffffff;">Writing&nbsp;Asynchronous JavaScript</a></span><br><span style="color: #ffffff;">&nbsp; &nbsp; &nbsp; &nbsp; <a href="#A-chaining-dependencies-in-asynchronous-code" rel="noopener" style="color: #ffffff;">a. Chaining Dependences in Asynchronous Code</a></span><br><span style="color: #ffffff;">&nbsp; &nbsp; &nbsp; &nbsp; <a href="#b-promises" rel="noopener" style="color: #ffffff;">b. Promises</a></span><br><span style="color: #ffffff;">&nbsp; &nbsp; &nbsp; <a href="#c-working-with-the-aws-sdk-for-javascript-version2" rel="noopener" style="color: #ffffff;">&nbsp; c. Working with the AWS SDK for JavaScript Version 2</a></span></li>
+<li><span style="color: #ffffff;">&nbsp;<a href="#the-javascript-typescript-development-ecosystem" rel="noopener" style="color: #ffffff;">The JavaScript/TypeScript Development EcoSystem</a></span><br><span style="color: #ffffff;">&nbsp; &nbsp; &nbsp; &nbsp;<a href="#a-overview" rel="noopener" style="color: #ffffff;"> a. Overview</a></span><br><span style="color: #ffffff;">&nbsp; &nbsp; &nbsp; &nbsp;<a href="#b-package.json" rel="noopener" style="color: #ffffff;"> b. package.json</a></span><br><span style="color: #ffffff;">&nbsp; &nbsp; &nbsp; <a href="#c-npmandyarn" rel="noopener" style="color: #ffffff;">&nbsp; c. npm &amp; yarn</a></span><br><span style="color: #ffffff;">&nbsp; &nbsp; &nbsp; &nbsp; <a href="#d-gulp" rel="noopener" style="color: #ffffff;">d. Gulp</a></span><br><span style="color: #ffffff;">&nbsp; &nbsp; &nbsp; &nbsp; <a href="#e-tscandtsconfig.json" rel="noopener" style="color: #ffffff;">e. tsc &amp; tsconfig.json</a></span><br><span style="color: #ffffff;">&nbsp; &nbsp; &nbsp; &nbsp;<a href="#f-eslint" rel="noopener" style="color: #ffffff;"> f. ESLint</a></span><br><span style="color: #ffffff;">&nbsp; &nbsp; &nbsp; &nbsp;<a href="#g-tsdoc-and-typedoc" rel="noopener" style="color: #ffffff;">g. TSDoc and TypeDoc</a></span></li>
+<li><span style="color: #ffffff;"><a href="#conclusion" rel="noopener" style="color: #ffffff;">Conclusion</a></span></li>
+</ol>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(255, 255, 255, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <a id="what-is-typescript" data-hs-anchor="true"></a>
+<h4><span style="color: #31b595;">What is typescript?</span></h4>
+<p><span style="color: #041e42;"><span data-contrast="none" xml:lang="EN-GB" lang="EN-GB">TypeScript is JavaScript...with Types! It's a language one level higher than JavaScript that is compiled (actually transpiled) into JavaScript in order to execute. The types are not enforced at run-time, they are enforced at compile-time. TypeScript is a boundary that ensures you are writing strongly-typed code before it is compiled into an untyped execution environment. TypeScript is the enforcement of a contract to use the right data between functions, modules, packages and other developers, which makes sure the resulting code does only what it is supposed to do. This means that we continue to benefit from the speed and agility of JavaScript at run-time while benefiting from structure and rules while developing. Another significant benefit is that while there are many different ways to run JavaScript both in browser environments and otherwise, which have different rules that govern the code you can write, TypeScript knows about them, and can be configured to compile your code to be compatible with different runtime environments. Almost like a real language(!).</span>&nbsp;</span></p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4><span style="color: #ffffff;">Interacting with external TypeScript modules</span></h4>
+<a id="interacting-with-external-typescript-modules" data-hs-anchor="true"></a>
+<p><span data-contrast="none">TypeScript is a developer tool that enforces types at compile-time. It has nothing to do with run-time. At run-time, all you have is JavaScript that was transpiled from the TypeScript source. This means that when you work with other people's TypeScript code, you are not interacting with their TypeScript, you are interacting with their JavaScript. In order to develop with type safety, TypeScript creates definitions files. You can see these as files with&nbsp;<span style="font-family: 'Courier New', Courier, monospace;">a </span></span><span style="font-family: 'Courier New', Courier, monospace;">.d.ts</span><span data-contrast="none"><em> </em>extension alongside the JavaScript files with a </span><span style="font-family: 'Courier New', Courier, monospace;">.js</span><span data-contrast="none"> extension. It is these definitions files that allow your TypeScript to reference and interact with the Type declarations in other peoples’&nbsp;code, while still actually executing your&nbsp;transpiled&nbsp;JavaScript with their&nbsp;transpiled&nbsp;JavaScript.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559738&quot;:150,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+<p><span data-contrast="none">In short, when you use the </span><span style="font-family: 'Courier New', Courier, monospace;">import</span><span data-contrast="none"><span style="font-family: 'Courier New', Courier, monospace;"> </span>command to import someone else's module into your code, if TypeScript finds type definitions for the module you are importing, items in the&nbsp;type&nbsp;namespace will be imported into your TypeScript along with the function and variable exports.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559738&quot;:150,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(255, 255, 255, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <a id="when-should-you-use-javascript-and-when-should-i-" data-hs-anchor="true"></a>
+<h4><span style="color: #31b595;">When Should I use JavaScript and when should I use TypeScript?</span></h4>
+<p><span style="color: #041e42;">If you have a simple script designed to do one job, that will be written once and then forgotten about and makes very simple use of data structures, you don't need to bother setting up a TypeScript project. The hassle of having a pipeline to rebuild the code alone simply isn't worth it, and not being able to easily tweak the compiled code on the fly is a pain. You can still interact perfectly well with TypeScript modules and get the job done.&nbsp;</span></p>
+<p><span style="color: #041e42;">That said - don't be lazy! Just because you can throw something simple together in JavaScript, keep the bar low on the choice to upgrade to TypeScript. Just as projects written in Bash can get out of hand and you can quickly realise (usually as soon as you start using Bash v4 Associative Arrays) that you probably should have written the project in a proper language rather than a CLI,&nbsp;don't go too deep in JavaScript before you Do&nbsp;The&nbsp;Right Thing.&nbsp;</span></p>
+<p><span style="color: #041e42;">This isn't to say you can't write everything in TypeScript, even single small files, and just use <span style="font-family: 'Courier New', Courier, monospace;">tsc</span>  to transpile it on-demand and ts-node to execute it interactively, but in reality, it's just not an efficient way to work for something independent and tiny. Use your own judgement.&nbsp;</span></p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <a id="turning-javascript-into-typescript" data-hs-anchor="true"></a>
+<h4><span style="color: #ffffff;">Turning JavaScript into TypeScript</span></h4>
+<p><span data-contrast="none">This is an exercise everyone should do...once! It is cumbersome and painful, but extremely educational. You should do it once and then forever after beginning your more-than-just-a-hack projects in TypeScript.</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559738&quot;:150,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+<p><span data-contrast="none">In short, you take your JavaScript and then add a colon after every symbol you declare, followed by the Type of that symbol (or return type for functions):<span style="font-family: 'Courier New', Courier, monospace;"> </span></span><span data-contrast="none" style="font-family: 'Courier New', Courier, monospace;">void, any, null, undefined, string, number,&nbsp;boolean, Array&lt;string&gt;, "NameOfComplexObject", Array&lt;"NameOfComplexObject"&gt;</span><span data-contrast="none"> . You then make sure that,&nbsp;when you handle data, you treat types with respect and cast things between types as necessary. You also act like a proper grown-up and declare all your variables (and declare anything that's&nbsp;actually constant&nbsp;as </span><span data-contrast="none" style="font-family: 'Courier New', Courier, monospace;">const</span><span data-contrast="none">) - TypeScript presumes </span><span data-contrast="none">'<span style="font-family: 'Courier New', Courier, monospace;">use strict</span>'</span><span data-contrast="none"> .</span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559738&quot;:150,&quot;335559739&quot;:160,&quot;335559740&quot;:240}">&nbsp;</span></p>
+<p style="font-size: 16px;"><img src="../hubfs/image-png-Oct-04-2021-02-17-01-43-PM.png" loading="lazy"></p>
+<p style="font-size: 20px;"><span data-contrast="none">&nbsp;becomes</span></p>
+<p style="font-size: 20px;"><img src="../hubfs/image-png-Oct-04-2021-02-17-29-51-PM.png" loading="lazy"></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">Now, technically I'm talking rubbish because you do not need to declare types for anything that can be inferred. If you are declaring a constant and assigning a string literal to it, there is no need or value in explicitly declaring the type as string. It can sometimes be difficult to know when a type can be inferred, but thankfully ESLint will tell you.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">When it comes to classes and complex objects, it's a simple matter of declaring interfaces and types. If you create a class, you create an Interface that describes the class's properties and methods just as you might in Java. An interface can extend to another interface. If you just want to create a complex object made up of properties of different types, you use a type declaration instead of an Interface. A type is pretty much the same thing as an interface, but it cannot use inheritance.</span></p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-parallex">
+    <div class="parallex-bg-wrap">
+      <div class="parallex-background" style="background-image: url(../hubfs/background%20image%20for%20typescript%20101.png);"></div>
+    </div>
+    <div class="page-center">
+      <div class="enginnering-post-inner-row">
+        <div class="enginnering-post-rich-tesx">
+          <a id="writing-asynchronous-javascript" data-hs-anchor="true"></a>
+<h4><span style="color: #31b595;">Writing Asynchronous Javascript</span></h4>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #172b4d;">I'm not going to teach you how to understand Asynchronous JavaScript code, a good visual primer <strong><a href="https://dev.to/lydiahallie/javascript-visualized-promises-async-await-5gke" rel="noopener" target="_blank">is available here</a></strong></span><span style="color: #172b4d;">. But I can tell you what you need to know to be effective.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #172b4d;">The core concept is that JavaScript is by default single-threaded and synchronous, but the execution is actually run in an event loop that prioritises certain actions over other actions using three queues/stacks: the call stack, the microtask queue, and the task queue. When all you have is simple synchronous code, you've just got statements being pushed to the call stack and executed. Calling a function just means the function call and its return sit in the stack waiting for the code inside the function to be processed because it more recently got added to the stack; procedural code as you would normally expect it to work. As soon as you invoke asynchronous code somewhere, you are going to disrupt the order in which tasks are done. Instead of a statement causing a new call to enter the call stack, it creates a task in the task queue or the microtask queue, which is a lower priority than the call stack. You are saying to the event loop: "do this asynchronous block of code as soon as you get a free second to get around to it".</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #172b4d;">It's really quite simple, but if you don't visualise that happening when you write your code you have things happening in seemingly random orders and, for a platform engineer, it usually means your lambda function reached the "I'm done, shut me down" call, before it got as far as doing the asynchronous task you asked it to do.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;">&nbsp;</p>
+<a id="A-chaining-dependencies-in-asynchronous-code" data-hs-anchor="true"></a>
+<h6><span style="color: #31b595;"><strong>A) Chaining Dependencies In Asynchronous Code</strong></span></h6>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #172b4d;">While there's a fair amount to be understood about what code will be executed in which stack or queue and in what precise order, in most cases when developing code for interacting with the AWS APIs via the AWS SDK for JavaScript, what you need to know is that this asynchronicity is invoked whenever you are interacting with Promises or calling a function which is explicitly async.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #172b4d;">There are two ways you will deal with this so that you can be sure that whatever needs to be done gets done in an order you can anticipate: callbacks and async/await.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 24px;"><span style="color: #31b595;"><strong>Callbacks</strong></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #172b4d;">Historically the way you would handle this is to chain actions with nested callbacks - effectively saying&nbsp;</span><span style="color: #172b4d; font-family: 'Courier New', Courier, monospace;">doThis().then(doThat().then(doSomethingElse()))</span><span style="color: #172b4d;"><span style="font-family: 'Courier New', Courier, monospace;">.</span> The problem with doing this is that you can't achieve synchronisation with unrelated tasks. You can kick off doThis and perform one chain of actions with the results, but you can't escape from that chain. The whole lifecycle of everything that happens after<span style="font-family: 'Courier New', Courier, monospace;"> doThis()</span> exists in one deeply-nested tree of callbacks. This is not unreasonable for browser-based website development because it aligns with the user journey of browser-based actions and asynchronous object manipulation. It absolutely sucks when you are trying to manipulate AWS via the APIs because there are lots of completely unrelated API calls you want to make where you need to get some information and then do an arbitrary number of disconnected things with that information that feeds into new process chains.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;">&nbsp;</p>
+<p style="font-size: 24px;"><span style="color: #31b595;"><strong>Async/Await</strong></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #172b4d;">The solution to this is the async/await structure. This makes use of the&nbsp;</span><span style="color: #172b4d; font-family: 'Courier New', Courier, monospace;">await</span><span><span style="color: #172b4d;">&nbsp;</span></span><span style="color: #172b4d;">keyword to tell the event loop to suspend processing anything until a Promise has been resolved, or more usually until the async function you called has returned something. Hypothetically, this is a bad thing to do because you are wasting execution time pausing something when unrelated pseudo-parallel actions could still be going on in the background, but in reality doesn't work this way and if your process has serial dependencies, your code must be able to implement them.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><img src="../hubfs/image-png-Oct-04-2021-02-18-46-67-PM.png" loading="lazy"></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: black; border: 1pt none windowtext;">Becomes:</span><span style="color: black; border: 1pt none windowtext;"></span></p>
+<p style="vertical-align: baseline; font-size: 20px;"><img src="../hubfs/image-png-Oct-04-2021-02-19-03-18-PM.png" loading="lazy"></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #172b4d;">The key value here is that you have access to the results of each of these asynchronous function calls at your top-level scope. Whatever you need to do with <span style="font-family: 'Courier New', Courier, monospace;">thisResult, thatResult</span> or <span style="font-family: 'Courier New', Courier, monospace;">somethingElseResult</span>, you can do without it being scope-contained to functions that are chained beneath <span style="font-family: 'Courier New', Courier, monospace;">doThis()</span>. The minor drawback is the loss of performance that everything your code does has to wait until <span style="font-family: 'Courier New', Courier, monospace;">doThis()</span> has been completed, even if it doesn't depend on the value of <span style="font-family: 'Courier New', Courier, monospace;">thisResult</span>. You are blocking things that might not need to be blocked. If this is a significant performance problem, you can code around it, you can combine async/await and callbacks together, or refactor your code to order things in the most efficient possible chain. But, frankly, we are mostly dealing here with platform engineering tasks that are not microsecond-sensitive in performance terms and have serial dependencies – so there’s no need to worry about it. Get the job done with async/await and address performance improvements with whatever experience you have when it's appropriate.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><strong><span style="color: #172b4d;">Note:</span></strong><span style="color: #172b4d;">&nbsp;the&nbsp;</span><span style="color: #172b4d; font-family: 'Courier New', Courier, monospace;">await</span><span><span style="color: #172b4d;">&nbsp;</span></span><span style="color: #172b4d;">keyword can only be used in an&nbsp;</span><span style="color: #172b4d; font-family: 'Courier New', Courier, monospace;">async</span><span><span style="color: #172b4d;">&nbsp;</span></span><span style="color: #172b4d;">function. In the context of platform engineering development you probably need to be using await all over your code and from very early on, so the very first thing your code needs to do is declare an async "main" function, and then call it, or in the case of lambda, make sure your lambda handler function is itself declared as async.</span></p>
+<p>&nbsp;</p>
+<a id="b-promises" data-hs-anchor="true"></a>
+<h6><span style="color: #31b595;"><strong>B) Promises</strong></span></h6>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #172b4d;">Promises are incredibly hard to understand for simple platform engineering development because every example expresses problems in terms of the Web API and the use of setTimeout. These things are meaningless when you are writing a script to make a couple of AWS API calls in NodeJS.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #172b4d;">Promises are easy if you explain them in simple terms. A Promise is a container in which you stuff a bunch of code that needs to be executed. The event loop "promises" you that that code will eventually get executed, as soon as it can get around to it, but in the meantime will crack on with whatever is more urgent in the call stack. Most functions that interact with external APIs use promises so that hanging around for several seconds waiting for a response from some internet-endpoint to give you some data doesn't hold up your code execution.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px;"><span style="color: #172b4d;">A promise has two possible end states: it succeeded <span style="font-family: 'Courier New', Courier, monospace;">(</span></span><span style="font-family: 'Courier New', Courier, monospace;"><span style="color: #172b4d;">resolve()</span><span style="color: #172b4d;">) </span></span><span style="color: #172b4d;">or it failed <span style="font-family: 'Courier New', Courier, monospace;">(</span></span><span style="font-family: 'Courier New', Courier, monospace;"><span style="color: #172b4d;">reject()</span><span style="color: #172b4d;">)</span></span><span style="color: #172b4d;">. Traditionally, you handle these states with callbacks: <strong>Once the code has finished executing: if it succeeded, <span style="font-family: 'Courier New', Courier, monospace;">doSomething()</span>; if it failed, <span style="font-family: 'Courier New', Courier, monospace;">handleTheFailure()</span>. </strong></span><span style="color: #172b4d;">This approach allows you to kick something off and disown it. You don't care when it finishes, only that it finishes as soon as it can. Whichever way it goes, success or failure will kick off the correct actions in response. The promise will return either&nbsp;<strong>something</strong>&nbsp;</span><span style="color: #172b4d;">valuable or a rejection exception. These are invoked by the code inside the promise passing values to the <span style="font-family: 'Courier New', Courier, monospace;">resolve()</span> or <span style="font-family: 'Courier New', Courier, monospace;">reject()</span> functions that the Promise makes available to the code.</span></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px;"><span style="color: #172b4d;">When you make a Promise in your code, the return you get from the Promise is "a promise to give you a return value". If you want to wait until the Promise has been resolved (or rejected) and get the value (or exception) straight away, just&nbsp;</span><span style="color: #172b4d; font-family: 'Courier New', Courier, monospace;">await</span><span style="color: #172b4d;">&nbsp;</span><span style="color: #172b4d;">the Promise. If you don't need to pause your execution right now, then you can hold on to the Promise and get its result later. Maybe when you come back to it, the work will already have been done - maybe it won't. In the worst case, the execution will take place when you eventually demand the result; in the best case, background time will have been free to get the result by the time you ask for it.</span></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px;"><span style="color: #172b4d;">For as much as it matters to you in this context, whenever you call an&nbsp;</span><span style="color: #172b4d; font-family: 'Courier New', Courier, monospace;">async</span><span style="color: #172b4d;">&nbsp;</span><span style="color: #172b4d;">function, you're calling a promise to execute the function, and you can await the function result, or not.</span></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #172b4d;">If you want or need to make a custom Promise it's easy and really helps understand how promises work:</span></p>
+<p style="vertical-align: baseline; font-size: 20px;"><img src="../hubfs/4th%20code-png-1.png" loading="lazy"></p>
+<a id="c-working-with-the-aws-sdk-for-javascript-version2" data-hs-anchor="true"></a>
+<h6>&nbsp;</h6>
+<h6><span style="color: #31b595;"><strong>C) Working with the AWS SDK for JavaScript version 2</strong></span></h6>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #172b4d;">I say version 2 because although version 3 is Generally Available, it is not at the time of writing included by default in AWS Lambda, and it has some significant changes - some for the better, some for the worse - that I'm not ready to talk about with any authority.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px;"><span style="color: #172b4d;">My first bit of advice in working with the AWS SDK for JavaScript is don't. Use the </span><strong><span style="color: #d90699;"><a href="https://bjsscloud.github.io/orgtomate-js/modules/get_aws_results.html" rel="noopener" target="_blank" style="color: #d90699;">get-AWS-results</a></span></strong><span style="color: #172b4d;">&nbsp;module from&nbsp;<span style="color: #d90699;"><strong><a href="https://www.npmjs.org/orgtomate" rel="noopener" target="_blank" style="color: #d90699;">Orgtomate</a></strong></span></span><span style="color: #172b4d;">. Mostly all you care about is individual read and write calls to AWS APIs, and when you perform reads you almost always want all of the pages of results in one result object. That's what this module's getAwsResults function provides to you. You tell it the name of an AWS Service (e.g., Route53), the name of an operation (e.g., listHostedZones), any custom parameters you want to be given to the Service object constructor or the Operation call, and it will do the work for you in creating the service object, making the call, and paginating results wherever automatic pagination is possible. You will get one result object containing what you needed.</span></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #172b4d;">If you need or want to work with the SDK directly there are several ways to do so, but I recommend one of two simple approaches:</span></p>
+<ol>
+<li style="color: #172b4d;"><span style="font-size: 20px;">Use and await the SDK promise() functions.</span></li>
+<li style="color: #172b4d;"><span style="font-size: 20px;">Use event listeners and wrap them in your own promises.</span></li>
+</ol>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #172b4d;">Wherever possible, just use the <span style="font-family: 'Courier New', Courier, monospace;">promise()</span> functions.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;">&nbsp;</p>
+<p style="font-size: 24px;"><span style="color: #31b595;"><strong>Promise Functions<br></strong></span><img src="../hubfs/image-png-Oct-04-2021-02-21-31-88-PM.png" loading="lazy"></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #172b4d;">It doesn't get much simpler than that. Import the SDK, create a Service object,&nbsp;</span><span style="color: #172b4d;">await</span><span><span style="color: #172b4d;">&nbsp;</span></span><span style="color: #172b4d;">a Promise that will return to you the value the API returns.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #172b4d;">You must be careful that there is no implied pagination here. If listHostedZones truncates your results and gives you a token you can use to go and get another page of results, you need to account for that. You need to know how the pagination token configuration works for Route53 listHostedZones calls, the conditions in which more pages may be available, and repeatedly make the API call with consecutive tokens until you get a result that has not been truncated, and then you can gather the results of all of your calls into one results object.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #172b4d;">If, however, you are making a Write call to the API, or making a filtered read call that will return just one object, or information about one object, you need not worry about pagination.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 24px;"><span style="color: #172b4d;"><span style="color: #31b595;"><strong>Event Listeners</strong></span></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #172b4d;">If you need to get creative and chain some callbacks based on the success or error of the API call you want to make, then you can take the event listener approach. This is the approach taken by the get-AWS-results module so that it can recursively paginate results where pagination is supported.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #172b4d;">First, you create the AWS Request object, then you register event listeners that call a callback for each of the success and error results, and then you </span><span style="color: #172b4d; font-family: 'Courier New', Courier, monospace;">.send()</span><span><span style="color: #172b4d;">&nbsp;</span></span><span style="color: #172b4d;">the Request. Because you are now locked into callback hell, unable to return your final result to your top-level scope - which you almost certainly still want to do - you can wrap the whole process in a promise and call the <span style="font-family: 'Courier New', Courier, monospace;">resolve()</span> and <span style="font-family: 'Courier New', Courier, monospace;">reject()</span> functions once you have some final result.</span></p>
+<p style="vertical-align: baseline; font-size: 20px;"><img src="../hubfs/5th%20code-png-1.png" loading="lazy"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(49, 181, 149, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4><span style="color: #ffffff;">The JavaScript/TypeScript Development Ecosystem</span></h4>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">So, now you can write some JavaScript that efficiently makes AWS API calls, you need a project repository you can start writing your code in and you need developer tools for ensuring the quality of your code and building and distributing it.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">Here is some guidance, focussed on the implementation for Orgtomate, in how to make use of the JavaScript/TypeScript development ecosystem.</span></p>
+<a id="a-overview" data-hs-anchor="true"></a>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff; font-size: 24px;"><strong>A. Overview</strong></span></p>
+<br>
+<ul>
+<li><span style="font-size: 20px; color: #ffffff;">The package.json file defines the JavaScript project.</span></li>
+<li>The tsconfig.json defines the TypeScript parts of the project.</li>
+<li>TSC does the compilation and produces the TypeScript definitions files.</li>
+<li>Gulp is the build manager.</li>
+<li>Yarn is the package manager.</li>
+<li>TypeDoc is the tool that produces documentation written to the TSDoc standard.</li>
+<li>ESLint is the code validation tool.</li>
+</ul>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #ffffff;">When you make changes to code, you can use ESLint to check the changes. When you compile, you use a gulp task to run ESLint and then compile. When you make changes to documentation you use a gulp task to run ESLint to validate the TSDoc syntax, and then compile.</span></p>
+<a id="b-package.json" data-hs-anchor="true"></a>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="color: #ffffff;"><span style="font-size: 24px;"><strong>B. package.json</strong></span></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">The package.json is the manifest that describes your project and its tooling ecosystem. This is not just a file for creating and publishing public modules, you need this file.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">Many of the tools in the ecosystem integrate with the package.json for your project. Most importantly, yarn or npm, which will manage your packages and dependencies based on the content of your package.json file. Tools will often allow you to either have an RC file explicitly for the tool, or you can create a config object in your package.json.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 24px;"><span style="color: #ffffff;"><strong>Example</strong></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">This is the current package.json from Orgtomate:</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><img src="../hubfs/6th%20code-png-1.png" loading="lazy"></p>
+<div style="font-size: 24px;">&nbsp;</div>
+<div style="font-size: 24px;"><span style="color: #ffffff;"><a id="c-npmandyarn" data-hs-anchor="true">&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+<div style="font-size: 24px;"><span style="color: #ffffff;"><strong>C. npm &amp; yarn</strong></span></div>
+<div style="font-size: 24px;">
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">NPM and Yarn are competing package managers for JavaScript. Pick one and use it. For Orgtomate, I use yarn. They both have drawbacks. I can't really recommend one over the other.</span></p>
+<a id="d-gulp" data-hs-anchor="true"></a>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 24px;"><span style="color: #ffffff;"><strong>D. Gulp</strong></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">Gulp is a Makefile for JavaScript, written in JavaScript.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">TypeScript has a compilation stage. TypeDoc/TSDoc has a compilation stage. When compiling you should also be validating code quality with ESLint. Orchestrating that these build steps happen when needed, in order, can be done with Gulp.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">You can either call gulp commands you have declared directly, e.g. gulp build, gulp clean, or you can alias them as commands in your package.json so that you can execute them with yarn.</span></p>
+<p style="margin-top: 22.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="color: #ffffff;"><strong>Example</strong></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #ffffff;">This is the gulpfile.js for Orgtomate.&nbsp;</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #ffffff;"><img src="../hubfs/7th%20code-png-1.png" loading="lazy"></span></p>
+</div>
+<div><span style="color: #ffffff;">&nbsp;</span></div>
+<div>
+<div style="font-size: 24px;"><span style="color: #ffffff;"><a id="e-tscandtsconfig.json" data-hs-anchor="true">&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+<div style="font-size: 24px;"><span style="color: #ffffff;"><strong>E. tsc &amp; tsconfig.json</strong></span></div>
+<div style="font-size: 24px;">
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">tsc is the tool that compiles (technically "transpiles") your TypeScript into JavaScript.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">The package.json is a JavaScript project file. The TypeScript project file is tsconfig.json. This is what turns your JavaScript project into a project that contains TypeScript that needs transpiling. The tsconfig.json works hierarchically so there may be more than one in your project if you have source files in different locations. In the case of something simple like Orgtomate, the tsconfig.json lives in the src/ directory along with the TypeScript source files.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">The tsconfig.json in Orgtomate directs tsc to put the transpiled JavaScript files in the dist/ directory which is where the final distributable executables, and their associated TypeScript definitions files, live.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">We use the gulp-uglify plugin to minify the distributable JavaScript because it is effectively a compiled artefact, and does not need to be readable or maintainable, and every little bit of performance optimisation helps.</span></p>
+<p style="margin-top: 22.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="color: #ffffff;"><strong>Example</strong></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">This is the tsconfig.json for Orgtomate.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">The critical part is:&nbsp;"extends": "@tsconfig/node14/tsconfig.json"&nbsp;which is all the dirty work in stating "This is a NodeJS v14 project" and configures the basics for you.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">The&nbsp;include&nbsp;statement declares which files to compile, using the&nbsp;compilerOptions&nbsp;.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">The rest of this file is configuration options for TypeDoc, which could have been in their own RC file, but are better left embedded in the tsconfig that tools can share as common config.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;"><img src="../hubfs/8th%20code-png-1.png" loading="lazy"></span></p>
+<div><span style="color: #ffffff;">&nbsp;</span></div>
+<div><span style="color: #ffffff;"><a id="f-eslint" data-hs-anchor="true">&nbsp;</a><strong>F. ESLint</strong></span></div>
+<div>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">Linting matters. This is how you maintain standards and consistency in your code. Do not commit anything that doesn't pass your linting checks.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">The JavaScript linter is called ESLint. There was a TypeScript linter called TSLint. It died. It was determined to be a duplication of ESLint with no value over and above a Typescript plugin for ESLint.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">ESLint brings together all the checks you want to use from lots of different sources, including integrating tools like prettier. Be careful that conflict is your responsibility. Multiple checks from multiple sources may fail at once for the same problem. If you have configured prettier to follow different rules to other rules from elsewhere, you will never have a successful test as one of the two conflicting rules will always be failing. The examples here from Orgtomate should be clean and non-conflicting.</span></p>
+<p style="margin-top: 22.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="color: #ffffff;"><strong>Configuration</strong></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">The main relevant files are .eslintrc and .eslintignore.</span></p>
+<p style="margin-top: 15pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 24px;"><span style="color: #ffffff;"><strong>.eslintrc Example</strong></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">This is the YAML ESLint configuration for Orgtomate - and if you have nothing today, and no strong opinions on standards, is the base configuration I recommend you use. I do have strong opinions on standards, and they are reflected in this configuration.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;"><img src="../hubfs/long%20code%202-png-1.png" loading="lazy"></span></p>
+<div style="font-size: 24px;"><span style="color: #ffffff;">&nbsp;</span></div>
+<div style="font-size: 24px;"><span style="color: #ffffff;"><strong>.eslintignore Example</strong></span></div>
+<div style="font-size: 20px;">&nbsp;</div>
+<div style="font-size: 20px;">As you would expect with an ignore file - don't lint that which shouldn't be linted.</div>
+<div style="font-size: 24px;"><span style="color: #ffffff;"><strong><img src="../hubfs/image-png-Oct-04-2021-02-27-30-71-PM.png" loading="lazy"></strong></span></div>
+<div style="font-size: 24px;">
+<div style="font-size: 20px;"><span style="color: #ffffff;">&nbsp;</span></div>
+<div style="font-size: 24px;"><span style="color: #ffffff;"><strong>ESLint Nibble</strong></span></div>
+<div style="font-size: 20px;">
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #ffffff;">In order to deal with a large number of linting errors it is a complete pain to deal with all of the output in one big dump. ESLint Nibble allows you to interactively address each individual rule failure, and also to autofix any automatically fixable rules independently.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #ffffff;">This is integrated into the Orgtomate package.json as two commands:<span style="font-family: 'Courier New', Courier, monospace;">&nbsp;</span><span style="font-family: 'Courier New', Courier, monospace;">nibble</span>&nbsp;and&nbsp;<span style="font-family: 'Courier New', Courier, monospace;">nibble-one</span>&nbsp;to either lint and nibble the whole project, or just one specific file.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 24px;"><span style="color: #ffffff;"><strong>Prettier</strong></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">Prettier is a pretty-printer and layout standardiser for JavaScript that integrates with ESLint.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">While the prettier config can be in its own file, it's easier to keep it in the package.json.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;">This is the prettier config for Orgtomate:</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #ffffff;"><img src="../hubfs/image-png-Oct-04-2021-02-28-00-70-PM.png" loading="lazy"></span></p>
+<div>&nbsp;</div>
+<a id="g-tsdoc-and-typedoc" data-hs-anchor="true"></a>
+<p style="font-size: 24px;"><span style="color: #ffffff;"><strong>G. tsc &amp; tsconfig.json</strong></span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #ffffff;">TSDoc is a Microsoft-owned standard for TypeScript module documentation similar to JSDoc. It is similar - it is&nbsp;<strong>not</strong>&nbsp;the same.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #ffffff;">TypeDoc is a program for creating Documentation from the code comments in TypeScript code.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #ffffff;">TypeDoc existed before TSDoc. TypeDoc&nbsp;almost&nbsp;completely implements the TSDoc standard, but not completely. Eventually they will probably converge. This is why the Orgtomate code currently has a linting warning on @inheritDoc tags. TypeDoc and TSDoc implement @inheritDoc differently and the TSDoc linter does not allow you to configure an override to ignore issues with certain tags.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #ffffff;">Orgtomate uses the GitHub Pages plugin for TypeDoc and orchestrates TypeDoc compilation with Gulp. This populates a local docs/ directory with HTML content from both the project README.md file, and the code comments in the TypeScript source to produce a navigable documentation website that is hosted directly out of the repository by GitHub Pages.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm;"><span style="font-size: 20px; color: #ffffff;">This isn't always ideal because you must independently run a compile step to produce what is effectively an artifact directory for documentation that is then committed to the codebase. It would be preferable for the documentation source to be in the repository, built into a website external to the repository, but the availability of GitHub pages and the ease and simplicity of using it to publish the documentation makes the compile-and-push step in the documentation process worthwhile.</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content " style="background-color: rgba(#null, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <a id="conclusion" data-hs-anchor="true"></a>
+<h4><span style="color: #31b595;">Conclusion</span></h4>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #041e42;">With the basics above, a grasp of JavaScript syntax, and the example project and code available in the Orgtomate project, you should have everything you need to knock together simple scripts and Lambda functions in TypeScript, just as you might do with Python. The result will be more portable and faster than it would have been in Python; and hopefully that will drive your enthusiasm to choose TypeScript or JavaScript whenever it is the right tool for the job and not avoid it just because of an unfamiliarity with it.</span></p>
+<p style="margin-top: 7.5pt; margin-right: 0cm; margin-bottom: 0cm; padding-left: 0cm; font-size: 20px;"><span style="color: #041e42;"><a href="../engineering-roles.html" rel="noopener" target="_blank"><img src="../hs-fs/hubfs/Lead-magnet-recruitment7ef7.png?width=1200&amp;name=Lead-magnet-recruitment.png" alt="Lead-magnet-recruitment" width="1200" loading="lazy" style="width: 1200px;" srcset="https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=600&amp;name=Lead-magnet-recruitment.png 600w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=1200&amp;name=Lead-magnet-recruitment.png 1200w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=1800&amp;name=Lead-magnet-recruitment.png 1800w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=2400&amp;name=Lead-magnet-recruitment.png 2400w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=3000&amp;name=Lead-magnet-recruitment.png 3000w, https://www.bjss.com/hs-fs/hubfs/Lead-magnet-recruitment.png?width=3600&amp;name=Lead-magnet-recruitment.png 3600w" sizes="(max-width: 1200px) 100vw, 1200px"></a></span></p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+</div></div>
+</main>
+
+
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/footer.html"><footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__container main__footer">
+      <div class="footer__column footer__column1">
+        <div class="footerTitle">
+          <div id="hs_cos_wrapper_footerTitle" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footerTitle_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h4 style="color: #fff">EXPANDING<br>POSSIBILITIES</h4></span></div>
+        </div>
+        <div class="footerSocial">
+          <div id="hs_cos_wrapper_footerSocial" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><ul class="social-share">
+  <li class="socil-icon social-twitter">
+    <a href="https://twitter.com/bjssltd" title="Follow on Twitter" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-linkedin">
+    <a href="https://uk.linkedin.com/company/bjss" title="Follow on LinkedIn" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-instagram">
+    <a href="http://www.instagram.com/bjssltd" title="Follow on Instagram" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-youtube">
+    <a href="https://www.youtube.com/channel/UCUWB9XUNt_g_YGWIjneXuSg" title="Follow on Youtube" target="_blank" class="icon"></a>
+  </li>
+</ul></div>
+        </div>
+        <div class="footerImage">
+          <div id="hs_cos_wrapper_footerImage" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_footerImage_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="../hs-fs/hubfs/Princess-Award_%26_Queens-Awardc48d.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png" class="hs-image-widget " width="1000" height="563" alt="Princess-Award_&amp;_Queens-Award" title="Princess-Award_&amp;_Queens-Award" srcset="https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=500&amp;height=282&amp;name=Princess-Award_%26_Queens-Award.png 500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png 1000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1500&amp;height=845&amp;name=Princess-Award_%26_Queens-Award.png 1500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2000&amp;height=1126&amp;name=Princess-Award_%26_Queens-Award.png 2000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2500&amp;height=1408&amp;name=Princess-Award_%26_Queens-Award.png 2500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=3000&amp;height=1689&amp;name=Princess-Award_%26_Queens-Award.png 3000w" sizes="(max-width: 1000px) 100vw, 1000px"></span></div>
+        </div>
+      </div>
+      <div class="footer__column footer__column2">
+        <div class="footer__column_inner">
+          <div class="footer-navigation">
+            <span id="hs_cos_wrapper_footer_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_footer_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47366551648" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../contact/index.html" role="menuitem">Contact BJSS</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../news.html" role="menuitem">News</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../governance/index.html" role="menuitem">Governance</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../website-privacy-policy/index.html" role="menuitem">Privacy notice</a></li>
+ </ul>
+</div></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__column footer__column3">
+        <div class="footer__column_inner">
+          <div class="footer__search">
+            <div class="hs-search-field">
+              <div class="hs-search-field__bar">
+                <form action="https://www.bjss.com/hs-search-results">
+                  <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search BJSS">
+                  <input type="submit" value="Search" class="searchsubmit" style="">
+                </form>
+              </div>
+              <ul class="hs-search-field__suggestions"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__container copyright__footer">
+      <div class="footer__copyright">
+        <div id="hs_cos_wrapper_footer_copyright_text" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer_copyright_text_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="text">&nbsp;© 2023 BJSS Limited. Registered in England with company number 2777575 VAT Number GB613295452.&nbsp;‘Enterprise Agile®’ and ‘BJSS Enterprise Agile®’ are registered trademarks of BJSS Limited.</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<span class="back-to-top"></span></div>
+      
+    </div>
+    <script src="../hs/hsstatic/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+<script src="../hs/hsstatic/jquery-libs/static-1.4/jquery-migrate/jquery-migrate-1.2.1.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+<script>
+(function () {
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST.html', '/_hcms/perf', true /*async*/);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.onreadystatechange = function () {
+                // do nothing.
+            };
+            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            function populateNetworkInfo(name, connection, info) {
+                if (name in connection) {
+                    info[name] = connection[name];
+                }
+            }
+            var networkInfo = {};
+            if (connection) {
+                ['type', 'effectiveType', 'downlink', 'rtt'].forEach(function(name) {
+                    populateNetworkInfo(name, connection, networkInfo);
+                });
+            }
+            var perfData = {
+                url: location.href,
+                portal: 9399653,
+                content: 56335450675,
+                group: -1,
+                connection: networkInfo,
+                timing: performance.timing
+            };
+            xhr.send(JSON.stringify(perfData));
+        }, 3000);  // Execute this 3 seconds after onload.
+    });
+})();
+</script>
+
+<script src="../hs-fs/hub/9399653/hub_generated/template_assets/47365698976/1645632663800/BJSS_May2021/js/main.min.js"></script>
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script>
+
+<script src="../hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+<script src="../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844495/module_52098159278_language_switcher.min.js"></script>
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/www.bjss.com\/engineering-insights\/typescript-101"]);
+_hsq.push(["setPageId", "56335450675"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 56335450675,
+    "legacyPageId": "56335450675",
+    "contentFolderId": null,
+    "contentGroupId": 48313963830,
+    "abTestId": null,
+    "languageVariantId": 56335450675,
+    "languageCode": "en",
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="../hs/scriptloader/9399653.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    ticks: 1674411515792,
+    page_id: 56335450675,
+    
+    content_group_id: 48313963830,
+    portal_id: 9399653,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en",
+    analytics_page_type: "blog-post",
+    analytics_page_id: "56335450675",
+    category_id: 3,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+<script defer src="../hs/hsstatic/HubspotToolsMenu/static-1.143/js/index.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKPDZ5X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ <!-- End Google Tag Manager (noscript) -->
+
+
+<div id="fb-root"></div>
+ <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../../connect.facebook.net/en_GB/all.js#xfbml=1&status=0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ 
+
+
+  
+</body>
+<!-- Mirrored from www.bjss.com/engineering-insights/typescript-101 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:41:30 GMT -->
+</html>

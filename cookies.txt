@@ -1,0 +1,11 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.vimeo.com	TRUE	/	FALSE	1999999999	__cf_bm	bAAesp_iGUVdZ4Za.xfVwqDpaP91zhzaccmf5KiIAcI-1674642896-0-AfO3nUUR8NYCt3rer6ok226SGY3ovwFPtg0pvgk45mK6WQ9rUXuqz/bDP2J3Hdk8G6dLB1C7GdfIdSC9yb+MTzI=
+player.vimeo.com	TRUE	/	FALSE	1999999999	SameSite	None
+no-cache.hubspot.com	TRUE	/	FALSE	1999999999	SameSite	None
+.hubspot.com	TRUE	/	FALSE	1999999999	__cf_bm	BNldEpHyOg0xXCiU5sY70PbMpcA__82Zd0qMpAJsdrk-1674648725-0-AXzCmom8873MAit2/3i2ZWD82YZAlJTdO3GY6eDe6692gU4UfF1E/fBXuVrABkNjzkSkF4c+GV8l/IUsI+iUJoo=
+track.hubspot.com	TRUE	/	FALSE	1999999999	SameSite	None
+.www.bjss.com	TRUE	/	FALSE	1999999999	__cf_bm	AXt_vZ1KVPb8YQ5xifsC3vpngBOsS08GXmP7.T7q9aI-1674649169-0-ARLNR87ennsBB3gymuqeNX4JsRUBCRMtfmzhYs/7C3xlXh2Bbzk/VK9M4GBzCCUMzUAavrXsWxGkX70WFMltgIA=
+.www.bjss.com	TRUE	/	FALSE	1999999999	__cfruid	26ffdb82183feba2c3b090f3c430b400e06749a4-1674649169
+www.bjss.com	TRUE	/	FALSE	1999999999	SameSite	None
+

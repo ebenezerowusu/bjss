@@ -1,0 +1,579 @@
+<!doctype html><html lang="en">
+<!-- Mirrored from www.bjss.com/engineering-insights/choosing-dynamodb-capacity-mode by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 10:41:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>Choosing a DynamoDB Capacity Mode</title>
+    <link rel="shortcut icon" href="../hubfs/BJSSfav-01.png">
+    <meta name="description" content="Breaking down the two pricing models of AWS DynamoDB, Provisioned Capacity and On-demand Capacity, and how each one impacts total cost.">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <meta property="og:description" content="Breaking down the two pricing models of AWS DynamoDB, Provisioned Capacity and On-demand Capacity, and how each one impacts total cost.">
+    <meta property="og:title" content="Choosing a DynamoDB Capacity Mode">
+    <meta name="twitter:description" content="Breaking down the two pricing models of AWS DynamoDB, Provisioned Capacity and On-demand Capacity, and how each one impacts total cost.">
+    <meta name="twitter:title" content="Choosing a DynamoDB Capacity Mode">
+
+    
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365676184/1622442584700/BJSS_May2021/css/layout.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365604017/1671180309381/BJSS_May2021/css/main.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Lato:400,700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,200,300,400,500,600,700,800,900%7CDroid+Serif:400,700%7CMontserrat:100,200,300,400,500,600,700,800,900%7CLato:300,400,700,900%7CAnton%7CBarlow+Condensed:100,200,300,400,500,600,700%7CSource+Code+Pro:300,400,500,600,700">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/template_assets/47365604651/1630588080644/BJSS_May2021/css/theme-overrides.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844591/module_52098159278_language_switcher.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/48374514008/1642518516330/module_48374514008_Engineering_Insights_Post_Banner.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/48372652123/1664435298183/module_48372652123_Engineering_Insights_Post_Content.min.css">
+<link rel="stylesheet" href="../hs-fs/hub/9399653/hub_generated/module_assets/47366505811/1642518516986/module_47366505811_Follow_Us.min.css">
+    
+
+    
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script id="Cookiebot" src="../../consent.cookiebot.com/uc.js" data-cbid="1e8015ed-e92b-4a8a-81af-cd363b75ae3f" data-blockingmode="auto" type="text/javascript"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKPDZ5X');</script>
+<!-- End Google Tag Manager -->
+<script>
+(function(g,e,o,t,a,r,ge,tl,y,s){
+g.getElementsByTagName(o)[0].insertAdjacentHTML('afterbegin','<style id="georedirect1630578272721style">body{opacity:0.0 !important;}</style>');
+s=function(){g.getElementById('georedirect1630578272721style').innerHTML='body{opacity:1.0 !important;}';};
+t=g.getElementsByTagName(o)[0];y=g.createElement(e);y.async=true;
+y.src='https://g792337340.co/gr?id=-Mia1T_TRP_QsDX3xGqm&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);
+t.parentNode.insertBefore(y,t);y.onerror=function(){s()};
+georedirect1630578272721loaded=function(redirect){var to=0;if(redirect){to=5000};
+setTimeout(function(){s();},to)};
+})(document,'script','head');
+</script>
+<meta name="google-site-verification" content="XE271XJfF68am7oHm2x4veUqLyGeIVskmS7V3t-JVh0">
+
+<link rel="amphtml" href="choosing-dynamodb-capacity-mode3d9f.html?hs_amp=true">
+
+<meta property="og:image" content="https://www.bjss.com/hubfs/Feature%20-%20choosing-a-dynamodb-capacity-mode.jpg#keepProtocol">
+<meta property="og:image:width" content="1155">
+<meta property="og:image:height" content="854">
+
+<meta name="twitter:image" content="https://www.bjss.com/hubfs/Feature%20-%20choosing-a-dynamodb-capacity-mode.jpg#keepProtocol">
+
+
+<meta property="og:url" content="https://www.bjss.com/engineering-insights/choosing-dynamodb-capacity-mode">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="choosing-dynamodb-capacity-mode.html">
+
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/rss+xml" href="rss.xml">
+<meta name="twitter:domain" content="www.bjss.com">
+<script src="../../platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+</script>
+
+<meta http-equiv="content-language" content="en">
+
+
+
+
+
+
+    
+  <meta name="generator" content="HubSpot"></head>
+  <body>
+    <div class="body-wrapper   hs-content-id-87867834457 hs-blog-post hs-blog-id-48313963830">
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/header.html"><header class="header">
+  <div class="main-header">
+    <div class="header__container">
+      <div class="headerLogo">
+        
+        <div id="hs_cos_wrapper_header_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  <span id="hs_cos_wrapper_header_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../index.html" id="hs-link-header_logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="../hubfs/bjss_logo_25_Blue%26Navy%20(RGB).svg" class="hs-image-widget " style="width:100px;border-width:0px;border:0px;" width="100" alt="bjss_logo_25_Blue&amp;Navy (RGB)" title="bjss_logo_25_Blue&amp;Navy (RGB)"></a></span>
+</div>
+      </div>
+      <div class="headerNavigation">
+        <div class="custom-menu-primary">
+          <span id="hs_cos_wrapper_header_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_header_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47367390570" aria-label="Navigation Menu">
+ <ul role="menu" class="active-branch">
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../about/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">About BJSS</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../our-work.html" role="menuitem">Our Work</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../community/index.html" role="menuitem">BJSS in the Community</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../governance/index.html" role="menuitem">Governance</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../our-sustainability.html" role="menuitem">Our Sustainability</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../greenfield.html" role="menuitem">Green Field</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../services/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Our Services</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../strategy-and-transformation.html" role="menuitem">Strategy &amp; Transformation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../design/index.html" role="menuitem">Design &amp; Innovation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../technology-engineering/index.html" role="menuitem">Technology &amp; Engineering</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../managed-service/index.html" role="menuitem">Managed Service</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../low-code-and-automation.html" role="menuitem">Low Code &amp; Automation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../data/index.html" role="menuitem">Data &amp; AI</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../cloud/index.html" role="menuitem">Cloud &amp; Platform</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../cyber-security.html" role="menuitem">Cyber Security</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../sustainability.html" role="menuitem">Sustainability</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../industries/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Your Industry</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../energy-commodities-utilities.html" role="menuitem">Energy, Commodities &amp; Utilities</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../financial-services.html" role="menuitem">Financial Services</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../health/index.html" role="menuitem">Health &amp; Social Care</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../public/index.html" role="menuitem">Public Sector</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../retail/index.html" role="menuitem">Retail &amp; Consumer Markets</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../enterprise-agile.html" role="menuitem">Enterprise Agile®</a></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch" role="none"><a href="../insights/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Insights</a>
+   <ul role="menu" class="hs-menu-children-wrapper active-branch">
+    <li class="hs-menu-item hs-menu-depth-2 active active-branch" role="none"><a href="../engineering-insights.html" role="menuitem">Engineering Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../industry-insights.html" role="menuitem">Industry Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../news.html" role="menuitem">News Centre</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../events/index.html" role="menuitem">Events</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../future-of-retail/index.html" role="menuitem">Future of Retail</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../careers.html" role="menuitem">Careers</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../contact/index.html" role="menuitem">Contact</a></li>
+ </ul>
+</div></span>
+        </div>
+        <div class="custom-menu-primary">
+          <div id="hs_cos_wrapper_module_16279825775607" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16279825775607_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="language_switcher"></span></div>
+        </div>
+        <div class="search-icon">
+          <span class="search-icon-in"></span>
+        </div>
+        <div class="mobile-navigation">
+          <div class="mobile-navigation-inner">
+            <span class="mobile-trigger"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search-outer">
+    <div class="header__container">
+      <div class="hs-search-field">
+        <div class="hs-search-field__bar">
+          <form action="https://www.bjss.com/hs-search-results">
+            <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search …">
+          </form>
+          <span class="close-search"></span>
+        </div>
+        <ul class="hs-search-field__suggestions"></ul>
+      </div>
+      
+    </div>
+  </div>
+</header></div>
+      
+
+      
+<main class="body-container-wrapper blog blog_post engineering_post">
+  <div class="blog-wrapper">
+    <div id="hs_cos_wrapper_post_banner" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="blog-banner post-banner engineering__banner" style="background-image: url(../hubfs/dyamodb-banner.png)">
+  <div class="content-wrapper">
+    <div class="post-banner-col post-banner-col7">
+      <div class="post-banner-rich-text">
+        <h4><span id="hs_cos_wrapper_name" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="text">Choosing a DynamoDB Capacity Mode</span></h4>
+        <p>By Jamie Kelly, Head of AWS Technology - UK</p>
+      </div>
+    </div>
+    
+    <div class="post-banner-col post-banner-col5">
+      <div class="post-banner-image">
+        <span class="post-banner-img">
+          <img src="../hubfs/jamie%20kelly%20headshot.png" alt="Jamie Kelly">
+        </span>
+      </div>
+    </div>
+    
+  </div>
+</div></div>
+  </div>
+  <div class="blog-single-wrapper">
+    <div class="content-wrapper ">
+      <div class="blog-post__body">
+        <span id="hs_cos_wrapper_post_body" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="rich_text"><p style="margin-top: 25px; padding-bottom: 40px;">In this blog post, I’m going to look at DynamoDB capacity modes and when you might choose one over the other. To start, I’ll introduce DynamoDB at a high level, then I’ll go through the two capacity modes and how they work, before finishing off with a few worked examples to give you an idea of how the bill would look in various situations.</p>
+<!--more-->
+<h4>what is dynamodb?</h4>
+<p>Taking the headline description straight from the <a href="https://aws.amazon.com/dynamodb/" rel="noopener" target="_blank" style="font-weight: bold;">AWS DynamoDB Landing Page</a>, DynamoDB is marketed as:</p>
+<blockquote><strong>A fast, flexible NoSQL database service for single-digit millisecond performance at any scale.</strong></blockquote>
+<p>Let's break that down into a few constituent parts:</p>
+<ul>
+<li><strong>Fast</strong>: It can serve requests as fast as a few milliseconds (and if you use <a href="https://aws.amazon.com/dynamodb/dax/" rel="noopener" target="_blank" style="font-weight: bold;">DynamoDB Accelerator</a>, microseconds).</li>
+</ul>
+<ul>
+<li style="padding-bottom: 10px;"><strong>Flexible NoSQL</strong>: It's a NoSQL database which can provide flexibility of design. To be clear, this doesn't mean you don't have to design how you use it, but that's a post for another day.</li>
+<li style="padding-bottom: 10px;"><strong>Database Service</strong>: It's a managed service offered by AWS. No servers to manage, no administration, no patching, etc.</li>
+<li><strong>Performance At Any Scale</strong>: Fast is great. But if your database is going to slow down the bigger it gets, you'll have problems. Thankfully, the design of DynamoDB avoids this. It's rapid at any scale and can actually get faster as it grows.</li>
+</ul>
+<p>This is sounding pretty neat at this stage, so what does an item stored in DynamoDB look like? If you were to grab an item out of DynamoDB and expose it as JSON, it could look like this:</p>
+<p><code>{</code></p>
+<p><code>&nbsp;&nbsp;&nbsp; "Author": "John Grisham",</code></p>
+<p><code>&nbsp;&nbsp;&nbsp; "Title": "The Rainmaker",</code></p>
+<p><code>&nbsp;&nbsp;&nbsp; "Formats": {</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Hardcover": "J4SUKVGU",</code></p>
+<p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Paperback": "D7YF4FCX"</code></p>
+<p><code>&nbsp;&nbsp;&nbsp; },</code></p>
+<p><code>&nbsp;&nbsp;&nbsp; "Category": "Suspense"</code></p>
+<p><code>}</code></p></span>
+      </div>
+    </div>
+  </div>
+  <div id="hs_cos_wrapper_post_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="enginnering-post-content">
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-bg" style="background-image: url(../hubfs/fullwidth-people2.png);">
+
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(4, 30, 66, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4 style="color: #ffffff;">DynamoDB Capacity Modes</h4>
+<p>DynamoDB provides two capacity modes, each with its own pricing model:</p>
+<ul>
+<li>Provisioned Capacity</li>
+<li>On-Demand Capacity.</li>
+</ul>
+<p>The right mode for you will depend on the workload and access characteristics. We're going to dive into each of these modes and see how they are priced. The right mode is largely going to come down to how much it costs you to run. So let's go ahead and dig a little deeper into each of these modes and see how they are charged.</p>
+<h6 style="margin-top: 25px; margin-bottom: 15px;"><strong>Provisioned Capacity</strong></h6>
+<p>Provisioned Capacity is a reservation of throughput, measured in Write Capacity Units (WCUs) and Read Capacity Units (RCUs). These capacity units determine the number and size of requests that you can make on the table per second before the DynamoDB service will start to throttle access to that table. With Provisioned Capacity mode, you specify the capacity you want and get billed for that capacity. It's not a flat capacity though, you can set autoscaling rules that allow you to have the available reserved capacity dynamically changed, which can save you money if your workload is predictable enough for it to be viable. In this mode, you are billed by reserved WCUs and RCUs, so how are they calculated exactly?</p>
+<p>WCUs are the easier of the two to calculate, 1 WCU = 1 Write Request up to 1KB in size per second. For example:</p>
+<ul>
+<li style="padding-bottomm: 10px;">5 writes of 1KB per second = 5 WCUs</li>
+<li style="padding-bottomm: 10px;">5 writes of 2KB per second = 10 WCUs</li>
+<li style="padding-bottomm: 10px;">1 write of 5KB per second = 5 WCUs</li>
+</ul>
+<p><span data-contrast="auto" xml:lang="EN-GB" lang="EN-GB"><span>RCUs are a little bit more complex, due to there being three different types of read request that you can issue. DynamoDB is eventually consistent as a system, however</span></span><span data-contrast="auto" xml:lang="EN-GB" lang="EN-GB"><span>,</span><span> you can request a strongly consistent read or even a transactional read. These do</span><span>,</span><span> however</span><span>,</span><span> come with a pricing penalty, so you should really question </span><span>whether or not</span><span> you absolutely require anything more than eventual consistency — many workloads do not, in my experience. The breakdown of read request pricing is:</span></span><span data-ccp-props="{&quot;201341983&quot;:0,&quot;335559739&quot;:160,&quot;335559740&quot;:259}">&nbsp;</span></p>
+<ul>
+<li>0.5 RCU = 1 Read Request up to 4KB in size per Second (Eventually Consistent)</li>
+<li>1 RCU = 1 Read Request up to 4KB in size per Second (Strongly Consistent)</li>
+<li>2 RCUs = 1 Read Request up to 4KB in size per Second (Transactional)</li>
+</ul>
+<p>If you have mixed usage of request types, this can make estimating your pricing a bit tricky, as you now have to estimate volume for each type of request to calculate your estimated cost. Now I’ll give a few examples, with a bit more detail for each this time. I'll use ‘chunk’ to refer to the number of 4KB sections of data charged for. Remember, this will always be rounded up, so 4KB = 1 chunk, 5KB = 2 chunks, 8KB = 2 chunks:</p>
+<ul>
+<li style="padding-bottom: 10px;">6 eventually consistent reads of 4KB per second = 3 RCUs<br>&nbsp; <span style="color: #d90699;"> →</span> 6 (reads per second) * 0.5 (eventually consistent) * 1 (chunk of data)</li>
+<li style="padding-bottom: 10px;">6 eventually consistent reads of 1KB per second = 3 RCUs<br>&nbsp; <span style="color: #d90699;"> →</span>6 (reads per second) * 0.5 (eventually consistent) * 1 (chunk of data still)</li>
+<li style="padding-bottom: 10px;">6 eventually consistent reads of 5KB per second = 6 RCUs<br>&nbsp; <span style="color: #d90699;"> →</span>6 (reads per second) * 0.5 (eventually consistent) * 2 (chunks of data, the first 4KB being chunk one, the final KB is rounded up as the next chunk)</li>
+<li style="padding-bottom: 10px;">2 strongly consistent reads of 8KB per second = 4 RCUs<br>&nbsp; <span style="color: #d90699;"> →</span>2 (reads per second) * 1 (strongly consistent) * 2 (chunks of data)</li>
+<li>1 transactional read of 5KB per second = 4 RCUs<br>&nbsp; <span style="color: #d90699;"> →</span>1 (reads per second) * 2 (eventually consistent) * 2 (chunks of data)</li>
+</ul>
+<p>At this point in time, the provisioned capacity mode pricing in eu-west-2 (London) is $0.000772 per WCU per hour, and $0.0001544 per RCU per hour. We’ll be using these later for making our cost estimates.</p>
+<h6 style="margin-top: 25px; margin-bottom: 15px;"><strong>On-demand</strong></h6>
+<p>On-demand is the pay per request mode and it is measured in Write Request Units (WRUs) and Read Request Units (RRUs). These work in a similar fashion to WCUs and RCUs, but as there is no capacity to set, the pricing model deals in request units instead of capacity units. For the capacity side of the equation, DynamoDB will scale to whatever capacity you need as requests ramp up - the starting capacity is 2,000 WRUs per second and 6,000 RRUs per second. Unless you scale over double your currently assigned capacity in a short amount of time, you won't get throttled. As you're paying per request, you don't have to think about capacity scaling and AWS takes care of it for you automatically. In looking at how WRUs and RRUs are calculated, you might notice some similarities to the provisioned capacity units:</p>
+<ul>
+<li>1 WRU = 1 Write Request up to 1KB in size</li>
+<li>0.5 RRU = 1 Read Request up to 4KB in size (Eventually Consistent)</li>
+<li>1 RRU = 1 Read Request up to 4KB in size (Strongly Consistent)</li>
+<li>2 RRUs = 1 Read Request up to 4KB in size (Transactional)</li>
+</ul>
+<p>Taking a one second snapshot of the same examples used previously, some familiar numbers come up:</p>
+<ul>
+<li>6 eventually consistent reads of 4KB = 3 RRUs</li>
+<li>6 eventually consistent reads of 1KB = 3 RRUs</li>
+<li>6 eventually consistent reads of 5KB = 6 RRUs</li>
+<li>2 strongly consistent reads of 8KB = 4 RRUs</li>
+<li>1 transactional read of 5KB = 4 RRUs</li>
+</ul>
+<p>In On-demand mode, the "per-hour" aspect of the pricing that Provisioned Capacity uses no longer applies. Instead, it charges a flat amount per request and in eu-west-2 (London) that comes in at $0.0000014846 per WRU and $0.000000297 per RRU. These unit rates are lower than the WCU and RCU costs, but it's important to remember that those are per hour. In an hour, if we were maxing out 1WCU and 1 RCU, we'd have made:</p>
+<p><strong>`60 * 60 = 3,600`</strong> read and write requests each</p>
+<p>So how do they stack up? As mentioned earlier, that depends on your workload!</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-parallex">
+    <div class="parallex-bg-wrap">
+      <div class="parallex-background" style="background-image: url(../hubfs/dynamodb-background-gray.png);"></div>
+    </div>
+    <div class="page-center">
+      <div class="enginnering-post-inner-row">
+        <div class="enginnering-post-rich-tesx">
+          <h4>Worked Examples</h4>
+<p>So we have some details on how the two modes charge, both in the units used and the cost per unit, but how might that come out in a cost comparison across different hypothetical workloads? Let's explore two different examples and see how the modes compete. In these examples we'll use 730 hours as a typical month. We're also going to give headroom for up to 10% extra traffic so we can sleep at night, knowing we aren't constantly running a system on the edge.</p>
+<p>For a recap on the pricing we're using:</p>
+<ul>
+<li>1 WCU = $0.000772 per hour</li>
+<li>1 RCU = $0.0001544 per hour</li>
+<li>1 WRU = $0.0000014846</li>
+<li>1 RRU = $0.000000297</li>
+</ul>
+<h6 style="margin-top: 25px; margin-bottom: 15px;"><strong>Scenario 1: Consistent Load</strong></h6>
+<p>In this scenario, we have a well-known workload that is chugging away at much the same rate, 24/7. It's dealing with items that are a max of 1KB in size, and the system will make roughly 100 writes per second and around 8,000 eventually consistent reads per second throughout the month. How will our bill look in each mode?</p>
+<p>If we use Provisioned Capacity mode for the month, we will need to provision for 110 WCUs and 8,800 RCUs to cover the load plus the 10% headroom.</p>
+<p>This comes to:</p>
+<p><strong>110 * 730 * $0.000772 = $62.00 for the WCUs</strong></p>
+<p><strong>8,800 * 730 * $0.0001544 = $991.87 for the RCUs</strong></p>
+<p style="padding-bottom: 30px;"><strong>$62 + $992 = $1,054 total for the month</strong></p>
+<p>On-demand, we'll be paying for about:</p>
+<p><strong>100 * 60 * 60 * 730 = 262,800,000 write requests</strong></p>
+<p style="padding-bottom: 30px;"><strong>8,000 * 60 * 60 * 730 = 21,024,000,000 read requests</strong></p>
+<p>Multiplying that by the pricing above and we get $390.16 for the writes, and $6244.13 for the reads, for a grand total of $6,635 for the month.</p>
+<p>The clear winner for consistent loads is using Provisioned Capacity, with On-demand being more than six times as expensive! Whilst this example focuses on a consistent load 24/7 (rare in my experience), for the easier calculations, similar conclusions will be arrived at for any loads that are predictable with relatively smooth scaling, as DynamoDB allows you to automatically scale the provisioned capacity based on usage as required. If your workload has a predictable load pattern without major spikes, Provisioned Capacity is evidently the way to go.</p>
+<h6 style="margin-top: 25px; margin-bottom: 15px;"><strong>Scenario 2: Daily Spike</strong></h6>
+<p>For the second scenario, we're looking at a workload that has low usage during most of the day but gets hit hard for a random hour of the day. This scenario simulates those more unpredictable spiky workloads, where you can't accurately predict how much capacity you need or aren't sure when you'll suddenly need more. In this scenario, we will have the same 1KB items, but this time we'll have ~100 writes per second and ~8,000 eventually consistent reads per second for just half an hour at a random point per day, and 1 write and 80 reads per second for the rest of the day.</p>
+<p>Using Provisioned Capacity, we need to provision for the max load, as we have no idea when it'll hit and autoscaling won't be able to scale up in time, leading to throttling and a loss of service. As such, we need to provision the same capacity as the previous example, coming to a monthly cost of $1,054.</p>
+<p>However, for On-demand mode, we're paying per request. For the busy half hour, we're paying for:</p>
+<p><strong>100 * 60 * 30 = 180,000 </strong>writes</p>
+<p><strong>8,000 * 60 * 30 = 14,400,000</strong>&nbsp;reads</p>
+<p>For the rest of the day it's:</p>
+<p><strong>1 * 60 * 60 * 23.5 = 84,600</strong>&nbsp;writes</p>
+<p><strong>80 * 60 * 60 * 23.5 = 6,768,000 </strong>reads</p>
+<p>To align with the 730-hour assumption we'll get the total day's writes (264,600) and reads (21,168,000), divide by 24 and multiply back out by the 730, giving us a monthly total of 8,048,250 writes in the month and 643,860,000 reads. This will cost a total of $11.95 + $191.23 = $204 for the month.</p>
+<p>In this example we can see a dramatic saving by using On-demand mode to account for the unknown levels of traffic.</p>
+<p><img src="../hs-fs/hubfs/ddb5630.png?width=1488&amp;name=ddb.png" alt="ddb" width="1488" loading="lazy" style="width: 1488px;" srcset="https://www.bjss.com/hs-fs/hubfs/ddb.png?width=744&amp;name=ddb.png 744w, https://www.bjss.com/hs-fs/hubfs/ddb.png?width=1488&amp;name=ddb.png 1488w, https://www.bjss.com/hs-fs/hubfs/ddb.png?width=2232&amp;name=ddb.png 2232w, https://www.bjss.com/hs-fs/hubfs/ddb.png?width=2976&amp;name=ddb.png 2976w, https://www.bjss.com/hs-fs/hubfs/ddb.png?width=3720&amp;name=ddb.png 3720w, https://www.bjss.com/hs-fs/hubfs/ddb.png?width=4464&amp;name=ddb.png 4464w" sizes="(max-width: 1488px) 100vw, 1488px"></p>
+<p style="font-size: 16px; color: #041e42;">Above: Example cost savings on a low usage table (~30k request units per day)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-bg" style="background-image: url(../hubfs/fullwidth-people1.png);">
+
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(0, 71, 187, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4 style="color: #ffffff; margin-top: 25px;">Wrap-up</h4>
+<p style="color: #ffffff; margin-bottom: 25px;">As we have seen, DynamoDB has two different capacity modes that allow you to choose the most efficient option for your workload. In general, the Provisioned Capacity mode will be best suited to workloads with a known traffic profile with a smooth-scaling curve. On-demand is best for spiky workloads or workloads that can be unpredictable. If you're unsure, do the maths and you can work out which is likely to pay off whilst being able to serve your users without throttling issues. For a new workload that needs to be able to run but for which you can't work out the required provisioned capacity, I'd suggest starting in On-demand mode and switching to Provisioned Capacity when you have had time to reflect on the usage data — it's all in <strong><a href="https://aws.amazon.com/cloudwatch/" rel="noopener" target="_blank" style="color: #d90699;">CloudWatch</a></strong>. Thankfully, DynamoDB makes it easy to switch between the two!</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+</div></div>
+</main>
+
+
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/footer.html"><footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__container main__footer">
+      <div class="footer__column footer__column1">
+        <div class="footerTitle">
+          <div id="hs_cos_wrapper_footerTitle" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footerTitle_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h4 style="color: #fff">EXPANDING<br>POSSIBILITIES</h4></span></div>
+        </div>
+        <div class="footerSocial">
+          <div id="hs_cos_wrapper_footerSocial" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><ul class="social-share">
+  <li class="socil-icon social-twitter">
+    <a href="https://twitter.com/bjssltd" title="Follow on Twitter" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-linkedin">
+    <a href="https://uk.linkedin.com/company/bjss" title="Follow on LinkedIn" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-instagram">
+    <a href="http://www.instagram.com/bjssltd" title="Follow on Instagram" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-youtube">
+    <a href="https://www.youtube.com/channel/UCUWB9XUNt_g_YGWIjneXuSg" title="Follow on Youtube" target="_blank" class="icon"></a>
+  </li>
+</ul></div>
+        </div>
+        <div class="footerImage">
+          <div id="hs_cos_wrapper_footerImage" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_footerImage_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="../hs-fs/hubfs/Princess-Award_%26_Queens-Awardc48d.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png" class="hs-image-widget " width="1000" height="563" alt="Princess-Award_&amp;_Queens-Award" title="Princess-Award_&amp;_Queens-Award" srcset="https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=500&amp;height=282&amp;name=Princess-Award_%26_Queens-Award.png 500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png 1000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1500&amp;height=845&amp;name=Princess-Award_%26_Queens-Award.png 1500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2000&amp;height=1126&amp;name=Princess-Award_%26_Queens-Award.png 2000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2500&amp;height=1408&amp;name=Princess-Award_%26_Queens-Award.png 2500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=3000&amp;height=1689&amp;name=Princess-Award_%26_Queens-Award.png 3000w" sizes="(max-width: 1000px) 100vw, 1000px"></span></div>
+        </div>
+      </div>
+      <div class="footer__column footer__column2">
+        <div class="footer__column_inner">
+          <div class="footer-navigation">
+            <span id="hs_cos_wrapper_footer_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_footer_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47366551648" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../contact/index.html" role="menuitem">Contact BJSS</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../news.html" role="menuitem">News</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../governance/index.html" role="menuitem">Governance</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../website-privacy-policy/index.html" role="menuitem">Privacy notice</a></li>
+ </ul>
+</div></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__column footer__column3">
+        <div class="footer__column_inner">
+          <div class="footer__search">
+            <div class="hs-search-field">
+              <div class="hs-search-field__bar">
+                <form action="https://www.bjss.com/hs-search-results">
+                  <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search BJSS">
+                  <input type="submit" value="Search" class="searchsubmit" style="">
+                </form>
+              </div>
+              <ul class="hs-search-field__suggestions"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__container copyright__footer">
+      <div class="footer__copyright">
+        <div id="hs_cos_wrapper_footer_copyright_text" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer_copyright_text_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="text">&nbsp;© 2023 BJSS Limited. Registered in England with company number 2777575 VAT Number GB613295452.&nbsp;‘Enterprise Agile®’ and ‘BJSS Enterprise Agile®’ are registered trademarks of BJSS Limited.</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<span class="back-to-top"></span></div>
+      
+    </div>
+    <script src="../hs/hsstatic/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+<script src="../hs/hsstatic/jquery-libs/static-1.4/jquery-migrate/jquery-migrate-1.2.1.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+<script>
+(function () {
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST.html', '/_hcms/perf', true /*async*/);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.onreadystatechange = function () {
+                // do nothing.
+            };
+            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            function populateNetworkInfo(name, connection, info) {
+                if (name in connection) {
+                    info[name] = connection[name];
+                }
+            }
+            var networkInfo = {};
+            if (connection) {
+                ['type', 'effectiveType', 'downlink', 'rtt'].forEach(function(name) {
+                    populateNetworkInfo(name, connection, networkInfo);
+                });
+            }
+            var perfData = {
+                url: location.href,
+                portal: 9399653,
+                content: 87867834457,
+                group: -1,
+                connection: networkInfo,
+                timing: performance.timing
+            };
+            xhr.send(JSON.stringify(perfData));
+        }, 3000);  // Execute this 3 seconds after onload.
+    });
+})();
+</script>
+
+<script src="../hs-fs/hub/9399653/hub_generated/template_assets/47365698976/1645632663800/BJSS_May2021/js/main.min.js"></script>
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script>
+
+<script src="../hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+<script src="../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844495/module_52098159278_language_switcher.min.js"></script>
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/www.bjss.com\/engineering-insights\/choosing-dynamodb-capacity-mode"]);
+_hsq.push(["setPageId", "87867834457"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 87867834457,
+    "legacyPageId": "87867834457",
+    "contentFolderId": null,
+    "contentGroupId": 48313963830,
+    "abTestId": null,
+    "languageVariantId": 87867834457,
+    "languageCode": "en",
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="../hs/scriptloader/9399653.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    ticks: 1674411597364,
+    page_id: 87867834457,
+    
+    content_group_id: 48313963830,
+    portal_id: 9399653,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en",
+    analytics_page_type: "blog-post",
+    analytics_page_id: "87867834457",
+    category_id: 3,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+<script defer src="../hs/hsstatic/HubspotToolsMenu/static-1.143/js/index.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKPDZ5X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ <!-- End Google Tag Manager (noscript) -->
+
+
+<div id="fb-root"></div>
+ <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../../connect.facebook.net/en_GB/all.js#xfbml=1&status=0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ 
+
+
+  
+</body>
+<!-- Mirrored from www.bjss.com/engineering-insights/choosing-dynamodb-capacity-mode by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 10:41:45 GMT -->
+</html>

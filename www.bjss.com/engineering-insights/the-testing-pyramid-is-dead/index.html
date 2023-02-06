@@ -1,0 +1,568 @@
+<!doctype html><html lang="en">
+<!-- Mirrored from www.bjss.com/engineering-insights/the-testing-pyramid-is-dead/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:42:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <title>The Testing Pyramid is Dead</title>
+    <link rel="shortcut icon" href="../../hubfs/BJSSfav-01.png">
+    <meta name="description" content="The Testing Pyramid is Dead - BJSS - Expanding Possibilities">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <meta property="og:description" content="The Testing Pyramid is Dead - BJSS - Expanding Possibilities">
+    <meta property="og:title" content="The Testing Pyramid is Dead">
+    <meta name="twitter:description" content="The Testing Pyramid is Dead - BJSS - Expanding Possibilities">
+    <meta name="twitter:title" content="The Testing Pyramid is Dead">
+
+    
+
+    
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+<link rel="stylesheet" href="../../hs-fs/hub/9399653/hub_generated/template_assets/47365676184/1622442584700/BJSS_May2021/css/layout.min.css">
+<link rel="stylesheet" href="../../hs-fs/hub/9399653/hub_generated/template_assets/47365604017/1671180309381/BJSS_May2021/css/main.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700|Lato:400,700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;900&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CRaleway:100,200,300,400,500,600,700,800,900%7CDroid+Serif:400,700%7CMontserrat:100,200,300,400,500,600,700,800,900%7CLato:300,400,700,900%7CAnton%7CBarlow+Condensed:100,200,300,400,500,600,700%7CSource+Code+Pro:300,400,500,600,700">
+<link rel="stylesheet" href="../../hs-fs/hub/9399653/hub_generated/template_assets/47365604651/1630588080644/BJSS_May2021/css/theme-overrides.min.css">
+<link rel="stylesheet" href="../../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844591/module_52098159278_language_switcher.min.css">
+<link rel="stylesheet" href="../../hs-fs/hub/9399653/hub_generated/module_assets/48374514008/1642518516330/module_48374514008_Engineering_Insights_Post_Banner.min.css">
+<link rel="stylesheet" href="../../hs-fs/hub/9399653/hub_generated/module_assets/48372652123/1664435298183/module_48372652123_Engineering_Insights_Post_Content.min.css">
+<link rel="stylesheet" href="../../hs-fs/hub/9399653/hub_generated/module_assets/47366505811/1642518516986/module_47366505811_Follow_Us.min.css">
+    
+
+    
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script id="Cookiebot" src="../../../consent.cookiebot.com/uc.js" data-cbid="1e8015ed-e92b-4a8a-81af-cd363b75ae3f" data-blockingmode="auto" type="text/javascript"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KKPDZ5X');</script>
+<!-- End Google Tag Manager -->
+<script>
+(function(g,e,o,t,a,r,ge,tl,y,s){
+g.getElementsByTagName(o)[0].insertAdjacentHTML('afterbegin','<style id="georedirect1630578272721style">body{opacity:0.0 !important;}</style>');
+s=function(){g.getElementById('georedirect1630578272721style').innerHTML='body{opacity:1.0 !important;}';};
+t=g.getElementsByTagName(o)[0];y=g.createElement(e);y.async=true;
+y.src='https://g792337340.co/gr?id=-Mia1T_TRP_QsDX3xGqm&refurl='+g.referrer+'&winurl='+encodeURIComponent(window.location);
+t.parentNode.insertBefore(y,t);y.onerror=function(){s()};
+georedirect1630578272721loaded=function(redirect){var to=0;if(redirect){to=5000};
+setTimeout(function(){s();},to)};
+})(document,'script','head');
+</script>
+<meta name="google-site-verification" content="XE271XJfF68am7oHm2x4veUqLyGeIVskmS7V3t-JVh0">
+
+<link rel="amphtml" href="index3d9f.html?hs_amp=true">
+
+<meta property="og:image" content="https://www.bjss.com/hubfs/BJSS_May2021/Images/the-testing-pyramid-is-dead-featured-image-1.jpeg#keepProtocol">
+<meta property="og:image:width" content="866">
+<meta property="og:image:height" content="640">
+
+<meta name="twitter:image" content="https://www.bjss.com/hubfs/BJSS_May2021/Images/the-testing-pyramid-is-dead-featured-image-1.jpeg#keepProtocol">
+
+
+<meta property="og:url" content="https://www.bjss.com/engineering-insights/the-testing-pyramid-is-dead/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="canonical" href="index.html">
+
+<meta property="og:type" content="article">
+<link rel="alternate" type="application/rss+xml" href="../rss.xml">
+<meta name="twitter:domain" content="www.bjss.com">
+<script src="../../../platform.linkedin.com/in.js" type="text/javascript">
+    lang: en_US
+</script>
+
+<meta http-equiv="content-language" content="en">
+
+
+
+
+
+
+    
+  <meta name="generator" content="HubSpot"></head>
+  <body>
+    <div class="body-wrapper   hs-content-id-48314201960 hs-blog-post hs-blog-id-48313963830">
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/header.html"><header class="header">
+  <div class="main-header">
+    <div class="header__container">
+      <div class="headerLogo">
+        
+        <div id="hs_cos_wrapper_header_logo" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  <span id="hs_cos_wrapper_header_logo_hs_logo_widget" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="../../index.html" id="hs-link-header_logo_hs_logo_widget" style="border-width:0px;border:0px;"><img src="../../hubfs/bjss_logo_25_Blue%26Navy%20(RGB).svg" class="hs-image-widget " style="width:100px;border-width:0px;border:0px;" width="100" alt="bjss_logo_25_Blue&amp;Navy (RGB)" title="bjss_logo_25_Blue&amp;Navy (RGB)"></a></span>
+</div>
+      </div>
+      <div class="headerNavigation">
+        <div class="custom-menu-primary">
+          <span id="hs_cos_wrapper_header_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_header_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47367390570" aria-label="Navigation Menu">
+ <ul role="menu" class="active-branch">
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../../about/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">About BJSS</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../our-work.html" role="menuitem">Our Work</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../community/index.html" role="menuitem">BJSS in the Community</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../governance/index.html" role="menuitem">Governance</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../our-sustainability.html" role="menuitem">Our Sustainability</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../greenfield.html" role="menuitem">Green Field</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../../services/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Our Services</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../strategy-and-transformation.html" role="menuitem">Strategy &amp; Transformation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../design/index.html" role="menuitem">Design &amp; Innovation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../technology-engineering/index.html" role="menuitem">Technology &amp; Engineering</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../managed-service/index.html" role="menuitem">Managed Service</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../low-code-and-automation.html" role="menuitem">Low Code &amp; Automation</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../data/index.html" role="menuitem">Data &amp; AI</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../cloud/index.html" role="menuitem">Cloud &amp; Platform</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../cyber-security.html" role="menuitem">Cyber Security</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../sustainability.html" role="menuitem">Sustainability</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="../../industries/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Your Industry</a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../energy-commodities-utilities.html" role="menuitem">Energy, Commodities &amp; Utilities</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../financial-services.html" role="menuitem">Financial Services</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../health/index.html" role="menuitem">Health &amp; Social Care</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../public/index.html" role="menuitem">Public Sector</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../retail/index.html" role="menuitem">Retail &amp; Consumer Markets</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../../enterprise-agile.html" role="menuitem">Enterprise Agile®</a></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children active-branch" role="none"><a href="../../insights/index.html" aria-haspopup="true" aria-expanded="false" role="menuitem">Insights</a>
+   <ul role="menu" class="hs-menu-children-wrapper active-branch">
+    <li class="hs-menu-item hs-menu-depth-2 active active-branch" role="none"><a href="../../engineering-insights.html" role="menuitem">Engineering Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../industry-insights.html" role="menuitem">Industry Insights</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../news.html" role="menuitem">News Centre</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../events/index.html" role="menuitem">Events</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="../../future-of-retail/index.html" role="menuitem">Future of Retail</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../../careers.html" role="menuitem">Careers</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../../contact/index.html" role="menuitem">Contact</a></li>
+ </ul>
+</div></span>
+        </div>
+        <div class="custom-menu-primary">
+          <div id="hs_cos_wrapper_module_16279825775607" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16279825775607_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_language_switcher" style="" data-hs-cos-general-type="widget" data-hs-cos-type="language_switcher"></span></div>
+        </div>
+        <div class="search-icon">
+          <span class="search-icon-in"></span>
+        </div>
+        <div class="mobile-navigation">
+          <div class="mobile-navigation-inner">
+            <span class="mobile-trigger"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search-outer">
+    <div class="header__container">
+      <div class="hs-search-field">
+        <div class="hs-search-field__bar">
+          <form action="https://www.bjss.com/hs-search-results">
+            <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search …">
+          </form>
+          <span class="close-search"></span>
+        </div>
+        <ul class="hs-search-field__suggestions"></ul>
+      </div>
+      
+    </div>
+  </div>
+</header></div>
+      
+
+      
+<main class="body-container-wrapper blog blog_post engineering_post">
+  <div class="blog-wrapper">
+    <div id="hs_cos_wrapper_post_banner" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="blog-banner post-banner engineering__banner" style="background-image: url(../../hubfs/Banner_the-testing-pyramid-is-dead.jpg)">
+  <div class="content-wrapper">
+    <div class="post-banner-col post-banner-col7">
+      <div class="post-banner-rich-text">
+        <h4><span id="hs_cos_wrapper_name" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="text">The Testing Pyramid is Dead</span></h4>
+        <p>By Richard McIntyre, Chief Architect at BJSS</p>
+      </div>
+    </div>
+    
+    <div class="post-banner-col post-banner-col5">
+      <div class="post-banner-image">
+        <span class="post-banner-img">
+          <img src="../../hubfs/BJSS_May2021/Images/Rich-1.gif" alt="Richard McIntyre">
+        </span>
+      </div>
+    </div>
+    
+  </div>
+</div></div>
+  </div>
+  <div class="blog-single-wrapper">
+    <div class="content-wrapper ">
+      <div class="blog-post__body">
+        <span id="hs_cos_wrapper_post_body" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="rich_text"><p><strong>The monolith, what used to be a bad word is now being remembered with fondness for its simplicity. Yes, there was often a big ball of spaghetti associated with such a time. This is where the testing pyramid shone. Those clean layers of testing, those clear responsibilities broken up between developers, automation testers, and manual testers.</strong></p>
+<p><strong><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-d0993674-0185-431d-8ae0-88443e0e9886"><span class="hs-cta-node hs-cta-d0993674-0185-431d-8ae0-88443e0e9886" id="hs-cta-d0993674-0185-431d-8ae0-88443e0e9886"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/9399653/d0993674-0185-431d-8ae0-88443e0e9886" target="_blank" rel="noopener"><img class="hs-cta-img" id="hs-cta-img-d0993674-0185-431d-8ae0-88443e0e9886" style="border-width:0px;" height="450" width="1200" src="../../../no-cache.hubspot.com/cta/default/9399653/d0993674-0185-431d-8ae0-88443e0e9886.png" alt="Top 10 Skills For Technologists In 2022"></a></span><script charset="utf-8" src="../../hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(9399653, 'd0993674-0185-431d-8ae0-88443e0e9886', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></strong></p>
+<!--more-->
+<h4 style="color: #0047bb;">what am I talking about?</h4>
+<p><span style="font-size: 20px;">Those of you who are not familiar with the testing pyramid will get the idea from the following diagram.</span></p>
+<p>I used to swear by this concept, I would also hold teams to account on this almost like a religion. In a monolith based paradigm, this makes so much sense. The unit tests keep the developers honest and ensure they write clean code that adheres to SOLID principles, service tests were far simpler as you would have fewer dependencies – yes, you would still have external dependencies but you would have less of your own distributed dependencies to deal with. UI tests have always been hard, so keeping these to a minimum was a lifesaver.</p>
+<p>There was of course arguments about what should be tested, what level should these be tested at, what level of test coverage would be required. Mature teams would talk these out reasonably and come to sensible decisions.</p></span>
+      </div>
+    </div>
+  </div>
+  <div id="hs_cos_wrapper_post_content" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="enginnering-post-content">
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(4, 30, 66, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <div>
+<h4><span color="#ffffff" style="color: #ffffff;">tooling?</span></h4>
+<div style="height: 12px;">&nbsp;</div>
+<p>Test tooling was also limited to largely your favourite test framework for your given programming language, this was the same language as your codebase. Then the more adventurous might use Ruby (my fondest language) to write Cucumber based BDD tests.&nbsp;</p>
+<p>For those who wrote more BDD scenarios than the unit tests that existed, I would profusely encourage that they were ‘doing it wrong’. I would engage in some purist battles based on the point that I thought they had ‘misunderstood BDD’ and its place in the development lifecycle. Longwinded boring Gherkin scenarios, brittleness, builds that take too long and slowness of pace in writing these tests were areas that particularly frustrated me.</p>
+<p>Now I look back the world was so much more simple. The architecture was simple, deployments were simple and so was the tooling.</p>
+<p>Now the array of tooling in the test space is immense. Here are some of the levels of tooling you will need to look into:</p>
+<ul>
+<li>Contract testing e.g. Pact</li>
+<li>Browser Testing e.g. Browser Stack</li>
+<li>Browser Driving Libraries e.g. Puppeteer</li>
+<li>Unit testing e.g. Jest</li>
+<li>E2End Testing e.g. Cypress</li>
+<li>Load Testing e.g. K6</li>
+<li>Security Testing e.g. OWASP Zap</li>
+</ul>
+</div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content " style="background-color: rgba(#null, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4>Test Managers or Test Architects or Principal software developers in test?</h4>
+<p>Once there was a world where a test manager would be your point of call to sign off the test approach, testing mechanisms, or the amount of a certain type of test.</p>
+<div class="post-col-left">
+<p>Now testing is far more complex, environments are no longer a small fixed number in fact with ephemeral environments they might be indeed infinite. There will be environments for different uses. Test data can also be incredibly complex.</p>
+</div>
+<div class="post-col-right"><img loading="lazy" src="../../hubfs/BJSS_May2021/Images/Post%20Images/BJSS_3-scaled.jpg" alt="BJSS_3" title="BJSS_3" srcset="https://www.bjss.com/hubfs/BJSS_May2021/Images/Post%20Images/BJSS_3-scaled.jpg 2560w, https://www.bjss.com/hubfs/BJSS_May2021/Images/Post%20Images/BJSS_3-1280x720.jpg 1280w, https://www.bjss.com/hubfs/BJSS_May2021/Images/Post%20Images/BJSS_3-980x551.jpg 980w, https://www.bjss.com/hubfs/BJSS_May2021/Images/Post%20Images/BJSS_3-480x270.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 2560px, 100vw"></div>
+<p>Anonymising, and pseudo-anonymising large amounts of data whilst also holding on to data characteristics that allow you to effectively run a broad range of automated tests that cover edge cases are no longer trivial. The methods we have for keeping robots from unauthorised access to our products are the same methods that will keep our own automation tests from being blocked access. We need to create solutions around these issues that involve a good amount of engineering expertise.</p>
+<p>So who does this work? Is it the engineers? Test engineer? Who then orchestrates and plans this work? Who gains this deep level understanding of the data and architecture so that the testing approaches can be validated? This would often be a mixture of architects, test engineers, and developers. I only occasionally come across test engineers who are comfortable with this level of complexity. Managers have been a goto person to help with this division of responsibility, I am increasingly seeing their role evolving into the more technical engineering space that is more aligned with the role of an architect. The lack of someone at this level has made for some challenges in some of the teams I have been involved in and yet something that I have seen really well covered by a principal software developer in test (SDET).</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-bg" style="background-image: url(../../hubfs/writing-programming-code-on-laptop-SGC9439-scaled.jpg);">
+
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(4, 30, 66, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <div>
+<h4><span color="#ffffff" style="color: #ffffff;">automation testing as a bolt-on</span></h4>
+<div style="height: 12px;">&nbsp;</div>
+<p>Having testers who know a little automation has become a common culture. QA analysts come into your organisation and are encouraged to learn scripting languages to write selenium, cucumber, or cypress tests. Their background is often not software engineering. The quality level of their code is mixed, some are happy to create the basic scripting needed to get this to work, others are keen to better themselves. Some really talented folks often get so much into the engineering principles and coding elegance that they drop the QA role to become more involved with software engineering.&nbsp;</p>
+<p>The approach of having automation QAs writing basic front end test scripts fitted really well into the test pyramid. There was only a small amount of happy path journeys covered. This meant that even slow test runs could be finished in 5 minutes and also the sometimes sloppy nature of the less experienced test engineers meant that a few badly written Cucumber tests would not cause there to be any long term technical debt as there was so few of them.</p>
+<p>Something changed….</p>
+</div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-parallex">
+    <div class="parallex-bg-wrap">
+      <div class="parallex-background" style="background-image: url(../../hubfs/BackgroundImage_EngineringInsights2.jpg);"></div>
+    </div>
+    <div class="page-center">
+      <div class="enginnering-post-inner-row">
+        <div class="enginnering-post-rich-tesx">
+          <h4 style="color: #0047bb;">DevOps</h4>
+<div height="20px">Knowledge of cloud platforms is now a must, knowing how to inspect logs of data flowing from containers, serverless functions, through queues to data sources, and how to identify a potential fault by analysing data is a far more common ask. Of course, there is still a need for exploratory testing or manual browser testing (this can be overlooked by many more technically focussed SDETs), but this alone will struggle with newer development styles where fast change in a codebase is prominent.</div>
+<div height="20px">&nbsp;</div>
+<div height="20px">DevOps culture is a large driver of this. The traditional ops model of creating a build and having them deploy it to production is long being forgotten. The team now has full power to set up the infrastructure as it suits them. This is a challenge, just as there is no longer a ‘standard testing pyramid’ there is also no longer a ‘standard architecture’. This has to be created by the whole team in collaboration which includes the test folks.</div>
+<div height="20px">&nbsp;</div>
+<div height="20px">It is important that whoever owns much of the QA responsibility speaks into this process. They need to make sure the design caters to the testing need as much as possible. How can various components be mocked out? How can it be monitored for anomalies? How can it be stood up in a way that it is a stable platform for testing that is resilient to the fast pace of change in a codebase?</div>
+<p>&nbsp;</p>
+<h4 style="color: #0047bb;">Cohesive Tools</h4>
+<p>Going back to the practical nitty-gritty of engineering and running test pipelines then….</p>
+<p>Beyond the standard set of test libraries and tools your team adopts, to make immutable test runs robust, the need for seed data, environments, infrastructure, identity solutions is obvious. Much of the time and energy is spent in the QA space is on building these. This means that no longer is the tip of the ice-cream cone taking the least effort. It is taking the most effort!!</p>
+<p>Investing in tooling that can achieve standard patterns and approaches is one way that this process can be sped up. Currently tooling in this space can actually mean stringing a lot of fast-changing tools together. Thinking of the strain on test engineers that we mentioned earlier it may be possible to achieve but is likely to be somewhat time inefficient at times.</p>
+<p>Having pre-set-up examples of these tools running or by well documenting your toolchain so that new folks know exactly how to approach these common patterns will certainly help. Just like there are landing-zone projects for AWS or Azure, a test landing zone may also be worthwhile. It is not a one-size-fits-all and some bespoke tooling will always be needed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(4, 30, 66, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4><span style="color: #ffffff;">The Strain on Test Analysts</span>&nbsp;</h4>
+<div class="post-left-col">
+<p>This depth of platform and engineering knowledge required to deliver testing solutions in this kind of environment is fairly advanced. To some degree, this goes above the original engineering complexity, especially when you consider how in creative ways you need to inject, manipulate data, and route traffic. This implies that modern QA needs to also be a competent software engineer, some of the best SDETs I have met have been.</p>
+</div>
+<div class="post-right-col"><img loading="lazy" src="../../hubfs/BJSS_May2021/Images/Post%20Images/BJSS_43-1.jpg" alt="" title="BJSS_43" srcset="https://www.bjss.com/hubfs/BJSS_May2021/Images/Post%20Images/BJSS_43-1.jpg 1920w, https://www.bjss.com/hubfs/BJSS_May2021/Images/Post%20Images/BJSS_43-1-1280x720.jpg 1280w, https://www.bjss.com/hubfs/BJSS_May2021/Images/Post%20Images/BJSS_43-1-980x551.jpg 980w, https://www.bjss.com/hubfs/BJSS_May2021/Images/Post%20Images/BJSS_43-1-480x270.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1920px, 100vw" class="wp-image-237353"></div>
+<p><span style="font-size: 20px;">Saying this, as I suggested before many come into QA automation from a test analyst role. This role can often be very product focused. I have worked with some talented test analysts who were amazing at fleshing out the requirements and could own and contribute to tickets. This would be a huge benefit to the whole team, with overlaps of a BA and at times a project manager when their ownership of ticket-flow and team process was employed.</span></p>
+<p>These same people do not always have an ‘engineering’ mindset, which actually is fine if they do not shy away from technical conversations. Being interested in environments, data, and data flow is not always the same as being an engineer. By delegating many of the engineering tasks but still taking ownership of the QA process is still a valid way of taking hold of these challenges.</p>
+<p>Is the QA engineering focused or product focused? This is now a tension that could emerge.</p>
+<p>We need to make sure that as part of our teamwork we take time to understand our QA person’s strengths and communicate with them which approach would suit them better eg the engineering approach or QA product/process ownership approach. Upon deciding so, you may pick up some potential gaps in your team. Identifying these gaps is a good thing and can help you delegate either ownership or engineering tasks to whichever level seems to fill these gaps.</p>
+<p>One thing is clear that you should not allow leaving such a value-able person hanging between either approach. I have seen this lead to a lack of direction, a broken test process, and demotivated QA staff.</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content  has-bg " style="background-color: rgba(0, 71, 187, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        <h4><span color="#ffffff" style="color: #ffffff;">Conclusion</span>&nbsp;</h4>
+<p>To make sure that teams can handle this new era of the `inverting of the test pyramid`, a company or team investment in how to streamline solutions will be needed. A brilliant test function needs not just talented individuals but tried and tested methods of solving common problems. In the new world of data and cloud platforms, it is now our job to create and solidify these methods until we can again be confident in our approach just as we were when the ‘test pyramid’ was the source of all testing truth.</p>
+<p>Now seems a great time to challenge our thinking and play with different approaches. There may have to be a tricky sweet spot to try and reach, but let’s go and find it!</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="enginnering-post-content-row enginnering-post-full-content " style="background-color: rgba(#null, 1.0); ">
+    <div class="page-center">
+      <div class="enginnering-post-rich-tesx">
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+</div></div>
+</main>
+
+
+      
+      <div data-global-resource-path="BJSS_May2021/templates/partials/footer.html"><footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__container main__footer">
+      <div class="footer__column footer__column1">
+        <div class="footerTitle">
+          <div id="hs_cos_wrapper_footerTitle" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footerTitle_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h4 style="color: #fff">EXPANDING<br>POSSIBILITIES</h4></span></div>
+        </div>
+        <div class="footerSocial">
+          <div id="hs_cos_wrapper_footerSocial" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><ul class="social-share">
+  <li class="socil-icon social-twitter">
+    <a href="https://twitter.com/bjssltd" title="Follow on Twitter" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-linkedin">
+    <a href="https://uk.linkedin.com/company/bjss" title="Follow on LinkedIn" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-instagram">
+    <a href="http://www.instagram.com/bjssltd" title="Follow on Instagram" target="_blank" class="icon"></a>
+  </li>
+  <li class="socil-icon social-youtube">
+    <a href="https://www.youtube.com/channel/UCUWB9XUNt_g_YGWIjneXuSg" title="Follow on Youtube" target="_blank" class="icon"></a>
+  </li>
+</ul></div>
+        </div>
+        <div class="footerImage">
+          <div id="hs_cos_wrapper_footerImage" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_footerImage_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="../../hs-fs/hubfs/Princess-Award_%26_Queens-Awardc48d.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png" class="hs-image-widget " width="1000" height="563" alt="Princess-Award_&amp;_Queens-Award" title="Princess-Award_&amp;_Queens-Award" srcset="https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=500&amp;height=282&amp;name=Princess-Award_%26_Queens-Award.png 500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1000&amp;height=563&amp;name=Princess-Award_%26_Queens-Award.png 1000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=1500&amp;height=845&amp;name=Princess-Award_%26_Queens-Award.png 1500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2000&amp;height=1126&amp;name=Princess-Award_%26_Queens-Award.png 2000w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=2500&amp;height=1408&amp;name=Princess-Award_%26_Queens-Award.png 2500w, https://www.bjss.com/hs-fs/hubfs/Princess-Award_%26_Queens-Award.png?width=3000&amp;height=1689&amp;name=Princess-Award_%26_Queens-Award.png 3000w" sizes="(max-width: 1000px) 100vw, 1000px"></span></div>
+        </div>
+      </div>
+      <div class="footer__column footer__column2">
+        <div class="footer__column_inner">
+          <div class="footer-navigation">
+            <span id="hs_cos_wrapper_footer_menu" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_footer_menu" class="hs-menu-wrapper active-branch no-flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="47366551648" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../../contact/index.html" role="menuitem">Contact BJSS</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../../news.html" role="menuitem">News</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../../governance/index.html" role="menuitem">Governance</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="../../website-privacy-policy/index.html" role="menuitem">Privacy notice</a></li>
+ </ul>
+</div></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__column footer__column3">
+        <div class="footer__column_inner">
+          <div class="footer__search">
+            <div class="hs-search-field">
+              <div class="hs-search-field__bar">
+                <form action="https://www.bjss.com/hs-search-results">
+                  <input type="text" class="hs-search-field__input" name="term" autocomplete="off" placeholder="Search BJSS">
+                  <input type="submit" value="Search" class="searchsubmit" style="">
+                </form>
+              </div>
+              <ul class="hs-search-field__suggestions"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__container copyright__footer">
+      <div class="footer__copyright">
+        <div id="hs_cos_wrapper_footer_copyright_text" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_footer_copyright_text_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="text">&nbsp;© 2023 BJSS Limited. Registered in England with company number 2777575 VAT Number GB613295452.&nbsp;‘Enterprise Agile®’ and ‘BJSS Enterprise Agile®’ are registered trademarks of BJSS Limited.</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<span class="back-to-top"></span></div>
+      
+    </div>
+    <script src="../../hs/hsstatic/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+<script src="../../hs/hsstatic/jquery-libs/static-1.4/jquery-migrate/jquery-migrate-1.2.1.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+<script>
+(function () {
+    window.addEventListener('load', function () {
+        setTimeout(function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST.html', '/_hcms/perf', true /*async*/);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.onreadystatechange = function () {
+                // do nothing.
+            };
+            var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+            function populateNetworkInfo(name, connection, info) {
+                if (name in connection) {
+                    info[name] = connection[name];
+                }
+            }
+            var networkInfo = {};
+            if (connection) {
+                ['type', 'effectiveType', 'downlink', 'rtt'].forEach(function(name) {
+                    populateNetworkInfo(name, connection, networkInfo);
+                });
+            }
+            var perfData = {
+                url: location.href,
+                portal: 9399653,
+                content: 48314201960,
+                group: -1,
+                connection: networkInfo,
+                timing: performance.timing
+            };
+            xhr.send(JSON.stringify(perfData));
+        }, 3000);  // Execute this 3 seconds after onload.
+    });
+})();
+</script>
+
+<script src="../../hs-fs/hub/9399653/hub_generated/template_assets/47365698976/1645632663800/BJSS_May2021/js/main.min.js"></script>
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'en';
+</script>
+
+<script src="../../hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+<script src="../../hs-fs/hub/9399653/hub_generated/module_assets/52098159278/1638279844495/module_52098159278_language_switcher.min.js"></script>
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/www.bjss.com\/engineering-insights\/the-testing-pyramid-is-dead\/"]);
+_hsq.push(["setPageId", "48314201960"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 48314201960,
+    "legacyPageId": "48314201960",
+    "contentFolderId": null,
+    "contentGroupId": 48313963830,
+    "abTestId": null,
+    "languageVariantId": 48314201960,
+    "languageCode": "en",
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="../../hs/scriptloader/9399653.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    ticks: 1674411408515,
+    page_id: 48314201960,
+    
+    content_group_id: 48313963830,
+    portal_id: 9399653,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "en",
+    analytics_page_type: "blog-post",
+    analytics_page_id: "48314201960",
+    category_id: 3,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+<script defer src="../../hs/hsstatic/HubspotToolsMenu/static-1.143/js/index.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+ <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKPDZ5X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+ <!-- End Google Tag Manager (noscript) -->
+
+
+<div id="fb-root"></div>
+ <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../../../connect.facebook.net/en_GB/all.js#xfbml=1&status=0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="../../../platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+ 
+
+
+  
+</body>
+<!-- Mirrored from www.bjss.com/engineering-insights/the-testing-pyramid-is-dead/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 25 Jan 2023 11:42:55 GMT -->
+</html>
